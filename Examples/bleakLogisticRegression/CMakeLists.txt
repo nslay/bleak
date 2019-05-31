@@ -1,0 +1,4 @@
+project(bleakLogisticRegression CXX)
+
+add_executable(bleakLogisticRegressionDemo bleakLogisticRegressionDemo.cpp)
+target_link_libraries(bleakLogisticRegressionDemo ${bleakLibraries})

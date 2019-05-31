@@ -1,0 +1,78 @@
+numTrees1=10;
+treeDepth1=10;
+numInputs=1;
+numFeatures=$treeDepth1;
+
+Input {
+  size = [ 50, 1 ];
+} input;
+
+##### Parameters ######
+
+Parameters {
+  size = [ $numFeatures, 1 ];
+  learnable=false;
+} dataAggWeights;
+
+Parameters {
+  size = [ $numFeatures ];
+  learnable=true;
+} dataAggBias;
+
+Parameters {
+  size = [ $numTrees1, $treeDepth1 ];
+  learnable=true;
+  initType="uniform";
+  a = -1.0;
+  b = 1.0;
+} fernsThresholds1;
+
+Parameters {
+  size = [ $numTrees1, $numFeatures ];
+  learnable=false;
+  saveOutputs=true;
+} fernsIndicators1;
+
+Parameters {
+  size = [ $numTrees1, 2^$treeDepth1 ];
+  learnable=true;
+} fernsWeights1;
+
+Parameters {
+  size = [ 1, $numTrees1 ];
+  learnable = true;
+  initType="gaussian";
+  mu = 0.0;
+  sigma = 1.0;
+} fernsAggWeights1;
+
+Parameters {
+  size = [ 1 ];
+  learnable = true;
+} fernsAggBias1;
+
+##### End Parameters ######
+
+##### Operation vertices #####
+
+InnerProduct dataAgg;
+RandomHingeFerns ferns1;
+InnerProduct output;
+
+##### End operation vertices #####
+
+##### Connections #####
+
+input.outData -> dataAgg.inData;
+dataAggWeights.outData -> dataAgg.inWeights;
+dataAggBias.outData -> dataAgg.inBias;
+
+dataAgg.outData -> ferns1.inData;
+fernsWeights1.outData -> ferns1.inWeights;
+fernsIndicators1.outData -> ferns1.inIndicators;
+fernsThresholds1.outData -> ferns1.inThresholds;
+
+ferns1.outData -> output.inData;
+fernsAggWeights1.outData -> output.inWeights;
+fernsAggBias1.outData -> output.inBias;
+

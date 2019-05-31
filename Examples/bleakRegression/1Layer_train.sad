@@ -1,0 +1,91 @@
+numTrees1=10;
+treeDepth1=10;
+numInputs=1;
+numFeatures=$treeDepth1;
+
+CsvReader {
+  shuffle = true;
+  batchSize = 50;
+  csvFileName = "trainingData.csv";
+  labelColumn = $numInputs;
+} trainData;
+
+##### Parameters ######
+
+Parameters {
+  size = [ $numFeatures, 1 ];
+  learnable=true;
+  initType="fill";
+  fill=1;
+} dataAggWeights;
+
+Parameters {
+  size = [ $numFeatures ];
+  learnable=true;
+} dataAggBias;
+
+Parameters {
+  size = [ $numTrees1, $treeDepth1 ];
+  learnable=true;
+  initType="uniform";
+  a = -1.0;
+  b = 1.0;
+  learningRateMultiplier=10;
+} fernsThresholds1;
+
+Parameters {
+  size = [ $numTrees1, $numFeatures ];
+  learnable=false;
+  saveOutputs=true;
+} fernsIndicators1;
+
+Parameters {
+  size = [ $numTrees1, 2^$treeDepth1 ];
+  learnable=true;
+} fernsWeights1;
+
+Parameters {
+  size = [ 1, $numTrees1 ];
+  learnable = true;
+  initType="gaussian";
+  mu = 0.0;
+  sigma = 1.0;
+} fernsAggWeights1;
+
+Parameters {
+  size = [ 1 ];
+  learnable = true;
+} fernsAggBias1;
+
+##### End Parameters ######
+
+##### Operation vertices #####
+
+InnerProduct dataAgg;
+RandomHingeFerns ferns1;
+InnerProduct fernsAgg1;
+L2Loss fernsLoss;
+Residual { displayFrequency = 100; } res;
+
+##### End operation vertices #####
+
+##### Connections #####
+
+trainData.outData -> dataAgg.inData;
+dataAggWeights.outData -> dataAgg.inWeights;
+dataAggBias.outData -> dataAgg.inBias;
+
+dataAgg.outData -> ferns1.inData;
+fernsWeights1.outData -> ferns1.inWeights;
+fernsIndicators1.outData -> ferns1.inIndicators;
+fernsThresholds1.outData -> ferns1.inThresholds;
+
+ferns1.outData -> fernsAgg1.inData;
+fernsAggWeights1.outData -> fernsAgg1.inWeights;
+fernsAggBias1.outData -> fernsAgg1.inBias;
+
+fernsAgg1.outData -> fernsLoss.inData;
+trainData.outLabels -> fernsLoss.inLabels;
+
+fernsAgg1.outData -> res.inData;
+trainData.outLabels -> res.inLabels;

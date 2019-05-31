@@ -1,0 +1,98 @@
+numClasses = 10;
+numFeatures = 10000;
+numToSelect = 20; # This is actually per label... so up to 200 features are selected
+
+CsvReader {
+  shuffle = true;
+  batchSize = 50;
+  csvFileName = "trainingData.csv";
+  labelColumn = $numFeatures;
+} trainData;
+
+###### FSA Parameters (we really need a nice GUI editor) ######
+
+Parameters {
+  size = [ $numClasses, $numFeatures ];
+  learnable = false; # Indicators are not learnable (with SGD anyway)
+  saveOutputs = true; # Need to specify this manually here
+  initType = "fill";
+  fill = 1;
+} fsaSelected;
+
+Parameters {
+  size = [ $numClasses, $numFeatures ];
+  learnable = true;
+  initType = "gaussian";
+  mu = 0.0;
+  sigma = 3.0;
+} fsaWeights;
+
+Parameters {
+  size = [ $numClasses ];
+  learnable = true;
+} fsaBias;
+
+###### End FSA Parameters ######
+
+###### Followup model parameters ######
+
+Parameters {
+  size = [ $numClasses, $numFeatures ];
+  learnable = true;
+  initType = "gaussian";
+  mu = 0.0;
+  sigma = 3.0;
+} logisticWeights;
+
+Parameters {
+  size = [ $numClasses ];
+  learnable = true;
+} logisticBias;
+
+###### End followup model parameters ######
+
+###### FSA Vertices ######
+
+FeatureSelectionAnnealing {
+  scheduleType = "inverse";
+  mu = 20.0;
+  beginIteration = 100;
+  endIteration = 5100;
+  numFeatures = $numToSelect;
+} fsa;
+
+SoftmaxLoss fsaLoss;
+
+###### End FSA vertices ######
+
+###### Followup model vertices ######
+
+InnerProduct logisticInner;
+SoftmaxLoss logisticLoss;
+
+###### End followup model vertices ######
+
+###### FSA Connections ######
+
+trainData.outData -> fsa.inData;
+fsaSelected.outData -> fsa.inIndicators;
+fsaWeights.outData -> fsa.inWeights;
+fsaBias.outData -> fsa.inBias;
+
+fsa.outData -> fsaLoss.inData;
+trainData.outLabels -> fsaLoss.inLabels;
+
+###### End FSA Connections ######
+
+###### Followup model connections ######
+
+fsa.outSelectedData -> logisticInner.inData;
+
+logisticWeights.outData -> logisticInner.inWeights;
+logisticBias.outData -> logisticInner.inBias;
+
+logisticInner.outData -> logisticLoss.inData;
+trainData.outLabels -> logisticLoss.inLabels;
+
+###### End followup model connections ######
+

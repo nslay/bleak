@@ -1,0 +1,32 @@
+numClasses = 10;
+numFeatures = 100;
+
+CsvReader {
+  shuffle = true;
+  batchSize = 50;
+  csvFileName = "trainingData.csv";
+  labelColumn = $numFeatures;
+} trainData;
+
+Parameters {
+  size = [ $numClasses, $numFeatures ];
+  learnable = true;
+  initType = "gaussian";
+  mu = 0.0;
+  sigma = 3.0;
+} weights;
+
+Parameters {
+  size = [ $numClasses ];
+  learnable = true;
+} bias;
+
+InnerProduct inner;
+SoftmaxLoss loss;
+
+trainData.outData -> inner.inData;
+weights.outData -> inner.inWeights;
+bias.outData -> inner.inBias;
+
+inner.outData -> loss.inData;
+trainData.outLabels -> loss.inLabels;
