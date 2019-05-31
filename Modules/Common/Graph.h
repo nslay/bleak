@@ -237,7 +237,6 @@ private:
     std::sort(vTargets.begin(), vTargets.end(), LexicalVertexCompare());
   }
 
-#if 0
   bool CheckDependencies(const std::shared_ptr<VertexType> &p_clVertex, const VertexSetType &sVisit) const {
     VertexVectorType vSources;
     CollectSourcesForVertex(p_clVertex, vSources);
@@ -249,40 +248,7 @@ private:
 
     return true;
   }
-#endif
 
-  bool ComputePlan() {
-    m_vPlan.clear();
-    m_vPlan.reserve(m_sVertices.size());
-
-    VertexVectorType vTmpPlan; // This will initially be a redundant plan in reverse!
-
-    FindLeafVertices(vTmpPlan);
-
-    VertexVectorType vSources;
-    VertexSetType sVisit; // Initially, this will denote which vertices have been visited (rather than simply pushed ... so lots of redundant pushes vertices will be in the plan!)
-
-    for (size_t i = 0; i < vTmpPlan.size(); ++i) {
-      std::shared_ptr<VertexType> p_clVertex = vTmpPlan[i]; // XXX: Must be a copy since vTmpPlan can resize
-
-      if (sVisit.emplace(p_clVertex).second) {
-        vSources.clear();
-        CollectSourcesForVertex(p_clVertex, vSources);
-        vTmpPlan.insert(vTmpPlan.end(), vSources.begin(), vSources.end());
-      }
-    }
-
-    sVisit.clear(); // Now this will be those vertices that have already been pushed!
-
-    for (auto itr = vTmpPlan.rbegin(); itr != vTmpPlan.rend(); ++itr) {
-      if (sVisit.emplace(*itr).second)
-        m_vPlan.push_back(*itr);
-    }
-
-    return true;
-  }
-
-#if 0
   bool ComputePlan() {
     m_vPlan.clear();
 
@@ -309,7 +275,6 @@ private:
 
     return true;
   }
-#endif
 };
 
 } // end namespace bleak
