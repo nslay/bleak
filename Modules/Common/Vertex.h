@@ -1,0 +1,457 @@
+/*-
+ * Copyright (c) 2017 Nathan Lay (enslay@gmail.com)
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR(S) ``AS IS'' AND ANY EXPRESS OR
+ * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ * IN NO EVENT SHALL THE AUTHOR(S) BE LIABLE FOR ANY DIRECT, INDIRECT,
+ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+#pragma once
+
+#ifndef BLEAK_VERTEX_H
+#define BLEAK_VERTEX_H
+
+#include <iostream>
+#include <algorithm>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
+#include <functional>
+#include <unordered_map>
+#include "Property.h"
+#include "Edge.h"
+#include "Database.h"
+
+// Only needed if your class inherits from a templated class with unresolved template parameters
+#define bleakForwardVertexTypedefs() \
+  typedef typename SuperType::VertexType VertexType; \
+  typedef typename SuperType::EdgeType EdgeType; \
+  typedef typename SuperType::ArrayType ArrayType; \
+  typedef typename SuperType::OutputMapType OutputMapType; \
+  typedef typename SuperType::InputMapType InputMapType; \
+  typedef typename SuperType::PropertyMapType PropertyMapType
+
+#define bleakNewAbstractVertex(thisClass, superClass, ...) \
+  protected: \
+  virtual void OnCreateWithNew() override { \
+    superClass :: OnCreateWithNew(); \
+    int forNewVertexMacro_ = 0; \
+    __VA_ARGS__ ; \
+  } \
+  public: \
+    typedef superClass SuperType; \
+    typedef thisClass SelfType; \
+    using SuperType::shared_from_this; \
+    using SuperType::GetOutput; \
+    using SuperType::SetInput; \
+    using SuperType::GetInput; \
+    using SuperType::HasInput; \
+    using SuperType::HasOutput; \
+    using SuperType::GetAllInputs; \
+    using SuperType::GetAllOutputs; \
+    using SuperType::GetProperty; \
+    using SuperType::SetProperty; \
+    using SuperType::GetName; \
+    using SuperType::IsLeaf
+
+#define bleakNewVertex(thisClass, superClass, ...) \
+  static constexpr const char * GetTypeName() { return #thisClass ; } \
+  static std::shared_ptr< thisClass > New() { \
+    std::shared_ptr< thisClass > p_clVertex(new ( thisClass ) ()); \
+    p_clVertex->OnCreateWithNew(); \
+    return p_clVertex; \
+  } \
+  bleakNewAbstractVertex(thisClass, superClass, __VA_ARGS__)
+
+#define bleakAddInput(name) forNewVertexMacro_; this->RegisterInput(name); forNewVertexMacro_
+#define bleakAddOutput(name) forNewVertexMacro_; this->RegisterOutput(name); forNewVertexMacro_
+#define bleakAddProperty(name, value) forNewVertexMacro_; this->RegisterProperty(name, value); forNewVertexMacro_
+#define bleakAddGetterSetter(name, memberGetter, memberSetter) \
+  forNewVertexMacro_; \
+  this->RegisterGetterSetter(name, \
+  std::bind( memberGetter , this, std::placeholders::_1), \
+  std::bind( memberSetter , this, std::placeholders::_1) ); \
+  forNewVertexMacro_
+
+#define bleakGetAndCheckOutput(varName, outputName, ...) \
+  std::shared_ptr<EdgeType> varName = this->GetOutput( outputName ); \
+  if ( varName == nullptr ) { \
+    std::cerr << this->GetName() << ": Error: Could not get output '" << outputName << "'." << std::endl; \
+    return __VA_ARGS__ ; \
+  }
+
+#define bleakGetAndCheckInput(varName, inputName, ...) \
+  std::shared_ptr<EdgeType> varName = this->GetInput( inputName ); \
+  if( varName == nullptr ) { \
+      std::cerr << this->GetName() << ": Error: Could not get input '" << inputName << "'." << std::endl; \
+      return __VA_ARGS__ ; \
+  }
+
+namespace bleak {
+
+template<typename RealType>
+class Vertex : public std::enable_shared_from_this<Vertex<RealType>> {
+public:
+  typedef std::enable_shared_from_this<Vertex<RealType>> SuperType;
+  typedef Vertex<RealType> VertexType;
+  typedef Edge<RealType> EdgeType;
+  typedef Array<RealType> ArrayType;
+  typedef std::unordered_map<std::string, std::shared_ptr<EdgeType>> OutputMapType;
+  typedef std::unordered_map<std::string, std::weak_ptr<EdgeType>> InputMapType;
+  typedef std::unordered_map<std::string, std::unique_ptr<Property>> PropertyMapType;
+
+  using SuperType::shared_from_this;
+
+  virtual ~Vertex() {
+    // Formally disconnect our outputs from targets' inputs (if any)
+    for (auto &clPair : m_mOutputs) {
+      const auto &vTargets = clPair.second->GetAllTargets();
+
+      for (const auto &p_clWeakTarget : vTargets) {
+        std::shared_ptr<VertexType> p_clTarget = p_clWeakTarget.first.lock();
+
+        if (p_clTarget != nullptr) {
+          std::string strInputAtTarget;
+
+          // Could be multiple inputs with this edge
+          while ((strInputAtTarget = p_clTarget->FindInputName(clPair.second)).size() > 0) {
+            p_clTarget->UnsetInput(strInputAtTarget);
+          }
+        }
+      }
+    }
+
+    // We can't safely call shared_from_this() in a destructor.
+    // Thus we can't use UnsetInput() here! So let's just try to clean up expired targets in edges!
+    for (auto &clPair : m_mInputs) {
+      std::shared_ptr<EdgeType> p_clEdge = clPair.second.lock();
+
+      if (p_clEdge != nullptr) {
+        p_clEdge->RemoveExpiredTargets();
+        clPair.second.reset();
+      }
+    }
+  }
+
+  virtual bool SetSizes() = 0;
+  virtual bool Initialize() = 0;
+  virtual void Forward() = 0;
+  virtual void Backward() = 0;
+
+  // This is a convenience function. Memory for vertices can be setup externally!
+  bool Allocate(bool bForTraining) {
+    for (auto &clPair : m_mOutputs) {
+      if (!clPair.second->GetData().Allocate())
+        return false;
+
+      if (bForTraining && clPair.second->GetGradient().GetSize().Valid() && !clPair.second->GetGradient().Allocate())
+        return false;
+    }
+
+    return true;
+  }
+
+  // These should only indicate a failure if a Database function legitimately fails or the data is unexpected!
+  virtual bool SaveToDatabase(const std::unique_ptr<Transaction> &p_clTransaction) const {
+    if(p_clTransaction == nullptr)
+      return false;
+
+    if (!m_bSaveOutputs)
+      return true; // Nothing to do
+
+    std::vector<double> vBuffer; // Save to doubles no matter what
+
+    for (const auto &clOutputPair : m_mOutputs) {
+      const std::string &strOutputName = clOutputPair.first;
+      const auto &p_clEdge = clOutputPair.second;
+
+      const ArrayType &clData = p_clEdge->GetData();
+
+      if (!clData.Valid())
+        continue;
+
+      vBuffer.resize(clData.GetSize().Product());
+
+      const std::string strKey = MakeDatabaseKey(strOutputName);
+
+      std::cout << GetName() << ": Info: Saving output '" << strKey << "'." << std::endl;
+
+      std::transform(clData.begin(), clData.end(), vBuffer.begin(), 
+        [](const RealType &x) -> double {
+          return (double)x;
+        });
+
+      p_clTransaction->Put(strKey, (uint8_t *)vBuffer.data(), sizeof(double)*vBuffer.size());
+    }
+
+    return p_clTransaction->Commit();
+  }
+
+  // Should be called after SetSize() and memory allocation at least!
+  virtual bool LoadFromDatabase(const std::unique_ptr<Cursor> &p_clCursor) {
+    if (p_clCursor == nullptr)
+      return false;
+
+    for (auto &clOutputPair : m_mOutputs) {
+      const std::string &strOutputName = clOutputPair.first;
+      const auto &p_clEdge = clOutputPair.second;
+
+      ArrayType &clData = p_clEdge->GetData();
+
+      if (!clData.Valid())
+        continue;
+
+      const std::string strKey = MakeDatabaseKey(strOutputName);
+
+      if (!p_clCursor->Find(strKey))
+        continue;
+
+      std::cout << GetName() << ": Info: Loading output '" << strKey << "'." << std::endl;
+
+      size_t bufferSize = 0;
+      const double * const p_dBuffer = (double *)p_clCursor->Value(bufferSize);
+
+      if (bufferSize != clData.GetSize().Product()*sizeof(double))
+        return false;
+
+      std::transform(p_dBuffer, p_dBuffer + clData.GetSize().Product(), clData.begin(),
+        [](const double &x) -> RealType {
+          return RealType(x);
+        });
+    }
+
+    return true;
+  }
+
+  void SetName(const std::string &strName) {
+    m_strName = strName;
+  }
+
+  const std::string & GetName() const {
+    return m_strName;
+  }
+
+  bool SetInput(const std::string &strName, const std::shared_ptr<EdgeType> &p_clEdge) {
+    auto itr = m_mInputs.find(strName);
+
+    if (itr == m_mInputs.end())
+      return false;
+
+    std::shared_ptr<EdgeType> p_clOldEdge = itr->second.lock();
+
+    if (p_clEdge == p_clOldEdge)
+      return true;
+
+    if (p_clOldEdge != nullptr) {
+      p_clOldEdge->RemoveTarget(shared_from_this());
+      itr->second.reset();
+    }
+
+    if (p_clEdge != nullptr) {
+      itr->second = p_clEdge;
+      p_clEdge->AddTarget(shared_from_this());
+    }
+
+    return true;
+  }
+
+  void UnsetInput(const std::string &strName) {
+    auto itr = m_mInputs.find(strName);
+
+    if(itr == m_mInputs.end())
+      return;
+
+    std::shared_ptr<EdgeType> p_clEdge = itr->second.lock();
+
+    if (p_clEdge != nullptr) {
+      p_clEdge->RemoveTarget(shared_from_this());
+      itr->second.reset();
+    }
+  }
+
+  std::shared_ptr<EdgeType> GetOutput(const std::string &strName) {
+    auto itr = m_mOutputs.find(strName);
+    return itr != m_mOutputs.end() ? itr->second : std::shared_ptr<EdgeType>();
+  }
+
+  std::shared_ptr<EdgeType> GetInput(const std::string &strName) {
+    auto itr = m_mInputs.find(strName);
+    return itr != m_mInputs.end() ? itr->second.lock() : std::shared_ptr<EdgeType>();
+  }
+
+  const OutputMapType & GetAllOutputs() {
+    return m_mOutputs;
+  }
+
+  const InputMapType & GetAllInputs() {
+    return m_mInputs;
+  }
+
+  std::string FindInputName(const std::shared_ptr<EdgeType> &p_clEdge) const {
+    if (p_clEdge == nullptr)
+      return std::string();
+
+    for (const auto &clPair : m_mInputs) {
+      if (clPair.second.lock() == p_clEdge)
+        return clPair.first;
+    }
+
+    return std::string();
+  }
+
+  std::string FindOutputName(const std::shared_ptr<EdgeType> &p_clEdge) const {
+    if (p_clEdge == nullptr)
+      return std::string();
+
+    for (const auto &clPair : m_mOutputs) {
+      if (clPair.second == p_clEdge)
+        return clPair.first;
+    }
+
+    return std::string();
+  }
+
+  virtual bool HasOutput(const std::string &strName) const {
+    return m_mOutputs.find(strName) != m_mOutputs.end();
+  }
+
+  virtual bool HasInput(const std::string &strName) const {
+    return m_mInputs.find(strName) != m_mInputs.end();
+  }
+
+  virtual bool HasOutputs() const {
+    return m_mOutputs.size() > 0;
+  }
+
+  virtual bool HasInputs() const {
+    return m_mInputs.size() > 0;
+  }
+
+  template<typename ValueType>
+  bool SetProperty(const std::string &strKey, const ValueType &value) {
+    auto itr = m_mProperties.find(strKey);
+    return itr != m_mProperties.end() ? itr->second->SetValue(value) : false;
+  }
+
+  template<typename ValueType>
+  bool GetProperty(const std::string &strKey, ValueType &value) const {
+    auto itr = m_mProperties.find(strKey);
+    return itr != m_mProperties.end() ? itr->second->GetValue(value) : false;
+  }
+
+  const PropertyMapType & GetAllProperties() {
+    return m_mProperties;
+  }
+
+  bool IsRoot() const {
+    if(m_mInputs.empty())
+      return true;
+
+    for(const auto &clPair : m_mInputs) {
+      std::shared_ptr<EdgeType> p_clEdge = clPair.second.lock();
+
+      if(p_clEdge != nullptr && p_clEdge->GetSource() != nullptr)
+        return false;
+    }
+
+    return true;
+  }
+
+  bool IsLeaf() const {
+    if (m_mOutputs.empty())
+      return true;
+
+    for (const auto &clPair : m_mOutputs) {
+      if (clPair.second != nullptr && clPair.second->HasTargets()) {
+        const auto &vTargets = clPair.second->GetAllTargets();
+
+        // Check for targets with outputs. We will ignore targets with no output.
+        for (const auto &clTargetPair : vTargets) {
+          std::shared_ptr<VertexType> p_clTarget = clTargetPair.first.lock();
+          if (p_clTarget != nullptr && p_clTarget->HasOutputs())
+            return false;
+        }
+      }
+    }
+
+    return true;
+  }
+
+protected:
+  Vertex() = default;
+
+  virtual void OnCreateWithNew() {
+    RegisterProperty("name", m_strName);
+    RegisterProperty("saveOutputs", m_bSaveOutputs);
+  }
+
+  bool RegisterOutput(const std::string &strName) {
+    if(strName.empty() || HasOutput(strName))
+      return false;
+
+    m_mOutputs.emplace(strName,std::make_shared<EdgeType>(shared_from_this()));
+
+    return true;
+  }
+
+  bool RegisterInput(const std::string &strName) {
+    return strName.size() > 0 ? m_mInputs.emplace(strName, std::weak_ptr<EdgeType>()).second : false;
+  }
+
+  template<typename ValueType>
+  bool RegisterProperty(const std::string &strKey, ValueType &value) {
+    if (strKey.empty() || m_mProperties.find(strKey) != m_mProperties.end())
+      return false;
+
+    m_mProperties.emplace(strKey, Property::New(value));
+
+    return true;
+  }
+
+  template<typename GetterType, typename SetterType>
+  bool RegisterGetterSetter(const std::string &strKey, GetterType funGetter, SetterType funSetter) {
+    if (strKey.empty() || m_mProperties.find(strKey) != m_mProperties.end())
+      return false;
+
+    m_mProperties.emplace(strKey, Property::New(funGetter, funSetter));
+
+    return true;
+  }
+
+  std::string MakeDatabaseKey(const std::string &strOutputName) const {
+    return GetName() + '.' + strOutputName + ".data"; // In case we ever decide to store the gradient
+  }
+
+private:
+  std::string m_strName;
+  bool m_bSaveOutputs = false; // Whether or not to save this Vertex's output to the database (usually false).
+
+  OutputMapType m_mOutputs;
+  InputMapType m_mInputs;
+  PropertyMapType m_mProperties;
+
+  Vertex(const Vertex &) = delete;
+  Vertex & operator=(const Vertex &) = delete;
+};
+
+} // end namespace bleak
+
+#endif // !BLEAK_VERTEX_H

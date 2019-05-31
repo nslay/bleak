@@ -1,0 +1,19 @@
+subgraph SGSum {
+  numInputs=10;
+  numOutputs=100;
+  learningRateMultiplier=1.0;
+  
+  Parameters {
+    size = [ $numOutputs, $numInputs ];
+    initType="fill";
+    fill=1;
+    learnable = false;
+  } weights;
+  
+  InnerProduct innerProduct;
+  
+  weights.outData -> innerProduct.inWeights;
+  
+  this.inData -> innerProduct.inData;
+  innerProduct.outData -> this.outData;
+};

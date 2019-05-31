@@ -1,0 +1,25 @@
+subgraph SGBatchNormalization {
+  numInputs=10;
+
+  Parameters {
+    size = [ $numInputs ];
+    learnable=false;
+    saveOutputs=true;
+  } batchMeans;
+  
+  Parameters {
+    size = [ $numInputs ];
+    learnable=false;
+    saveOutputs=true;
+    initType="fill";
+    fill=1;
+  } batchVars;
+  
+  BatchNormalization batchNorm;
+  
+  batchMeans.outData -> batchNorm.inMeans;
+  batchVars.outData -> batchNorm.inVariances;
+  
+  this.inData -> batchNorm.inData;
+  batchNorm.outData -> this.outData;
+};
