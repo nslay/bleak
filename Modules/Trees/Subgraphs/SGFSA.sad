@@ -1,0 +1,50 @@
+subgraph SGFSA {
+  numInputs=10000;
+  numOutputs=2;
+  numToSelect=20;
+  beginIteration=100;
+  endIteration=1100;
+  learningRateMultiplier=1.0;
+  useBias=true;
+  mu=20.0;
+
+  Parameters {
+    size = [ $numOutputs, $numInputs ];
+    learnable=true;
+    initType="gaussian";
+    mu=0.0;
+    sigma=1.0;
+    learningRateMultiplier=$learningRateMultiplier;
+  } fsaWeights;
+
+  Parameters {
+    size = [ $numOutputs ];
+    learnable=$useBias;
+    learningRateMultiplier=$learningRateMultiplier;
+  } fsaBias;
+
+  Parameters {
+    size = [ $numOutputs, $numInputs ];
+    learnable=false;
+    saveOutputs=true;
+    initType="fill";
+    fill=1;
+  } fsaIndicators;
+
+  FeatureSelectionAnnealing {
+    scheduleType="inverse";
+    mu=$mu;
+    beginIteration=$beginIteration;
+    endIteration=$endIteration;
+    numFeatures=$numToSelect;
+  } fsa;
+
+  this.inData -> fsa.inData;
+  fsaWeights.outData -> fsa.inWeights;
+  fsaBias.outData -> fsa.inBias;
+  fsaIndicators.outData -> fsa.inIndicators;
+
+  fsa.outData -> this.outData;
+  fsa.outSelectedData -> this.outSelectedData;
+};
+

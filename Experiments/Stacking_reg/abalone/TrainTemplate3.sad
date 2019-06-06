@@ -1,0 +1,92 @@
+numInputs=8;
+numFeatures=100;
+numTrees1=100;
+treeDepth1=5;
+numTrees2=$numTrees1 / 2;
+treeDepth2=5;
+numTrees3=$numTrees2 / 2;
+treeDepth3=5;
+
+include "../../SGFerns.sad"
+include "../../SGInnerProduct.sad"
+
+# Data vertex definition. Add this to your sad graph and adjust accordingly.
+DatabaseReader {
+        databaseType = "LMDB";
+        databasePath = "../../../../Data/abalone_reg/" + $dataBaseName + ".lmdb";
+        size = [ 50, $numInputs ];
+        labelIndex = 8;
+} trainData;
+
+##### Parameters #####
+
+##### End parameters #####
+
+##### Operations #####
+
+SGInnerProduct {
+  numInputs=$numInputs;
+  numOutputs=$numFeatures;
+  learningRateMultiplier=$learningRateMultiplier;
+} features;
+
+SGFerns {
+  numInputs=$numFeatures;
+  numTrees=$numTrees1;
+  treeDepth=$treeDepth1;
+  learningRateMultiplier=$learningRateMultiplier;
+} ferns1;
+
+SGInnerProduct {
+  numInputs=$numTrees1;
+  numOutputs=$numTrees1;
+  learningRateMultiplier=$learningRateMultiplier;
+} fernsAgg1;
+
+SGFerns {
+  numInputs=$numTrees1;
+  numTrees=$numTrees2;
+  treeDepth=$treeDepth2;
+  learningRateMultiplier=$learningRateMultiplier;
+} ferns2;
+
+SGInnerProduct {
+  numInputs=$numTrees2;
+  numOutputs=$numTrees2;
+  learningRateMultiplier=$learningRateMultiplier;
+} fernsAgg2;
+
+SGFerns {
+  numInputs=$numTrees2;
+  numTrees=$numTrees3;
+  treeDepth=$treeDepth3;
+  learningRateMultiplier=$learningRateMultiplier;
+} ferns3;
+
+SGInnerProduct {
+  numInputs=$numTrees3;
+  numOutputs=1;
+  learningRateMultiplier=$learningRateMultiplier;
+} fernsAgg3;
+
+L2Loss fernsLoss;
+Residual { displayFrequency = 100; } res;
+
+##### End operations #####
+
+##### Connections #####
+
+trainData.outData -> features.inData;
+features.outData -> ferns1.inData;
+ferns1.outData -> fernsAgg1.inData;
+fernsAgg1.outData -> ferns2.inData;
+ferns2.outData -> fernsAgg2.inData;
+fernsAgg2.outData -> ferns3.inData;
+ferns3.outData -> fernsAgg3.inData;
+
+fernsAgg3.outData -> fernsLoss.inData;
+trainData.outLabels -> fernsLoss.inLabels;
+
+trainData.outLabels -> res.inLabels;
+fernsAgg3.outData -> res.inData;
+

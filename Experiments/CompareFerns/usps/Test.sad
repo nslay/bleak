@@ -1,0 +1,41 @@
+include "ConfigTest.sad"
+batchSize=1;
+
+include "SGFernsGraph.sad"
+
+DatabaseReader {
+        databaseType = "LMDB";
+        databasePath = $dataBasePath;
+        #size = [ $batchSize, $inputChannels, $inputHeight, $inputWidth ]; # Yes, this is intentionally C, H, W
+        size = [ $batchSize, $inputHeight * $inputWidth * $inputChannels ];
+        labelIndex = $labelIndex;
+} data;
+
+SGFernsGraph {
+  #inputWidth=$inputWidth;
+  #inputHeight=$inputHeight;
+  numInputs=$inputHeight * $inputWidth * $inputChannels;
+  #numClasses=$numClasses;
+  numOutputs=$numClasses;
+  treeDepth=$treeDepth;
+  numTrees=$numTrees;
+  learningRateMultiplier=$learningRateMultiplier;
+} graph;
+
+Accuracy { 
+  displayFrequency = 0; 
+  printConfusionMatrix = true;
+} acc;
+
+SoftmaxLoss loss;
+Average { displayFrequency = 0; } avgLoss;
+
+data.outData -> graph.inData;
+
+graph.outData -> loss.inData;
+data.outLabels -> loss.inLabels;
+
+graph.outData -> acc.inProbabilities;
+data.outLabels -> acc.inLabels;
+
+loss.outLoss -> avgLoss.inData;

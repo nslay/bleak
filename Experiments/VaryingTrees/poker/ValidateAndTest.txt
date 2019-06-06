@@ -1,0 +1,870 @@
+Info: Processing 100_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_1/Run1: Best validation loss = 0.867534, best weightsFile = bleak_40000
+100_1/Run1: Test accuracy = 0.617285
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_1/Run10: Best validation loss = 0.870777, best weightsFile = bleak_39000
+100_1/Run10: Test accuracy = 0.606932
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_1/Run2: Best validation loss = 0.853669, best weightsFile = bleak_38000
+100_1/Run2: Test accuracy = 0.626067
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_1/Run3: Best validation loss = 0.876025, best weightsFile = bleak_38000
+100_1/Run3: Test accuracy = 0.614371
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_1/Run4: Best validation loss = 0.899363, best weightsFile = bleak_38000
+100_1/Run4: Test accuracy = 0.606244
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_1/Run5: Best validation loss = 0.848667, best weightsFile = bleak_40000
+100_1/Run5: Test accuracy = 0.637706
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_1/Run6: Best validation loss = 0.85041, best weightsFile = bleak_38000
+100_1/Run6: Test accuracy = 0.625371
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_1/Run7: Best validation loss = 0.833362, best weightsFile = bleak_38000
+100_1/Run7: Test accuracy = 0.639902
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_1/Run8: Best validation loss = 0.886922, best weightsFile = bleak_40000
+100_1/Run8: Test accuracy = 0.604877
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_1/Run9: Best validation loss = 0.834557, best weightsFile = bleak_40000
+100_1/Run9: Test accuracy = 0.641667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 100_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_10/Run1: Best validation loss = 0.952553, best weightsFile = bleak_1000
+100_10/Run1: Test accuracy = 0.558006
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_10/Run10: Best validation loss = 0.949741, best weightsFile = bleak_1000
+100_10/Run10: Test accuracy = 0.558849
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_10/Run2: Best validation loss = 0.947385, best weightsFile = bleak_1000
+100_10/Run2: Test accuracy = 0.558842
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_10/Run3: Best validation loss = 0.954176, best weightsFile = bleak_1500
+100_10/Run3: Test accuracy = 0.555669
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_10/Run4: Best validation loss = 0.94903, best weightsFile = bleak_1500
+100_10/Run4: Test accuracy = 0.557375
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_10/Run5: Best validation loss = 0.956655, best weightsFile = bleak_1000
+100_10/Run5: Test accuracy = 0.557102
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_10/Run6: Best validation loss = 0.951427, best weightsFile = bleak_1000
+100_10/Run6: Test accuracy = 0.557967
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_10/Run7: Best validation loss = 0.945867, best weightsFile = bleak_1000
+100_10/Run7: Test accuracy = 0.560346
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_10/Run8: Best validation loss = 0.949889, best weightsFile = bleak_1500
+100_10/Run8: Test accuracy = 0.555969
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_10/Run9: Best validation loss = 0.944841, best weightsFile = bleak_1500
+100_10/Run9: Test accuracy = 0.560138
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 100_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_3/Run1: Best validation loss = 0.838516, best weightsFile = bleak_16000
+100_3/Run1: Test accuracy = 0.624645
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_3/Run10: Best validation loss = 0.731407, best weightsFile = bleak_38000
+100_3/Run10: Test accuracy = 0.68836
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_3/Run2: Best validation loss = 0.823243, best weightsFile = bleak_29500
+100_3/Run2: Test accuracy = 0.645899
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_3/Run3: Best validation loss = 0.836031, best weightsFile = bleak_22500
+100_3/Run3: Test accuracy = 0.642796
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_3/Run4: Best validation loss = 0.806373, best weightsFile = bleak_40000
+100_3/Run4: Test accuracy = 0.666881
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_3/Run5: Best validation loss = 0.879272, best weightsFile = bleak_23500
+100_3/Run5: Test accuracy = 0.619205
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_3/Run6: Best validation loss = 0.83218, best weightsFile = bleak_39000
+100_3/Run6: Test accuracy = 0.641364
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_3/Run7: Best validation loss = 0.889064, best weightsFile = bleak_35500
+100_3/Run7: Test accuracy = 0.616086
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_3/Run8: Best validation loss = 0.905735, best weightsFile = bleak_12500
+100_3/Run8: Test accuracy = 0.58951
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_3/Run9: Best validation loss = 0.76959, best weightsFile = bleak_39000
+100_3/Run9: Test accuracy = 0.678045
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 100_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 77: [: : integer expression expected
+100_5/Run1: Best validation loss = 0.939104, best weightsFile = bleak_3500
+100_5/Run1: Test accuracy = 0.57156
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_5/Run10: Best validation loss = 0.86895, best weightsFile = bleak_26000
+100_5/Run10: Test accuracy = 0.631291
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_5/Run2: Best validation loss = 0.910768, best weightsFile = bleak_7000
+100_5/Run2: Test accuracy = 0.589123
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_5/Run3: Best validation loss = 0.94376, best weightsFile = bleak_3500
+100_5/Run3: Test accuracy = 0.563468
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_5/Run4: Best validation loss = 0.935698, best weightsFile = bleak_2500
+100_5/Run4: Test accuracy = 0.563242
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_5/Run5: Best validation loss = 0.854194, best weightsFile = bleak_37000
+100_5/Run5: Test accuracy = 0.669485
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_5/Run6: Best validation loss = 0.900243, best weightsFile = bleak_3500
+100_5/Run6: Test accuracy = 0.59271
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_5/Run7: Best validation loss = 0.9263, best weightsFile = bleak_10500
+100_5/Run7: Test accuracy = 0.58915
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_5/Run8: Best validation loss = 0.944001, best weightsFile = bleak_1500
+100_5/Run8: Test accuracy = 0.558839
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_5/Run9: Best validation loss = 0.949633, best weightsFile = bleak_2500
+100_5/Run9: Test accuracy = 0.56177
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 100_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_7/Run1: Best validation loss = 0.946408, best weightsFile = bleak_1000
+100_7/Run1: Test accuracy = 0.559522
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_7/Run10: Best validation loss = 0.889944, best weightsFile = bleak_9500
+100_7/Run10: Test accuracy = 0.621655
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_7/Run2: Best validation loss = 0.936505, best weightsFile = bleak_1500
+100_7/Run2: Test accuracy = 0.560883
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_7/Run3: Best validation loss = 0.936825, best weightsFile = bleak_3500
+100_7/Run3: Test accuracy = 0.573087
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_7/Run4: Best validation loss = 0.942374, best weightsFile = bleak_1500
+100_7/Run4: Test accuracy = 0.561038
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_7/Run5: Best validation loss = 0.941928, best weightsFile = bleak_1500
+100_7/Run5: Test accuracy = 0.557488
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_7/Run6: Best validation loss = 0.945538, best weightsFile = bleak_1500
+100_7/Run6: Test accuracy = 0.557967
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_7/Run7: Best validation loss = 0.945325, best weightsFile = bleak_1500
+100_7/Run7: Test accuracy = 0.55915
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_7/Run8: Best validation loss = 0.949886, best weightsFile = bleak_1500
+100_7/Run8: Test accuracy = 0.557505
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+100_7/Run9: Best validation loss = 0.943131, best weightsFile = bleak_1500
+100_7/Run9: Test accuracy = 0.559405
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 10_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_1/Run1: Best validation loss = 0.949795, best weightsFile = bleak_6500
+10_1/Run1: Test accuracy = 0.544163
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_1/Run10: Best validation loss = 0.941667, best weightsFile = bleak_36500
+10_1/Run10: Test accuracy = 0.552417
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_1/Run2: Best validation loss = 0.938769, best weightsFile = bleak_38000
+10_1/Run2: Test accuracy = 0.553267
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_1/Run3: Best validation loss = 0.926971, best weightsFile = bleak_40000
+10_1/Run3: Test accuracy = 0.568547
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_1/Run4: Best validation loss = 0.943102, best weightsFile = bleak_39000
+10_1/Run4: Test accuracy = 0.551703
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_1/Run5: Best validation loss = 0.936753, best weightsFile = bleak_36500
+10_1/Run5: Test accuracy = 0.5531
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_1/Run6: Best validation loss = 0.9426, best weightsFile = bleak_38000
+10_1/Run6: Test accuracy = 0.552634
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_1/Run7: Best validation loss = 0.937378, best weightsFile = bleak_33000
+10_1/Run7: Test accuracy = 0.558698
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_1/Run8: Best validation loss = 0.948283, best weightsFile = bleak_40000
+10_1/Run8: Test accuracy = 0.547051
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_1/Run9: Best validation loss = 0.94169, best weightsFile = bleak_40000
+10_1/Run9: Test accuracy = 0.553751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 10_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_10/Run1: Best validation loss = 0.946076, best weightsFile = bleak_4000
+10_10/Run1: Test accuracy = 0.554079
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_10/Run10: Best validation loss = 0.938809, best weightsFile = bleak_3500
+10_10/Run10: Test accuracy = 0.554143
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_10/Run2: Best validation loss = 0.946665, best weightsFile = bleak_4000
+10_10/Run2: Test accuracy = 0.555296
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 77: [: : integer expression expected
+10_10/Run3: Best validation loss = 0.945025, best weightsFile = bleak_3500
+10_10/Run3: Test accuracy = 0.55658
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_10/Run4: Best validation loss = 0.93777, best weightsFile = bleak_39000
+10_10/Run4: Test accuracy = 0.573059
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_10/Run5: Best validation loss = 0.939315, best weightsFile = bleak_7000
+10_10/Run5: Test accuracy = 0.560812
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_10/Run6: Best validation loss = 0.946562, best weightsFile = bleak_4000
+10_10/Run6: Test accuracy = 0.554179
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_10/Run7: Best validation loss = 0.937455, best weightsFile = bleak_6000
+10_10/Run7: Test accuracy = 0.553938
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_10/Run8: Best validation loss = 0.945666, best weightsFile = bleak_4000
+10_10/Run8: Test accuracy = 0.552009
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_10/Run9: Best validation loss = 0.945917, best weightsFile = bleak_4000
+10_10/Run9: Test accuracy = 0.551567
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 10_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_3/Run1: Best validation loss = 0.84982, best weightsFile = bleak_38000
+10_3/Run1: Test accuracy = 0.61464
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_3/Run10: Best validation loss = 0.784592, best weightsFile = bleak_40000
+10_3/Run10: Test accuracy = 0.656288
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_3/Run2: Best validation loss = 0.912634, best weightsFile = bleak_35500
+10_3/Run2: Test accuracy = 0.581287
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_3/Run3: Best validation loss = 0.859288, best weightsFile = bleak_39000
+10_3/Run3: Test accuracy = 0.611569
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_3/Run4: Best validation loss = 0.928209, best weightsFile = bleak_36500
+10_3/Run4: Test accuracy = 0.564939
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_3/Run5: Best validation loss = 0.889827, best weightsFile = bleak_38000
+10_3/Run5: Test accuracy = 0.584486
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_3/Run6: Best validation loss = 0.923146, best weightsFile = bleak_40000
+10_3/Run6: Test accuracy = 0.564941
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_3/Run7: Best validation loss = 0.919427, best weightsFile = bleak_33000
+10_3/Run7: Test accuracy = 0.571706
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_3/Run8: Best validation loss = 0.923266, best weightsFile = bleak_35500
+10_3/Run8: Test accuracy = 0.575007
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_3/Run9: Best validation loss = 0.859682, best weightsFile = bleak_38000
+10_3/Run9: Test accuracy = 0.607866
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 10_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_5/Run1: Best validation loss = 0.917082, best weightsFile = bleak_34000
+10_5/Run1: Test accuracy = 0.575404
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_5/Run10: Best validation loss = 0.924364, best weightsFile = bleak_38000
+10_5/Run10: Test accuracy = 0.574022
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_5/Run2: Best validation loss = 0.834423, best weightsFile = bleak_39000
+10_5/Run2: Test accuracy = 0.627572
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_5/Run3: Best validation loss = 0.882766, best weightsFile = bleak_38500
+10_5/Run3: Test accuracy = 0.601983
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_5/Run4: Best validation loss = 0.939026, best weightsFile = bleak_39000
+10_5/Run4: Test accuracy = 0.557479
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_5/Run5: Best validation loss = 0.917913, best weightsFile = bleak_40000
+10_5/Run5: Test accuracy = 0.580901
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_5/Run6: Best validation loss = 0.913202, best weightsFile = bleak_38000
+10_5/Run6: Test accuracy = 0.578987
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_5/Run7: Best validation loss = 0.856412, best weightsFile = bleak_40000
+10_5/Run7: Test accuracy = 0.611948
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_5/Run8: Best validation loss = 0.859415, best weightsFile = bleak_39000
+10_5/Run8: Test accuracy = 0.607959
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_5/Run9: Best validation loss = 0.927275, best weightsFile = bleak_27000
+10_5/Run9: Test accuracy = 0.565529
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 10_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_7/Run1: Best validation loss = 0.910097, best weightsFile = bleak_17500
+10_7/Run1: Test accuracy = 0.582996
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_7/Run10: Best validation loss = 0.856321, best weightsFile = bleak_36500
+10_7/Run10: Test accuracy = 0.608613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_7/Run2: Best validation loss = 0.939837, best weightsFile = bleak_16000
+10_7/Run2: Test accuracy = 0.554781
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_7/Run3: Best validation loss = 0.936376, best weightsFile = bleak_9000
+10_7/Run3: Test accuracy = 0.559157
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_7/Run4: Best validation loss = 0.893911, best weightsFile = bleak_38000
+10_7/Run4: Test accuracy = 0.59533
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_7/Run5: Best validation loss = 0.937482, best weightsFile = bleak_12500
+10_7/Run5: Test accuracy = 0.561196
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_7/Run6: Best validation loss = 0.946246, best weightsFile = bleak_6500
+10_7/Run6: Test accuracy = 0.552114
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_7/Run7: Best validation loss = 0.949685, best weightsFile = bleak_2500
+10_7/Run7: Test accuracy = 0.546759
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_7/Run8: Best validation loss = 0.945844, best weightsFile = bleak_6500
+10_7/Run8: Test accuracy = 0.558004
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+10_7/Run9: Best validation loss = 0.904904, best weightsFile = bleak_16500
+10_7/Run9: Test accuracy = 0.587359
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 1_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_1/Run1: Best validation loss = 0.980848, best weightsFile = bleak_23000
+1_1/Run1: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_1/Run10: Best validation loss = 0.980801, best weightsFile = bleak_23000
+1_1/Run10: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_1/Run2: Best validation loss = 0.980999, best weightsFile = bleak_14500
+1_1/Run2: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_1/Run3: Best validation loss = 0.974885, best weightsFile = bleak_37500
+1_1/Run3: Test accuracy = 0.525374
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_1/Run4: Best validation loss = 0.973679, best weightsFile = bleak_37500
+1_1/Run4: Test accuracy = 0.526198
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_1/Run5: Best validation loss = 0.98113, best weightsFile = bleak_6000
+1_1/Run5: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_1/Run6: Best validation loss = 0.981112, best weightsFile = bleak_14500
+1_1/Run6: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_1/Run7: Best validation loss = 0.98104, best weightsFile = bleak_23000
+1_1/Run7: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_1/Run8: Best validation loss = 0.980701, best weightsFile = bleak_23000
+1_1/Run8: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_1/Run9: Best validation loss = 0.981209, best weightsFile = bleak_14500
+1_1/Run9: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 1_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_10/Run1: Best validation loss = 0.949602, best weightsFile = bleak_13500
+1_10/Run1: Test accuracy = 0.543007
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_10/Run10: Best validation loss = 0.949118, best weightsFile = bleak_33500
+1_10/Run10: Test accuracy = 0.543559
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_10/Run2: Best validation loss = 0.949012, best weightsFile = bleak_23000
+1_10/Run2: Test accuracy = 0.544455
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_10/Run3: Best validation loss = 0.951732, best weightsFile = bleak_11500
+1_10/Run3: Test accuracy = 0.542179
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_10/Run4: Best validation loss = 0.950371, best weightsFile = bleak_13500
+1_10/Run4: Test accuracy = 0.54344
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_10/Run5: Best validation loss = 0.956613, best weightsFile = bleak_6500
+1_10/Run5: Test accuracy = 0.54014
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_10/Run6: Best validation loss = 0.949414, best weightsFile = bleak_28500
+1_10/Run6: Test accuracy = 0.543356
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_10/Run7: Best validation loss = 0.950624, best weightsFile = bleak_22000
+1_10/Run7: Test accuracy = 0.542762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_10/Run8: Best validation loss = 0.94983, best weightsFile = bleak_13500
+1_10/Run8: Test accuracy = 0.54624
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_10/Run9: Best validation loss = 0.949494, best weightsFile = bleak_22500
+1_10/Run9: Test accuracy = 0.544086
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 1_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_3/Run1: Best validation loss = 0.952612, best weightsFile = bleak_40000
+1_3/Run1: Test accuracy = 0.541405
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_3/Run10: Best validation loss = 0.948715, best weightsFile = bleak_36500
+1_3/Run10: Test accuracy = 0.543481
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_3/Run2: Best validation loss = 0.949614, best weightsFile = bleak_40000
+1_3/Run2: Test accuracy = 0.542557
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_3/Run3: Best validation loss = 0.948452, best weightsFile = bleak_34000
+1_3/Run3: Test accuracy = 0.544527
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_3/Run4: Best validation loss = 0.948839, best weightsFile = bleak_34000
+1_3/Run4: Test accuracy = 0.543782
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_3/Run5: Best validation loss = 0.948825, best weightsFile = bleak_31000
+1_3/Run5: Test accuracy = 0.543764
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_3/Run6: Best validation loss = 0.948358, best weightsFile = bleak_30500
+1_3/Run6: Test accuracy = 0.543861
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_3/Run7: Best validation loss = 0.948755, best weightsFile = bleak_34000
+1_3/Run7: Test accuracy = 0.543899
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_3/Run8: Best validation loss = 0.951492, best weightsFile = bleak_40000
+1_3/Run8: Test accuracy = 0.541416
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_3/Run9: Best validation loss = 0.947949, best weightsFile = bleak_36500
+1_3/Run9: Test accuracy = 0.543922
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 1_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_5/Run1: Best validation loss = 0.952803, best weightsFile = bleak_39000
+1_5/Run1: Test accuracy = 0.536793
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_5/Run10: Best validation loss = 0.949799, best weightsFile = bleak_36500
+1_5/Run10: Test accuracy = 0.543347
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_5/Run2: Best validation loss = 0.948644, best weightsFile = bleak_36500
+1_5/Run2: Test accuracy = 0.543606
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_5/Run3: Best validation loss = 0.948587, best weightsFile = bleak_34000
+1_5/Run3: Test accuracy = 0.544526
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_5/Run4: Best validation loss = 0.9518, best weightsFile = bleak_8500
+1_5/Run4: Test accuracy = 0.541394
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_5/Run5: Best validation loss = 0.948728, best weightsFile = bleak_36500
+1_5/Run5: Test accuracy = 0.543267
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_5/Run6: Best validation loss = 0.9511, best weightsFile = bleak_29000
+1_5/Run6: Test accuracy = 0.54255
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_5/Run7: Best validation loss = 0.949416, best weightsFile = bleak_28500
+1_5/Run7: Test accuracy = 0.543643
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_5/Run8: Best validation loss = 0.948313, best weightsFile = bleak_22000
+1_5/Run8: Test accuracy = 0.543013
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_5/Run9: Best validation loss = 0.952129, best weightsFile = bleak_39000
+1_5/Run9: Test accuracy = 0.5386
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 1_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_7/Run1: Best validation loss = 0.948293, best weightsFile = bleak_24500
+1_7/Run1: Test accuracy = 0.544121
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_7/Run10: Best validation loss = 0.947893, best weightsFile = bleak_34000
+1_7/Run10: Test accuracy = 0.544989
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_7/Run2: Best validation loss = 0.948611, best weightsFile = bleak_34000
+1_7/Run2: Test accuracy = 0.544299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_7/Run3: Best validation loss = 0.952034, best weightsFile = bleak_40000
+1_7/Run3: Test accuracy = 0.54158
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_7/Run4: Best validation loss = 0.949435, best weightsFile = bleak_34000
+1_7/Run4: Test accuracy = 0.543251
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_7/Run5: Best validation loss = 0.944932, best weightsFile = bleak_33000
+1_7/Run5: Test accuracy = 0.575469
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_7/Run6: Best validation loss = 0.948848, best weightsFile = bleak_13500
+1_7/Run6: Test accuracy = 0.544146
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_7/Run7: Best validation loss = 0.95201, best weightsFile = bleak_39000
+1_7/Run7: Test accuracy = 0.540308
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_7/Run8: Best validation loss = 0.951955, best weightsFile = bleak_5500
+1_7/Run8: Test accuracy = 0.541349
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+1_7/Run9: Best validation loss = 0.948024, best weightsFile = bleak_18500
+1_7/Run9: Test accuracy = 0.544625
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 50_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_1/Run1: Best validation loss = 0.879493, best weightsFile = bleak_40000
+50_1/Run1: Test accuracy = 0.602975
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_1/Run10: Best validation loss = 0.852161, best weightsFile = bleak_40000
+50_1/Run10: Test accuracy = 0.618133
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_1/Run2: Best validation loss = 0.848736, best weightsFile = bleak_40000
+50_1/Run2: Test accuracy = 0.620727
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_1/Run3: Best validation loss = 0.885979, best weightsFile = bleak_38000
+50_1/Run3: Test accuracy = 0.602696
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_1/Run4: Best validation loss = 0.834895, best weightsFile = bleak_40000
+50_1/Run4: Test accuracy = 0.635365
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_1/Run5: Best validation loss = 0.878531, best weightsFile = bleak_40000
+50_1/Run5: Test accuracy = 0.613939
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_1/Run6: Best validation loss = 0.890768, best weightsFile = bleak_38000
+50_1/Run6: Test accuracy = 0.59693
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_1/Run7: Best validation loss = 0.840203, best weightsFile = bleak_38000
+50_1/Run7: Test accuracy = 0.639827
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_1/Run8: Best validation loss = 0.913883, best weightsFile = bleak_38000
+50_1/Run8: Test accuracy = 0.575747
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_1/Run9: Best validation loss = 0.877586, best weightsFile = bleak_38000
+50_1/Run9: Test accuracy = 0.605634
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 50_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_10/Run1: Best validation loss = 0.943795, best weightsFile = bleak_1000
+50_10/Run1: Test accuracy = 0.557759
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+data: Error: Could not open database '../../../../Data/poker/poker_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 77: [: : integer expression expected
+50_10/Run10: Best validation loss = 0.943682, best weightsFile = bleak_1000
+50_10/Run10: Test accuracy = 0.558141
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_10/Run2: Best validation loss = 0.94137, best weightsFile = bleak_1500
+50_10/Run2: Test accuracy = 0.55977
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_10/Run3: Best validation loss = 0.94141, best weightsFile = bleak_1500
+50_10/Run3: Test accuracy = 0.558871
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_10/Run4: Best validation loss = 0.945636, best weightsFile = bleak_1500
+50_10/Run4: Test accuracy = 0.55952
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_10/Run5: Best validation loss = 0.9433, best weightsFile = bleak_1500
+50_10/Run5: Test accuracy = 0.556513
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_10/Run6: Best validation loss = 0.949166, best weightsFile = bleak_1000
+50_10/Run6: Test accuracy = 0.554451
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_10/Run7: Best validation loss = 0.947659, best weightsFile = bleak_1500
+50_10/Run7: Test accuracy = 0.556473
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_10/Run8: Best validation loss = 0.944256, best weightsFile = bleak_1500
+50_10/Run8: Test accuracy = 0.560623
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_10/Run9: Best validation loss = 0.948322, best weightsFile = bleak_1000
+50_10/Run9: Test accuracy = 0.554382
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 50_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_3/Run1: Best validation loss = 0.882973, best weightsFile = bleak_15000
+50_3/Run1: Test accuracy = 0.607116
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_3/Run10: Best validation loss = 0.778118, best weightsFile = bleak_40000
+50_3/Run10: Test accuracy = 0.66082
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_3/Run2: Best validation loss = 0.779847, best weightsFile = bleak_38000
+50_3/Run2: Test accuracy = 0.660443
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_3/Run3: Best validation loss = 0.705266, best weightsFile = bleak_40000
+50_3/Run3: Test accuracy = 0.70441
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_3/Run4: Best validation loss = 0.880511, best weightsFile = bleak_38000
+50_3/Run4: Test accuracy = 0.607288
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_3/Run5: Best validation loss = 0.786538, best weightsFile = bleak_35500
+50_3/Run5: Test accuracy = 0.657154
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_3/Run6: Best validation loss = 0.727259, best weightsFile = bleak_39000
+50_3/Run6: Test accuracy = 0.69306
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_3/Run7: Best validation loss = 0.763912, best weightsFile = bleak_40000
+50_3/Run7: Test accuracy = 0.677852
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_3/Run8: Best validation loss = 0.712675, best weightsFile = bleak_40000
+50_3/Run8: Test accuracy = 0.696881
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_3/Run9: Best validation loss = 0.542066, best weightsFile = bleak_38500
+50_3/Run9: Test accuracy = 0.770646
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 50_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_5/Run1: Best validation loss = 0.932609, best weightsFile = bleak_6500
+50_5/Run1: Test accuracy = 0.572109
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_5/Run10: Best validation loss = 0.80789, best weightsFile = bleak_20000
+50_5/Run10: Test accuracy = 0.645657
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_5/Run2: Best validation loss = 0.90741, best weightsFile = bleak_11500
+50_5/Run2: Test accuracy = 0.591451
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_5/Run3: Best validation loss = 0.803066, best weightsFile = bleak_27000
+50_5/Run3: Test accuracy = 0.65339
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_5/Run4: Best validation loss = 0.932476, best weightsFile = bleak_6500
+50_5/Run4: Test accuracy = 0.572909
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_5/Run5: Best validation loss = 0.737201, best weightsFile = bleak_36500
+50_5/Run5: Test accuracy = 0.690593
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_5/Run6: Best validation loss = 0.905398, best weightsFile = bleak_18500
+50_5/Run6: Test accuracy = 0.594526
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_5/Run7: Best validation loss = 0.874651, best weightsFile = bleak_13000
+50_5/Run7: Test accuracy = 0.60674
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_5/Run8: Best validation loss = 0.837468, best weightsFile = bleak_40000
+50_5/Run8: Test accuracy = 0.636716
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_5/Run9: Best validation loss = 0.806875, best weightsFile = bleak_35500
+50_5/Run9: Test accuracy = 0.65526
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+Info: Processing 50_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_7/Run1: Best validation loss = 0.947216, best weightsFile = bleak_1500
+50_7/Run1: Test accuracy = 0.556842
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_7/Run10: Best validation loss = 0.939264, best weightsFile = bleak_4000
+50_7/Run10: Test accuracy = 0.560034
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_7/Run2: Best validation loss = 0.880259, best weightsFile = bleak_35500
+50_7/Run2: Test accuracy = 0.636578
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_7/Run3: Best validation loss = 0.913588, best weightsFile = bleak_6500
+50_7/Run3: Test accuracy = 0.587729
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_7/Run4: Best validation loss = 0.941524, best weightsFile = bleak_3500
+50_7/Run4: Test accuracy = 0.563186
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_7/Run5: Best validation loss = 0.948308, best weightsFile = bleak_1500
+50_7/Run5: Test accuracy = 0.556245
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_7/Run6: Best validation loss = 0.945561, best weightsFile = bleak_2000
+50_7/Run6: Test accuracy = 0.559432
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_7/Run7: Best validation loss = 0.942731, best weightsFile = bleak_1000
+50_7/Run7: Test accuracy = 0.556358
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_7/Run8: Best validation loss = 0.940023, best weightsFile = bleak_1500
+50_7/Run8: Test accuracy = 0.55845
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+50_7/Run9: Best validation loss = 0.927423, best weightsFile = bleak_4000
+50_7/Run9: Test accuracy = 0.569988
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/poker

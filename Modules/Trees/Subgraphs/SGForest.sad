@@ -1,0 +1,47 @@
+subgraph SGForest {
+  numInputs=10;
+  treeDepth=5;
+  numTrees=100;
+  learningRateMultiplier=1.0;
+  
+  include "SGBatchNormalization.sad"
+  
+  Parameters {
+    size = [ $numTrees, 2^$treeDepth - 1 ];
+    learnable=false;
+    saveOutputs=true;
+  } ordinals;
+  
+  Parameters {
+    size = [ $numTrees, 2^$treeDepth - 1 ];
+    learnable=true;
+    initType="uniform";
+    a = -3;
+    b = 3;
+    #learningRateMultiplier=$learningRateMultiplier * $treeDepth;
+    learningRateMultiplier=$learningRateMultiplier;
+  } thresholds;
+  
+  Parameters {
+    size = [ $numTrees, 2^$treeDepth ];
+    learnable=true;  
+    learningRateMultiplier=$learningRateMultiplier;
+    initType="gaussian";
+    mu=0.0;
+    sigma=0.01;
+  } weights;
+  
+  SGBatchNormalization {
+    numInputs = $numInputs;
+  } batchNorm;
+  
+  RandomHingeForest forest;
+  
+  batchNorm.outData -> forest.inData;
+  ordinals.outData -> forest.inOrdinals;
+  thresholds.outData -> forest.inThresholds;
+  weights.outData -> forest.inWeights;
+  
+  this.inData -> batchNorm.inData;
+  forest.outData -> this.outData;
+};

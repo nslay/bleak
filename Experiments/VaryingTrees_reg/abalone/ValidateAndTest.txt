@@ -1,0 +1,860 @@
+Info: Processing 100_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_1/Run1: Best validation loss = 4.42058, best weightsFile = bleak_27500
+100_1/Run1: Test res = 4.03738, test R2 = 0.570289
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_1/Run10: Best validation loss = 4.50554, best weightsFile = bleak_16500
+100_1/Run10: Test res = 4.17915, test R2 = 0.5552
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_1/Run2: Best validation loss = 4.32149, best weightsFile = bleak_15000
+100_1/Run2: Test res = 4.00043, test R2 = 0.574222
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_1/Run3: Best validation loss = 4.49079, best weightsFile = bleak_15000
+100_1/Run3: Test res = 4.12085, test R2 = 0.561406
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_1/Run4: Best validation loss = 4.36382, best weightsFile = bleak_15000
+100_1/Run4: Test res = 4.02794, test R2 = 0.571295
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_1/Run5: Best validation loss = 4.34261, best weightsFile = bleak_34000
+100_1/Run5: Test res = 4.14478, test R2 = 0.558858
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_1/Run6: Best validation loss = 4.42256, best weightsFile = bleak_24500
+100_1/Run6: Test res = 4.03919, test R2 = 0.570097
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_1/Run7: Best validation loss = 4.4604, best weightsFile = bleak_16500
+100_1/Run7: Test res = 4.15072, test R2 = 0.558227
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_1/Run8: Best validation loss = 4.34816, best weightsFile = bleak_16500
+100_1/Run8: Test res = 3.99786, test R2 = 0.574496
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_1/Run9: Best validation loss = 4.3777, best weightsFile = bleak_15000
+100_1/Run9: Test res = 4.07269, test R2 = 0.566532
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 100_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_10/Run1: Best validation loss = 4.58042, best weightsFile = bleak_3500
+100_10/Run1: Test res = 4.4115, test R2 = 0.530471
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_10/Run10: Best validation loss = 4.69256, best weightsFile = bleak_4500
+100_10/Run10: Test res = 4.46918, test R2 = 0.524331
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_10/Run2: Best validation loss = 4.70147, best weightsFile = bleak_4500
+100_10/Run2: Test res = 4.30153, test R2 = 0.542176
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_10/Run3: Best validation loss = 4.74034, best weightsFile = bleak_2000
+100_10/Run3: Test res = 4.57146, test R2 = 0.513446
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_10/Run4: Best validation loss = 4.81517, best weightsFile = bleak_3500
+100_10/Run4: Test res = 4.42818, test R2 = 0.528695
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_10/Run5: Best validation loss = 4.67049, best weightsFile = bleak_2000
+100_10/Run5: Test res = 4.43311, test R2 = 0.528171
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_10/Run6: Best validation loss = 4.64767, best weightsFile = bleak_2000
+100_10/Run6: Test res = 4.36625, test R2 = 0.535287
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_10/Run7: Best validation loss = 4.79373, best weightsFile = bleak_1500
+100_10/Run7: Test res = 4.60409, test R2 = 0.509973
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_10/Run8: Best validation loss = 4.6048, best weightsFile = bleak_3500
+100_10/Run8: Test res = 4.33468, test R2 = 0.538647
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_10/Run9: Best validation loss = 4.79559, best weightsFile = bleak_2000
+100_10/Run9: Test res = 4.29914, test R2 = 0.54243
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 100_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_3/Run1: Best validation loss = 4.39937, best weightsFile = bleak_7000
+100_3/Run1: Test res = 4.13897, test R2 = 0.559477
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_3/Run10: Best validation loss = 4.50809, best weightsFile = bleak_11500
+100_3/Run10: Test res = 4.32437, test R2 = 0.539744
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_3/Run2: Best validation loss = 4.46018, best weightsFile = bleak_4500
+100_3/Run2: Test res = 4.15588, test R2 = 0.557678
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_3/Run3: Best validation loss = 4.52024, best weightsFile = bleak_4500
+100_3/Run3: Test res = 4.29349, test R2 = 0.543031
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_3/Run4: Best validation loss = 4.41485, best weightsFile = bleak_4500
+100_3/Run4: Test res = 4.11802, test R2 = 0.561707
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_3/Run5: Best validation loss = 4.40966, best weightsFile = bleak_4500
+100_3/Run5: Test res = 4.23814, test R2 = 0.548922
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_3/Run6: Best validation loss = 4.45642, best weightsFile = bleak_7000
+100_3/Run6: Test res = 4.06987, test R2 = 0.566832
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_3/Run7: Best validation loss = 4.48129, best weightsFile = bleak_7000
+100_3/Run7: Test res = 4.24409, test R2 = 0.548289
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_3/Run8: Best validation loss = 4.4603, best weightsFile = bleak_4500
+100_3/Run8: Test res = 4.22334, test R2 = 0.550497
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_3/Run9: Best validation loss = 4.41544, best weightsFile = bleak_7000
+100_3/Run9: Test res = 4.14953, test R2 = 0.558353
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 100_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_5/Run1: Best validation loss = 4.56242, best weightsFile = bleak_7000
+100_5/Run1: Test res = 4.27849, test R2 = 0.544627
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_5/Run10: Best validation loss = 4.48055, best weightsFile = bleak_8500
+100_5/Run10: Test res = 4.27289, test R2 = 0.545223
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_5/Run2: Best validation loss = 4.51291, best weightsFile = bleak_7000
+100_5/Run2: Test res = 4.35163, test R2 = 0.536843
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_5/Run3: Best validation loss = 4.61917, best weightsFile = bleak_4500
+100_5/Run3: Test res = 4.21409, test R2 = 0.551482
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_5/Run4: Best validation loss = 4.62057, best weightsFile = bleak_7000
+100_5/Run4: Test res = 4.3004, test R2 = 0.542296
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_5/Run5: Best validation loss = 4.4535, best weightsFile = bleak_4500
+100_5/Run5: Test res = 4.22177, test R2 = 0.550665
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_5/Run6: Best validation loss = 4.52195, best weightsFile = bleak_8500
+100_5/Run6: Test res = 4.28442, test R2 = 0.543997
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_5/Run7: Best validation loss = 4.4717, best weightsFile = bleak_7000
+100_5/Run7: Test res = 4.31768, test R2 = 0.540457
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_5/Run8: Best validation loss = 4.63874, best weightsFile = bleak_2000
+100_5/Run8: Test res = 4.29308, test R2 = 0.543075
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_5/Run9: Best validation loss = 4.63908, best weightsFile = bleak_4500
+100_5/Run9: Test res = 4.31172, test R2 = 0.54109
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 100_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_7/Run1: Best validation loss = 4.50902, best weightsFile = bleak_4500
+100_7/Run1: Test res = 4.2522, test R2 = 0.547425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_7/Run10: Best validation loss = 4.65056, best weightsFile = bleak_7000
+100_7/Run10: Test res = 4.483, test R2 = 0.522861
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_7/Run2: Best validation loss = 4.65192, best weightsFile = bleak_3500
+100_7/Run2: Test res = 4.40394, test R2 = 0.531275
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_7/Run3: Best validation loss = 4.59389, best weightsFile = bleak_4500
+100_7/Run3: Test res = 4.32707, test R2 = 0.539457
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_7/Run4: Best validation loss = 4.62079, best weightsFile = bleak_5500
+100_7/Run4: Test res = 4.24183, test R2 = 0.548529
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_7/Run5: Best validation loss = 4.63648, best weightsFile = bleak_3500
+100_7/Run5: Test res = 4.30685, test R2 = 0.54161
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_7/Run6: Best validation loss = 4.71099, best weightsFile = bleak_2000
+100_7/Run6: Test res = 4.34202, test R2 = 0.537866
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_7/Run7: Best validation loss = 4.54375, best weightsFile = bleak_4500
+100_7/Run7: Test res = 4.30898, test R2 = 0.541383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_7/Run8: Best validation loss = 4.68331, best weightsFile = bleak_2000
+100_7/Run8: Test res = 4.33049, test R2 = 0.539094
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+100_7/Run9: Best validation loss = 4.68825, best weightsFile = bleak_4500
+100_7/Run9: Test res = 4.31694, test R2 = 0.540535
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 10_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_1/Run1: Best validation loss = 4.80247, best weightsFile = bleak_40000
+10_1/Run1: Test res = 4.54287, test R2 = 0.516489
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_1/Run10: Best validation loss = 4.79139, best weightsFile = bleak_40000
+10_1/Run10: Test res = 4.59326, test R2 = 0.511125
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_1/Run2: Best validation loss = 4.73702, best weightsFile = bleak_40000
+10_1/Run2: Test res = 4.64401, test R2 = 0.505725
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_1/Run3: Best validation loss = 4.58254, best weightsFile = bleak_40000
+10_1/Run3: Test res = 4.45154, test R2 = 0.52621
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_1/Run4: Best validation loss = 4.67896, best weightsFile = bleak_40000
+10_1/Run4: Test res = 4.51133, test R2 = 0.519846
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_1/Run5: Best validation loss = 4.35689, best weightsFile = bleak_38500
+10_1/Run5: Test res = 4.23669, test R2 = 0.549076
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_1/Run6: Best validation loss = 4.57614, best weightsFile = bleak_40000
+10_1/Run6: Test res = 4.44908, test R2 = 0.526471
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_1/Run7: Best validation loss = 4.88952, best weightsFile = bleak_40000
+10_1/Run7: Test res = 4.66894, test R2 = 0.503071
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_1/Run8: Best validation loss = 4.48326, best weightsFile = bleak_40000
+10_1/Run8: Test res = 4.33631, test R2 = 0.538473
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_1/Run9: Best validation loss = 4.65695, best weightsFile = bleak_40000
+10_1/Run9: Test res = 4.48948, test R2 = 0.522171
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 10_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_10/Run1: Best validation loss = 4.48735, best weightsFile = bleak_34000
+10_10/Run1: Test res = 4.23535, test R2 = 0.549219
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_10/Run10: Best validation loss = 4.61321, best weightsFile = bleak_21000
+10_10/Run10: Test res = 4.31782, test R2 = 0.540442
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_10/Run2: Best validation loss = 4.50022, best weightsFile = bleak_37000
+10_10/Run2: Test res = 4.34334, test R2 = 0.537725
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_10/Run3: Best validation loss = 4.58883, best weightsFile = bleak_39000
+10_10/Run3: Test res = 4.34904, test R2 = 0.537118
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_10/Run4: Best validation loss = 4.46798, best weightsFile = bleak_40000
+10_10/Run4: Test res = 4.31066, test R2 = 0.541204
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_10/Run5: Best validation loss = 4.34704, best weightsFile = bleak_30500
+10_10/Run5: Test res = 4.14422, test R2 = 0.558919
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_10/Run6: Best validation loss = 4.63765, best weightsFile = bleak_11500
+10_10/Run6: Test res = 4.47081, test R2 = 0.524158
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_10/Run7: Best validation loss = 4.55695, best weightsFile = bleak_23000
+10_10/Run7: Test res = 4.22068, test R2 = 0.55078
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_10/Run8: Best validation loss = 4.59334, best weightsFile = bleak_27500
+10_10/Run8: Test res = 4.21687, test R2 = 0.551186
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_10/Run9: Best validation loss = 4.51821, best weightsFile = bleak_27000
+10_10/Run9: Test res = 4.30511, test R2 = 0.541795
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 10_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_3/Run1: Best validation loss = 4.56292, best weightsFile = bleak_18000
+10_3/Run1: Test res = 4.34316, test R2 = 0.537745
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_3/Run10: Best validation loss = 4.57426, best weightsFile = bleak_40000
+10_3/Run10: Test res = 4.44152, test R2 = 0.527276
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_3/Run2: Best validation loss = 4.58225, best weightsFile = bleak_39500
+10_3/Run2: Test res = 4.42781, test R2 = 0.528735
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_3/Run3: Best validation loss = 4.46956, best weightsFile = bleak_39000
+10_3/Run3: Test res = 4.36108, test R2 = 0.535837
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_3/Run4: Best validation loss = 4.45906, best weightsFile = bleak_39500
+10_3/Run4: Test res = 4.2481, test R2 = 0.547862
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_3/Run5: Best validation loss = 4.57661, best weightsFile = bleak_39000
+10_3/Run5: Test res = 4.3376, test R2 = 0.538337
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_3/Run6: Best validation loss = 4.50536, best weightsFile = bleak_40000
+10_3/Run6: Test res = 4.12647, test R2 = 0.560808
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_3/Run7: Best validation loss = 4.46606, best weightsFile = bleak_38500
+10_3/Run7: Test res = 4.20328, test R2 = 0.552632
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_3/Run8: Best validation loss = 4.56492, best weightsFile = bleak_40000
+10_3/Run8: Test res = 4.34003, test R2 = 0.538078
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_3/Run9: Best validation loss = 4.63692, best weightsFile = bleak_40000
+10_3/Run9: Test res = 4.40967, test R2 = 0.530666
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 10_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_5/Run1: Best validation loss = 4.53409, best weightsFile = bleak_13000
+10_5/Run1: Test res = 4.32238, test R2 = 0.539956
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_5/Run10: Best validation loss = 4.61211, best weightsFile = bleak_39500
+10_5/Run10: Test res = 4.25724, test R2 = 0.546889
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_5/Run2: Best validation loss = 4.57155, best weightsFile = bleak_18000
+10_5/Run2: Test res = 4.40747, test R2 = 0.5309
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_5/Run3: Best validation loss = 4.66755, best weightsFile = bleak_37000
+10_5/Run3: Test res = 4.25797, test R2 = 0.546811
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_5/Run4: Best validation loss = 4.46693, best weightsFile = bleak_22500
+10_5/Run4: Test res = 4.15792, test R2 = 0.557461
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_5/Run5: Best validation loss = 4.42263, best weightsFile = bleak_39500
+10_5/Run5: Test res = 4.16203, test R2 = 0.557023
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_5/Run6: Best validation loss = 4.54511, best weightsFile = bleak_37000
+10_5/Run6: Test res = 4.18912, test R2 = 0.55414
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_5/Run7: Best validation loss = 4.62504, best weightsFile = bleak_40000
+10_5/Run7: Test res = 4.45099, test R2 = 0.526267
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_5/Run8: Best validation loss = 4.44629, best weightsFile = bleak_39000
+10_5/Run8: Test res = 4.2233, test R2 = 0.550501
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_5/Run9: Best validation loss = 4.43628, best weightsFile = bleak_39500
+10_5/Run9: Test res = 4.19164, test R2 = 0.553871
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 10_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_7/Run1: Best validation loss = 4.63609, best weightsFile = bleak_38500
+10_7/Run1: Test res = 4.43048, test R2 = 0.528451
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_7/Run10: Best validation loss = 4.47823, best weightsFile = bleak_31000
+10_7/Run10: Test res = 4.13232, test R2 = 0.560185
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_7/Run2: Best validation loss = 4.5222, best weightsFile = bleak_39000
+10_7/Run2: Test res = 4.17056, test R2 = 0.556115
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_7/Run3: Best validation loss = 4.55021, best weightsFile = bleak_29000
+10_7/Run3: Test res = 4.28923, test R2 = 0.543485
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_7/Run4: Best validation loss = 4.54604, best weightsFile = bleak_37000
+10_7/Run4: Test res = 4.19764, test R2 = 0.553232
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_7/Run5: Best validation loss = 4.58726, best weightsFile = bleak_39000
+10_7/Run5: Test res = 4.30401, test R2 = 0.541911
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_7/Run6: Best validation loss = 4.62655, best weightsFile = bleak_39000
+10_7/Run6: Test res = 4.45975, test R2 = 0.525336
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_7/Run7: Best validation loss = 4.5426, best weightsFile = bleak_30500
+10_7/Run7: Test res = 4.26413, test R2 = 0.546156
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_7/Run8: Best validation loss = 4.67091, best weightsFile = bleak_37000
+10_7/Run8: Test res = 4.13656, test R2 = 0.559734
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+10_7/Run9: Best validation loss = 4.53336, best weightsFile = bleak_39000
+10_7/Run9: Test res = 4.15236, test R2 = 0.558052
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 1_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_1/Run1: Best validation loss = 6.72408, best weightsFile = bleak_40000
+1_1/Run1: Test res = 6.20261, test R2 = 0.339837
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_1/Run10: Best validation loss = 5.47043, best weightsFile = bleak_40000
+1_1/Run10: Test res = 5.14675, test R2 = 0.452216
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_1/Run2: Best validation loss = 7.10505, best weightsFile = bleak_39500
+1_1/Run2: Test res = 6.52925, test R2 = 0.305072
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_1/Run3: Best validation loss = 7.75164, best weightsFile = bleak_39500
+1_1/Run3: Test res = 7.12684, test R2 = 0.24147
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_1/Run4: Best validation loss = 7.06519, best weightsFile = bleak_40000
+1_1/Run4: Test res = 6.55584, test R2 = 0.302243
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_1/Run5: Best validation loss = 7.08818, best weightsFile = bleak_39500
+1_1/Run5: Test res = 6.52486, test R2 = 0.305539
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_1/Run6: Best validation loss = 7.09855, best weightsFile = bleak_39500
+1_1/Run6: Test res = 6.55541, test R2 = 0.302288
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_1/Run7: Best validation loss = 7.07779, best weightsFile = bleak_39500
+1_1/Run7: Test res = 6.67262, test R2 = 0.289814
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_1/Run8: Best validation loss = 7.30522, best weightsFile = bleak_39500
+1_1/Run8: Test res = 6.8052, test R2 = 0.275702
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_1/Run9: Best validation loss = 7.26652, best weightsFile = bleak_39500
+1_1/Run9: Test res = 6.74387, test R2 = 0.282229
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 1_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_10/Run1: Best validation loss = 5.57564, best weightsFile = bleak_39500
+1_10/Run1: Test res = 5.36792, test R2 = 0.428677
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_10/Run10: Best validation loss = 5.51239, best weightsFile = bleak_39500
+1_10/Run10: Test res = 5.50676, test R2 = 0.413899
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_10/Run2: Best validation loss = 12.2826, best weightsFile = bleak_40000
+1_10/Run2: Test res = 11.1273, test R2 = -0.184307
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_10/Run3: Best validation loss = 7.40308, best weightsFile = bleak_29000
+1_10/Run3: Test res = 7.33738, test R2 = 0.219061
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_10/Run4: Best validation loss = 6.23806, best weightsFile = bleak_39000
+1_10/Run4: Test res = 5.70312, test R2 = 0.393
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_10/Run5: Best validation loss = 5.76395, best weightsFile = bleak_39000
+1_10/Run5: Test res = 5.30425, test R2 = 0.435453
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_10/Run6: Best validation loss = 6.15737, best weightsFile = bleak_39500
+1_10/Run6: Test res = 6.02551, test R2 = 0.358687
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_10/Run7: Best validation loss = 6.53507, best weightsFile = bleak_39500
+1_10/Run7: Test res = 6.09138, test R2 = 0.351677
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_10/Run8: Best validation loss = 6.00066, best weightsFile = bleak_39500
+1_10/Run8: Test res = 5.49784, test R2 = 0.414849
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_10/Run9: Best validation loss = 6.38848, best weightsFile = bleak_31000
+1_10/Run9: Test res = 6.57411, test R2 = 0.300297
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 1_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_3/Run1: Best validation loss = 5.67466, best weightsFile = bleak_39500
+1_3/Run1: Test res = 5.4547, test R2 = 0.419441
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_3/Run10: Best validation loss = 5.72709, best weightsFile = bleak_39500
+1_3/Run10: Test res = 5.50717, test R2 = 0.413855
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_3/Run2: Best validation loss = 5.20226, best weightsFile = bleak_39000
+1_3/Run2: Test res = 4.81073, test R2 = 0.48798
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_3/Run3: Best validation loss = 6.01805, best weightsFile = bleak_39000
+1_3/Run3: Test res = 5.79454, test R2 = 0.38327
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_3/Run4: Best validation loss = 5.29592, best weightsFile = bleak_39000
+1_3/Run4: Test res = 5.04123, test R2 = 0.463446
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_3/Run5: Best validation loss = 5.09962, best weightsFile = bleak_39500
+1_3/Run5: Test res = 5.09127, test R2 = 0.458121
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_3/Run6: Best validation loss = 5.64507, best weightsFile = bleak_39500
+1_3/Run6: Test res = 5.5325, test R2 = 0.411159
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_3/Run7: Best validation loss = 5.27292, best weightsFile = bleak_39500
+1_3/Run7: Test res = 4.89605, test R2 = 0.478899
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_3/Run8: Best validation loss = 5.36932, best weightsFile = bleak_39500
+1_3/Run8: Test res = 5.16436, test R2 = 0.450342
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_3/Run9: Best validation loss = 5.39832, best weightsFile = bleak_39500
+1_3/Run9: Test res = 5.13168, test R2 = 0.45382
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 1_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_5/Run1: Best validation loss = 4.82129, best weightsFile = bleak_39000
+1_5/Run1: Test res = 4.69422, test R2 = 0.50038
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_5/Run10: Best validation loss = 7.2049, best weightsFile = bleak_27000
+1_5/Run10: Test res = 6.83182, test R2 = 0.27287
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_5/Run2: Best validation loss = 4.77976, best weightsFile = bleak_39000
+1_5/Run2: Test res = 4.74858, test R2 = 0.494595
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_5/Run3: Best validation loss = 5.79433, best weightsFile = bleak_39000
+1_5/Run3: Test res = 5.47483, test R2 = 0.417297
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_5/Run4: Best validation loss = 6.37084, best weightsFile = bleak_38000
+1_5/Run4: Test res = 6.14403, test R2 = 0.346072
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_5/Run5: Best validation loss = 6.39437, best weightsFile = bleak_39500
+1_5/Run5: Test res = 5.70182, test R2 = 0.393139
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_5/Run6: Best validation loss = 5.00749, best weightsFile = bleak_31000
+1_5/Run6: Test res = 4.82632, test R2 = 0.48632
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_5/Run7: Best validation loss = 5.53864, best weightsFile = bleak_39500
+1_5/Run7: Test res = 5.06736, test R2 = 0.460666
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_5/Run8: Best validation loss = 6.04828, best weightsFile = bleak_39000
+1_5/Run8: Test res = 5.55985, test R2 = 0.408248
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_5/Run9: Best validation loss = 6.01709, best weightsFile = bleak_21500
+1_5/Run9: Test res = 5.89999, test R2 = 0.372046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 1_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_7/Run1: Best validation loss = 5.95274, best weightsFile = bleak_39500
+1_7/Run1: Test res = 5.17684, test R2 = 0.449013
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_7/Run10: Best validation loss = 5.70014, best weightsFile = bleak_39500
+1_7/Run10: Test res = 5.75433, test R2 = 0.387549
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_7/Run2: Best validation loss = 5.9635, best weightsFile = bleak_29500
+1_7/Run2: Test res = 6.13363, test R2 = 0.34718
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_7/Run3: Best validation loss = 6.0682, best weightsFile = bleak_39500
+1_7/Run3: Test res = 5.66835, test R2 = 0.396701
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_7/Run4: Best validation loss = 6.61994, best weightsFile = bleak_39500
+1_7/Run4: Test res = 6.80823, test R2 = 0.27538
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_7/Run5: Best validation loss = 5.70244, best weightsFile = bleak_39500
+1_7/Run5: Test res = 5.3449, test R2 = 0.431127
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_7/Run6: Best validation loss = 5.09021, best weightsFile = bleak_34000
+1_7/Run6: Test res = 4.93902, test R2 = 0.474325
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_7/Run7: Best validation loss = 5.56168, best weightsFile = bleak_39000
+1_7/Run7: Test res = 5.1642, test R2 = 0.450359
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_7/Run8: Best validation loss = 5.65598, best weightsFile = bleak_39000
+1_7/Run8: Test res = 5.58412, test R2 = 0.405665
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+1_7/Run9: Best validation loss = 5.70277, best weightsFile = bleak_40000
+1_7/Run9: Test res = 5.36989, test R2 = 0.428466
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 50_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_1/Run1: Best validation loss = 4.24496, best weightsFile = bleak_37000
+50_1/Run1: Test res = 3.97615, test R2 = 0.576807
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_1/Run10: Best validation loss = 4.36955, best weightsFile = bleak_27500
+50_1/Run10: Test res = 4.04742, test R2 = 0.569221
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_1/Run2: Best validation loss = 4.30913, best weightsFile = bleak_23500
+50_1/Run2: Test res = 4.17733, test R2 = 0.555394
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_1/Run3: Best validation loss = 4.41251, best weightsFile = bleak_18000
+50_1/Run3: Test res = 4.09137, test R2 = 0.564543
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_1/Run4: Best validation loss = 4.34614, best weightsFile = bleak_18000
+50_1/Run4: Test res = 4.11116, test R2 = 0.562437
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_1/Run5: Best validation loss = 4.45915, best weightsFile = bleak_27500
+50_1/Run5: Test res = 4.09067, test R2 = 0.564618
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_1/Run6: Best validation loss = 4.42319, best weightsFile = bleak_18000
+50_1/Run6: Test res = 4.31211, test R2 = 0.54105
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_1/Run7: Best validation loss = 4.32125, best weightsFile = bleak_32500
+50_1/Run7: Test res = 4.04449, test R2 = 0.569533
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_1/Run8: Best validation loss = 4.34951, best weightsFile = bleak_18000
+50_1/Run8: Test res = 4.04746, test R2 = 0.569216
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_1/Run9: Best validation loss = 4.34698, best weightsFile = bleak_27500
+50_1/Run9: Test res = 4.12827, test R2 = 0.560616
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 50_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_10/Run1: Best validation loss = 4.50542, best weightsFile = bleak_5500
+50_10/Run1: Test res = 4.36808, test R2 = 0.535092
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_10/Run10: Best validation loss = 4.58278, best weightsFile = bleak_7000
+50_10/Run10: Test res = 4.24178, test R2 = 0.548534
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_10/Run2: Best validation loss = 4.63071, best weightsFile = bleak_2000
+50_10/Run2: Test res = 4.39472, test R2 = 0.532256
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_10/Run3: Best validation loss = 4.55617, best weightsFile = bleak_5000
+50_10/Run3: Test res = 4.3417, test R2 = 0.537899
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_10/Run4: Best validation loss = 4.6316, best weightsFile = bleak_3500
+50_10/Run4: Test res = 4.43959, test R2 = 0.527481
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_10/Run5: Best validation loss = 4.63284, best weightsFile = bleak_11500
+50_10/Run5: Test res = 4.41897, test R2 = 0.529676
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_10/Run6: Best validation loss = 4.57874, best weightsFile = bleak_6000
+50_10/Run6: Test res = 4.39715, test R2 = 0.531998
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_10/Run7: Best validation loss = 4.57274, best weightsFile = bleak_6000
+50_10/Run7: Test res = 4.36857, test R2 = 0.53504
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_10/Run8: Best validation loss = 4.51668, best weightsFile = bleak_7000
+50_10/Run8: Test res = 4.25624, test R2 = 0.546996
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_10/Run9: Best validation loss = 4.5664, best weightsFile = bleak_11500
+50_10/Run9: Test res = 4.41505, test R2 = 0.530093
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 50_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_3/Run1: Best validation loss = 4.35134, best weightsFile = bleak_11500
+50_3/Run1: Test res = 4.12973, test R2 = 0.56046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_3/Run10: Best validation loss = 4.40186, best weightsFile = bleak_11500
+50_3/Run10: Test res = 4.10959, test R2 = 0.562604
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_3/Run2: Best validation loss = 4.41062, best weightsFile = bleak_11500
+50_3/Run2: Test res = 4.17881, test R2 = 0.555237
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_3/Run3: Best validation loss = 4.36451, best weightsFile = bleak_11500
+50_3/Run3: Test res = 4.08395, test R2 = 0.565333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_3/Run4: Best validation loss = 4.46267, best weightsFile = bleak_18000
+50_3/Run4: Test res = 4.21256, test R2 = 0.551645
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_3/Run5: Best validation loss = 4.31078, best weightsFile = bleak_7000
+50_3/Run5: Test res = 4.07032, test R2 = 0.566784
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_3/Run6: Best validation loss = 4.42685, best weightsFile = bleak_10000
+50_3/Run6: Test res = 4.17253, test R2 = 0.555905
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_3/Run7: Best validation loss = 4.32158, best weightsFile = bleak_10000
+50_3/Run7: Test res = 4.05547, test R2 = 0.568365
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_3/Run8: Best validation loss = 4.38349, best weightsFile = bleak_10000
+50_3/Run8: Test res = 4.10947, test R2 = 0.562617
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_3/Run9: Best validation loss = 4.44555, best weightsFile = bleak_8500
+50_3/Run9: Test res = 4.15525, test R2 = 0.557745
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 50_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_5/Run1: Best validation loss = 4.44807, best weightsFile = bleak_4500
+50_5/Run1: Test res = 4.1943, test R2 = 0.553588
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_5/Run10: Best validation loss = 4.40715, best weightsFile = bleak_7000
+50_5/Run10: Test res = 4.22486, test R2 = 0.550336
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_5/Run2: Best validation loss = 4.58493, best weightsFile = bleak_4500
+50_5/Run2: Test res = 4.28328, test R2 = 0.544118
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_5/Run3: Best validation loss = 4.54968, best weightsFile = bleak_3500
+50_5/Run3: Test res = 4.26874, test R2 = 0.545666
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_5/Run4: Best validation loss = 4.52106, best weightsFile = bleak_7000
+50_5/Run4: Test res = 4.21781, test R2 = 0.551086
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_5/Run5: Best validation loss = 4.53276, best weightsFile = bleak_7000
+50_5/Run5: Test res = 4.26469, test R2 = 0.546096
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_5/Run6: Best validation loss = 4.57129, best weightsFile = bleak_7000
+50_5/Run6: Test res = 4.2896, test R2 = 0.543445
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_5/Run7: Best validation loss = 4.52433, best weightsFile = bleak_7000
+50_5/Run7: Test res = 4.25457, test R2 = 0.547174
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_5/Run8: Best validation loss = 4.36011, best weightsFile = bleak_7000
+50_5/Run8: Test res = 4.06332, test R2 = 0.567528
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_5/Run9: Best validation loss = 4.45031, best weightsFile = bleak_18000
+50_5/Run9: Test res = 4.12946, test R2 = 0.56049
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+Info: Processing 50_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_7/Run1: Best validation loss = 4.40583, best weightsFile = bleak_7000
+50_7/Run1: Test res = 4.22637, test R2 = 0.550175
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_7/Run10: Best validation loss = 4.4097, best weightsFile = bleak_11500
+50_7/Run10: Test res = 4.28697, test R2 = 0.543725
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_7/Run2: Best validation loss = 4.68475, best weightsFile = bleak_3500
+50_7/Run2: Test res = 4.2439, test R2 = 0.54831
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_7/Run3: Best validation loss = 4.53871, best weightsFile = bleak_7000
+50_7/Run3: Test res = 4.3103, test R2 = 0.541242
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_7/Run4: Best validation loss = 4.48813, best weightsFile = bleak_6000
+50_7/Run4: Test res = 4.26109, test R2 = 0.546479
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_7/Run5: Best validation loss = 4.52658, best weightsFile = bleak_10000
+50_7/Run5: Test res = 4.23103, test R2 = 0.549679
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_7/Run6: Best validation loss = 4.56265, best weightsFile = bleak_11500
+50_7/Run6: Test res = 4.20576, test R2 = 0.552368
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_7/Run7: Best validation loss = 4.50186, best weightsFile = bleak_4500
+50_7/Run7: Test res = 4.32333, test R2 = 0.539855
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_7/Run8: Best validation loss = 4.47824, best weightsFile = bleak_7000
+50_7/Run8: Test res = 4.14461, test R2 = 0.558877
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+50_7/Run9: Best validation loss = 4.50787, best weightsFile = bleak_4500
+50_7/Run9: Test res = 4.29365, test R2 = 0.543014
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees_reg/abalone

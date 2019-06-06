@@ -1,0 +1,37 @@
+subgraph SGConvolution2D {
+  padding = [ 0, 0 ];
+  stride = [ 1, 1 ];
+  dilate = [ 0, 0 ];
+  numOutputs = 16;
+  height = 9;
+  width = 9;
+  useBias = true;
+  learningRateMultiplier = 1.0;
+  
+  Parameters {
+    size = [ $numOutputs, $height, $width ];
+    learnable = true;
+    initType="gaussian";
+    mu=0.0;
+    sigma=1.0;
+    learningRateMultiplier = $learningRateMultiplier;
+  } weights;
+  
+  Parameters {
+    size = [ $numOutputs ];
+    learnable = $useBias;
+    learningRateMultiplier = $learningRateMultiplier;
+  } bias;
+  
+  Convolution2D {
+    stride = $stride;
+    padding = $padding;
+    dilate = $dilate;
+  } conv2D;
+  
+  weights.outData -> conv2D.inWeights;
+  bias.outData -> conv2D.inBias;
+  
+  this.inData -> conv2D.inData;
+  conv2D.outData -> this.outData;
+};

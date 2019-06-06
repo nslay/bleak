@@ -1,0 +1,61 @@
+subgraph SGFernsGraph {
+  inputWidth=16;
+  inputHeight=16;
+  convWidth=5;
+  convHeight=5;
+  strideX=3;
+  strideY=3;
+  dilateX=0;
+  dilateY=0;
+  numClasses=2;
+  numTrees=10;
+  treeDepth=5;
+  numConvolutions=80;
+  learningRateMultiplier=1.0;
+  
+  include "SGInnerProduct.sad"
+  include "SGFerns.sad"
+  include "SGSum.sad"
+  include "SGConvolution2D.sad"
+  
+  SGConvolution2D {
+    width = $convWidth;
+    height = $convHeight;
+    stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
+    dilate = [ $dilateY, $dilateX ];
+    padding = [ 0, 0 ];
+    numOutputs=$numConvolutions;
+    useBias = false;
+  } features;
+  
+  Reshape {
+    size = [ $numConvolutions*(($inputWidth - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1)*(($inputHeight - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1) ];
+  } reshapeFeatures;
+  
+  SGFerns {
+    numInputs=$numConvolutions*(($inputWidth - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1)*(($inputHeight - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1);
+    numOutputs=$numClasses;
+    numTrees=$numTrees;
+    treeDepth=$treeDepth;
+    learningRateMultiplier=$learningRateMultiplier;
+  } ferns;
+  
+  SGSum {
+    numInputs=$numTrees;
+    numOutputs=1;
+  } fernsAgg;
+  
+  Reshape { size = [ $numClasses ]; } reshape;
+  
+  features.outData -> reshapeFeatures.inData;
+  
+  reshapeFeatures.outData -> ferns.inData;
+  ferns.outData -> fernsAgg.inData;
+  
+  fernsAgg.outData -> reshape.inData;
+  
+  this.inData -> features.inData;
+  reshape.outData -> this.outData;
+  
+  ferns.outData -> this.outTreeData;
+};

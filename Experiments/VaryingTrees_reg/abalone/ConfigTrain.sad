@@ -1,0 +1,2 @@
+include "Config.sad"
+dataBasePath = "../../../../Data/abalone_reg/abalone_train.lmdb";

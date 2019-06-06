@@ -1,0 +1,39 @@
+include "ConfigValidation.sad"
+batchSize=1;
+
+include "SGForestGraph.sad"
+
+DatabaseReader {
+        databaseType = "LMDB";
+        databasePath = $dataBasePath;
+        size = [ $batchSize, $inputChannels, $inputHeight, $inputWidth ]; # Yes, this is intentionally C, H, W
+        labelIndex = $labelIndex;
+} data;
+
+SGForestGraph {
+  inputWidth=$inputWidth;
+  inputHeight=$inputHeight;
+  numClasses=$numClasses;
+  treeDepth=$treeDepth;
+  numTrees=$numTrees;
+  learningRateMultiplier=$learningRateMultiplier;
+} graph;
+
+Accuracy { 
+  displayFrequency = 0; 
+  printConfusionMatrix = true;
+} acc;
+
+SoftmaxLoss loss;
+
+Average { displayFrequency = 0; } avgLoss;
+
+data.outData -> graph.inData;
+
+graph.outData -> loss.inData;
+data.outLabels -> loss.inLabels;
+
+graph.outData -> acc.inProbabilities;
+data.outLabels -> acc.inLabels;
+
+loss.outLoss -> avgLoss.inData;

@@ -1,0 +1,47 @@
+subgraph SGFerns {
+  numInputs=10;
+  numOutputs=1;
+  treeDepth=5;
+  numTrees=100;
+  learningRateMultiplier=1.0;
+  
+  include "SGBatchNormalization.sad"
+  
+  Parameters {
+    size = [ $numTrees, $treeDepth ];
+    learnable=false;
+    saveOutputs=true;
+  } ordinals;
+  
+  Parameters {
+    size = [ $numTrees, $treeDepth ];
+    learnable=true;
+    initType="uniform";
+    a = -3;
+    b = 3;
+    #learningRateMultiplier=$learningRateMultiplier * $treeDepth;
+  } thresholds;
+  
+  Parameters {
+    size = [ $numTrees, 2^$treeDepth, $numOutputs ];
+    learnable=true;  
+    learningRateMultiplier=$learningRateMultiplier; 
+    initType="gaussian";
+    mu=0.0;
+    sigma=0.01;    
+  } weights;
+  
+  SGBatchNormalization {
+    numInputs=$numInputs;
+  } batchNorm;
+  
+  RandomHingeFerns ferns;
+  
+  batchNorm.outData -> ferns.inData;
+  ordinals.outData -> ferns.inOrdinals;
+  thresholds.outData -> ferns.inThresholds;
+  weights.outData -> ferns.inWeights;
+  
+  this.inData -> batchNorm.inData;
+  ferns.outData -> this.outData;
+};

@@ -1,0 +1,33 @@
+include "ConfigTrain.sad"
+
+include "SGFernsGraph.sad"
+
+DatabaseReader {
+        databaseType = "LMDB";
+        databasePath = $dataBasePath;
+        size = [ $batchSize, $numInputs ];
+        labelIndex = $labelIndex;
+} data;
+
+SGFernsGraph {
+  numInputs=$numInputs;
+  numOutputs=$numClasses;
+  treeDepth=$treeDepth;
+  numTrees=$numTrees;
+  learningRateMultiplier=$learningRateMultiplier;
+} graph;
+
+SoftmaxLoss loss;
+
+Accuracy { 
+  displayFrequency = 100; 
+  printConfusionMatrix = true;
+} acc;
+
+data.outData -> graph.inData;
+
+graph.outData -> loss.inData;
+data.outLabels -> loss.inLabels;
+
+data.outLabels -> acc.inLabels;
+graph.outData -> acc.inProbabilities;

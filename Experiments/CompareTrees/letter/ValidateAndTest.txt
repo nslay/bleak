@@ -1,0 +1,43 @@
+Info: Processing 100_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+100_10/Run1: Best accuracy = 0.97625, best weightsFile = bleak_30000
+100_10/Run1: Test accuracy = 0.97625
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+100_10/Run10: Best accuracy = 0.9735, best weightsFile = bleak_32600
+100_10/Run10: Test accuracy = 0.9735
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+100_10/Run2: Best accuracy = 0.97375, best weightsFile = bleak_23200
+100_10/Run2: Test accuracy = 0.97375
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+100_10/Run3: Best accuracy = 0.97575, best weightsFile = bleak_35000
+100_10/Run3: Test accuracy = 0.97575
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+100_10/Run4: Best accuracy = 0.976, best weightsFile = bleak_34900
+100_10/Run4: Test accuracy = 0.976
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+100_10/Run5: Best accuracy = 0.97425, best weightsFile = bleak_36100
+100_10/Run5: Test accuracy = 0.97425
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+100_10/Run6: Best accuracy = 0.97325, best weightsFile = bleak_33600
+100_10/Run6: Test accuracy = 0.97325
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+100_10/Run7: Best accuracy = 0.97375, best weightsFile = bleak_18900
+100_10/Run7: Test accuracy = 0.97375
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+100_10/Run8: Best accuracy = 0.97425, best weightsFile = bleak_33300
+100_10/Run8: Test accuracy = 0.97425
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+100_10/Run9: Best accuracy = 0.97375, best weightsFile = bleak_24300
+100_10/Run9: Test accuracy = 0.97375
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/letter

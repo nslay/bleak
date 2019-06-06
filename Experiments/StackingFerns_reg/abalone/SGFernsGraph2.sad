@@ -1,0 +1,50 @@
+subgraph SGFernsGraph2 {
+  numInputs=8;
+  numOutputs=1;
+  numFeatures=100;
+  numTrees1=10;
+  treeDepth1=5;
+  numTrees2=10;
+  treeDepth2=5;
+  learningRateMultiplier=1.0;
+  
+  include "SGInnerProduct.sad"
+  include "SGSum.sad"
+  include "SGFerns.sad"
+  
+  SGInnerProduct {
+    numInputs=$numInputs;
+    numOutputs=$numFeatures;
+    learningRateMultiplier=$learningRateMultiplier;
+    useBias=false;
+  } features;
+  
+  SGFerns {
+    numInputs=$numFeatures;
+    numTrees=$numTrees1;
+    treeDepth=$treeDepth1;
+    learningRateMultiplier=$learningRateMultiplier;
+  } ferns1;
+  
+  SGFerns {
+    numInputs=$numTrees1;
+    numTrees=$numTrees2;
+    treeDepth=$treeDepth2;
+    learningRateMultiplier=$learningRateMultiplier;
+  } ferns2;
+  
+  #SGInnerProduct {
+  SGSum {
+    numInputs=$numTrees2;
+    numOutputs=$numOutputs;
+    learningRateMultiplier=$learningRateMultiplier;
+    #useBias=false;
+  } fernsAgg;
+  
+  features.outData -> ferns1.inData;
+  ferns1.outData -> ferns2.inData;
+  ferns2.outData -> fernsAgg.inData;
+  
+  this.inData -> features.inData;
+  fernsAgg.outData -> this.outData;
+};

@@ -1,0 +1,61 @@
+subgraph SGForestGraph {
+  inputWidth=16;
+  inputHeight=16;
+  convWidth=5;
+  convHeight=5;
+  strideX=3;
+  strideY=3;
+  dilateX=0;
+  dilateY=0;
+  numClasses=2;
+  numTrees=10;
+  treeDepth=5;
+  numConvolutions=80;
+  learningRateMultiplier=1.0;
+  
+  include "SGInnerProduct.sad"
+  include "SGForest.sad"
+  include "SGSum.sad"
+  include "SGConvolution2D.sad"
+  
+  SGConvolution2D {
+    width = $convWidth;
+    height = $convHeight;
+    stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
+    dilate = [ $dilateY, $dilateX ];
+    padding = [ 0, 0 ];
+    numOutputs=$numConvolutions;
+    useBias = false;
+  } features;
+  
+  Reshape {
+    size = [ $numConvolutions*(($inputWidth - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1)*(($inputHeight - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1) ];
+  } reshapeFeatures;
+  
+  SGForest {
+    numInputs=$numConvolutions*(($inputWidth - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1)*(($inputHeight - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1);
+    numOutputs=$numClasses;
+    numTrees=$numTrees;
+    treeDepth=$treeDepth;
+    learningRateMultiplier=$learningRateMultiplier;
+  } forest;
+  
+  SGSum {
+    numInputs=$numTrees;
+    numOutputs=1;
+  } forestAgg;
+  
+  Reshape { size = [ $numClasses ]; } reshape;
+  
+  features.outData -> reshapeFeatures.inData;
+  
+  reshapeFeatures.outData -> forest.inData;
+  forest.outData -> forestAgg.inData;
+  
+  forestAgg.outData -> reshape.inData;
+  
+  this.inData -> features.inData;
+  reshape.outData -> this.outData;
+  
+  forest.outData -> this.outTreeData;
+};

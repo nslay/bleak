@@ -1,0 +1,60 @@
+subgraph SGForestGraph3 {
+  numInputs=8;
+  numOutputs=1;
+  numFeatures=100;
+  numTrees1=10;
+  treeDepth1=5;
+  numTrees2=10;
+  treeDepth2=5;
+  numTrees3=10;
+  treeDepth3=5;
+  learningRateMultiplier=1.0;
+  
+  include "SGInnerProduct.sad"
+  include "SGSum.sad"
+  include "SGForest.sad"
+  
+  SGInnerProduct {
+    numInputs=$numInputs;
+    numOutputs=$numFeatures;
+    learningRateMultiplier=$learningRateMultiplier;
+    useBias=false;
+  } features;
+  
+  SGForest {
+    numInputs=$numFeatures;
+    numTrees=$numTrees1;
+    treeDepth=$treeDepth1;
+    learningRateMultiplier=$learningRateMultiplier;
+  } forest1;
+  
+  SGForest {
+    numInputs=$numTrees1;
+    numTrees=$numTrees2;
+    treeDepth=$treeDepth2;
+    learningRateMultiplier=$learningRateMultiplier;
+  } forest2;
+  
+  SGForest {
+    numInputs=$numTrees2;
+    numTrees=$numTrees3;
+    treeDepth=$treeDepth3;
+    learningRateMultiplier=$learningRateMultiplier;
+  } forest3;
+  
+  #SGInnerProduct {
+  SGSum {
+    numInputs=$numTrees3;
+    numOutputs=$numOutputs;
+    learningRateMultiplier=$learningRateMultiplier;
+    #useBias=false;
+  } forestAgg;
+  
+  features.outData -> forest1.inData;
+  forest1.outData -> forest2.inData;
+  forest2.outData -> forest3.inData;
+  forest3.outData -> forestAgg.inData;
+  
+  this.inData -> features.inData;
+  forestAgg.outData -> this.outData;
+};

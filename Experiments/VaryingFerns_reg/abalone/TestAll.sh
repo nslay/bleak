@@ -1,0 +1,77 @@
+#!/bin/bash
+
+GetExeName() {
+  base_="$1"
+
+  for exe_ in "${base_}" "${base_}.exe"
+  do
+    if which "${exe_}" > /dev/null 2>&1
+    then
+      echo "${exe_}"
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+if [ $# -ne 1 ]
+then
+  echo "Usage: $0 weightsFile" 1>&2
+  exit 1
+fi
+
+bestWeightsFile=$1
+
+searchCmd="bleakTool"
+toolCmd=`GetExeName "${searchCmd}"`
+
+if [ -z "${toolCmd}" ]
+then
+  echo "Error: ${searchCmd} is not in PATH." 1>&2
+  exit 1
+fi
+
+for dir in *
+do
+  if [ ! -d "${dir}" ]
+  then
+    continue
+  fi
+
+  if [ ! -f "${dir}/test.sad" ]
+  then
+    continue
+  fi
+
+  echo "Info: Processing ${dir} ..."
+
+  pushd "${dir}"
+
+  for runDir in Run*
+  do
+    if [ ! -d "${runDir}" ]
+    then
+      continue
+    fi
+
+    if [ ! -f "${runDir}/${bestWeightsFile}" ]
+    then
+      echo "Error: Missing weights file." 1>&2
+      continue
+    fi
+    
+    pushd "${runDir}"
+    
+    line=`"${toolCmd}" test -n 1044 -g ../test.sad -w "${bestWeightsFile}" | tail -n 1`
+    testRes=`echo "${line}" | awk '{ gsub("\r",""); gsub(",",""); print $(NF-1) }'`
+    testR2=`echo "${line}" | awk '{ gsub("\r",""); gsub(",",""); print $NF }'`
+  
+    echo "${dir}/${runDir}: Test res = ${testRes}, test R2 = ${testR2}"
+    
+    popd
+  done
+    
+  popd
+done
+

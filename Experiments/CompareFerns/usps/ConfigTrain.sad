@@ -1,0 +1,2 @@
+include "Config.sad"
+dataBasePath = "../../../../Data/usps/usps_train.lmdb";

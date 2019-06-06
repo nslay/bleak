@@ -1,0 +1,86 @@
+Info: Processing 1000_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+1000_10/Run1: Best accuracy = 0.9811, best weightsFile = bleak_18000
+1000_10/Run1: Test accuracy = 0.9811
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+1000_10/Run10: Best accuracy = 0.9811, best weightsFile = bleak_23000
+1000_10/Run10: Test accuracy = 0.9811
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+1000_10/Run2: Best accuracy = 0.9812, best weightsFile = bleak_4000
+1000_10/Run2: Test accuracy = 0.9812
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+1000_10/Run3: Best accuracy = 0.9812, best weightsFile = bleak_3000
+1000_10/Run3: Test accuracy = 0.9812
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+1000_10/Run4: Best accuracy = 0.9795, best weightsFile = bleak_4000
+1000_10/Run4: Test accuracy = 0.9795
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+1000_10/Run5: Best accuracy = 0.9814, best weightsFile = bleak_37500
+1000_10/Run5: Test accuracy = 0.9814
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+1000_10/Run6: Best accuracy = 0.9809, best weightsFile = bleak_4000
+1000_10/Run6: Test accuracy = 0.9809
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+1000_10/Run7: Best accuracy = 0.9814, best weightsFile = bleak_12500
+1000_10/Run7: Test accuracy = 0.9814
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+1000_10/Run8: Best accuracy = 0.9813, best weightsFile = bleak_39500
+1000_10/Run8: Test accuracy = 0.9813
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+1000_10/Run9: Best accuracy = 0.9807, best weightsFile = bleak_29000
+1000_10/Run9: Test accuracy = 0.9807
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/1000_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+Info: Processing 100_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+100_10/Run1: Best accuracy = 0.9714, best weightsFile = bleak_39500
+100_10/Run1: Test accuracy = 0.9714
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+100_10/Run10: Best accuracy = 0.9742, best weightsFile = bleak_7500
+100_10/Run10: Test accuracy = 0.9742
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+100_10/Run2: Best accuracy = 0.9706, best weightsFile = bleak_6000
+100_10/Run2: Test accuracy = 0.9706
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+100_10/Run3: Best accuracy = 0.9713, best weightsFile = bleak_8500
+100_10/Run3: Test accuracy = 0.9713
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+100_10/Run4: Best accuracy = 0.9703, best weightsFile = bleak_8500
+100_10/Run4: Test accuracy = 0.9703
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+100_10/Run5: Best accuracy = 0.9718, best weightsFile = bleak_39000
+100_10/Run5: Test accuracy = 0.9718
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+100_10/Run6: Best accuracy = 0.9729, best weightsFile = bleak_38000
+100_10/Run6: Test accuracy = 0.9729
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+100_10/Run7: Best accuracy = 0.9707, best weightsFile = bleak_8000
+100_10/Run7: Test accuracy = 0.9707
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+100_10/Run8: Best accuracy = 0.9701, best weightsFile = bleak_16000
+100_10/Run8: Test accuracy = 0.9701
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+100_10/Run9: Best accuracy = 0.9716, best weightsFile = bleak_8500
+100_10/Run9: Test accuracy = 0.9716
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist
+/mnt/c/Work/Source/Bleak/Experiments/CompareFerns/mnist

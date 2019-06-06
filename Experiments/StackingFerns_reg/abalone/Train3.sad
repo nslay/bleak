@@ -1,0 +1,34 @@
+include "ConfigTrain.sad"
+
+include "SGFernsGraph3.sad"
+
+DatabaseReader {
+        databaseType = "LMDB";
+        databasePath = $dataBasePath;
+        size = [ $batchSize, $numInputs ];
+        labelIndex = $labelIndex;
+} data;
+
+SGFernsGraph3 {
+  numInputs=$numInputs;
+  numOutputs=1;
+  numFeatures=100;
+  treeDepth1=$treeDepth1;
+  numTrees1=$numTrees1;
+  treeDepth2=$treeDepth2;
+  numTrees2=$numTrees2;
+  treeDepth3=$treeDepth3;
+  numTrees3=$numTrees3;
+  learningRateMultiplier=$learningRateMultiplier;
+} graph;
+
+L2Loss loss;
+Residual { displayFrequency = 100; } res;
+
+data.outData -> graph.inData;
+
+graph.outData -> loss.inData;
+data.outLabels -> loss.inLabels;
+
+graph.outData -> res.inData;
+data.outLabels -> res.inLabels;

@@ -1,0 +1,41 @@
+subgraph SGInnerProduct {
+  numInputs=0;
+  numOutputs=100;
+  learningRateMultiplier=1.0;
+
+  ##### Parameters #####
+
+  Parameters {
+    size=[ $numOutputs, $numInputs ];
+    learnable=true;
+    initType="gaussian";
+    mu=0.0;
+    sigma=1.0;
+    learningRateMultiplier=$learningRateMultiplier;
+  } weights;
+
+  Parameters {
+    size = [ $numOutputs ];
+    learnable=true;
+    learningRateMultiplier=$learningRateMultiplier;
+  } bias;
+
+  ##### End parameters #####
+  
+  ##### Operations #####
+ 
+  InnerProduct innerProduct;
+
+  ##### End operations #####
+  
+  ##### Connections #####
+
+  weights.outData -> innerProduct.inWeights;
+  bias.outData -> innerProduct.inBias;
+
+  ##### Interface Connections #####
+
+  this.inData -> innerProduct.inData;
+  innerProduct.outData -> this.outData;
+};
+

@@ -1,0 +1,43 @@
+Info: Processing 100_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+100_10/Run1: Best accuracy = 0.947185, best weightsFile = bleak_20000
+100_10/Run1: Test accuracy = 0.947185
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+100_10/Run10: Best accuracy = 0.94569, best weightsFile = bleak_16800
+100_10/Run10: Test accuracy = 0.94569
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+100_10/Run2: Best accuracy = 0.942202, best weightsFile = bleak_36600
+100_10/Run2: Test accuracy = 0.942202
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+100_10/Run3: Best accuracy = 0.946188, best weightsFile = bleak_34100
+100_10/Run3: Test accuracy = 0.946188
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+100_10/Run4: Best accuracy = 0.944195, best weightsFile = bleak_26000
+100_10/Run4: Test accuracy = 0.944195
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+100_10/Run5: Best accuracy = 0.942701, best weightsFile = bleak_14100
+100_10/Run5: Test accuracy = 0.942701
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+100_10/Run6: Best accuracy = 0.944195, best weightsFile = bleak_16700
+100_10/Run6: Test accuracy = 0.944195
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+100_10/Run7: Best accuracy = 0.945192, best weightsFile = bleak_39300
+100_10/Run7: Test accuracy = 0.945192
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+100_10/Run8: Best accuracy = 0.944195, best weightsFile = bleak_15100
+100_10/Run8: Test accuracy = 0.944195
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+100_10/Run9: Best accuracy = 0.94569, best weightsFile = bleak_24600
+100_10/Run9: Test accuracy = 0.94569
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps/100_10 /mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps
+/mnt/c/Work/Source/Bleak/Experiments/CompareTrees/usps

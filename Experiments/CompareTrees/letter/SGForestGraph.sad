@@ -1,0 +1,47 @@
+subgraph SGForestGraph {
+  numInputs=8;
+  numOutputs=1;
+  numTrees=10;
+  treeDepth=5;
+  numFeatures=100;
+  learningRateMultiplier=1.0;
+  
+  include "SGInnerProduct.sad"
+  include "SGForest.sad"
+  include "SGSum.sad"
+  
+  SGInnerProduct {
+    numInputs=$numInputs;
+    numOutputs=$numFeatures;
+    useBias = false;
+    learningRateMultiplier = $learningRateMultiplier;
+  } features;
+  
+  SGForest {
+    #numInputs=$numInputs;
+    numInputs=$numFeatures;
+    numOutputs=$numOutputs;
+    numTrees=$numTrees;
+    treeDepth=$treeDepth;
+    learningRateMultiplier=$learningRateMultiplier;
+  } forest;
+  
+  SGSum {
+    numInputs=$numTrees;
+    numOutputs=1;
+  } forestAgg;
+  
+  Reshape { size = [ $numOutputs ]; } reshape;
+  
+  features.outData -> forest.inData;
+  forest.outData -> forestAgg.inData;
+  
+  forestAgg.outData -> reshape.inData;
+  
+  #this.inData -> forest.inData;
+  this.inData -> features.inData;
+  reshape.outData -> this.outData;
+  
+  forest.outData -> this.outTreeData;
+};
+

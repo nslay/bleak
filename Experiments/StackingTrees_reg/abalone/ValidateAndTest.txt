@@ -1,0 +1,86 @@
+Info: Processing 2 ...
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2/Run1 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+2/Run1: Best validation loss = 4.57007, best weightsFile = bleak_4500
+2/Run1: Test res = 4.38073, test R2 = 0.533746
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2/Run10 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+2/Run10: Best validation loss = 4.6473, best weightsFile = bleak_6000
+2/Run10: Test res = 4.54136, test R2 = 0.516649
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2/Run2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+2/Run2: Best validation loss = 4.93398, best weightsFile = bleak_6000
+2/Run2: Test res = 4.34183, test R2 = 0.537886
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2/Run3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+2/Run3: Best validation loss = 4.92677, best weightsFile = bleak_4500
+2/Run3: Test res = 4.56202, test R2 = 0.51445
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2/Run4 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+2/Run4: Best validation loss = 4.64639, best weightsFile = bleak_6000
+2/Run4: Test res = 4.17832, test R2 = 0.555289
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2/Run5 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+2/Run5: Best validation loss = 4.71328, best weightsFile = bleak_4500
+2/Run5: Test res = 4.43819, test R2 = 0.52763
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2/Run6 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+2/Run6: Best validation loss = 4.64222, best weightsFile = bleak_6000
+2/Run6: Test res = 4.52744, test R2 = 0.518131
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2/Run7 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+2/Run7: Best validation loss = 4.78354, best weightsFile = bleak_6500
+2/Run7: Test res = 4.40737, test R2 = 0.53091
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2/Run8 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+2/Run8: Best validation loss = 4.91574, best weightsFile = bleak_6000
+2/Run8: Test res = 4.29469, test R2 = 0.542903
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2/Run9 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+2/Run9: Best validation loss = 4.57485, best weightsFile = bleak_6000
+2/Run9: Test res = 4.49436, test R2 = 0.521652
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+Info: Processing 3 ...
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3/Run1 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+3/Run1: Best validation loss = 4.63338, best weightsFile = bleak_4000
+3/Run1: Test res = 4.56737, test R2 = 0.513881
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3/Run10 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+3/Run10: Best validation loss = 5.06244, best weightsFile = bleak_12000
+3/Run10: Test res = 4.90784, test R2 = 0.477644
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3/Run2 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+3/Run2: Best validation loss = 5.1546, best weightsFile = bleak_5000
+3/Run2: Test res = 4.72482, test R2 = 0.497123
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3/Run3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+3/Run3: Best validation loss = 5.116, best weightsFile = bleak_5500
+3/Run3: Test res = 4.95636, test R2 = 0.47248
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3/Run4 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+3/Run4: Best validation loss = 5.14236, best weightsFile = bleak_3500
+3/Run4: Test res = 4.97287, test R2 = 0.470723
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3/Run5 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+3/Run5: Best validation loss = 5.09516, best weightsFile = bleak_7500
+3/Run5: Test res = 4.8956, test R2 = 0.478947
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3/Run6 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+3/Run6: Best validation loss = 5.13243, best weightsFile = bleak_5000
+3/Run6: Test res = 4.81527, test R2 = 0.487496
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3/Run7 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+3/Run7: Best validation loss = 4.92426, best weightsFile = bleak_7000
+3/Run7: Test res = 4.78821, test R2 = 0.490377
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3/Run8 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+3/Run8: Best validation loss = 4.95486, best weightsFile = bleak_7000
+3/Run8: Test res = 4.66502, test R2 = 0.503488
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3/Run9 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+3/Run9: Best validation loss = 5.02367, best weightsFile = bleak_6500
+3/Run9: Test res = 4.78602, test R2 = 0.490609
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone/3 /mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone
+/mnt/c/Work/Source/Bleak/Experiments/StackingTrees_reg/abalone

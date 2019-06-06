@@ -1,0 +1,2 @@
+include "Config.sad"
+dataBasePath = "../../../../Data/abalone/abalone_test.lmdb";

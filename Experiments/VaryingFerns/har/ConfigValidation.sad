@@ -1,0 +1,3 @@
+include "Config.sad"
+dataBasePath = "../../../../Data/har/har_validation.lmdb";
+

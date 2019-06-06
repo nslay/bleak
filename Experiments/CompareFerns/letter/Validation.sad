@@ -1,0 +1,38 @@
+include "ConfigValidation.sad"
+batchSize=1;
+
+include "SGFernsGraph.sad"
+
+DatabaseReader {
+        databaseType = "LMDB";
+        databasePath = $dataBasePath;
+        size = [ $batchSize, $numInputs ];
+        labelIndex = $labelIndex;
+} data;
+
+SGFernsGraph {
+  numInputs=$numInputs;
+  numOutputs=$numClasses;
+  treeDepth=$treeDepth;
+  numTrees=$numTrees;
+  learningRateMultiplier=$learningRateMultiplier;
+} graph;
+
+Accuracy { 
+  displayFrequency = 0; 
+  printConfusionMatrix = true;
+} acc;
+
+SoftmaxLoss loss;
+
+Average { displayFrequency = 0; } avgLoss;
+
+data.outData -> graph.inData;
+
+graph.outData -> loss.inData;
+data.outLabels -> loss.inLabels;
+
+data.outLabels -> acc.inLabels;
+graph.outData -> acc.inProbabilities;
+
+loss.outLoss -> avgLoss.inData;

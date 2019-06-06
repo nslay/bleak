@@ -1,0 +1,30 @@
+include "ConfigTrain.sad"
+
+include "SGForestGraph.sad"
+
+DatabaseReader {
+        databaseType = "LMDB";
+        databasePath = $dataBasePath;
+        size = [ $batchSize, $numInputs ];
+        labelIndex = $labelIndex;
+} data;
+
+SGForestGraph {
+  numInputs=$numInputs;
+  numOutputs=1;
+  numFeatures=100;
+  treeDepth=$treeDepth;
+  numTrees=$numTrees;
+  learningRateMultiplier=$learningRateMultiplier;
+} graph;
+
+L2Loss loss;
+Residual { displayFrequency = 100; } res;
+
+data.outData -> graph.inData;
+
+graph.outData -> loss.inData;
+data.outLabels -> loss.inLabels;
+
+graph.outData -> res.inData;
+data.outLabels -> res.inLabels;

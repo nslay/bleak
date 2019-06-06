@@ -1,0 +1,67 @@
+subgraph SGFerns {
+  numInputs=4;
+  numTrees=100;
+  treeDepth=10;
+  learningRateMultiplier=1.0;
+  
+  ##### Parameters #####
+  Parameters {
+    size = [ $numInputs ];
+    learnable = false;
+    saveOutputs = true;
+  } batchNormMeans;
+  
+  Parameters {
+    size = [ $numInputs ];
+    learnable = false;
+    saveOutputs = true;
+    initType = "fill";
+    fill=1;
+  } batchNormVars;
+  
+  Parameters {
+    size=[ $numTrees, $numInputs ];
+    learnable=false;
+    saveOutputs=true;
+  } fernsIndicators;
+  
+  Parameters {
+    size=[ $numTrees, 2^$treeDepth ];
+    learnable=true;
+    learningRateMultiplier=$learningRateMultiplier;
+  } fernsWeights;
+  
+  Parameters {
+    size=[ $numTrees, $treeDepth ];
+    learnable=true;
+    initType="uniform";
+    a=-3.0;
+    b=3.0;
+    learningRateMultiplier=$treeDepth * $learningRateMultiplier;
+  } fernsThresholds;
+  
+  ##### End parameters #####
+  
+  ##### Operations #####
+  
+  BatchNormalization batchNorm;
+  RandomHingeFerns ferns;
+  
+  ##### End operations #####
+  
+  ##### Connections #####
+  
+  batchNormMeans.outData -> batchNorm.inMeans;
+  batchNormVars.outData -> batchNorm.inVariances;
+  
+  batchNorm.outData -> ferns.inData;
+  fernsIndicators.outData -> ferns.inIndicators;
+  fernsWeights.outData -> ferns.inWeights;
+  fernsThresholds.outData -> ferns.inThresholds;
+
+  ##### Interface Connections #####
+
+  this.inData -> batchNorm.inData;
+  ferns.outData -> this.outData;
+};
+

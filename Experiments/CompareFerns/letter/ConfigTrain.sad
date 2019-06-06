@@ -1,0 +1,2 @@
+include "Config.sad"
+dataBasePath = "../../../../Data/letter/letter_train.lmdb";

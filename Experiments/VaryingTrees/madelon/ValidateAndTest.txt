@@ -1,0 +1,872 @@
+Info: Processing 100_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_1/Run1: Best validation loss = 0.671405, best weightsFile = bleak_1500
+100_1/Run1: Test accuracy = 0.586667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_1/Run10: Best validation loss = 0.6645, best weightsFile = bleak_37500
+100_1/Run10: Test accuracy = 0.568333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_1/Run2: Best validation loss = 0.680931, best weightsFile = bleak_34500
+100_1/Run2: Test accuracy = 0.561667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_1/Run3: Best validation loss = 0.667757, best weightsFile = bleak_25500
+100_1/Run3: Test accuracy = 0.59
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_1/Run4: Best validation loss = 0.652807, best weightsFile = bleak_6000
+100_1/Run4: Test accuracy = 0.578333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_1/Run5: Best validation loss = 0.656098, best weightsFile = bleak_15000
+100_1/Run5: Test accuracy = 0.61
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_1/Run6: Best validation loss = 0.672208, best weightsFile = bleak_7500
+100_1/Run6: Test accuracy = 0.61
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_1/Run7: Best validation loss = 0.671428, best weightsFile = bleak_22500
+100_1/Run7: Test accuracy = 0.563333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_1/Run8: Best validation loss = 0.670048, best weightsFile = bleak_6000
+100_1/Run8: Test accuracy = 0.513333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_1/Run9: Best validation loss = 0.657748, best weightsFile = bleak_33000
+100_1/Run9: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 100_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_10/Run1: Best validation loss = 0.648507, best weightsFile = bleak_1500
+100_10/Run1: Test accuracy = 0.586667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_10/Run10: Best validation loss = 0.645047, best weightsFile = bleak_1500
+100_10/Run10: Test accuracy = 0.585
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_10/Run2: Best validation loss = 0.629749, best weightsFile = bleak_1000
+100_10/Run2: Test accuracy = 0.553333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_10/Run3: Best validation loss = 0.637568, best weightsFile = bleak_1500
+100_10/Run3: Test accuracy = 0.625
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_10/Run4: Best validation loss = 0.662325, best weightsFile = bleak_1000
+100_10/Run4: Test accuracy = 0.588333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_10/Run5: Best validation loss = 0.627602, best weightsFile = bleak_1500
+100_10/Run5: Test accuracy = 0.641667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_10/Run6: Best validation loss = 0.643119, best weightsFile = bleak_1500
+100_10/Run6: Test accuracy = 0.58
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_10/Run7: Best validation loss = 0.633949, best weightsFile = bleak_1500
+100_10/Run7: Test accuracy = 0.586667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_10/Run8: Best validation loss = 0.666624, best weightsFile = bleak_1000
+100_10/Run8: Test accuracy = 0.561667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_10/Run9: Best validation loss = 0.652424, best weightsFile = bleak_1500
+100_10/Run9: Test accuracy = 0.585
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 100_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_3/Run1: Best validation loss = 0.632691, best weightsFile = bleak_1500
+100_3/Run1: Test accuracy = 0.593333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_3/Run10: Best validation loss = 0.657137, best weightsFile = bleak_1500
+100_3/Run10: Test accuracy = 0.618333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_3/Run2: Best validation loss = 0.660245, best weightsFile = bleak_1500
+100_3/Run2: Test accuracy = 0.543333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_3/Run3: Best validation loss = 0.645293, best weightsFile = bleak_1500
+100_3/Run3: Test accuracy = 0.618333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_3/Run4: Best validation loss = 0.657381, best weightsFile = bleak_1500
+100_3/Run4: Test accuracy = 0.583333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_3/Run5: Best validation loss = 0.634953, best weightsFile = bleak_1500
+100_3/Run5: Test accuracy = 0.598333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_3/Run6: Best validation loss = 0.666342, best weightsFile = bleak_1500
+100_3/Run6: Test accuracy = 0.593333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_3/Run7: Best validation loss = 0.667905, best weightsFile = bleak_1500
+100_3/Run7: Test accuracy = 0.568333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_3/Run8: Best validation loss = 0.674003, best weightsFile = bleak_1500
+100_3/Run8: Test accuracy = 0.571667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_3/Run9: Best validation loss = 0.647127, best weightsFile = bleak_3000
+100_3/Run9: Test accuracy = 0.61
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 100_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_5/Run1: Best validation loss = 0.635516, best weightsFile = bleak_1500
+100_5/Run1: Test accuracy = 0.595
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_5/Run10: Best validation loss = 0.67095, best weightsFile = bleak_500
+100_5/Run10: Test accuracy = 0.585
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_5/Run2: Best validation loss = 0.625245, best weightsFile = bleak_2500
+100_5/Run2: Test accuracy = 0.581667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_5/Run3: Best validation loss = 0.652319, best weightsFile = bleak_1000
+100_5/Run3: Test accuracy = 0.595
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_5/Run4: Best validation loss = 0.661202, best weightsFile = bleak_1500
+100_5/Run4: Test accuracy = 0.583333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_5/Run5: Best validation loss = 0.635216, best weightsFile = bleak_1500
+100_5/Run5: Test accuracy = 0.6
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_5/Run6: Best validation loss = 0.641361, best weightsFile = bleak_3000
+100_5/Run6: Test accuracy = 0.613333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_5/Run7: Best validation loss = 0.662216, best weightsFile = bleak_1500
+100_5/Run7: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_5/Run8: Best validation loss = 0.669321, best weightsFile = bleak_1500
+100_5/Run8: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_5/Run9: Best validation loss = 0.647892, best weightsFile = bleak_1500
+100_5/Run9: Test accuracy = 0.583333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 100_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_7/Run1: Best validation loss = 0.633916, best weightsFile = bleak_1000
+100_7/Run1: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_7/Run10: Best validation loss = 0.6469, best weightsFile = bleak_1500
+100_7/Run10: Test accuracy = 0.615
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_7/Run2: Best validation loss = 0.643537, best weightsFile = bleak_1000
+100_7/Run2: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_7/Run3: Best validation loss = 0.644318, best weightsFile = bleak_1500
+100_7/Run3: Test accuracy = 0.611667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_7/Run4: Best validation loss = 0.648396, best weightsFile = bleak_1000
+100_7/Run4: Test accuracy = 0.565
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_7/Run5: Best validation loss = 0.635952, best weightsFile = bleak_3000
+100_7/Run5: Test accuracy = 0.591667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_7/Run6: Best validation loss = 0.678862, best weightsFile = bleak_500
+100_7/Run6: Test accuracy = 0.61
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_7/Run7: Best validation loss = 0.660635, best weightsFile = bleak_500
+100_7/Run7: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_7/Run8: Best validation loss = 0.66638, best weightsFile = bleak_500
+100_7/Run8: Test accuracy = 0.57
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+100_7/Run9: Best validation loss = 0.667004, best weightsFile = bleak_1500
+100_7/Run9: Test accuracy = 0.583333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 10_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_1/Run1: Best validation loss = 0.679285, best weightsFile = bleak_40000
+10_1/Run1: Test accuracy = 0.583333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_1/Run10: Best validation loss = 0.661087, best weightsFile = bleak_40000
+10_1/Run10: Test accuracy = 0.596667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_1/Run2: Best validation loss = 0.67263, best weightsFile = bleak_39000
+10_1/Run2: Test accuracy = 0.55
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_1/Run3: Best validation loss = 0.674674, best weightsFile = bleak_40000
+10_1/Run3: Test accuracy = 0.573333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_1/Run4: Best validation loss = 0.669641, best weightsFile = bleak_39000
+10_1/Run4: Test accuracy = 0.57
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_1/Run5: Best validation loss = 0.675903, best weightsFile = bleak_39000
+10_1/Run5: Test accuracy = 0.55
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_1/Run6: Best validation loss = 0.685632, best weightsFile = bleak_40000
+10_1/Run6: Test accuracy = 0.56
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_1/Run7: Best validation loss = 0.672689, best weightsFile = bleak_39000
+10_1/Run7: Test accuracy = 0.555
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_1/Run8: Best validation loss = 0.664207, best weightsFile = bleak_40000
+10_1/Run8: Test accuracy = 0.583333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_1/Run9: Best validation loss = 0.670577, best weightsFile = bleak_40000
+10_1/Run9: Test accuracy = 0.583333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 10_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_10/Run1: Best validation loss = 0.663583, best weightsFile = bleak_5500
+10_10/Run1: Test accuracy = 0.543333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_10/Run10: Best validation loss = 0.664065, best weightsFile = bleak_8500
+10_10/Run10: Test accuracy = 0.596667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_10/Run2: Best validation loss = 0.658089, best weightsFile = bleak_3000
+10_10/Run2: Test accuracy = 0.53
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_10/Run3: Best validation loss = 0.654701, best weightsFile = bleak_3000
+10_10/Run3: Test accuracy = 0.593333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_10/Run4: Best validation loss = 0.67313, best weightsFile = bleak_1500
+10_10/Run4: Test accuracy = 0.588333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_10/Run5: Best validation loss = 0.637056, best weightsFile = bleak_2500
+10_10/Run5: Test accuracy = 0.568333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_10/Run6: Best validation loss = 0.670131, best weightsFile = bleak_2500
+10_10/Run6: Test accuracy = 0.566667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_10/Run7: Best validation loss = 0.652688, best weightsFile = bleak_3000
+10_10/Run7: Test accuracy = 0.595
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_10/Run8: Best validation loss = 0.673267, best weightsFile = bleak_6000
+10_10/Run8: Test accuracy = 0.546667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_10/Run9: Best validation loss = 0.647941, best weightsFile = bleak_5500
+10_10/Run9: Test accuracy = 0.57
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 10_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_3/Run1: Best validation loss = 0.649976, best weightsFile = bleak_40000
+10_3/Run1: Test accuracy = 0.585
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_3/Run10: Best validation loss = 0.66025, best weightsFile = bleak_5000
+10_3/Run10: Test accuracy = 0.573333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_3/Run2: Best validation loss = 0.66884, best weightsFile = bleak_14500
+10_3/Run2: Test accuracy = 0.626667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_3/Run3: Best validation loss = 0.635971, best weightsFile = bleak_19000
+10_3/Run3: Test accuracy = 0.578333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_3/Run4: Best validation loss = 0.662978, best weightsFile = bleak_13500
+10_3/Run4: Test accuracy = 0.61
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_3/Run5: Best validation loss = 0.670692, best weightsFile = bleak_1500
+10_3/Run5: Test accuracy = 0.58
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_3/Run6: Best validation loss = 0.645602, best weightsFile = bleak_19500
+10_3/Run6: Test accuracy = 0.593333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_3/Run7: Best validation loss = 0.6723, best weightsFile = bleak_10500
+10_3/Run7: Test accuracy = 0.588333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_3/Run8: Best validation loss = 0.660714, best weightsFile = bleak_13500
+10_3/Run8: Test accuracy = 0.59
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_3/Run9: Best validation loss = 0.653329, best weightsFile = bleak_22000
+10_3/Run9: Test accuracy = 0.595
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 10_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_5/Run1: Best validation loss = 0.660662, best weightsFile = bleak_7000
+10_5/Run1: Test accuracy = 0.576667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_5/Run10: Best validation loss = 0.655228, best weightsFile = bleak_13500
+10_5/Run10: Test accuracy = 0.578333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_5/Run2: Best validation loss = 0.660068, best weightsFile = bleak_16500
+10_5/Run2: Test accuracy = 0.543333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_5/Run3: Best validation loss = 0.671958, best weightsFile = bleak_1000
+10_5/Run3: Test accuracy = 0.59
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_5/Run4: Best validation loss = 0.666581, best weightsFile = bleak_4500
+10_5/Run4: Test accuracy = 0.58
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_5/Run5: Best validation loss = 0.659743, best weightsFile = bleak_4000
+10_5/Run5: Test accuracy = 0.553333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_5/Run6: Best validation loss = 0.65439, best weightsFile = bleak_2500
+10_5/Run6: Test accuracy = 0.598333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_5/Run7: Best validation loss = 0.657831, best weightsFile = bleak_3000
+10_5/Run7: Test accuracy = 0.583333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_5/Run8: Best validation loss = 0.658562, best weightsFile = bleak_10500
+10_5/Run8: Test accuracy = 0.585
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_5/Run9: Best validation loss = 0.666494, best weightsFile = bleak_5000
+10_5/Run9: Test accuracy = 0.58
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 10_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_7/Run1: Best validation loss = 0.658313, best weightsFile = bleak_4500
+10_7/Run1: Test accuracy = 0.566667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_7/Run10: Best validation loss = 0.65469, best weightsFile = bleak_19500
+10_7/Run10: Test accuracy = 0.558333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_7/Run2: Best validation loss = 0.661624, best weightsFile = bleak_1500
+10_7/Run2: Test accuracy = 0.581667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_7/Run3: Best validation loss = 0.648813, best weightsFile = bleak_8500
+10_7/Run3: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_7/Run4: Best validation loss = 0.672265, best weightsFile = bleak_1500
+10_7/Run4: Test accuracy = 0.596667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_7/Run5: Best validation loss = 0.655988, best weightsFile = bleak_8500
+10_7/Run5: Test accuracy = 0.586667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_7/Run6: Best validation loss = 0.665245, best weightsFile = bleak_5500
+10_7/Run6: Test accuracy = 0.595
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_7/Run7: Best validation loss = 0.665538, best weightsFile = bleak_1500
+10_7/Run7: Test accuracy = 0.611667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_7/Run8: Best validation loss = 0.666992, best weightsFile = bleak_3000
+10_7/Run8: Test accuracy = 0.593333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+10_7/Run9: Best validation loss = 0.653601, best weightsFile = bleak_6000
+10_7/Run9: Test accuracy = 0.571667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 1_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_1/Run1: Best validation loss = 0.694267, best weightsFile = bleak_500
+1_1/Run1: Test accuracy = 0.5
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_1/Run10: Best validation loss = 0.691698, best weightsFile = bleak_39500
+1_1/Run10: Test accuracy = 0.515
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_1/Run2: Best validation loss = 0.694444, best weightsFile = bleak_17500
+1_1/Run2: Test accuracy = 0.5
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_1/Run3: Best validation loss = 0.69424, best weightsFile = bleak_500
+1_1/Run3: Test accuracy = 0.5
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_1/Run4: Best validation loss = 0.686836, best weightsFile = bleak_40000
+1_1/Run4: Test accuracy = 0.536667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_1/Run5: Best validation loss = 0.667591, best weightsFile = bleak_40000
+1_1/Run5: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_1/Run6: Best validation loss = 0.694317, best weightsFile = bleak_500
+1_1/Run6: Test accuracy = 0.5
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_1/Run7: Best validation loss = 0.694236, best weightsFile = bleak_39000
+1_1/Run7: Test accuracy = 0.511667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_1/Run8: Best validation loss = 0.690736, best weightsFile = bleak_40000
+1_1/Run8: Test accuracy = 0.541667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_1/Run9: Best validation loss = 0.694171, best weightsFile = bleak_500
+1_1/Run9: Test accuracy = 0.498333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 1_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_10/Run1: Best validation loss = 0.673564, best weightsFile = bleak_12000
+1_10/Run1: Test accuracy = 0.543333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_10/Run10: Best validation loss = 0.679072, best weightsFile = bleak_6000
+1_10/Run10: Test accuracy = 0.55
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_10/Run2: Best validation loss = 0.682872, best weightsFile = bleak_7000
+1_10/Run2: Test accuracy = 0.525
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_10/Run3: Best validation loss = 0.673232, best weightsFile = bleak_20500
+1_10/Run3: Test accuracy = 0.548333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_10/Run4: Best validation loss = 0.683347, best weightsFile = bleak_8500
+1_10/Run4: Test accuracy = 0.558333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_10/Run5: Best validation loss = 0.67527, best weightsFile = bleak_9000
+1_10/Run5: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_10/Run6: Best validation loss = 0.675871, best weightsFile = bleak_38000
+1_10/Run6: Test accuracy = 0.556667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_10/Run7: Best validation loss = 0.688763, best weightsFile = bleak_12500
+1_10/Run7: Test accuracy = 0.483333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_10/Run8: Best validation loss = 0.676816, best weightsFile = bleak_6000
+1_10/Run8: Test accuracy = 0.556667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_10/Run9: Best validation loss = 0.667415, best weightsFile = bleak_25500
+1_10/Run9: Test accuracy = 0.551667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 1_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_3/Run1: Best validation loss = 0.694238, best weightsFile = bleak_500
+1_3/Run1: Test accuracy = 0.5
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_3/Run10: Best validation loss = 0.668778, best weightsFile = bleak_39000
+1_3/Run10: Test accuracy = 0.543333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_3/Run2: Best validation loss = 0.665622, best weightsFile = bleak_39000
+1_3/Run2: Test accuracy = 0.573333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_3/Run3: Best validation loss = 0.6937, best weightsFile = bleak_1000
+1_3/Run3: Test accuracy = 0.5
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_3/Run4: Best validation loss = 0.681438, best weightsFile = bleak_39000
+1_3/Run4: Test accuracy = 0.553333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_3/Run5: Best validation loss = 0.686901, best weightsFile = bleak_40000
+1_3/Run5: Test accuracy = 0.485
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_3/Run6: Best validation loss = 0.685469, best weightsFile = bleak_39000
+1_3/Run6: Test accuracy = 0.558333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_3/Run7: Best validation loss = 0.683717, best weightsFile = bleak_39500
+1_3/Run7: Test accuracy = 0.55
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_3/Run8: Best validation loss = 0.675118, best weightsFile = bleak_39000
+1_3/Run8: Test accuracy = 0.551667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_3/Run9: Best validation loss = 0.681362, best weightsFile = bleak_9500
+1_3/Run9: Test accuracy = 0.545
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 1_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_5/Run1: Best validation loss = 0.679076, best weightsFile = bleak_10500
+1_5/Run1: Test accuracy = 0.551667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_5/Run10: Best validation loss = 0.66651, best weightsFile = bleak_39500
+1_5/Run10: Test accuracy = 0.513333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_5/Run2: Best validation loss = 0.672525, best weightsFile = bleak_39000
+1_5/Run2: Test accuracy = 0.536667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_5/Run3: Best validation loss = 0.66477, best weightsFile = bleak_17000
+1_5/Run3: Test accuracy = 0.598333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_5/Run4: Best validation loss = 0.673508, best weightsFile = bleak_38000
+1_5/Run4: Test accuracy = 0.576667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_5/Run5: Best validation loss = 0.66408, best weightsFile = bleak_39000
+1_5/Run5: Test accuracy = 0.566667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_5/Run6: Best validation loss = 0.676305, best weightsFile = bleak_40000
+1_5/Run6: Test accuracy = 0.538333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_5/Run7: Best validation loss = 0.675268, best weightsFile = bleak_9000
+1_5/Run7: Test accuracy = 0.553333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_5/Run8: Best validation loss = 0.685118, best weightsFile = bleak_22500
+1_5/Run8: Test accuracy = 0.535
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_5/Run9: Best validation loss = 0.660233, best weightsFile = bleak_35500
+1_5/Run9: Test accuracy = 0.616667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 1_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_7/Run1: Best validation loss = 0.665848, best weightsFile = bleak_7500
+1_7/Run1: Test accuracy = 0.543333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_7/Run10: Best validation loss = 0.692294, best weightsFile = bleak_9000
+1_7/Run10: Test accuracy = 0.551667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_7/Run2: Best validation loss = 0.673903, best weightsFile = bleak_9000
+1_7/Run2: Test accuracy = 0.546667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_7/Run3: Best validation loss = 0.688085, best weightsFile = bleak_1500
+1_7/Run3: Test accuracy = 0.561667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_7/Run4: Best validation loss = 0.669389, best weightsFile = bleak_20000
+1_7/Run4: Test accuracy = 0.538333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_7/Run5: Best validation loss = 0.681086, best weightsFile = bleak_13500
+1_7/Run5: Test accuracy = 0.533333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_7/Run6: Best validation loss = 0.686457, best weightsFile = bleak_13000
+1_7/Run6: Test accuracy = 0.5
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_7/Run7: Best validation loss = 0.69084, best weightsFile = bleak_1000
+1_7/Run7: Test accuracy = 0.528333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_7/Run8: Best validation loss = 0.689277, best weightsFile = bleak_5500
+1_7/Run8: Test accuracy = 0.541667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+1_7/Run9: Best validation loss = 0.675256, best weightsFile = bleak_9000
+1_7/Run9: Test accuracy = 0.556667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 50_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_1/Run1: Best validation loss = 0.652279, best weightsFile = bleak_13500
+50_1/Run1: Test accuracy = 0.615
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_1/Run10: Best validation loss = 0.667885, best weightsFile = bleak_39000
+50_1/Run10: Test accuracy = 0.606667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_1/Run2: Best validation loss = 0.663646, best weightsFile = bleak_21000
+50_1/Run2: Test accuracy = 0.571667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_1/Run3: Best validation loss = 0.651757, best weightsFile = bleak_39000
+50_1/Run3: Test accuracy = 0.56
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_1/Run4: Best validation loss = 0.654568, best weightsFile = bleak_40000
+50_1/Run4: Test accuracy = 0.558333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_1/Run5: Best validation loss = 0.65329, best weightsFile = bleak_27000
+50_1/Run5: Test accuracy = 0.563333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_1/Run6: Best validation loss = 0.660052, best weightsFile = bleak_39000
+50_1/Run6: Test accuracy = 0.581667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_1/Run7: Best validation loss = 0.670771, best weightsFile = bleak_34500
+50_1/Run7: Test accuracy = 0.558333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_1/Run8: Best validation loss = 0.676972, best weightsFile = bleak_2500
+50_1/Run8: Test accuracy = 0.588333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_1/Run9: Best validation loss = 0.66251, best weightsFile = bleak_10500
+50_1/Run9: Test accuracy = 0.568333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 50_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_10/Run1: Best validation loss = 0.63953, best weightsFile = bleak_2500
+50_10/Run1: Test accuracy = 0.593333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_10/Run10: Best validation loss = 0.650569, best weightsFile = bleak_1500
+50_10/Run10: Test accuracy = 0.608333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_10/Run2: Best validation loss = 0.657414, best weightsFile = bleak_500
+50_10/Run2: Test accuracy = 0.526667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_10/Run3: Best validation loss = 0.636637, best weightsFile = bleak_3000
+50_10/Run3: Test accuracy = 0.61
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_10/Run4: Best validation loss = 0.634878, best weightsFile = bleak_4500
+50_10/Run4: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_10/Run5: Best validation loss = 0.658806, best weightsFile = bleak_1000
+50_10/Run5: Test accuracy = 0.585
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_10/Run6: Best validation loss = 0.664445, best weightsFile = bleak_1500
+50_10/Run6: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_10/Run7: Best validation loss = 0.644775, best weightsFile = bleak_1500
+50_10/Run7: Test accuracy = 0.575
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_10/Run8: Best validation loss = 0.661619, best weightsFile = bleak_3000
+50_10/Run8: Test accuracy = 0.586667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_10/Run9: Best validation loss = 0.65937, best weightsFile = bleak_1000
+50_10/Run9: Test accuracy = 0.561667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 50_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_3/Run1: Best validation loss = 0.65612, best weightsFile = bleak_3000
+50_3/Run1: Test accuracy = 0.606667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_3/Run10: Best validation loss = 0.648684, best weightsFile = bleak_6000
+50_3/Run10: Test accuracy = 0.593333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_3/Run2: Best validation loss = 0.641868, best weightsFile = bleak_12000
+50_3/Run2: Test accuracy = 0.581667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_3/Run3: Best validation loss = 0.639762, best weightsFile = bleak_3000
+50_3/Run3: Test accuracy = 0.585
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_3/Run4: Best validation loss = 0.649561, best weightsFile = bleak_1500
+50_3/Run4: Test accuracy = 0.605
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_3/Run5: Best validation loss = 0.66287, best weightsFile = bleak_1500
+50_3/Run5: Test accuracy = 0.58
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_3/Run6: Best validation loss = 0.659766, best weightsFile = bleak_1500
+50_3/Run6: Test accuracy = 0.613333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_3/Run7: Best validation loss = 0.670164, best weightsFile = bleak_3000
+50_3/Run7: Test accuracy = 0.585
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_3/Run8: Best validation loss = 0.663217, best weightsFile = bleak_1500
+50_3/Run8: Test accuracy = 0.583333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_3/Run9: Best validation loss = 0.67271, best weightsFile = bleak_1500
+50_3/Run9: Test accuracy = 0.57
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 50_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_5/Run1: Best validation loss = 0.641118, best weightsFile = bleak_5500
+50_5/Run1: Test accuracy = 0.595
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+data: Error: Could not open database '../../../../Data/madelon/madelon_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+50_5/Run10: Best validation loss = 0.655325, best weightsFile = bleak_1000
+50_5/Run10: Test accuracy = 0.596667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_5/Run2: Best validation loss = 0.642355, best weightsFile = bleak_3000
+50_5/Run2: Test accuracy = 0.576667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_5/Run3: Best validation loss = 0.661177, best weightsFile = bleak_1500
+50_5/Run3: Test accuracy = 0.601667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+data: Error: Could not open database '../../../../Data/madelon/madelon_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+50_5/Run4: Best validation loss = 0.665819, best weightsFile = bleak_2500
+50_5/Run4: Test accuracy = 0.556667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_5/Run5: Best validation loss = 0.644849, best weightsFile = bleak_1000
+50_5/Run5: Test accuracy = 0.608333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_5/Run6: Best validation loss = 0.661575, best weightsFile = bleak_3000
+50_5/Run6: Test accuracy = 0.588333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_5/Run7: Best validation loss = 0.65321, best weightsFile = bleak_1500
+50_5/Run7: Test accuracy = 0.588333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_5/Run8: Best validation loss = 0.667215, best weightsFile = bleak_1000
+50_5/Run8: Test accuracy = 0.546667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_5/Run9: Best validation loss = 0.653447, best weightsFile = bleak_1500
+50_5/Run9: Test accuracy = 0.58
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+Info: Processing 50_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_7/Run1: Best validation loss = 0.633851, best weightsFile = bleak_5000
+50_7/Run1: Test accuracy = 0.591667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_7/Run10: Best validation loss = 0.658153, best weightsFile = bleak_2500
+50_7/Run10: Test accuracy = 0.613333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_7/Run2: Best validation loss = 0.635056, best weightsFile = bleak_1500
+50_7/Run2: Test accuracy = 0.573333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_7/Run3: Best validation loss = 0.642318, best weightsFile = bleak_1000
+50_7/Run3: Test accuracy = 0.581667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_7/Run4: Best validation loss = 0.664805, best weightsFile = bleak_1500
+50_7/Run4: Test accuracy = 0.593333
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_7/Run5: Best validation loss = 0.639928, best weightsFile = bleak_1500
+50_7/Run5: Test accuracy = 0.601667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_7/Run6: Best validation loss = 0.650825, best weightsFile = bleak_1500
+50_7/Run6: Test accuracy = 0.616667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+data: Error: Could not open database '../../../../Data/madelon/madelon_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+50_7/Run7: Best validation loss = 0.652866, best weightsFile = bleak_3000
+50_7/Run7: Test accuracy = 0.6
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_7/Run8: Best validation loss = 0.663658, best weightsFile = bleak_1500
+50_7/Run8: Test accuracy = 0.56
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+50_7/Run9: Best validation loss = 0.644685, best weightsFile = bleak_2500
+50_7/Run9: Test accuracy = 0.571667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/madelon

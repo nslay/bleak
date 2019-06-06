@@ -1,0 +1,29 @@
+GetWindowsPath() {
+  echo "$1" | awk -F/ '$2 == "mnt" && $3 ~ /^[a-zA-Z]$/ { 
+    drive=toupper($3)
+    printf drive ":" 
+    
+    if (NF < 4)
+      printf "/"
+      
+    for (i = 4; i <= NF; ++i)
+      printf "/" $i
+      
+    printf "\n"
+  }'
+}
+
+# Some modification needed for cygwin or Linux
+
+# Set these values and then type: source profile.sh
+bleakSourceFolder="/mnt/c/Work/Source/Bleak"
+bleakBuildFolder="/mnt/c/Work/Build/Bleak"
+
+bleakWin32SourceFolder=`GetWindowsPath "${bleakSourceFolder}"`
+bleakWin32BuildFolder=`GetWindowsPath "${bleakBuildFolder}"`
+
+PATH="${PATH}:${bleakBuildFolder}/Tools/bleakTool/Release:${bleakBuildFolder}/Tools/bleakMakeDatabase/Release:${bleakBuildFolder}/Tools/bleakSadToDot/Release:${bleakBuildFolder}/Tools/bleakMakeDatabaseMNIST/Release"
+toolFlags="-I ${bleakWin32SourceFolder}/Modules/Common/Subgraphs -I ${bleakWin32SourceFolder}/Modules/Trees/Subgraphs -I ${bleakWin32SourceFolder}/Modules/Image/Subgraphs"
+
+export PATH toolFlags
+

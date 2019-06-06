@@ -1,0 +1,885 @@
+Info: Processing 100_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_1/Run1: Best validation loss = 0.72019, best weightsFile = bleak_24500
+100_1/Run1: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_1/Run10: Best validation loss = 0.721431, best weightsFile = bleak_15000
+100_1/Run10: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_1/Run2: Best validation loss = 0.709273, best weightsFile = bleak_15000
+100_1/Run2: Test accuracy = 0.663793
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_1/Run3: Best validation loss = 0.704476, best weightsFile = bleak_7000
+100_1/Run3: Test accuracy = 0.657088
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_1/Run4: Best validation loss = 0.718277, best weightsFile = bleak_8500
+100_1/Run4: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_1/Run5: Best validation loss = 0.710867, best weightsFile = bleak_7000
+100_1/Run5: Test accuracy = 0.658046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_1/Run6: Best validation loss = 0.725169, best weightsFile = bleak_7000
+100_1/Run6: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 73: [: : integer expression expected
+100_1/Run7: Best validation loss = 0.708065, best weightsFile = bleak_8500
+100_1/Run7: Test accuracy = 0.659004
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_1/Run8: Best validation loss = 0.718555, best weightsFile = bleak_7000
+100_1/Run8: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_1/Run9: Best validation loss = 0.71528, best weightsFile = bleak_7000
+100_1/Run9: Test accuracy = 0.664751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 100_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_10/Run1: Best validation loss = 0.746587, best weightsFile = bleak_2000
+100_10/Run1: Test accuracy = 0.638889
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_10/Run10: Best validation loss = 0.760383, best weightsFile = bleak_2000
+100_10/Run10: Test accuracy = 0.643678
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_10/Run2: Best validation loss = 0.741688, best weightsFile = bleak_2000
+100_10/Run2: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_10/Run3: Best validation loss = 0.748312, best weightsFile = bleak_2000
+100_10/Run3: Test accuracy = 0.639847
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_10/Run4: Best validation loss = 0.760175, best weightsFile = bleak_2000
+100_10/Run4: Test accuracy = 0.635057
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_10/Run5: Best validation loss = 0.748644, best weightsFile = bleak_2000
+100_10/Run5: Test accuracy = 0.637931
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_10/Run6: Best validation loss = 0.750457, best weightsFile = bleak_2000
+100_10/Run6: Test accuracy = 0.637931
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_10/Run7: Best validation loss = 0.752994, best weightsFile = bleak_2000
+100_10/Run7: Test accuracy = 0.637931
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_10/Run8: Best validation loss = 0.750866, best weightsFile = bleak_500
+100_10/Run8: Test accuracy = 0.639847
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_10/Run9: Best validation loss = 0.753182, best weightsFile = bleak_1500
+100_10/Run9: Test accuracy = 0.643678
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 100_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_3/Run1: Best validation loss = 0.736549, best weightsFile = bleak_4500
+100_3/Run1: Test accuracy = 0.664751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_3/Run10: Best validation loss = 0.732023, best weightsFile = bleak_5500
+100_3/Run10: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_3/Run2: Best validation loss = 0.737935, best weightsFile = bleak_7000
+100_3/Run2: Test accuracy = 0.66092
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_3/Run3: Best validation loss = 0.725105, best weightsFile = bleak_7000
+100_3/Run3: Test accuracy = 0.663793
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_3/Run4: Best validation loss = 0.736587, best weightsFile = bleak_2000
+100_3/Run4: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_3/Run5: Best validation loss = 0.7274, best weightsFile = bleak_5500
+100_3/Run5: Test accuracy = 0.659004
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_3/Run6: Best validation loss = 0.725112, best weightsFile = bleak_7000
+100_3/Run6: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_3/Run7: Best validation loss = 0.7352, best weightsFile = bleak_7000
+100_3/Run7: Test accuracy = 0.658046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_3/Run8: Best validation loss = 0.732115, best weightsFile = bleak_7000
+100_3/Run8: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_3/Run9: Best validation loss = 0.745695, best weightsFile = bleak_5500
+100_3/Run9: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 100_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_5/Run1: Best validation loss = 0.742695, best weightsFile = bleak_2000
+100_5/Run1: Test accuracy = 0.638889
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_5/Run10: Best validation loss = 0.73284, best weightsFile = bleak_2000
+100_5/Run10: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_5/Run2: Best validation loss = 0.74427, best weightsFile = bleak_2000
+100_5/Run2: Test accuracy = 0.654215
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_5/Run3: Best validation loss = 0.739054, best weightsFile = bleak_2000
+100_5/Run3: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_5/Run4: Best validation loss = 0.74606, best weightsFile = bleak_2000
+100_5/Run4: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_5/Run5: Best validation loss = 0.742981, best weightsFile = bleak_2000
+100_5/Run5: Test accuracy = 0.638889
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_5/Run6: Best validation loss = 0.734457, best weightsFile = bleak_2000
+100_5/Run6: Test accuracy = 0.639847
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_5/Run7: Best validation loss = 0.746789, best weightsFile = bleak_2000
+100_5/Run7: Test accuracy = 0.64272
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_5/Run8: Best validation loss = 0.738172, best weightsFile = bleak_2000
+100_5/Run8: Test accuracy = 0.636015
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_5/Run9: Best validation loss = 0.746466, best weightsFile = bleak_7000
+100_5/Run9: Test accuracy = 0.655172
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 100_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_7/Run1: Best validation loss = 0.739665, best weightsFile = bleak_2000
+100_7/Run1: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_7/Run10: Best validation loss = 0.74443, best weightsFile = bleak_2000
+100_7/Run10: Test accuracy = 0.655172
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_7/Run2: Best validation loss = 0.743151, best weightsFile = bleak_2000
+100_7/Run2: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_7/Run3: Best validation loss = 0.754447, best weightsFile = bleak_1500
+100_7/Run3: Test accuracy = 0.637931
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_7/Run4: Best validation loss = 0.75099, best weightsFile = bleak_2000
+100_7/Run4: Test accuracy = 0.637931
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_7/Run5: Best validation loss = 0.740285, best weightsFile = bleak_2000
+100_7/Run5: Test accuracy = 0.639847
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_7/Run6: Best validation loss = 0.750277, best weightsFile = bleak_2000
+100_7/Run6: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_7/Run7: Best validation loss = 0.748231, best weightsFile = bleak_2000
+100_7/Run7: Test accuracy = 0.637931
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_7/Run8: Best validation loss = 0.744892, best weightsFile = bleak_2000
+100_7/Run8: Test accuracy = 0.636973
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+100_7/Run9: Best validation loss = 0.743816, best weightsFile = bleak_2000
+100_7/Run9: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 10_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_1/Run1: Best validation loss = 0.722872, best weightsFile = bleak_38500
+10_1/Run1: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_1/Run10: Best validation loss = 0.709747, best weightsFile = bleak_39000
+10_1/Run10: Test accuracy = 0.65613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_1/Run2: Best validation loss = 0.724072, best weightsFile = bleak_40000
+10_1/Run2: Test accuracy = 0.628352
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_1/Run3: Best validation loss = 0.723016, best weightsFile = bleak_29000
+10_1/Run3: Test accuracy = 0.640805
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_1/Run4: Best validation loss = 0.718847, best weightsFile = bleak_38500
+10_1/Run4: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_1/Run5: Best validation loss = 0.716608, best weightsFile = bleak_40000
+10_1/Run5: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_1/Run6: Best validation loss = 0.716284, best weightsFile = bleak_38500
+10_1/Run6: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_1/Run7: Best validation loss = 0.724967, best weightsFile = bleak_39500
+10_1/Run7: Test accuracy = 0.643678
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_1/Run8: Best validation loss = 0.723716, best weightsFile = bleak_40000
+10_1/Run8: Test accuracy = 0.6341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_1/Run9: Best validation loss = 0.737431, best weightsFile = bleak_40000
+10_1/Run9: Test accuracy = 0.635057
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 10_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_10/Run1: Best validation loss = 0.744903, best weightsFile = bleak_15000
+10_10/Run1: Test accuracy = 0.65613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_10/Run10: Best validation loss = 0.731485, best weightsFile = bleak_15000
+10_10/Run10: Test accuracy = 0.646552
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_10/Run2: Best validation loss = 0.733771, best weightsFile = bleak_3500
+10_10/Run2: Test accuracy = 0.636973
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_10/Run3: Best validation loss = 0.741308, best weightsFile = bleak_13500
+10_10/Run3: Test accuracy = 0.640805
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_10/Run4: Best validation loss = 0.73611, best weightsFile = bleak_5500
+10_10/Run4: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_10/Run5: Best validation loss = 0.747468, best weightsFile = bleak_8500
+10_10/Run5: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_10/Run6: Best validation loss = 0.738742, best weightsFile = bleak_5000
+10_10/Run6: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_10/Run7: Best validation loss = 0.748219, best weightsFile = bleak_5000
+10_10/Run7: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_10/Run8: Best validation loss = 0.717513, best weightsFile = bleak_7000
+10_10/Run8: Test accuracy = 0.64272
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_10/Run9: Best validation loss = 0.729103, best weightsFile = bleak_21500
+10_10/Run9: Test accuracy = 0.64272
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 10_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_3/Run1: Best validation loss = 0.717794, best weightsFile = bleak_21500
+10_3/Run1: Test accuracy = 0.653257
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_3/Run10: Best validation loss = 0.71771, best weightsFile = bleak_39000
+10_3/Run10: Test accuracy = 0.658046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_3/Run2: Best validation loss = 0.6893, best weightsFile = bleak_31000
+10_3/Run2: Test accuracy = 0.654215
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_3/Run3: Best validation loss = 0.715747, best weightsFile = bleak_32500
+10_3/Run3: Test accuracy = 0.646552
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_3/Run4: Best validation loss = 0.711636, best weightsFile = bleak_39000
+10_3/Run4: Test accuracy = 0.646552
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_3/Run5: Best validation loss = 0.72629, best weightsFile = bleak_16500
+10_3/Run5: Test accuracy = 0.655172
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_3/Run6: Best validation loss = 0.731669, best weightsFile = bleak_34000
+10_3/Run6: Test accuracy = 0.633142
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_3/Run7: Best validation loss = 0.726586, best weightsFile = bleak_39000
+10_3/Run7: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_3/Run8: Best validation loss = 0.725007, best weightsFile = bleak_38000
+10_3/Run8: Test accuracy = 0.631226
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_3/Run9: Best validation loss = 0.736283, best weightsFile = bleak_24500
+10_3/Run9: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 10_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_5/Run1: Best validation loss = 0.726848, best weightsFile = bleak_38000
+10_5/Run1: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_5/Run10: Best validation loss = 0.720334, best weightsFile = bleak_39000
+10_5/Run10: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+data: Error: Could not open database '../../../../Data/abalone/abalone_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 73: [: : integer expression expected
+10_5/Run2: Best validation loss = 0.755449, best weightsFile = bleak_34500
+10_5/Run2: Test accuracy = 0.637931
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_5/Run3: Best validation loss = 0.726135, best weightsFile = bleak_24500
+10_5/Run3: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_5/Run4: Best validation loss = 0.728433, best weightsFile = bleak_7500
+10_5/Run4: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_5/Run5: Best validation loss = 0.718239, best weightsFile = bleak_8500
+10_5/Run5: Test accuracy = 0.635057
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_5/Run6: Best validation loss = 0.729873, best weightsFile = bleak_5500
+10_5/Run6: Test accuracy = 0.637931
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_5/Run7: Best validation loss = 0.717851, best weightsFile = bleak_34000
+10_5/Run7: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_5/Run8: Best validation loss = 0.719433, best weightsFile = bleak_16500
+10_5/Run8: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_5/Run9: Best validation loss = 0.748708, best weightsFile = bleak_21500
+10_5/Run9: Test accuracy = 0.646552
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 10_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_7/Run1: Best validation loss = 0.736669, best weightsFile = bleak_15500
+10_7/Run1: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_7/Run10: Best validation loss = 0.717019, best weightsFile = bleak_3500
+10_7/Run10: Test accuracy = 0.664751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_7/Run2: Best validation loss = 0.733063, best weightsFile = bleak_37000
+10_7/Run2: Test accuracy = 0.65613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_7/Run3: Best validation loss = 0.734385, best weightsFile = bleak_10000
+10_7/Run3: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_7/Run4: Best validation loss = 0.746076, best weightsFile = bleak_15000
+10_7/Run4: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_7/Run5: Best validation loss = 0.734729, best weightsFile = bleak_26000
+10_7/Run5: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_7/Run6: Best validation loss = 0.725718, best weightsFile = bleak_11500
+10_7/Run6: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_7/Run7: Best validation loss = 0.733893, best weightsFile = bleak_6000
+10_7/Run7: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_7/Run8: Best validation loss = 0.761924, best weightsFile = bleak_15000
+10_7/Run8: Test accuracy = 0.626437
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+10_7/Run9: Best validation loss = 0.726537, best weightsFile = bleak_15000
+10_7/Run9: Test accuracy = 0.655172
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 1_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_1/Run1: Best validation loss = 0.809243, best weightsFile = bleak_40000
+1_1/Run1: Test accuracy = 0.57567
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_1/Run10: Best validation loss = 0.799635, best weightsFile = bleak_40000
+1_1/Run10: Test accuracy = 0.577586
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_1/Run2: Best validation loss = 0.84281, best weightsFile = bleak_40000
+1_1/Run2: Test accuracy = 0.555556
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_1/Run3: Best validation loss = 0.840881, best weightsFile = bleak_40000
+1_1/Run3: Test accuracy = 0.554598
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_1/Run4: Best validation loss = 0.825475, best weightsFile = bleak_40000
+1_1/Run4: Test accuracy = 0.557471
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_1/Run5: Best validation loss = 0.844756, best weightsFile = bleak_40000
+1_1/Run5: Test accuracy = 0.545977
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_1/Run6: Best validation loss = 0.832525, best weightsFile = bleak_40000
+1_1/Run6: Test accuracy = 0.563218
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_1/Run7: Best validation loss = 0.817872, best weightsFile = bleak_40000
+1_1/Run7: Test accuracy = 0.568965
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_1/Run8: Best validation loss = 0.804634, best weightsFile = bleak_40000
+1_1/Run8: Test accuracy = 0.578544
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_1/Run9: Best validation loss = 0.768413, best weightsFile = bleak_40000
+1_1/Run9: Test accuracy = 0.604406
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 1_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 73: [: : integer expression expected
+1_10/Run1: Best validation loss = 0.803489, best weightsFile = bleak_38500
+1_10/Run1: Test accuracy = 0.576628
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_10/Run10: Best validation loss = 0.808613, best weightsFile = bleak_39000
+1_10/Run10: Test accuracy = 0.572797
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_10/Run2: Best validation loss = 0.806555, best weightsFile = bleak_39500
+1_10/Run2: Test accuracy = 0.59387
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_10/Run3: Best validation loss = 0.799214, best weightsFile = bleak_32000
+1_10/Run3: Test accuracy = 0.599617
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_10/Run4: Best validation loss = 0.799407, best weightsFile = bleak_40000
+1_10/Run4: Test accuracy = 0.58908
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_10/Run5: Best validation loss = 0.818093, best weightsFile = bleak_39000
+1_10/Run5: Test accuracy = 0.587165
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_10/Run6: Best validation loss = 0.787537, best weightsFile = bleak_39000
+1_10/Run6: Test accuracy = 0.598659
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_10/Run7: Best validation loss = 0.753587, best weightsFile = bleak_39500
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+1_10/Run7: Test accuracy = 
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_10/Run8: Best validation loss = 0.795402, best weightsFile = bleak_39500
+1_10/Run8: Test accuracy = 0.570881
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_10/Run9: Best validation loss = 0.798975, best weightsFile = bleak_39000
+1_10/Run9: Test accuracy = 0.564176
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 1_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_3/Run1: Best validation loss = 0.785664, best weightsFile = bleak_39000
+1_3/Run1: Test accuracy = 0.599617
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_3/Run10: Best validation loss = 0.82995, best weightsFile = bleak_40000
+1_3/Run10: Test accuracy = 0.574713
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_3/Run2: Best validation loss = 0.82211, best weightsFile = bleak_40000
+1_3/Run2: Test accuracy = 0.56705
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_3/Run3: Best validation loss = 0.826065, best weightsFile = bleak_40000
+1_3/Run3: Test accuracy = 0.555556
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_3/Run4: Best validation loss = 0.765101, best weightsFile = bleak_39000
+1_3/Run4: Test accuracy = 0.597701
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_3/Run5: Best validation loss = 0.843966, best weightsFile = bleak_39000
+1_3/Run5: Test accuracy = 0.566092
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_3/Run6: Best validation loss = 0.823262, best weightsFile = bleak_40000
+1_3/Run6: Test accuracy = 0.572797
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_3/Run7: Best validation loss = 0.809943, best weightsFile = bleak_40000
+1_3/Run7: Test accuracy = 0.58046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_3/Run8: Best validation loss = 0.825081, best weightsFile = bleak_39000
+1_3/Run8: Test accuracy = 0.555556
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_3/Run9: Best validation loss = 0.76343, best weightsFile = bleak_38500
+1_3/Run9: Test accuracy = 0.591954
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 1_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_5/Run1: Best validation loss = 0.793959, best weightsFile = bleak_39500
+1_5/Run1: Test accuracy = 0.601533
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_5/Run10: Best validation loss = 0.834078, best weightsFile = bleak_39500
+1_5/Run10: Test accuracy = 0.582375
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_5/Run2: Best validation loss = 0.813616, best weightsFile = bleak_39000
+1_5/Run2: Test accuracy = 0.555556
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_5/Run3: Best validation loss = 0.769826, best weightsFile = bleak_39000
+1_5/Run3: Test accuracy = 0.603448
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_5/Run4: Best validation loss = 0.831075, best weightsFile = bleak_39000
+1_5/Run4: Test accuracy = 0.568965
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_5/Run5: Best validation loss = 0.825224, best weightsFile = bleak_40000
+1_5/Run5: Test accuracy = 0.568008
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_5/Run6: Best validation loss = 0.764563, best weightsFile = bleak_39000
+1_5/Run6: Test accuracy = 0.597701
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_5/Run7: Best validation loss = 0.760902, best weightsFile = bleak_39500
+1_5/Run7: Test accuracy = 0.595785
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_5/Run8: Best validation loss = 0.761115, best weightsFile = bleak_39000
+1_5/Run8: Test accuracy = 0.597701
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_5/Run9: Best validation loss = 0.764153, best weightsFile = bleak_39000
+1_5/Run9: Test accuracy = 0.596743
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 1_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+data: Error: Could not open database '../../../../Data/abalone/abalone_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 73: [: : integer expression expected
+1_7/Run1: Best validation loss = 0.780061, best weightsFile = bleak_39000
+1_7/Run1: Test accuracy = 0.599617
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_7/Run10: Best validation loss = 0.833465, best weightsFile = bleak_39000
+1_7/Run10: Test accuracy = 0.564176
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_7/Run2: Best validation loss = 0.765939, best weightsFile = bleak_39500
+1_7/Run2: Test accuracy = 0.611111
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_7/Run3: Best validation loss = 0.75846, best weightsFile = bleak_39000
+1_7/Run3: Test accuracy = 0.60728
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_7/Run4: Best validation loss = 0.808227, best weightsFile = bleak_39000
+1_7/Run4: Test accuracy = 0.582375
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_7/Run5: Best validation loss = 0.774362, best weightsFile = bleak_39500
+1_7/Run5: Test accuracy = 0.596743
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_7/Run6: Best validation loss = 0.800362, best weightsFile = bleak_39000
+1_7/Run6: Test accuracy = 0.592912
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_7/Run7: Best validation loss = 0.799565, best weightsFile = bleak_39000
+1_7/Run7: Test accuracy = 0.581418
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_7/Run8: Best validation loss = 0.773624, best weightsFile = bleak_39500
+1_7/Run8: Test accuracy = 0.587165
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+1_7/Run9: Best validation loss = 0.787726, best weightsFile = bleak_39000
+1_7/Run9: Test accuracy = 0.603448
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 50_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_1/Run1: Best validation loss = 0.711047, best weightsFile = bleak_34000
+50_1/Run1: Test accuracy = 0.664751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_1/Run10: Best validation loss = 0.707267, best weightsFile = bleak_10000
+50_1/Run10: Test accuracy = 0.659962
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_1/Run2: Best validation loss = 0.710876, best weightsFile = bleak_18000
+50_1/Run2: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_1/Run3: Best validation loss = 0.705576, best weightsFile = bleak_24500
+50_1/Run3: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_1/Run4: Best validation loss = 0.709366, best weightsFile = bleak_29000
+50_1/Run4: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_1/Run5: Best validation loss = 0.708612, best weightsFile = bleak_15000
+50_1/Run5: Test accuracy = 0.65613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_1/Run6: Best validation loss = 0.715942, best weightsFile = bleak_24500
+50_1/Run6: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+data: Error: Could not open database '../../../../Data/abalone/abalone_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 73: [: : integer expression expected
+50_1/Run7: Best validation loss = 0.699917, best weightsFile = bleak_15000
+50_1/Run7: Test accuracy = 0.664751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_1/Run8: Best validation loss = 0.706235, best weightsFile = bleak_34000
+50_1/Run8: Test accuracy = 0.657088
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_1/Run9: Best validation loss = 0.713914, best weightsFile = bleak_24500
+50_1/Run9: Test accuracy = 0.657088
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 50_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_10/Run1: Best validation loss = 0.735278, best weightsFile = bleak_2000
+50_10/Run1: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_10/Run10: Best validation loss = 0.733363, best weightsFile = bleak_2000
+50_10/Run10: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_10/Run2: Best validation loss = 0.750994, best weightsFile = bleak_2000
+50_10/Run2: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_10/Run3: Best validation loss = 0.734212, best weightsFile = bleak_2000
+50_10/Run3: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_10/Run4: Best validation loss = 0.751831, best weightsFile = bleak_2000
+50_10/Run4: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_10/Run5: Best validation loss = 0.730772, best weightsFile = bleak_2000
+50_10/Run5: Test accuracy = 0.640805
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_10/Run6: Best validation loss = 0.730737, best weightsFile = bleak_2000
+50_10/Run6: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_10/Run7: Best validation loss = 0.756266, best weightsFile = bleak_2000
+50_10/Run7: Test accuracy = 0.655172
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_10/Run8: Best validation loss = 0.737029, best weightsFile = bleak_1500
+50_10/Run8: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_10/Run9: Best validation loss = 0.743908, best weightsFile = bleak_2000
+50_10/Run9: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 50_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_3/Run1: Best validation loss = 0.739477, best weightsFile = bleak_7000
+50_3/Run1: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_3/Run10: Best validation loss = 0.720842, best weightsFile = bleak_7000
+50_3/Run10: Test accuracy = 0.662835
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_3/Run2: Best validation loss = 0.73281, best weightsFile = bleak_7000
+50_3/Run2: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_3/Run3: Best validation loss = 0.735375, best weightsFile = bleak_5500
+50_3/Run3: Test accuracy = 0.657088
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_3/Run4: Best validation loss = 0.730255, best weightsFile = bleak_7000
+50_3/Run4: Test accuracy = 0.654215
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_3/Run5: Best validation loss = 0.721007, best weightsFile = bleak_7000
+50_3/Run5: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_3/Run6: Best validation loss = 0.72124, best weightsFile = bleak_7000
+50_3/Run6: Test accuracy = 0.65613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_3/Run7: Best validation loss = 0.732564, best weightsFile = bleak_7000
+50_3/Run7: Test accuracy = 0.659004
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_3/Run8: Best validation loss = 0.723715, best weightsFile = bleak_7000
+50_3/Run8: Test accuracy = 0.657088
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_3/Run9: Best validation loss = 0.734831, best weightsFile = bleak_7000
+50_3/Run9: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 50_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_5/Run1: Best validation loss = 0.733685, best weightsFile = bleak_2000
+50_5/Run1: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_5/Run10: Best validation loss = 0.726479, best weightsFile = bleak_2000
+50_5/Run10: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_5/Run2: Best validation loss = 0.735525, best weightsFile = bleak_4500
+50_5/Run2: Test accuracy = 0.659004
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_5/Run3: Best validation loss = 0.721488, best weightsFile = bleak_2000
+50_5/Run3: Test accuracy = 0.658046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_5/Run4: Best validation loss = 0.729073, best weightsFile = bleak_5500
+50_5/Run4: Test accuracy = 0.658046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_5/Run5: Best validation loss = 0.734555, best weightsFile = bleak_2000
+50_5/Run5: Test accuracy = 0.654215
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_5/Run6: Best validation loss = 0.717317, best weightsFile = bleak_2000
+50_5/Run6: Test accuracy = 0.653257
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_5/Run7: Best validation loss = 0.734713, best weightsFile = bleak_2000
+50_5/Run7: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_5/Run8: Best validation loss = 0.724695, best weightsFile = bleak_2000
+50_5/Run8: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_5/Run9: Best validation loss = 0.7436, best weightsFile = bleak_4500
+50_5/Run9: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+Info: Processing 50_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_7/Run1: Best validation loss = 0.740168, best weightsFile = bleak_4500
+50_7/Run1: Test accuracy = 0.659962
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_7/Run10: Best validation loss = 0.738732, best weightsFile = bleak_2000
+50_7/Run10: Test accuracy = 0.655172
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_7/Run2: Best validation loss = 0.757507, best weightsFile = bleak_2000
+50_7/Run2: Test accuracy = 0.643678
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_7/Run3: Best validation loss = 0.749121, best weightsFile = bleak_2000
+50_7/Run3: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_7/Run4: Best validation loss = 0.737997, best weightsFile = bleak_2000
+50_7/Run4: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_7/Run5: Best validation loss = 0.743741, best weightsFile = bleak_2000
+50_7/Run5: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_7/Run6: Best validation loss = 0.734563, best weightsFile = bleak_2000
+50_7/Run6: Test accuracy = 0.661877
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 73: [: : integer expression expected
+50_7/Run7: Best validation loss = 0.737502, best weightsFile = bleak_2000
+50_7/Run7: Test accuracy = 0.66092
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 73: [: : integer expression expected
+50_7/Run8: Best validation loss = 0.727934, best weightsFile = bleak_2000
+50_7/Run8: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+50_7/Run9: Best validation loss = 0.732066, best weightsFile = bleak_2000
+50_7/Run9: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/abalone

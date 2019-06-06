@@ -1,0 +1,898 @@
+Info: Processing 100_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_1/Run1: Best validation loss = 0.867534, best weightsFile = bleak_40000
+100_1/Run1: Test accuracy = 0.617285
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+100_1/Run10: Best validation loss = 0.870777, best weightsFile = bleak_39000
+100_1/Run10: Test accuracy = 0.606932
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_1/Run2: Best validation loss = 0.853669, best weightsFile = bleak_38000
+100_1/Run2: Test accuracy = 0.626067
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_1/Run3: Best validation loss = 0.876025, best weightsFile = bleak_38000
+100_1/Run3: Test accuracy = 0.614371
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_1/Run4: Best validation loss = 0.899363, best weightsFile = bleak_38000
+100_1/Run4: Test accuracy = 0.606244
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_1/Run5: Best validation loss = 0.848667, best weightsFile = bleak_40000
+100_1/Run5: Test accuracy = 0.637706
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_1/Run6: Best validation loss = 0.85041, best weightsFile = bleak_38000
+100_1/Run6: Test accuracy = 0.625371
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_1/Run7: Best validation loss = 0.833362, best weightsFile = bleak_38000
+100_1/Run7: Test accuracy = 0.639902
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_1/Run8: Best validation loss = 0.886922, best weightsFile = bleak_40000
+100_1/Run8: Test accuracy = 0.604877
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_1/Run9: Best validation loss = 0.834557, best weightsFile = bleak_40000
+100_1/Run9: Test accuracy = 0.641667
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 100_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_10/Run1: Best validation loss = 0.943261, best weightsFile = bleak_1500
+100_10/Run1: Test accuracy = 0.561149
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_10/Run10: Best validation loss = 0.939156, best weightsFile = bleak_1500
+100_10/Run10: Test accuracy = 0.561899
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_10/Run2: Best validation loss = 0.93897, best weightsFile = bleak_1000
+100_10/Run2: Test accuracy = 0.560723
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_10/Run3: Best validation loss = 0.943579, best weightsFile = bleak_1500
+100_10/Run3: Test accuracy = 0.55978
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+data: Error: Could not open database '../../../../Data/poker/poker_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+100_10/Run4: Best validation loss = 0.942745, best weightsFile = bleak_1000
+100_10/Run4: Test accuracy = 0.559037
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_10/Run5: Best validation loss = 0.941468, best weightsFile = bleak_1500
+100_10/Run5: Test accuracy = 0.558358
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_10/Run6: Best validation loss = 0.949634, best weightsFile = bleak_1500
+100_10/Run6: Test accuracy = 0.55882
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_10/Run7: Best validation loss = 0.944592, best weightsFile = bleak_1500
+100_10/Run7: Test accuracy = 0.55707
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_10/Run8: Best validation loss = 0.942456, best weightsFile = bleak_1500
+100_10/Run8: Test accuracy = 0.560011
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_10/Run9: Best validation loss = 0.947081, best weightsFile = bleak_1500
+100_10/Run9: Test accuracy = 0.557489
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 100_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_3/Run1: Best validation loss = 0.898983, best weightsFile = bleak_38000
+100_3/Run1: Test accuracy = 0.610402
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_3/Run10: Best validation loss = 0.631512, best weightsFile = bleak_39000
+100_3/Run10: Test accuracy = 0.746825
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_3/Run2: Best validation loss = 0.796004, best weightsFile = bleak_40000
+100_3/Run2: Test accuracy = 0.654755
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_3/Run3: Best validation loss = 0.760341, best weightsFile = bleak_37000
+100_3/Run3: Test accuracy = 0.688257
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_3/Run4: Best validation loss = 0.90464, best weightsFile = bleak_32500
+100_3/Run4: Test accuracy = 0.604613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_3/Run5: Best validation loss = 0.833887, best weightsFile = bleak_39000
+100_3/Run5: Test accuracy = 0.641146
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_3/Run6: Best validation loss = 0.812804, best weightsFile = bleak_35500
+100_3/Run6: Test accuracy = 0.646253
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_3/Run7: Best validation loss = 0.794997, best weightsFile = bleak_38000
+100_3/Run7: Test accuracy = 0.671092
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_3/Run8: Best validation loss = 0.668802, best weightsFile = bleak_40000
+100_3/Run8: Test accuracy = 0.723747
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_3/Run9: Best validation loss = 0.840191, best weightsFile = bleak_40000
+100_3/Run9: Test accuracy = 0.625209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 100_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_5/Run1: Best validation loss = 0.931154, best weightsFile = bleak_22500
+100_5/Run1: Test accuracy = 0.594616
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+100_5/Run10: Best validation loss = 0.818526, best weightsFile = bleak_11500
+100_5/Run10: Test accuracy = 0.640857
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_5/Run2: Best validation loss = 0.902048, best weightsFile = bleak_7000
+100_5/Run2: Test accuracy = 0.599776
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_5/Run3: Best validation loss = 0.951491, best weightsFile = bleak_1500
+100_5/Run3: Test accuracy = 0.556629
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_5/Run4: Best validation loss = 0.9045, best weightsFile = bleak_16000
+100_5/Run4: Test accuracy = 0.601586
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_5/Run5: Best validation loss = 0.883354, best weightsFile = bleak_14500
+100_5/Run5: Test accuracy = 0.613715
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_5/Run6: Best validation loss = 0.948697, best weightsFile = bleak_1500
+100_5/Run6: Test accuracy = 0.559746
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_5/Run7: Best validation loss = 0.942369, best weightsFile = bleak_6500
+100_5/Run7: Test accuracy = 0.572152
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_5/Run8: Best validation loss = 0.929472, best weightsFile = bleak_14000
+100_5/Run8: Test accuracy = 0.588957
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_5/Run9: Best validation loss = 0.895425, best weightsFile = bleak_40000
+100_5/Run9: Test accuracy = 0.624444
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 100_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_7/Run1: Best validation loss = 0.94848, best weightsFile = bleak_1500
+100_7/Run1: Test accuracy = 0.559744
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_7/Run10: Best validation loss = 0.943303, best weightsFile = bleak_1500
+100_7/Run10: Test accuracy = 0.558672
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_7/Run2: Best validation loss = 0.931235, best weightsFile = bleak_2500
+100_7/Run2: Test accuracy = 0.569327
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_7/Run3: Best validation loss = 0.946014, best weightsFile = bleak_2500
+100_7/Run3: Test accuracy = 0.555658
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_7/Run4: Best validation loss = 0.946261, best weightsFile = bleak_1000
+100_7/Run4: Test accuracy = 0.559398
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_7/Run5: Best validation loss = 0.948337, best weightsFile = bleak_2500
+100_7/Run5: Test accuracy = 0.553891
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_7/Run6: Best validation loss = 0.945267, best weightsFile = bleak_1500
+100_7/Run6: Test accuracy = 0.557232
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_7/Run7: Best validation loss = 0.931417, best weightsFile = bleak_3500
+100_7/Run7: Test accuracy = 0.575003
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_7/Run8: Best validation loss = 0.942403, best weightsFile = bleak_1500
+100_7/Run8: Test accuracy = 0.560413
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+100_7/Run9: Best validation loss = 0.945693, best weightsFile = bleak_2500
+100_7/Run9: Test accuracy = 0.55831
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 10_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_1/Run1: Best validation loss = 0.949795, best weightsFile = bleak_6500
+10_1/Run1: Test accuracy = 0.544163
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_1/Run10: Best validation loss = 0.941667, best weightsFile = bleak_36500
+10_1/Run10: Test accuracy = 0.552417
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+10_1/Run2: Best validation loss = 0.938769, best weightsFile = bleak_38000
+10_1/Run2: Test accuracy = 0.553267
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_1/Run3: Best validation loss = 0.926971, best weightsFile = bleak_40000
+10_1/Run3: Test accuracy = 0.568547
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_1/Run4: Best validation loss = 0.943102, best weightsFile = bleak_39000
+10_1/Run4: Test accuracy = 0.551703
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_1/Run5: Best validation loss = 0.936753, best weightsFile = bleak_36500
+10_1/Run5: Test accuracy = 0.5531
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_1/Run6: Best validation loss = 0.9426, best weightsFile = bleak_38000
+10_1/Run6: Test accuracy = 0.552634
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_1/Run7: Best validation loss = 0.937378, best weightsFile = bleak_33000
+10_1/Run7: Test accuracy = 0.558698
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_1/Run8: Best validation loss = 0.948283, best weightsFile = bleak_40000
+10_1/Run8: Test accuracy = 0.547051
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+10_1/Run9: Best validation loss = 0.94169, best weightsFile = bleak_40000
+10_1/Run9: Test accuracy = 0.553751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 10_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_10/Run1: Best validation loss = 0.944773, best weightsFile = bleak_6000
+10_10/Run1: Test accuracy = 0.552824
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_10/Run10: Best validation loss = 0.890513, best weightsFile = bleak_32000
+10_10/Run10: Test accuracy = 0.597736
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_10/Run2: Best validation loss = 0.946673, best weightsFile = bleak_6500
+10_10/Run2: Test accuracy = 0.551407
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_10/Run3: Best validation loss = 0.923026, best weightsFile = bleak_27000
+10_10/Run3: Test accuracy = 0.568674
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+10_10/Run4: Best validation loss = 0.949292, best weightsFile = bleak_5000
+10_10/Run4: Test accuracy = 0.545777
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_10/Run5: Best validation loss = 0.926578, best weightsFile = bleak_8500
+10_10/Run5: Test accuracy = 0.573436
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_10/Run6: Best validation loss = 0.944384, best weightsFile = bleak_4000
+10_10/Run6: Test accuracy = 0.551955
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_10/Run7: Best validation loss = 0.937417, best weightsFile = bleak_7500
+10_10/Run7: Test accuracy = 0.560891
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_10/Run8: Best validation loss = 0.930265, best weightsFile = bleak_18500
+10_10/Run8: Test accuracy = 0.567638
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_10/Run9: Best validation loss = 0.930148, best weightsFile = bleak_40000
+10_10/Run9: Test accuracy = 0.571578
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 10_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_3/Run1: Best validation loss = 0.887642, best weightsFile = bleak_40000
+10_3/Run1: Test accuracy = 0.602077
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_3/Run10: Best validation loss = 0.920284, best weightsFile = bleak_38000
+10_3/Run10: Test accuracy = 0.569392
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_3/Run2: Best validation loss = 0.855475, best weightsFile = bleak_39000
+10_3/Run2: Test accuracy = 0.606733
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_3/Run3: Best validation loss = 0.812961, best weightsFile = bleak_38000
+10_3/Run3: Test accuracy = 0.63976
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_3/Run4: Best validation loss = 0.834786, best weightsFile = bleak_39000
+10_3/Run4: Test accuracy = 0.621578
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_3/Run5: Best validation loss = 0.910618, best weightsFile = bleak_40000
+10_3/Run5: Test accuracy = 0.577462
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_3/Run6: Best validation loss = 0.864828, best weightsFile = bleak_39000
+10_3/Run6: Test accuracy = 0.608253
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_3/Run7: Best validation loss = 0.923615, best weightsFile = bleak_40000
+10_3/Run7: Test accuracy = 0.565643
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_3/Run8: Best validation loss = 0.916527, best weightsFile = bleak_40000
+10_3/Run8: Test accuracy = 0.574007
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_3/Run9: Best validation loss = 0.91205, best weightsFile = bleak_33000
+10_3/Run9: Test accuracy = 0.574142
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 10_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_5/Run1: Best validation loss = 0.935452, best weightsFile = bleak_35500
+10_5/Run1: Test accuracy = 0.560008
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_5/Run10: Best validation loss = 0.917671, best weightsFile = bleak_39500
+10_5/Run10: Test accuracy = 0.575568
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_5/Run2: Best validation loss = 0.838456, best weightsFile = bleak_39500
+10_5/Run2: Test accuracy = 0.630455
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_5/Run3: Best validation loss = 0.879373, best weightsFile = bleak_35500
+10_5/Run3: Test accuracy = 0.596825
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_5/Run4: Best validation loss = 0.857926, best weightsFile = bleak_33500
+10_5/Run4: Test accuracy = 0.618324
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_5/Run5: Best validation loss = 0.9107, best weightsFile = bleak_39000
+10_5/Run5: Test accuracy = 0.579076
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_5/Run6: Best validation loss = 0.820232, best weightsFile = bleak_32000
+10_5/Run6: Test accuracy = 0.64049
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_5/Run7: Best validation loss = 0.888317, best weightsFile = bleak_38000
+10_5/Run7: Test accuracy = 0.597752
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_5/Run8: Best validation loss = 0.875773, best weightsFile = bleak_38000
+10_5/Run8: Test accuracy = 0.599238
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_5/Run9: Best validation loss = 0.901768, best weightsFile = bleak_40000
+10_5/Run9: Test accuracy = 0.583522
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 10_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_7/Run1: Best validation loss = 0.948325, best weightsFile = bleak_3500
+10_7/Run1: Test accuracy = 0.549229
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_7/Run10: Best validation loss = 0.931416, best weightsFile = bleak_35500
+10_7/Run10: Test accuracy = 0.564461
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_7/Run2: Best validation loss = 0.918996, best weightsFile = bleak_39000
+10_7/Run2: Test accuracy = 0.566422
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_7/Run3: Best validation loss = 0.868339, best weightsFile = bleak_24500
+10_7/Run3: Test accuracy = 0.606171
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_7/Run4: Best validation loss = 0.906429, best weightsFile = bleak_39500
+10_7/Run4: Test accuracy = 0.584799
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_7/Run5: Best validation loss = 0.833214, best weightsFile = bleak_35500
+10_7/Run5: Test accuracy = 0.629181
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+10_7/Run6: Best validation loss = 0.940658, best weightsFile = bleak_17500
+10_7/Run6: Test accuracy = 0.557591
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_7/Run7: Best validation loss = 0.930856, best weightsFile = bleak_35500
+10_7/Run7: Test accuracy = 0.565808
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_7/Run8: Best validation loss = 0.918829, best weightsFile = bleak_22500
+10_7/Run8: Test accuracy = 0.575382
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+10_7/Run9: Best validation loss = 0.859769, best weightsFile = bleak_35500
+10_7/Run9: Test accuracy = 0.617296
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 1_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_1/Run1: Best validation loss = 0.980848, best weightsFile = bleak_23000
+1_1/Run1: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_1/Run10: Best validation loss = 0.980801, best weightsFile = bleak_23000
+1_1/Run10: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_1/Run2: Best validation loss = 0.980999, best weightsFile = bleak_14500
+1_1/Run2: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_1/Run3: Best validation loss = 0.974885, best weightsFile = bleak_37500
+1_1/Run3: Test accuracy = 0.525374
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_1/Run4: Best validation loss = 0.973679, best weightsFile = bleak_37500
+1_1/Run4: Test accuracy = 0.526198
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_1/Run5: Best validation loss = 0.98113, best weightsFile = bleak_6000
+1_1/Run5: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_1/Run6: Best validation loss = 0.981112, best weightsFile = bleak_14500
+1_1/Run6: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_1/Run7: Best validation loss = 0.98104, best weightsFile = bleak_23000
+1_1/Run7: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_1/Run8: Best validation loss = 0.980701, best weightsFile = bleak_23000
+1_1/Run8: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_1/Run9: Best validation loss = 0.981209, best weightsFile = bleak_14500
+1_1/Run9: Test accuracy = 0.501209
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 1_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_10/Run1: Best validation loss = 0.952357, best weightsFile = bleak_39000
+1_10/Run1: Test accuracy = 0.5414
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_10/Run10: Best validation loss = 0.952095, best weightsFile = bleak_34000
+1_10/Run10: Test accuracy = 0.543923
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_10/Run2: Best validation loss = 0.949265, best weightsFile = bleak_13500
+1_10/Run2: Test accuracy = 0.543118
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_10/Run3: Best validation loss = 0.951619, best weightsFile = bleak_8500
+1_10/Run3: Test accuracy = 0.540374
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_10/Run4: Best validation loss = 0.950627, best weightsFile = bleak_22500
+1_10/Run4: Test accuracy = 0.556724
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_10/Run5: Best validation loss = 0.950182, best weightsFile = bleak_13500
+1_10/Run5: Test accuracy = 0.542581
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_10/Run6: Best validation loss = 0.949436, best weightsFile = bleak_13500
+1_10/Run6: Test accuracy = 0.542361
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_10/Run7: Best validation loss = 0.944197, best weightsFile = bleak_9000
+1_10/Run7: Test accuracy = 0.552457
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_10/Run8: Best validation loss = 0.948051, best weightsFile = bleak_13500
+1_10/Run8: Test accuracy = 0.543139
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_10/Run9: Best validation loss = 0.948433, best weightsFile = bleak_22000
+1_10/Run9: Test accuracy = 0.543017
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 1_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_3/Run1: Best validation loss = 0.952419, best weightsFile = bleak_28500
+1_3/Run1: Test accuracy = 0.542239
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_3/Run10: Best validation loss = 0.952468, best weightsFile = bleak_30500
+1_3/Run10: Test accuracy = 0.542175
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+1_3/Run2: Best validation loss = 0.947506, best weightsFile = bleak_36500
+1_3/Run2: Test accuracy = 0.545189
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_3/Run3: Best validation loss = 0.972899, best weightsFile = bleak_40000
+1_3/Run3: Test accuracy = 0.501858
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_3/Run4: Best validation loss = 0.948604, best weightsFile = bleak_36500
+1_3/Run4: Test accuracy = 0.543762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_3/Run5: Best validation loss = 0.952099, best weightsFile = bleak_40000
+1_3/Run5: Test accuracy = 0.541987
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_3/Run6: Best validation loss = 0.952536, best weightsFile = bleak_28500
+1_3/Run6: Test accuracy = 0.542558
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_3/Run7: Best validation loss = 0.951948, best weightsFile = bleak_40000
+1_3/Run7: Test accuracy = 0.542059
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_3/Run8: Best validation loss = 0.948871, best weightsFile = bleak_36500
+1_3/Run8: Test accuracy = 0.543437
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_3/Run9: Best validation loss = 0.948659, best weightsFile = bleak_34000
+1_3/Run9: Test accuracy = 0.544043
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 1_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_5/Run1: Best validation loss = 0.952568, best weightsFile = bleak_24500
+1_5/Run1: Test accuracy = 0.535543
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_5/Run10: Best validation loss = 0.94795, best weightsFile = bleak_18500
+1_5/Run10: Test accuracy = 0.542215
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_5/Run2: Best validation loss = 0.950102, best weightsFile = bleak_22000
+1_5/Run2: Test accuracy = 0.541764
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_5/Run3: Best validation loss = 0.950984, best weightsFile = bleak_39000
+1_5/Run3: Test accuracy = 0.541347
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_5/Run4: Best validation loss = 0.948222, best weightsFile = bleak_33500
+1_5/Run4: Test accuracy = 0.545385
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_5/Run5: Best validation loss = 0.949414, best weightsFile = bleak_40000
+1_5/Run5: Test accuracy = 0.543365
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_5/Run6: Best validation loss = 0.948574, best weightsFile = bleak_22000
+1_5/Run6: Test accuracy = 0.542908
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_5/Run7: Best validation loss = 0.948775, best weightsFile = bleak_31000
+1_5/Run7: Test accuracy = 0.544057
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_5/Run8: Best validation loss = 0.947694, best weightsFile = bleak_29000
+1_5/Run8: Test accuracy = 0.545236
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_5/Run9: Best validation loss = 0.948713, best weightsFile = bleak_13500
+1_5/Run9: Test accuracy = 0.54363
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 1_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_7/Run1: Best validation loss = 0.95038, best weightsFile = bleak_40000
+1_7/Run1: Test accuracy = 0.542787
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_7/Run10: Best validation loss = 0.949085, best weightsFile = bleak_13500
+1_7/Run10: Test accuracy = 0.543633
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_7/Run2: Best validation loss = 0.949506, best weightsFile = bleak_22000
+1_7/Run2: Test accuracy = 0.542564
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_7/Run3: Best validation loss = 0.948239, best weightsFile = bleak_36500
+1_7/Run3: Test accuracy = 0.543674
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_7/Run4: Best validation loss = 0.949916, best weightsFile = bleak_20000
+1_7/Run4: Test accuracy = 0.542243
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_7/Run5: Best validation loss = 0.94939, best weightsFile = bleak_36500
+1_7/Run5: Test accuracy = 0.543369
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+data: Error: Could not open database '../../../../Data/poker/poker_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+1_7/Run6: Best validation loss = 0.946326, best weightsFile = bleak_33000
+1_7/Run6: Test accuracy = 0.543388
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_7/Run7: Best validation loss = 0.925054, best weightsFile = bleak_35000
+1_7/Run7: Test accuracy = 0.559672
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_7/Run8: Best validation loss = 0.948603, best weightsFile = bleak_25500
+1_7/Run8: Test accuracy = 0.544041
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+1_7/Run9: Best validation loss = 0.949957, best weightsFile = bleak_24500
+1_7/Run9: Test accuracy = 0.542216
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 50_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_1/Run1: Best validation loss = 0.879493, best weightsFile = bleak_40000
+50_1/Run1: Test accuracy = 0.602975
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_1/Run10: Best validation loss = 0.852161, best weightsFile = bleak_40000
+50_1/Run10: Test accuracy = 0.618133
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_1/Run2: Best validation loss = 0.848736, best weightsFile = bleak_40000
+50_1/Run2: Test accuracy = 0.620727
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_1/Run3: Best validation loss = 0.885979, best weightsFile = bleak_38000
+50_1/Run3: Test accuracy = 0.602696
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_1/Run4: Best validation loss = 0.834895, best weightsFile = bleak_40000
+50_1/Run4: Test accuracy = 0.635365
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_1/Run5: Best validation loss = 0.878531, best weightsFile = bleak_40000
+50_1/Run5: Test accuracy = 0.613939
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_1/Run6: Best validation loss = 0.890768, best weightsFile = bleak_38000
+50_1/Run6: Test accuracy = 0.59693
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_1/Run7: Best validation loss = 0.840203, best weightsFile = bleak_38000
+50_1/Run7: Test accuracy = 0.639827
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_1/Run8: Best validation loss = 0.913883, best weightsFile = bleak_38000
+50_1/Run8: Test accuracy = 0.575747
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_1/Run9: Best validation loss = 0.877586, best weightsFile = bleak_38000
+50_1/Run9: Test accuracy = 0.605634
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 50_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_10/Run1: Best validation loss = 0.945986, best weightsFile = bleak_1000
+50_10/Run1: Test accuracy = 0.554117
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_10/Run10: Best validation loss = 0.937754, best weightsFile = bleak_2500
+50_10/Run10: Test accuracy = 0.556531
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_10/Run2: Best validation loss = 0.945044, best weightsFile = bleak_1500
+50_10/Run2: Test accuracy = 0.557018
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_10/Run3: Best validation loss = 0.944493, best weightsFile = bleak_2000
+50_10/Run3: Test accuracy = 0.56079
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_10/Run4: Best validation loss = 0.93843, best weightsFile = bleak_2000
+50_10/Run4: Test accuracy = 0.561327
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_10/Run5: Best validation loss = 0.944519, best weightsFile = bleak_2500
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+50_10/Run5: Test accuracy = 
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_10/Run6: Best validation loss = 0.942391, best weightsFile = bleak_2500
+50_10/Run6: Test accuracy = 0.554133
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_10/Run7: Best validation loss = 0.947151, best weightsFile = bleak_2500
+50_10/Run7: Test accuracy = 0.556998
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_10/Run8: Best validation loss = 0.938638, best weightsFile = bleak_2500
+50_10/Run8: Test accuracy = 0.559066
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_10/Run9: Best validation loss = 0.943273, best weightsFile = bleak_1500
+50_10/Run9: Test accuracy = 0.557094
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 50_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_3/Run1: Best validation loss = 0.863426, best weightsFile = bleak_35500
+50_3/Run1: Test accuracy = 0.617978
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+data: Error: Could not open database '../../../../Data/poker/poker_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+50_3/Run10: Best validation loss = 0.863424, best weightsFile = bleak_39000
+50_3/Run10: Test accuracy = 0.617809
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_3/Run2: Best validation loss = 0.751919, best weightsFile = bleak_40000
+50_3/Run2: Test accuracy = 0.670795
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_3/Run3: Best validation loss = 0.762323, best weightsFile = bleak_38000
+50_3/Run3: Test accuracy = 0.668647
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_3/Run4: Best validation loss = 0.79672, best weightsFile = bleak_40000
+50_3/Run4: Test accuracy = 0.654269
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_3/Run5: Best validation loss = 0.688749, best weightsFile = bleak_40000
+50_3/Run5: Test accuracy = 0.707621
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_3/Run6: Best validation loss = 0.798781, best weightsFile = bleak_40000
+50_3/Run6: Test accuracy = 0.653551
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_3/Run7: Best validation loss = 0.852001, best weightsFile = bleak_38000
+50_3/Run7: Test accuracy = 0.622427
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_3/Run8: Best validation loss = 0.873316, best weightsFile = bleak_35500
+50_3/Run8: Test accuracy = 0.610726
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_3/Run9: Best validation loss = 0.778269, best weightsFile = bleak_38000
+50_3/Run9: Test accuracy = 0.662826
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 50_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_5/Run1: Best validation loss = 0.920188, best weightsFile = bleak_18000
+50_5/Run1: Test accuracy = 0.584331
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_5/Run10: Best validation loss = 0.926968, best weightsFile = bleak_6500
+50_5/Run10: Test accuracy = 0.566911
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_5/Run2: Best validation loss = 0.866323, best weightsFile = bleak_16000
+50_5/Run2: Test accuracy = 0.611118
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_5/Run3: Best validation loss = 0.822881, best weightsFile = bleak_38000
+50_5/Run3: Test accuracy = 0.653119
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_5/Run4: Best validation loss = 0.813258, best weightsFile = bleak_36500
+50_5/Run4: Test accuracy = 0.653785
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_5/Run5: Best validation loss = 0.86956, best weightsFile = bleak_39000
+50_5/Run5: Test accuracy = 0.619114
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_5/Run6: Best validation loss = 0.813791, best weightsFile = bleak_38000
+50_5/Run6: Test accuracy = 0.651008
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_5/Run7: Best validation loss = 0.870319, best weightsFile = bleak_15500
+50_5/Run7: Test accuracy = 0.607909
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_5/Run8: Best validation loss = 0.889588, best weightsFile = bleak_26000
+50_5/Run8: Test accuracy = 0.607013
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_5/Run9: Best validation loss = 0.748074, best weightsFile = bleak_38000
+50_5/Run9: Test accuracy = 0.690084
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+Info: Processing 50_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_7/Run1: Best validation loss = 0.933247, best weightsFile = bleak_12000
+50_7/Run1: Test accuracy = 0.580443
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_7/Run10: Best validation loss = 0.913704, best weightsFile = bleak_6500
+50_7/Run10: Test accuracy = 0.58092
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_7/Run2: Best validation loss = 0.891873, best weightsFile = bleak_12500
+50_7/Run2: Test accuracy = 0.604904
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_7/Run3: Best validation loss = 0.932045, best weightsFile = bleak_4000
+50_7/Run3: Test accuracy = 0.563906
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_7/Run4: Best validation loss = 0.945015, best weightsFile = bleak_2500
+50_7/Run4: Test accuracy = 0.558674
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_7/Run5: Best validation loss = 0.918506, best weightsFile = bleak_12500
+50_7/Run5: Test accuracy = 0.591666
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_7/Run6: Best validation loss = 0.92857, best weightsFile = bleak_6000
+50_7/Run6: Test accuracy = 0.571925
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_7/Run7: Best validation loss = 0.928296, best weightsFile = bleak_9000
+50_7/Run7: Test accuracy = 0.575618
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+50_7/Run8: Best validation loss = 0.949467, best weightsFile = bleak_2500
+50_7/Run8: Test accuracy = 0.556293
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+data: Error: Could not open database '../../../../Data/poker/poker_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 75: [: : integer expression expected
+50_7/Run9: Best validation loss = 0.849689, best weightsFile = bleak_16000
+50_7/Run9: Test accuracy = 0.621988
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker
+/mnt/c/Work/Source/Bleak/Experiments/VaryingFerns/poker

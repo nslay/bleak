@@ -1,0 +1,1260 @@
+Info: Processing 100_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run1_1: Best validation loss = 0.000102497, best weightsFile = bleak_22500
+100_1/Run1_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run1_2: Best validation loss = 0.149676, best weightsFile = bleak_500
+100_1/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run1_3: Best validation loss = 0.0978473, best weightsFile = bleak_500
+100_1/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run2_1: Best validation loss = 4.00075E-05, best weightsFile = bleak_40000
+100_1/Run2_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run2_2: Best validation loss = 0.0832574, best weightsFile = bleak_500
+100_1/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run2_3: Best validation loss = 0.151982, best weightsFile = bleak_500
+100_1/Run2_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run3_1: Best validation loss = 1.49987E-05, best weightsFile = bleak_40000
+100_1/Run3_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run3_2: Best validation loss = 0.0945194, best weightsFile = bleak_500
+100_1/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run3_3: Best validation loss = 0.0133232, best weightsFile = bleak_2000
+100_1/Run3_3: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run4_1: Best validation loss = 2.75137E-05, best weightsFile = bleak_40000
+100_1/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run4_2: Best validation loss = 0.0340011, best weightsFile = bleak_7000
+100_1/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run4_3: Best validation loss = 0.131638, best weightsFile = bleak_500
+100_1/Run4_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run5_1: Best validation loss = 2.5268E-05, best weightsFile = bleak_40000
+100_1/Run5_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run5_2: Best validation loss = 0.193858, best weightsFile = bleak_500
+100_1/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_1/Run5_3: Best validation loss = 0.0779732, best weightsFile = bleak_1000
+100_1/Run5_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 100_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run1_1: Best validation loss = 1.26362E-07, best weightsFile = bleak_39500
+100_10/Run1_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run1_2: Best validation loss = 0.103406, best weightsFile = bleak_4500
+100_10/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run1_3: Best validation loss = 0.135762, best weightsFile = bleak_500
+100_10/Run1_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run2_1: Best validation loss = 1.90735E-07, best weightsFile = bleak_39500
+100_10/Run2_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run2_2: Best validation loss = 0.0243709, best weightsFile = bleak_3000
+100_10/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run2_3: Best validation loss = 0.0891344, best weightsFile = bleak_2000
+100_10/Run2_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run3_1: Best validation loss = 1.71661E-07, best weightsFile = bleak_40000
+100_10/Run3_1: Test accuracy = 0.9
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run3_2: Best validation loss = 0.0704424, best weightsFile = bleak_500
+100_10/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run3_3: Best validation loss = 0.0962827, best weightsFile = bleak_500
+100_10/Run3_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run4_1: Best validation loss = 1.09912E-06, best weightsFile = bleak_40000
+100_10/Run4_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run4_2: Best validation loss = 0.0404234, best weightsFile = bleak_1500
+100_10/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run4_3: Best validation loss = 0.279382, best weightsFile = bleak_500
+100_10/Run4_3: Test accuracy = 0.88
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run5_1: Best validation loss = 1.00136E-07, best weightsFile = bleak_17500
+100_10/Run5_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run5_2: Best validation loss = 0.181714, best weightsFile = bleak_500
+100_10/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_10/Run5_3: Best validation loss = 0.200428, best weightsFile = bleak_500
+100_10/Run5_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 100_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run1_1: Best validation loss = 1.01452E-05, best weightsFile = bleak_22000
+100_3/Run1_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run1_2: Best validation loss = 0.214864, best weightsFile = bleak_500
+100_3/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run1_3: Best validation loss = 0.140543, best weightsFile = bleak_500
+100_3/Run1_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run2_1: Best validation loss = 1.00594E-05, best weightsFile = bleak_13500
+100_3/Run2_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run2_2: Best validation loss = 0.0736826, best weightsFile = bleak_500
+100_3/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run2_3: Best validation loss = 0.106053, best weightsFile = bleak_500
+100_3/Run2_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run3_1: Best validation loss = 1.00375E-06, best weightsFile = bleak_36000
+100_3/Run3_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run3_2: Best validation loss = 0.0492658, best weightsFile = bleak_1000
+100_3/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run3_3: Best validation loss = 0.116719, best weightsFile = bleak_1500
+100_3/Run3_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run4_1: Best validation loss = 1.00751E-05, best weightsFile = bleak_24000
+100_3/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run4_2: Best validation loss = 0.045546, best weightsFile = bleak_500
+100_3/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run4_3: Best validation loss = 0.194977, best weightsFile = bleak_500
+100_3/Run4_3: Test accuracy = 0.9
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run5_1: Best validation loss = 1.06812E-06, best weightsFile = bleak_40000
+100_3/Run5_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run5_2: Best validation loss = 0.154301, best weightsFile = bleak_500
+100_3/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_3/Run5_3: Best validation loss = 0.160075, best weightsFile = bleak_500
+100_3/Run5_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 100_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run1_1: Best validation loss = 1.54258E-06, best weightsFile = bleak_40000
+100_5/Run1_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run1_2: Best validation loss = 0.197808, best weightsFile = bleak_500
+100_5/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run1_3: Best validation loss = 0.120088, best weightsFile = bleak_1000
+100_5/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run2_1: Best validation loss = 1.01451E-05, best weightsFile = bleak_14500
+100_5/Run2_1: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run2_2: Best validation loss = 0.0455751, best weightsFile = bleak_500
+100_5/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run2_3: Best validation loss = 0.126323, best weightsFile = bleak_500
+100_5/Run2_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run3_1: Best validation loss = 1.43529E-06, best weightsFile = bleak_40000
+100_5/Run3_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run3_2: Best validation loss = 0.0643051, best weightsFile = bleak_500
+100_5/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run3_3: Best validation loss = 0.121868, best weightsFile = bleak_500
+100_5/Run3_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run4_1: Best validation loss = 1.5569E-06, best weightsFile = bleak_40000
+100_5/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run4_2: Best validation loss = 0.0430778, best weightsFile = bleak_500
+100_5/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run4_3: Best validation loss = 0.216442, best weightsFile = bleak_1000
+100_5/Run4_3: Test accuracy = 0.88
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run5_1: Best validation loss = 1.0109E-06, best weightsFile = bleak_31500
+100_5/Run5_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run5_2: Best validation loss = 0.241528, best weightsFile = bleak_500
+100_5/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_5/Run5_3: Best validation loss = 0.126237, best weightsFile = bleak_500
+100_5/Run5_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 100_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run1_1: Best validation loss = 1.02997E-06, best weightsFile = bleak_14500
+100_7/Run1_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run1_2: Best validation loss = 0.171299, best weightsFile = bleak_500
+100_7/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run1_3: Best validation loss = 0.0768016, best weightsFile = bleak_500
+100_7/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run2_1: Best validation loss = 1.00613E-06, best weightsFile = bleak_40000
+100_7/Run2_1: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run2_2: Best validation loss = 0.0131113, best weightsFile = bleak_1000
+100_7/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run2_3: Best validation loss = 0.136946, best weightsFile = bleak_500
+100_7/Run2_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run3_1: Best validation loss = 1.00374E-06, best weightsFile = bleak_18500
+100_7/Run3_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run3_2: Best validation loss = 0.0636388, best weightsFile = bleak_500
+100_7/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run3_3: Best validation loss = 0.144753, best weightsFile = bleak_40000
+100_7/Run3_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run4_1: Best validation loss = 1.00375E-06, best weightsFile = bleak_21500
+100_7/Run4_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run4_2: Best validation loss = 0.0219893, best weightsFile = bleak_500
+100_7/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run4_3: Best validation loss = 0.213327, best weightsFile = bleak_500
+100_7/Run4_3: Test accuracy = 0.9
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run5_1: Best validation loss = 1.01329E-06, best weightsFile = bleak_28500
+100_7/Run5_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run5_2: Best validation loss = 0.217127, best weightsFile = bleak_2000
+100_7/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+100_7/Run5_3: Best validation loss = 0.131759, best weightsFile = bleak_40000
+100_7/Run5_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 10_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run1_1: Best validation loss = 0.000140717, best weightsFile = bleak_40000
+10_1/Run1_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run1_2: Best validation loss = 0.0754575, best weightsFile = bleak_500
+10_1/Run1_2: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run1_3: Best validation loss = 0.0847535, best weightsFile = bleak_1000
+10_1/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run2_1: Best validation loss = 0.000534764, best weightsFile = bleak_40000
+10_1/Run2_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run2_2: Best validation loss = 0.0507278, best weightsFile = bleak_500
+10_1/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run2_3: Best validation loss = 0.0572523, best weightsFile = bleak_36000
+10_1/Run2_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run3_1: Best validation loss = 0.00010176, best weightsFile = bleak_29000
+10_1/Run3_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run3_2: Best validation loss = 0.0603851, best weightsFile = bleak_2500
+10_1/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run3_3: Best validation loss = 0.00021475, best weightsFile = bleak_40000
+10_1/Run3_3: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run4_1: Best validation loss = 0.000106791, best weightsFile = bleak_40000
+10_1/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run4_2: Best validation loss = 0.0300031, best weightsFile = bleak_1500
+10_1/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run4_3: Best validation loss = 0.0879968, best weightsFile = bleak_500
+10_1/Run4_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run5_1: Best validation loss = 0.000100729, best weightsFile = bleak_36500
+10_1/Run5_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run5_2: Best validation loss = 0.147207, best weightsFile = bleak_500
+10_1/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_1/Run5_3: Best validation loss = 0.136699, best weightsFile = bleak_500
+10_1/Run5_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 10_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run1_1: Best validation loss = 1.25626E-05, best weightsFile = bleak_38500
+10_10/Run1_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run1_2: Best validation loss = 0.140031, best weightsFile = bleak_1000
+10_10/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run1_3: Best validation loss = 0.089441, best weightsFile = bleak_3500
+10_10/Run1_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run2_1: Best validation loss = 1.75689E-05, best weightsFile = bleak_40000
+10_10/Run2_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run2_2: Best validation loss = 0.0147404, best weightsFile = bleak_1000
+10_10/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run2_3: Best validation loss = 0.123089, best weightsFile = bleak_3000
+10_10/Run2_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run3_1: Best validation loss = 1.00257E-05, best weightsFile = bleak_29500
+10_10/Run3_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run3_2: Best validation loss = 0.125019, best weightsFile = bleak_1500
+10_10/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run3_3: Best validation loss = 0.0517677, best weightsFile = bleak_1000
+10_10/Run3_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run4_1: Best validation loss = 2.31945E-05, best weightsFile = bleak_40000
+10_10/Run4_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run4_2: Best validation loss = 0.0385868, best weightsFile = bleak_11000
+10_10/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run4_3: Best validation loss = 0.214645, best weightsFile = bleak_500
+10_10/Run4_3: Test accuracy = 0.9
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run5_1: Best validation loss = 1.01807E-05, best weightsFile = bleak_22500
+10_10/Run5_1: Test accuracy = 0.88
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run5_2: Best validation loss = 0.126796, best weightsFile = bleak_1000
+10_10/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_10/Run5_3: Best validation loss = 0.0728256, best weightsFile = bleak_1500
+10_10/Run5_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 10_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run1_1: Best validation loss = 0.000100746, best weightsFile = bleak_33500
+10_3/Run1_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run1_2: Best validation loss = 0.109145, best weightsFile = bleak_500
+10_3/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run1_3: Best validation loss = 0.116047, best weightsFile = bleak_500
+10_3/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run2_1: Best validation loss = 0.000118595, best weightsFile = bleak_40000
+10_3/Run2_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run2_2: Best validation loss = 0.0263155, best weightsFile = bleak_500
+10_3/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run2_3: Best validation loss = 0.228377, best weightsFile = bleak_500
+10_3/Run2_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run3_1: Best validation loss = 2.54641E-05, best weightsFile = bleak_40000
+10_3/Run3_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run3_2: Best validation loss = 0.0497188, best weightsFile = bleak_1500
+10_3/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run3_3: Best validation loss = 0.110339, best weightsFile = bleak_500
+10_3/Run3_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run4_1: Best validation loss = 0.000101064, best weightsFile = bleak_26500
+10_3/Run4_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run4_2: Best validation loss = 0.0349798, best weightsFile = bleak_500
+10_3/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run4_3: Best validation loss = 0.133878, best weightsFile = bleak_500
+10_3/Run4_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run5_1: Best validation loss = 2.2386E-05, best weightsFile = bleak_40000
+10_3/Run5_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run5_2: Best validation loss = 0.110468, best weightsFile = bleak_1000
+10_3/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_3/Run5_3: Best validation loss = 0.11764, best weightsFile = bleak_500
+10_3/Run5_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 10_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run1_1: Best validation loss = 3.08254E-05, best weightsFile = bleak_40000
+10_5/Run1_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run1_2: Best validation loss = 0.198955, best weightsFile = bleak_500
+10_5/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run1_3: Best validation loss = 0.0828943, best weightsFile = bleak_1000
+10_5/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run2_1: Best validation loss = 1.90086E-05, best weightsFile = bleak_40000
+10_5/Run2_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run2_2: Best validation loss = 0.0292546, best weightsFile = bleak_500
+10_5/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run2_3: Best validation loss = 0.110407, best weightsFile = bleak_500
+10_5/Run2_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run3_1: Best validation loss = 1.12348E-05, best weightsFile = bleak_21000
+10_5/Run3_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run3_2: Best validation loss = 0.045739, best weightsFile = bleak_1500
+10_5/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run3_3: Best validation loss = 4.33478E-05, best weightsFile = bleak_40000
+10_5/Run3_3: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run4_1: Best validation loss = 3.16714E-05, best weightsFile = bleak_40000
+10_5/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run4_2: Best validation loss = 0.0181607, best weightsFile = bleak_23500
+10_5/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run4_3: Best validation loss = 0.166201, best weightsFile = bleak_2500
+10_5/Run4_3: Test accuracy = 0.9
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run5_1: Best validation loss = 1.34606E-05, best weightsFile = bleak_40000
+10_5/Run5_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run5_2: Best validation loss = 0.100713, best weightsFile = bleak_500
+10_5/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_5/Run5_3: Best validation loss = 0.135209, best weightsFile = bleak_500
+10_5/Run5_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 10_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run1_1: Best validation loss = 1.39122E-05, best weightsFile = bleak_40000
+10_7/Run1_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run1_2: Best validation loss = 0.115958, best weightsFile = bleak_500
+10_7/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run1_3: Best validation loss = 0.0920304, best weightsFile = bleak_500
+10_7/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run2_1: Best validation loss = 2.81999E-05, best weightsFile = bleak_40000
+10_7/Run2_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run2_2: Best validation loss = 0.0138786, best weightsFile = bleak_1000
+10_7/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run2_3: Best validation loss = 0.188593, best weightsFile = bleak_500
+10_7/Run2_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run3_1: Best validation loss = 1.29681E-05, best weightsFile = bleak_40000
+10_7/Run3_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run3_2: Best validation loss = 0.0571102, best weightsFile = bleak_500
+10_7/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run3_3: Best validation loss = 0.00196307, best weightsFile = bleak_16000
+10_7/Run3_3: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run4_1: Best validation loss = 3.52398E-05, best weightsFile = bleak_40000
+10_7/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run4_2: Best validation loss = 0.055351, best weightsFile = bleak_3500
+10_7/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run4_3: Best validation loss = 0.137371, best weightsFile = bleak_500
+10_7/Run4_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run5_1: Best validation loss = 3.84718E-05, best weightsFile = bleak_40000
+10_7/Run5_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run5_2: Best validation loss = 0.20917, best weightsFile = bleak_1000
+10_7/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+10_7/Run5_3: Best validation loss = 0.138531, best weightsFile = bleak_1000
+10_7/Run5_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 1_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run1_1: Best validation loss = 0.00366694, best weightsFile = bleak_40000
+1_1/Run1_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run1_2: Best validation loss = 0.0736393, best weightsFile = bleak_6000
+1_1/Run1_2: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run1_3: Best validation loss = 0.102, best weightsFile = bleak_6000
+1_1/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run2_1: Best validation loss = 0.00337662, best weightsFile = bleak_40000
+1_1/Run2_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run2_2: Best validation loss = 0.0320843, best weightsFile = bleak_9000
+1_1/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run2_3: Best validation loss = 0.0768408, best weightsFile = bleak_40000
+1_1/Run2_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run3_1: Best validation loss = 0.0012896, best weightsFile = bleak_40000
+1_1/Run3_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run3_2: Best validation loss = 0.0642906, best weightsFile = bleak_11000
+1_1/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run3_3: Best validation loss = 0.0776708, best weightsFile = bleak_21000
+1_1/Run3_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run4_1: Best validation loss = 0.00217888, best weightsFile = bleak_40000
+1_1/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run4_2: Best validation loss = 0.0334497, best weightsFile = bleak_11000
+1_1/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run4_3: Best validation loss = 0.0987478, best weightsFile = bleak_8000
+1_1/Run4_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run5_1: Best validation loss = 0.00113081, best weightsFile = bleak_40000
+1_1/Run5_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run5_2: Best validation loss = 0.0567616, best weightsFile = bleak_2500
+1_1/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_1/Run5_3: Best validation loss = 0.116406, best weightsFile = bleak_7000
+1_1/Run5_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 1_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run1_1: Best validation loss = 0.00159361, best weightsFile = bleak_40000
+1_10/Run1_1: Test accuracy = 0.88
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run1_2: Best validation loss = 0.157649, best weightsFile = bleak_1500
+1_10/Run1_2: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run1_3: Best validation loss = 0.089261, best weightsFile = bleak_5000
+1_10/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run2_1: Best validation loss = 0.00214022, best weightsFile = bleak_40000
+1_10/Run2_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run2_2: Best validation loss = 0.0141208, best weightsFile = bleak_24500
+1_10/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run2_3: Best validation loss = 0.350559, best weightsFile = bleak_2500
+1_10/Run2_3: Test accuracy = 0.82
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run3_1: Best validation loss = 0.00157431, best weightsFile = bleak_40000
+1_10/Run3_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run3_2: Best validation loss = 0.0487561, best weightsFile = bleak_13500
+1_10/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run3_3: Best validation loss = 0.18666, best weightsFile = bleak_5500
+1_10/Run3_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run4_1: Best validation loss = 0.00166191, best weightsFile = bleak_40000
+1_10/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run4_2: Best validation loss = 0.0944118, best weightsFile = bleak_40000
+1_10/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run4_3: Best validation loss = 0.496487, best weightsFile = bleak_4000
+1_10/Run4_3: Test accuracy = 0.8
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run5_1: Best validation loss = 0.00102027, best weightsFile = bleak_40000
+1_10/Run5_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run5_2: Best validation loss = 0.233178, best weightsFile = bleak_1000
+1_10/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_10/Run5_3: Best validation loss = 0.271194, best weightsFile = bleak_5000
+1_10/Run5_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 1_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run1_1: Best validation loss = 0.00165034, best weightsFile = bleak_40000
+1_3/Run1_1: Test accuracy = 0.88
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run1_2: Best validation loss = 0.121116, best weightsFile = bleak_3000
+1_3/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run1_3: Best validation loss = 0.120004, best weightsFile = bleak_4500
+1_3/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run2_1: Best validation loss = 0.00495081, best weightsFile = bleak_40000
+1_3/Run2_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run2_2: Best validation loss = 0.00490928, best weightsFile = bleak_40000
+1_3/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run2_3: Best validation loss = 0.0495578, best weightsFile = bleak_40000
+1_3/Run2_3: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run3_1: Best validation loss = 0.0109493, best weightsFile = bleak_40000
+1_3/Run3_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run3_2: Best validation loss = 0.0526953, best weightsFile = bleak_11500
+1_3/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run3_3: Best validation loss = 0.053058, best weightsFile = bleak_40000
+1_3/Run3_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run4_1: Best validation loss = 0.00199469, best weightsFile = bleak_40000
+1_3/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run4_2: Best validation loss = 0.0997926, best weightsFile = bleak_19500
+1_3/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run4_3: Best validation loss = 0.141278, best weightsFile = bleak_10500
+1_3/Run4_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run5_1: Best validation loss = 0.00120758, best weightsFile = bleak_40000
+1_3/Run5_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run5_2: Best validation loss = 0.0715452, best weightsFile = bleak_3000
+1_3/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_3/Run5_3: Best validation loss = 0.14298, best weightsFile = bleak_1500
+1_3/Run5_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 1_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run1_1: Best validation loss = 0.00162112, best weightsFile = bleak_40000
+1_5/Run1_1: Test accuracy = 0.86
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run1_2: Best validation loss = 0.12814, best weightsFile = bleak_4000
+1_5/Run1_2: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run1_3: Best validation loss = 0.385302, best weightsFile = bleak_2500
+1_5/Run1_3: Test accuracy = 0.9
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run2_1: Best validation loss = 0.0101199, best weightsFile = bleak_40000
+1_5/Run2_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run2_2: Best validation loss = 0.0078801, best weightsFile = bleak_16000
+1_5/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run2_3: Best validation loss = 0.129375, best weightsFile = bleak_40000
+1_5/Run2_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run3_1: Best validation loss = 0.00146168, best weightsFile = bleak_40000
+1_5/Run3_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run3_2: Best validation loss = 0.0486572, best weightsFile = bleak_13000
+1_5/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run3_3: Best validation loss = 0.120117, best weightsFile = bleak_40000
+1_5/Run3_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run4_1: Best validation loss = 0.00191956, best weightsFile = bleak_40000
+1_5/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run4_2: Best validation loss = 0.0671511, best weightsFile = bleak_4000
+1_5/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run4_3: Best validation loss = 0.104577, best weightsFile = bleak_10500
+1_5/Run4_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run5_1: Best validation loss = 0.00122123, best weightsFile = bleak_40000
+1_5/Run5_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run5_2: Best validation loss = 0.176455, best weightsFile = bleak_5500
+1_5/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_5/Run5_3: Best validation loss = 0.167393, best weightsFile = bleak_8000
+1_5/Run5_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 1_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run1_1: Best validation loss = 0.000938384, best weightsFile = bleak_40000
+1_7/Run1_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run1_2: Best validation loss = 0.121663, best weightsFile = bleak_3500
+1_7/Run1_2: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run1_3: Best validation loss = 0.526707, best weightsFile = bleak_1500
+1_7/Run1_3: Test accuracy = 0.76
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run2_1: Best validation loss = 0.00468444, best weightsFile = bleak_40000
+1_7/Run2_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run2_2: Best validation loss = 0.00819414, best weightsFile = bleak_16500
+1_7/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run2_3: Best validation loss = 0.123227, best weightsFile = bleak_40000
+1_7/Run2_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run3_1: Best validation loss = 0.00145159, best weightsFile = bleak_40000
+1_7/Run3_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run3_2: Best validation loss = 0.056981, best weightsFile = bleak_11500
+1_7/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run3_3: Best validation loss = 0.00496228, best weightsFile = bleak_40000
+1_7/Run3_3: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run4_1: Best validation loss = 0.00174068, best weightsFile = bleak_40000
+1_7/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run4_2: Best validation loss = 0.0582851, best weightsFile = bleak_4500
+1_7/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run4_3: Best validation loss = 0.094208, best weightsFile = bleak_5000
+1_7/Run4_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run5_1: Best validation loss = 0.00131651, best weightsFile = bleak_40000
+1_7/Run5_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run5_2: Best validation loss = 0.269489, best weightsFile = bleak_16000
+1_7/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+1_7/Run5_3: Best validation loss = 0.180447, best weightsFile = bleak_11000
+1_7/Run5_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 50_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run1_1: Best validation loss = 0.000100142, best weightsFile = bleak_32000
+50_1/Run1_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run1_2: Best validation loss = 0.219496, best weightsFile = bleak_500
+50_1/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run1_3: Best validation loss = 0.0848961, best weightsFile = bleak_500
+50_1/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run2_1: Best validation loss = 0.000101401, best weightsFile = bleak_40000
+50_1/Run2_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run2_2: Best validation loss = 0.0718823, best weightsFile = bleak_500
+50_1/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run2_3: Best validation loss = 0.0505416, best weightsFile = bleak_4000
+50_1/Run2_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run3_1: Best validation loss = 2.9138E-05, best weightsFile = bleak_40000
+50_1/Run3_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run3_2: Best validation loss = 0.045236, best weightsFile = bleak_500
+50_1/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run3_3: Best validation loss = 0.0565924, best weightsFile = bleak_500
+50_1/Run3_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run4_1: Best validation loss = 4.91354E-05, best weightsFile = bleak_40000
+50_1/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run4_2: Best validation loss = 0.0355425, best weightsFile = bleak_500
+50_1/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run4_3: Best validation loss = 0.118608, best weightsFile = bleak_500
+50_1/Run4_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run5_1: Best validation loss = 2.656E-05, best weightsFile = bleak_40000
+50_1/Run5_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run5_2: Best validation loss = 0.119543, best weightsFile = bleak_500
+50_1/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_1/Run5_3: Best validation loss = 0.0991794, best weightsFile = bleak_500
+50_1/Run5_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 50_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run1_1: Best validation loss = 1.00613E-06, best weightsFile = bleak_21000
+50_10/Run1_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run1_2: Best validation loss = 0.190186, best weightsFile = bleak_500
+50_10/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run1_3: Best validation loss = 0.0974381, best weightsFile = bleak_500
+50_10/Run1_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run2_1: Best validation loss = 1.03788E-05, best weightsFile = bleak_10000
+50_10/Run2_1: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run2_2: Best validation loss = 0.0193755, best weightsFile = bleak_1000
+50_10/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run2_3: Best validation loss = 0.127418, best weightsFile = bleak_30500
+50_10/Run2_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run3_1: Best validation loss = 1.02997E-06, best weightsFile = bleak_27000
+50_10/Run3_1: Test accuracy = 0.86
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run3_2: Best validation loss = 0.0699933, best weightsFile = bleak_500
+50_10/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run3_3: Best validation loss = 0.0908239, best weightsFile = bleak_1000
+50_10/Run3_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run4_1: Best validation loss = 1.28271E-06, best weightsFile = bleak_40000
+50_10/Run4_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run4_2: Best validation loss = 0.0358165, best weightsFile = bleak_27500
+50_10/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run4_3: Best validation loss = 0.174227, best weightsFile = bleak_500
+50_10/Run4_3: Test accuracy = 0.9
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run5_1: Best validation loss = 1.21117E-06, best weightsFile = bleak_29500
+50_10/Run5_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run5_2: Best validation loss = 0.171403, best weightsFile = bleak_500
+50_10/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_10/Run5_3: Best validation loss = 0.217357, best weightsFile = bleak_500
+50_10/Run5_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 50_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run1_1: Best validation loss = 1.01665E-05, best weightsFile = bleak_30000
+50_3/Run1_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run1_2: Best validation loss = 0.1324, best weightsFile = bleak_500
+50_3/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run1_3: Best validation loss = 0.0876147, best weightsFile = bleak_500
+50_3/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run2_1: Best validation loss = 1.00058E-05, best weightsFile = bleak_35000
+50_3/Run2_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run2_2: Best validation loss = 0.0271807, best weightsFile = bleak_26500
+50_3/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run2_3: Best validation loss = 0.104038, best weightsFile = bleak_16500
+50_3/Run2_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run3_1: Best validation loss = 1.86683E-06, best weightsFile = bleak_40000
+50_3/Run3_1: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run3_2: Best validation loss = 0.0603294, best weightsFile = bleak_1000
+50_3/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run3_3: Best validation loss = 0.0938645, best weightsFile = bleak_500
+50_3/Run3_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run4_1: Best validation loss = 1.01681E-05, best weightsFile = bleak_33000
+50_3/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run4_2: Best validation loss = 0.0324729, best weightsFile = bleak_500
+50_3/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run4_3: Best validation loss = 0.144834, best weightsFile = bleak_1500
+50_3/Run4_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run5_1: Best validation loss = 1.03978E-05, best weightsFile = bleak_14000
+50_3/Run5_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run5_2: Best validation loss = 0.192402, best weightsFile = bleak_500
+50_3/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_3/Run5_3: Best validation loss = 0.179159, best weightsFile = bleak_500
+50_3/Run5_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 50_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run1_1: Best validation loss = 1.01641E-05, best weightsFile = bleak_13500
+50_5/Run1_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run1_2: Best validation loss = 0.131047, best weightsFile = bleak_1500
+50_5/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run1_3: Best validation loss = 0.149625, best weightsFile = bleak_500
+50_5/Run1_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run2_1: Best validation loss = 1.04431E-05, best weightsFile = bleak_13000
+50_5/Run2_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run2_2: Best validation loss = 0.0689986, best weightsFile = bleak_500
+50_5/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run2_3: Best validation loss = 0.189464, best weightsFile = bleak_2000
+50_5/Run2_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run3_1: Best validation loss = 1.0045E-05, best weightsFile = bleak_16500
+50_5/Run3_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run3_2: Best validation loss = 0.076234, best weightsFile = bleak_500
+50_5/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run3_3: Best validation loss = 0.0958333, best weightsFile = bleak_500
+50_5/Run3_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run4_1: Best validation loss = 1.02291E-05, best weightsFile = bleak_24500
+50_5/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run4_2: Best validation loss = 0.0447624, best weightsFile = bleak_6500
+50_5/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run4_3: Best validation loss = 0.205443, best weightsFile = bleak_500
+50_5/Run4_3: Test accuracy = 0.88
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run5_1: Best validation loss = 1.02405E-05, best weightsFile = bleak_12500
+50_5/Run5_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run5_2: Best validation loss = 0.197595, best weightsFile = bleak_500
+50_5/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_5/Run5_3: Best validation loss = 0.098828, best weightsFile = bleak_500
+50_5/Run5_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+Info: Processing 50_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run1_1: Best validation loss = 1.5092E-06, best weightsFile = bleak_40000
+50_7/Run1_1: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run1_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run1_2: Best validation loss = 0.149255, best weightsFile = bleak_1500
+50_7/Run1_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run1_3: Best validation loss = 0.120055, best weightsFile = bleak_500
+50_7/Run1_3: Test accuracy = 0.94
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run2_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run2_1: Best validation loss = 1.17064E-06, best weightsFile = bleak_40000
+50_7/Run2_1: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run2_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run2_2: Best validation loss = 0.00265698, best weightsFile = bleak_1000
+50_7/Run2_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run2_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run2_3: Best validation loss = 0.17692, best weightsFile = bleak_500
+50_7/Run2_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run3_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run3_1: Best validation loss = 1.00375E-06, best weightsFile = bleak_26500
+50_7/Run3_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run3_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run3_2: Best validation loss = 0.0564171, best weightsFile = bleak_500
+50_7/Run3_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run3_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run3_3: Best validation loss = 0.113297, best weightsFile = bleak_500
+50_7/Run3_3: Test accuracy = 0.96
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run4_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run4_1: Best validation loss = 1.0109E-06, best weightsFile = bleak_37000
+50_7/Run4_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run4_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run4_2: Best validation loss = 0.00276541, best weightsFile = bleak_40000
+50_7/Run4_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run4_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run4_3: Best validation loss = 0.143055, best weightsFile = bleak_500
+50_7/Run4_3: Test accuracy = 0.92
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run5_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run5_1: Best validation loss = 1.11104E-06, best weightsFile = bleak_40000
+50_7/Run5_1: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run5_2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run5_2: Best validation loss = 0.097056, best weightsFile = bleak_500
+50_7/Run5_2: Test accuracy = 1
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7/Run5_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+50_7/Run5_3: Best validation loss = 0.0749858, best weightsFile = bleak_1500
+50_7/Run5_3: Test accuracy = 0.98
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/iris

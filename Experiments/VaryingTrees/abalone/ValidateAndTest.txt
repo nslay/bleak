@@ -1,0 +1,880 @@
+Info: Processing 100_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_1/Run1: Best validation loss = 0.72019, best weightsFile = bleak_24500
+100_1/Run1: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_1/Run10: Best validation loss = 0.721431, best weightsFile = bleak_15000
+100_1/Run10: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_1/Run2: Best validation loss = 0.709273, best weightsFile = bleak_15000
+100_1/Run2: Test accuracy = 0.663793
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_1/Run3: Best validation loss = 0.704476, best weightsFile = bleak_7000
+100_1/Run3: Test accuracy = 0.657088
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_1/Run4: Best validation loss = 0.718277, best weightsFile = bleak_8500
+100_1/Run4: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 70: [: : integer expression expected
+100_1/Run5: Best validation loss = 0.710867, best weightsFile = bleak_7000
+100_1/Run5: Test accuracy = 0.658046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_1/Run6: Best validation loss = 0.725169, best weightsFile = bleak_7000
+100_1/Run6: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_1/Run7: Best validation loss = 0.708065, best weightsFile = bleak_8500
+100_1/Run7: Test accuracy = 0.659004
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_1/Run8: Best validation loss = 0.718555, best weightsFile = bleak_7000
+100_1/Run8: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_1/Run9: Best validation loss = 0.71528, best weightsFile = bleak_7000
+100_1/Run9: Test accuracy = 0.664751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 100_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_10/Run1: Best validation loss = 0.755143, best weightsFile = bleak_2000
+100_10/Run1: Test accuracy = 0.640805
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_10/Run10: Best validation loss = 0.756641, best weightsFile = bleak_500
+100_10/Run10: Test accuracy = 0.636015
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_10/Run2: Best validation loss = 0.760263, best weightsFile = bleak_500
+100_10/Run2: Test accuracy = 0.626437
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_10/Run3: Best validation loss = 0.748034, best weightsFile = bleak_500
+100_10/Run3: Test accuracy = 0.631226
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_10/Run4: Best validation loss = 0.762142, best weightsFile = bleak_500
+100_10/Run4: Test accuracy = 0.630268
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_10/Run5: Best validation loss = 0.749406, best weightsFile = bleak_500
+100_10/Run5: Test accuracy = 0.636015
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_10/Run6: Best validation loss = 0.752045, best weightsFile = bleak_500
+100_10/Run6: Test accuracy = 0.627395
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_10/Run7: Best validation loss = 0.753496, best weightsFile = bleak_1500
+100_10/Run7: Test accuracy = 0.640805
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_10/Run8: Best validation loss = 0.740943, best weightsFile = bleak_500
+100_10/Run8: Test accuracy = 0.643678
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_10/Run9: Best validation loss = 0.767758, best weightsFile = bleak_500
+100_10/Run9: Test accuracy = 0.635057
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 100_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_3/Run1: Best validation loss = 0.724666, best weightsFile = bleak_7000
+100_3/Run1: Test accuracy = 0.659962
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_3/Run10: Best validation loss = 0.731247, best weightsFile = bleak_2000
+100_3/Run10: Test accuracy = 0.637931
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_3/Run2: Best validation loss = 0.723023, best weightsFile = bleak_2000
+100_3/Run2: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_3/Run3: Best validation loss = 0.727302, best weightsFile = bleak_5500
+100_3/Run3: Test accuracy = 0.655172
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_3/Run4: Best validation loss = 0.736539, best weightsFile = bleak_5500
+100_3/Run4: Test accuracy = 0.658046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_3/Run5: Best validation loss = 0.725438, best weightsFile = bleak_5500
+100_3/Run5: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_3/Run6: Best validation loss = 0.743669, best weightsFile = bleak_4500
+100_3/Run6: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_3/Run7: Best validation loss = 0.735597, best weightsFile = bleak_2000
+100_3/Run7: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_3/Run8: Best validation loss = 0.727854, best weightsFile = bleak_5500
+100_3/Run8: Test accuracy = 0.655172
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_3/Run9: Best validation loss = 0.752993, best weightsFile = bleak_4500
+100_3/Run9: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 100_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_5/Run1: Best validation loss = 0.747428, best weightsFile = bleak_2000
+100_5/Run1: Test accuracy = 0.639847
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_5/Run10: Best validation loss = 0.741147, best weightsFile = bleak_2000
+100_5/Run10: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_5/Run2: Best validation loss = 0.738959, best weightsFile = bleak_2000
+100_5/Run2: Test accuracy = 0.64272
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_5/Run3: Best validation loss = 0.729655, best weightsFile = bleak_2000
+100_5/Run3: Test accuracy = 0.643678
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_5/Run4: Best validation loss = 0.74031, best weightsFile = bleak_2000
+100_5/Run4: Test accuracy = 0.628352
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_5/Run5: Best validation loss = 0.747442, best weightsFile = bleak_2000
+100_5/Run5: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_5/Run6: Best validation loss = 0.732313, best weightsFile = bleak_2000
+100_5/Run6: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_5/Run7: Best validation loss = 0.737461, best weightsFile = bleak_2000
+100_5/Run7: Test accuracy = 0.636973
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_5/Run8: Best validation loss = 0.733473, best weightsFile = bleak_500
+100_5/Run8: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_5/Run9: Best validation loss = 0.763778, best weightsFile = bleak_2000
+100_5/Run9: Test accuracy = 0.6341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 100_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_7/Run1: Best validation loss = 0.752717, best weightsFile = bleak_2000
+100_7/Run1: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_7/Run10: Best validation loss = 0.755475, best weightsFile = bleak_1500
+100_7/Run10: Test accuracy = 0.637931
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_7/Run2: Best validation loss = 0.764541, best weightsFile = bleak_500
+100_7/Run2: Test accuracy = 0.617816
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_7/Run3: Best validation loss = 0.749972, best weightsFile = bleak_2000
+100_7/Run3: Test accuracy = 0.646552
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_7/Run4: Best validation loss = 0.754396, best weightsFile = bleak_2000
+100_7/Run4: Test accuracy = 0.639847
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_7/Run5: Best validation loss = 0.749057, best weightsFile = bleak_1500
+100_7/Run5: Test accuracy = 0.639847
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_7/Run6: Best validation loss = 0.744042, best weightsFile = bleak_2000
+100_7/Run6: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_7/Run7: Best validation loss = 0.76183, best weightsFile = bleak_500
+100_7/Run7: Test accuracy = 0.633142
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_7/Run8: Best validation loss = 0.75491, best weightsFile = bleak_2000
+100_7/Run8: Test accuracy = 0.636973
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+100_7/Run9: Best validation loss = 0.762149, best weightsFile = bleak_2000
+100_7/Run9: Test accuracy = 0.640805
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/100_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 10_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_1/Run1: Best validation loss = 0.722872, best weightsFile = bleak_38500
+10_1/Run1: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_1/Run10: Best validation loss = 0.709747, best weightsFile = bleak_39000
+10_1/Run10: Test accuracy = 0.65613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_1/Run2: Best validation loss = 0.724072, best weightsFile = bleak_40000
+10_1/Run2: Test accuracy = 0.628352
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_1/Run3: Best validation loss = 0.723016, best weightsFile = bleak_29000
+10_1/Run3: Test accuracy = 0.640805
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_1/Run4: Best validation loss = 0.718847, best weightsFile = bleak_38500
+10_1/Run4: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_1/Run5: Best validation loss = 0.716608, best weightsFile = bleak_40000
+10_1/Run5: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 70: [: : integer expression expected
+10_1/Run6: Best validation loss = 0.716284, best weightsFile = bleak_38500
+10_1/Run6: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_1/Run7: Best validation loss = 0.724967, best weightsFile = bleak_39500
+10_1/Run7: Test accuracy = 0.643678
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_1/Run8: Best validation loss = 0.723716, best weightsFile = bleak_40000
+10_1/Run8: Test accuracy = 0.6341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_1/Run9: Best validation loss = 0.737431, best weightsFile = bleak_40000
+10_1/Run9: Test accuracy = 0.635057
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 10_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_10/Run1: Best validation loss = 0.744669, best weightsFile = bleak_7000
+10_10/Run1: Test accuracy = 0.630268
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_10/Run10: Best validation loss = 0.734443, best weightsFile = bleak_6000
+10_10/Run10: Test accuracy = 0.654215
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_10/Run2: Best validation loss = 0.741329, best weightsFile = bleak_11500
+10_10/Run2: Test accuracy = 0.654215
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_10/Run3: Best validation loss = 0.749384, best weightsFile = bleak_5500
+10_10/Run3: Test accuracy = 0.630268
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_10/Run4: Best validation loss = 0.752718, best weightsFile = bleak_3500
+10_10/Run4: Test accuracy = 0.633142
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_10/Run5: Best validation loss = 0.747437, best weightsFile = bleak_11500
+10_10/Run5: Test accuracy = 0.628352
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_10/Run6: Best validation loss = 0.717036, best weightsFile = bleak_4000
+10_10/Run6: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_10/Run7: Best validation loss = 0.745854, best weightsFile = bleak_5500
+10_10/Run7: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_10/Run8: Best validation loss = 0.738315, best weightsFile = bleak_2000
+10_10/Run8: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_10/Run9: Best validation loss = 0.752165, best weightsFile = bleak_5500
+10_10/Run9: Test accuracy = 0.658046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 10_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_3/Run1: Best validation loss = 0.727387, best weightsFile = bleak_10000
+10_3/Run1: Test accuracy = 0.661877
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 70: [: : integer expression expected
+10_3/Run10: Best validation loss = 0.733061, best weightsFile = bleak_31000
+10_3/Run10: Test accuracy = 0.657088
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_3/Run2: Best validation loss = 0.728387, best weightsFile = bleak_39000
+10_3/Run2: Test accuracy = 0.643678
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_3/Run3: Best validation loss = 0.724627, best weightsFile = bleak_23000
+10_3/Run3: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_3/Run4: Best validation loss = 0.726489, best weightsFile = bleak_5500
+10_3/Run4: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_3/Run5: Best validation loss = 0.709396, best weightsFile = bleak_16000
+10_3/Run5: Test accuracy = 0.636973
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_3/Run6: Best validation loss = 0.71845, best weightsFile = bleak_34000
+10_3/Run6: Test accuracy = 0.636973
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_3/Run7: Best validation loss = 0.710652, best weightsFile = bleak_32500
+10_3/Run7: Test accuracy = 0.66092
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_3/Run8: Best validation loss = 0.702148, best weightsFile = bleak_15000
+10_3/Run8: Test accuracy = 0.655172
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Build/Bleak/Tools/bleakTool/Release/bleakTool.exe: Invalid argument
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 70: [: : integer expression expected
+10_3/Run9: Best validation loss = 0.722648, best weightsFile = bleak_8500
+10_3/Run9: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 10_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_5/Run1: Best validation loss = 0.738901, best weightsFile = bleak_15500
+10_5/Run1: Test accuracy = 0.64272
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_5/Run10: Best validation loss = 0.741545, best weightsFile = bleak_5500
+10_5/Run10: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_5/Run2: Best validation loss = 0.718528, best weightsFile = bleak_15000
+10_5/Run2: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_5/Run3: Best validation loss = 0.74168, best weightsFile = bleak_7000
+10_5/Run3: Test accuracy = 0.64272
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_5/Run4: Best validation loss = 0.727779, best weightsFile = bleak_15500
+10_5/Run4: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_5/Run5: Best validation loss = 0.731206, best weightsFile = bleak_15000
+10_5/Run5: Test accuracy = 0.653257
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_5/Run6: Best validation loss = 0.722013, best weightsFile = bleak_10000
+10_5/Run6: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_5/Run7: Best validation loss = 0.763378, best weightsFile = bleak_7000
+10_5/Run7: Test accuracy = 0.625479
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_5/Run8: Best validation loss = 0.7325, best weightsFile = bleak_24500
+10_5/Run8: Test accuracy = 0.654215
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_5/Run9: Best validation loss = 0.722363, best weightsFile = bleak_24500
+10_5/Run9: Test accuracy = 0.658046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 10_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_7/Run1: Best validation loss = 0.73736, best weightsFile = bleak_15000
+10_7/Run1: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_7/Run10: Best validation loss = 0.732773, best weightsFile = bleak_7000
+10_7/Run10: Test accuracy = 0.64272
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_7/Run2: Best validation loss = 0.739385, best weightsFile = bleak_5500
+10_7/Run2: Test accuracy = 0.646552
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_7/Run3: Best validation loss = 0.727635, best weightsFile = bleak_7000
+10_7/Run3: Test accuracy = 0.658046
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_7/Run4: Best validation loss = 0.757795, best weightsFile = bleak_21500
+10_7/Run4: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_7/Run5: Best validation loss = 0.739636, best weightsFile = bleak_23000
+10_7/Run5: Test accuracy = 0.640805
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_7/Run6: Best validation loss = 0.742254, best weightsFile = bleak_5500
+10_7/Run6: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_7/Run7: Best validation loss = 0.73397, best weightsFile = bleak_3500
+10_7/Run7: Test accuracy = 0.636973
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_7/Run8: Best validation loss = 0.720748, best weightsFile = bleak_5500
+10_7/Run8: Test accuracy = 0.65613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+10_7/Run9: Best validation loss = 0.745638, best weightsFile = bleak_8500
+10_7/Run9: Test accuracy = 0.64272
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/10_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 1_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_1/Run1: Best validation loss = 0.809243, best weightsFile = bleak_40000
+1_1/Run1: Test accuracy = 0.57567
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_1/Run10: Best validation loss = 0.799635, best weightsFile = bleak_40000
+1_1/Run10: Test accuracy = 0.577586
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_1/Run2: Best validation loss = 0.84281, best weightsFile = bleak_40000
+1_1/Run2: Test accuracy = 0.555556
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_1/Run3: Best validation loss = 0.840881, best weightsFile = bleak_40000
+1_1/Run3: Test accuracy = 0.554598
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_1/Run4: Best validation loss = 0.825475, best weightsFile = bleak_40000
+1_1/Run4: Test accuracy = 0.557471
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_1/Run5: Best validation loss = 0.844756, best weightsFile = bleak_40000
+1_1/Run5: Test accuracy = 0.545977
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_1/Run6: Best validation loss = 0.832525, best weightsFile = bleak_40000
+1_1/Run6: Test accuracy = 0.563218
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_1/Run7: Best validation loss = 0.817872, best weightsFile = bleak_40000
+1_1/Run7: Test accuracy = 0.568965
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_1/Run8: Best validation loss = 0.804634, best weightsFile = bleak_40000
+1_1/Run8: Test accuracy = 0.578544
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_1/Run9: Best validation loss = 0.768413, best weightsFile = bleak_40000
+1_1/Run9: Test accuracy = 0.604406
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 1_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_10/Run1: Best validation loss = 0.810856, best weightsFile = bleak_39000
+1_10/Run1: Test accuracy = 0.566092
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_10/Run10: Best validation loss = 0.792832, best weightsFile = bleak_39500
+1_10/Run10: Test accuracy = 0.598659
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+data: Error: Could not open database '../../../../Data/abalone/abalone_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 70: [: : integer expression expected
+1_10/Run2: Best validation loss = 0.788357, best weightsFile = bleak_39000
+1_10/Run2: Test accuracy = 0.586207
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_10/Run3: Best validation loss = 0.768312, best weightsFile = bleak_39000
+1_10/Run3: Test accuracy = 0.598659
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_10/Run4: Best validation loss = 0.812334, best weightsFile = bleak_39500
+1_10/Run4: Test accuracy = 0.547893
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_10/Run5: Best validation loss = 0.792534, best weightsFile = bleak_25500
+1_10/Run5: Test accuracy = 0.585249
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_10/Run6: Best validation loss = 0.787936, best weightsFile = bleak_15500
+1_10/Run6: Test accuracy = 0.617816
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_10/Run7: Best validation loss = 0.783178, best weightsFile = bleak_39000
+1_10/Run7: Test accuracy = 0.591954
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_10/Run8: Best validation loss = 0.795729, best weightsFile = bleak_31000
+1_10/Run8: Test accuracy = 0.597701
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_10/Run9: Best validation loss = 0.774624, best weightsFile = bleak_38500
+1_10/Run9: Test accuracy = 0.617816
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 1_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_3/Run1: Best validation loss = 0.832243, best weightsFile = bleak_40000
+1_3/Run1: Test accuracy = 0.565134
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_3/Run10: Best validation loss = 0.766243, best weightsFile = bleak_38500
+1_3/Run10: Test accuracy = 0.608238
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+data: Error: Could not open database '../../../../Data/abalone/abalone_validation.lmdb' for reading.
+Error: Failed to intialize graph.
+(standard_in) 1: syntax error
+./ValidateAndTestAll.sh: line 70: [: : integer expression expected
+1_3/Run2: Best validation loss = 0.841817, best weightsFile = bleak_40000
+1_3/Run2: Test accuracy = 0.559387
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_3/Run3: Best validation loss = 0.838543, best weightsFile = bleak_39500
+1_3/Run3: Test accuracy = 0.565134
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_3/Run4: Best validation loss = 0.786922, best weightsFile = bleak_39500
+1_3/Run4: Test accuracy = 0.608238
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_3/Run5: Best validation loss = 0.838779, best weightsFile = bleak_40000
+1_3/Run5: Test accuracy = 0.563218
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_3/Run6: Best validation loss = 0.809645, best weightsFile = bleak_40000
+1_3/Run6: Test accuracy = 0.57567
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_3/Run7: Best validation loss = 0.818611, best weightsFile = bleak_15000
+1_3/Run7: Test accuracy = 0.578544
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_3/Run8: Best validation loss = 0.770648, best weightsFile = bleak_38500
+1_3/Run8: Test accuracy = 0.597701
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_3/Run9: Best validation loss = 0.805326, best weightsFile = bleak_40000
+1_3/Run9: Test accuracy = 0.579502
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 1_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_5/Run1: Best validation loss = 0.740819, best weightsFile = bleak_31500
+1_5/Run1: Test accuracy = 0.632184
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_5/Run10: Best validation loss = 0.828614, best weightsFile = bleak_40000
+1_5/Run10: Test accuracy = 0.565134
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_5/Run2: Best validation loss = 0.79663, best weightsFile = bleak_30000
+1_5/Run2: Test accuracy = 0.576628
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_5/Run3: Best validation loss = 0.816431, best weightsFile = bleak_39000
+1_5/Run3: Test accuracy = 0.564176
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_5/Run4: Best validation loss = 0.767143, best weightsFile = bleak_38500
+1_5/Run4: Test accuracy = 0.606322
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_5/Run5: Best validation loss = 0.825518, best weightsFile = bleak_40000
+1_5/Run5: Test accuracy = 0.558429
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_5/Run6: Best validation loss = 0.79405, best weightsFile = bleak_39500
+1_5/Run6: Test accuracy = 0.594828
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_5/Run7: Best validation loss = 0.768147, best weightsFile = bleak_39000
+1_5/Run7: Test accuracy = 0.596743
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_5/Run8: Best validation loss = 0.79872, best weightsFile = bleak_40000
+1_5/Run8: Test accuracy = 0.572797
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_5/Run9: Best validation loss = 0.790635, best weightsFile = bleak_40000
+1_5/Run9: Test accuracy = 0.58908
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 1_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_7/Run1: Best validation loss = 0.790469, best weightsFile = bleak_39000
+1_7/Run1: Test accuracy = 0.598659
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_7/Run10: Best validation loss = 0.806432, best weightsFile = bleak_40000
+1_7/Run10: Test accuracy = 0.570881
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_7/Run2: Best validation loss = 0.768622, best weightsFile = bleak_39000
+1_7/Run2: Test accuracy = 0.60728
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_7/Run3: Best validation loss = 0.765527, best weightsFile = bleak_38000
+1_7/Run3: Test accuracy = 0.623563
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_7/Run4: Best validation loss = 0.781469, best weightsFile = bleak_40000
+1_7/Run4: Test accuracy = 0.60249
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_7/Run5: Best validation loss = 0.843994, best weightsFile = bleak_39500
+1_7/Run5: Test accuracy = 0.55364
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_7/Run6: Best validation loss = 0.837671, best weightsFile = bleak_40000
+1_7/Run6: Test accuracy = 0.568965
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_7/Run7: Best validation loss = 0.773069, best weightsFile = bleak_36500
+1_7/Run7: Test accuracy = 0.604406
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_7/Run8: Best validation loss = 0.824768, best weightsFile = bleak_21000
+1_7/Run8: Test accuracy = 0.584291
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+1_7/Run9: Best validation loss = 0.751621, best weightsFile = bleak_37500
+1_7/Run9: Test accuracy = 0.613985
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/1_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 50_1 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_1/Run1: Best validation loss = 0.711047, best weightsFile = bleak_34000
+50_1/Run1: Test accuracy = 0.664751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_1/Run10: Best validation loss = 0.707267, best weightsFile = bleak_10000
+50_1/Run10: Test accuracy = 0.659962
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_1/Run2: Best validation loss = 0.710876, best weightsFile = bleak_18000
+50_1/Run2: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_1/Run3: Best validation loss = 0.705576, best weightsFile = bleak_24500
+50_1/Run3: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_1/Run4: Best validation loss = 0.709366, best weightsFile = bleak_29000
+50_1/Run4: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_1/Run5: Best validation loss = 0.708612, best weightsFile = bleak_15000
+50_1/Run5: Test accuracy = 0.65613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_1/Run6: Best validation loss = 0.715942, best weightsFile = bleak_24500
+50_1/Run6: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_1/Run7: Best validation loss = 0.699917, best weightsFile = bleak_15000
+50_1/Run7: Test accuracy = 0.664751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_1/Run8: Best validation loss = 0.706235, best weightsFile = bleak_34000
+50_1/Run8: Test accuracy = 0.657088
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_1/Run9: Best validation loss = 0.713914, best weightsFile = bleak_24500
+50_1/Run9: Test accuracy = 0.657088
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 50_10 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_10/Run1: Best validation loss = 0.758719, best weightsFile = bleak_2000
+50_10/Run1: Test accuracy = 0.652299
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_10/Run10: Best validation loss = 0.740041, best weightsFile = bleak_2000
+50_10/Run10: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_10/Run2: Best validation loss = 0.7515, best weightsFile = bleak_2000
+50_10/Run2: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_10/Run3: Best validation loss = 0.7454, best weightsFile = bleak_2000
+50_10/Run3: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_10/Run4: Best validation loss = 0.743875, best weightsFile = bleak_2000
+50_10/Run4: Test accuracy = 0.636973
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_10/Run5: Best validation loss = 0.746595, best weightsFile = bleak_2000
+50_10/Run5: Test accuracy = 0.646552
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_10/Run6: Best validation loss = 0.743189, best weightsFile = bleak_500
+50_10/Run6: Test accuracy = 0.6341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_10/Run7: Best validation loss = 0.747351, best weightsFile = bleak_2000
+50_10/Run7: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_10/Run8: Best validation loss = 0.739877, best weightsFile = bleak_500
+50_10/Run8: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_10/Run9: Best validation loss = 0.748023, best weightsFile = bleak_2000
+50_10/Run9: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 50_3 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_3/Run1: Best validation loss = 0.720537, best weightsFile = bleak_7000
+50_3/Run1: Test accuracy = 0.65613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_3/Run10: Best validation loss = 0.720494, best weightsFile = bleak_5500
+50_3/Run10: Test accuracy = 0.663793
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_3/Run2: Best validation loss = 0.726797, best weightsFile = bleak_5500
+50_3/Run2: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_3/Run3: Best validation loss = 0.723564, best weightsFile = bleak_5500
+50_3/Run3: Test accuracy = 0.653257
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_3/Run4: Best validation loss = 0.725566, best weightsFile = bleak_7000
+50_3/Run4: Test accuracy = 0.65613
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_3/Run5: Best validation loss = 0.719677, best weightsFile = bleak_7000
+50_3/Run5: Test accuracy = 0.654215
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_3/Run6: Best validation loss = 0.733337, best weightsFile = bleak_5500
+50_3/Run6: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_3/Run7: Best validation loss = 0.731075, best weightsFile = bleak_5500
+50_3/Run7: Test accuracy = 0.653257
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_3/Run8: Best validation loss = 0.717215, best weightsFile = bleak_2000
+50_3/Run8: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_3/Run9: Best validation loss = 0.729493, best weightsFile = bleak_5500
+50_3/Run9: Test accuracy = 0.670498
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 50_5 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_5/Run1: Best validation loss = 0.737542, best weightsFile = bleak_2000
+50_5/Run1: Test accuracy = 0.644636
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_5/Run10: Best validation loss = 0.732873, best weightsFile = bleak_2000
+50_5/Run10: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_5/Run2: Best validation loss = 0.731258, best weightsFile = bleak_2000
+50_5/Run2: Test accuracy = 0.659962
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_5/Run3: Best validation loss = 0.732426, best weightsFile = bleak_2000
+50_5/Run3: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_5/Run4: Best validation loss = 0.727123, best weightsFile = bleak_4500
+50_5/Run4: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_5/Run5: Best validation loss = 0.727165, best weightsFile = bleak_2000
+50_5/Run5: Test accuracy = 0.641762
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_5/Run6: Best validation loss = 0.735285, best weightsFile = bleak_2000
+50_5/Run6: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_5/Run7: Best validation loss = 0.745377, best weightsFile = bleak_2000
+50_5/Run7: Test accuracy = 0.648467
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_5/Run8: Best validation loss = 0.745472, best weightsFile = bleak_2000
+50_5/Run8: Test accuracy = 0.650383
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_5/Run9: Best validation loss = 0.745858, best weightsFile = bleak_5500
+50_5/Run9: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+Info: Processing 50_7 ...
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7/Run1 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_7/Run1: Best validation loss = 0.740172, best weightsFile = bleak_2000
+50_7/Run1: Test accuracy = 0.655172
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7/Run10 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_7/Run10: Best validation loss = 0.739101, best weightsFile = bleak_2000
+50_7/Run10: Test accuracy = 0.638889
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7/Run2 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_7/Run2: Best validation loss = 0.72879, best weightsFile = bleak_2000
+50_7/Run2: Test accuracy = 0.64751
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7/Run3 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_7/Run3: Best validation loss = 0.746462, best weightsFile = bleak_2000
+50_7/Run3: Test accuracy = 0.636015
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7/Run4 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_7/Run4: Best validation loss = 0.735402, best weightsFile = bleak_2000
+50_7/Run4: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7/Run5 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_7/Run5: Best validation loss = 0.724691, best weightsFile = bleak_2000
+50_7/Run5: Test accuracy = 0.649425
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7/Run6 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_7/Run6: Best validation loss = 0.722275, best weightsFile = bleak_2000
+50_7/Run6: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7/Run7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_7/Run7: Best validation loss = 0.731528, best weightsFile = bleak_2000
+50_7/Run7: Test accuracy = 0.639847
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7/Run8 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_7/Run8: Best validation loss = 0.728291, best weightsFile = bleak_2000
+50_7/Run8: Test accuracy = 0.651341
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7/Run9 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+50_7/Run9: Best validation loss = 0.725555, best weightsFile = bleak_2000
+50_7/Run9: Test accuracy = 0.645594
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone/50_7 /mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
+/mnt/c/Work/Source/Bleak/Experiments/VaryingTrees/abalone
