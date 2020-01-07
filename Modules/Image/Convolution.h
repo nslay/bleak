@@ -308,12 +308,9 @@ public:
       m_clImageToMatrix.ExtractIndexMatrix(m_vIndexMatrix.data(), clImageSize.data()); // This never changes
 
       for (int i = 0; i < iOuterNum; ++i) {
+        cpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights, m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(0), m_vMatrix.data(), m_iCols);
+
         for (int j = 0; j < iInDataNumChannels; ++j) {
-          //m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + i*iInnerNum + j*iInDataChannelSize, clImageSize.data());
-
-          cpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights, m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(0), m_vMatrix.data(), m_iCols);
-
-          //for (int index : m_vIndexMatrix) {
           for (size_t k = 0; k < m_vIndexMatrix.size(); ++k) {
             const int index = m_vIndexMatrix[k];
             if (index >= 0)
