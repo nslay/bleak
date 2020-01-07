@@ -52,6 +52,9 @@ Database.h
 DatabaseFactory.h DatabaseFactory.cpp
 LMDBDatabase.h LMDBDatabase.cpp
 
+BlasWrapper.h
+SlowBlas.h SlowBlas.cpp
+
 InitializeCommonModule.cpp
 LIBRARIES lmdb
 ENABLE_BY_DEFAULT
