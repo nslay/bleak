@@ -23,11 +23,11 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "Convolution2D.h"
+#include "ConvolutionNaive.h"
 
 namespace bleak {
 
-template class Convolution2D<float>;
-template class Convolution2D<double>;
+template class ConvolutionNaive2D<float>;
+template class ConvolutionNaive2D<double>;
 
 } // end namespace bleak

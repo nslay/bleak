@@ -16,7 +16,7 @@ subgraph SGForestGraph {
   include "SGInnerProduct.sad"
   include "SGForest.sad"
   include "SGSum.sad"
-  include "SGConvolution2D.sad"
+  include "SGConvolutionNaive2D.sad"
   
   SGConvolution2D {
     width = $convWidth;

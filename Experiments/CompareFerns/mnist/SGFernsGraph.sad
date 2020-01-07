@@ -18,7 +18,7 @@ subgraph SGFernsGraph {
   include "SGSum.sad"
   include "SGConvolution2D.sad"
   
-  SGConvolution2D {
+  SGConvolutionNaive2D {
     width = $convWidth;
     height = $convHeight;
     stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward

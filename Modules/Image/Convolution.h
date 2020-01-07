@@ -28,12 +28,12 @@
 #ifndef BLEAK_CONVOLUTION_H
 #define BLEAK_CONVOLUTION_H
 
-#include <algorithm>
 #include "Vertex.h"
+#include "ImageToMatrix.h"
+#include "BlasWrapper.h"
 
 namespace bleak {
 
-// Base class for Convolutions
 template<typename RealType, unsigned int Dimension>
 class Convolution : public Vertex<RealType> {
 public:
@@ -47,6 +47,8 @@ public:
     bleakAddProperty("dilate", m_vDilate));
 
   bleakForwardVertexTypedefs();
+
+  typedef ImageToMatrix<RealType, Dimension> ImageToMatrixType;
 
   static constexpr unsigned int GetDimension() {
     return Dimension;
@@ -90,6 +92,7 @@ public:
       return false;
     }
 
+    // inData: Batch size x Channels x Z x Y x X
     if (clInWeights.GetSize().GetDimension() != GetDimension()+1 || clInData.GetSize().GetDimension() != GetDimension() + 2) {
       std::cerr << GetName() << ": Error: Unexpected dimension for inData and/or inWeights." << std::endl;
       return false;
@@ -119,15 +122,15 @@ public:
 
     Size clOutSize(GetDimension()+2);
 
-    clOutSize[0] = clInData.GetSize()[0];
-    clOutSize[1] = clInWeights.GetSize()[0];
+    clOutSize[0] = clInData.GetSize()[0]; // Batch size
+    clOutSize[1] = clInWeights.GetSize()[0]; // Number of output channels
 
     for (int i = 2; i < clOutSize.GetDimension(); ++i) {
       const int iPadding = m_vPadding[i-2];
       const int iStride = m_vStride[i-2];
       const int iDilate = m_vDilate[i-2];
       const int iInputLength = 2*m_vPadding[i-2] + clInData.GetSize()[i];
-      const int iKernelLength = clInWeights.GetSize()[i-1]*(1 + iDilate) - iDilate; // Simplified from K + (K-1)*D
+      const int iKernelLength = clInWeights.GetSize()[i-1]*(1 + iDilate) - iDilate; // Alternate form of K + (K-1)*D
 
       if (iInputLength <= iKernelLength) {
         std::cerr << GetName() << ": Error: inWeights dimensions " << clInWeights.GetSize().SubSize(1) << 
@@ -147,33 +150,221 @@ public:
   }
 
   virtual bool Initialize() override {
-    return true; // Nothing to do
+    bleakGetAndCheckInput(p_clInData, "inData", false);
+    bleakGetAndCheckInput(p_clInWeights, "inWeights", false);
+    bleakGetAndCheckOutput(p_clOutData, "outData", false);
+
+    //m_clImageToMatrix.SetImageSize(p_clInData->GetData().GetSize().SubSize(1).data());
+    m_clImageToMatrix.SetKernelSize(p_clInWeights->GetData().GetSize().SubSize(1).data());
+    m_clImageToMatrix.SetStride(m_vStride.data());
+    m_clImageToMatrix.SetPadding(m_vPadding.data());
+    m_clImageToMatrix.SetDilate(m_vDilate.data());
+
+    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    clImageSize[0] = 1; // Process 1 channel at a time
+
+    if (!m_clImageToMatrix.Good(clImageSize.data()))
+      return false;
+
+    // Row major 
+    m_clImageToMatrix.ComputeMatrixDimensions(m_iRows, m_iCols, clImageSize.data());
+
+    m_vMatrix.resize(m_iRows * m_iCols, RealType(0));
+    m_vIndexMatrix.resize(m_vMatrix.size(), 0);
+
+    return true;
+  }
+
+  virtual void Forward() override {
+    bleakGetAndCheckInput(p_clInData, "inData");
+    bleakGetAndCheckInput(p_clInWeights, "inWeights");
+    bleakGetAndCheckOutput(p_clOutData, "outData");
+
+    std::shared_ptr<EdgeType> p_clInBias = GetInput("inBias");
+
+    const ArrayType &clInData = p_clInData->GetData();
+    const ArrayType &clInWeights = p_clInWeights->GetData();
+    ArrayType &clOutData = p_clOutData->GetData();
+
+    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    clImageSize[0] = 1; // Process 1 channel at a time
+
+    const RealType * const p_inData = clInData.data();
+    const RealType * const p_inWeights = clInWeights.data();
+    const RealType * const p_inBias = p_clInBias != nullptr ? p_clInBias->GetData().data() : nullptr;
+    RealType * const p_outData = clOutData.data();
+
+    const int iOuterNum = clInData.GetSize()[0];
+    const int iInnerNum = clInData.GetSize().Product(1);
+    const int iInDataNumChannels = clInData.GetSize()[1];
+    const int iOutDataNumChannels = clOutData.GetSize()[1]; // Synonym for weights/bias channels
+    const int iOutDataChannelSize = clOutData.GetSize().Product(2);
+    const int iOutDataInnerNum = clOutData.GetSize().Product(1);
+    const int iInDataChannelSize = clInData.GetSize().Product(2);
+
+    if (p_inBias != nullptr) {
+      for (int i = 0; i < iOuterNum; ++i) {
+        for (int l = 0; l < iOutDataNumChannels; ++l) {
+          std::fill_n(p_outData + (i*iOutDataNumChannels + l)*iOutDataChannelSize, iOutDataChannelSize, p_inBias[l]);
+        }
+      }
+    }
+    else {
+      clOutData.Fill(RealType());
+    }
+
+    // In C++ (row major)
+    // Weights: iOutDataNumChannels x m_iCols
+    // m_vMatrix: m_iRows x m_iCols
+    // C = iOutDataNumChannels x m_iRows
+
+    // In column major that means...
+    // Weights: m_iCols x iOutDataNumChannels
+    // m_vMatrix: m_iCols x m_iRows
+    // C = m_iRows x iOutDataNumChannels
+
+    // So we need m_vMatrix^T * Weights = m_iRows x iOutDataNumChannels
+
+    for (int i = 0; i < iOuterNum; ++i) {
+      for (int j = 0; j < iInDataNumChannels; ++j) {
+        m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iInnerNum + j*iInDataChannelSize), clImageSize.data());
+        cpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_vMatrix.data(), m_iCols, p_inWeights, m_iCols, RealType(1), clOutData.data() + i*iOutDataInnerNum, m_iRows);
+      }
+    }
+  }
+
+  virtual void Backward() override {
+    bleakGetAndCheckInput(p_clInData, "inData");
+    bleakGetAndCheckInput(p_clInWeights, "inWeights");
+    bleakGetAndCheckOutput(p_clOutData, "outData");
+
+    std::shared_ptr<EdgeType> p_clInBias = GetInput("inBias");
+
+    const ArrayType &clInData = p_clInData->GetData();
+    ArrayType &clInDataGradient = p_clInData->GetGradient();
+    const ArrayType &clInWeights = p_clInWeights->GetData();
+    ArrayType &clInWeightsGradient = p_clInWeights->GetGradient();
+    const ArrayType &clOutData = p_clOutData->GetData();
+    const ArrayType &clOutDataGradient = p_clOutData->GetGradient();
+
+    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    clImageSize[0] = 1; // Process 1 channel at a time
+
+    const RealType * const p_inData = clInData.data();
+    RealType * const p_inDataGradient = clInDataGradient.data();
+    const RealType * const p_inWeights = clInWeights.data();
+    RealType * const p_inWeightsGradient = clInWeightsGradient.data();
+    const RealType * const p_inBias = p_clInBias != nullptr ? p_clInBias->GetData().data() : nullptr;
+    RealType * const p_inBiasGradient = p_clInBias != nullptr ? p_clInBias->GetGradient().data() : nullptr;
+    const RealType * const p_outData = clOutData.data();
+    const RealType * const p_outDataGradient = clOutDataGradient.data();
+
+    const int iOuterNum = clInData.GetSize()[0];
+    const int iInnerNum = clInData.GetSize().Product(1);
+    const int iInDataNumChannels = clInData.GetSize()[1];
+    const int iInWeightsChannelSize = clInWeights.GetSize().Product(1);
+    const int iOutDataNumChannels = clOutData.GetSize()[1];
+    const int iOutDataInnerNum = clOutData.GetSize().Product(1);
+    const int iOutDataChannelSize = clOutData.GetSize().Product(2);
+    const int iInDataChannelSize = clInData.GetSize().Product(2);
+
+    if (p_inBiasGradient != nullptr) {
+      for (int i = 0; i < iOuterNum; ++i) {
+        for (int l = 0; l < iOutDataNumChannels; ++l) {
+          for (int k = 0; k < iOutDataChannelSize; ++k)
+            p_inBiasGradient[l] += p_outDataGradient[(i*iOutDataNumChannels + l)*iOutDataChannelSize + k];
+        }
+      }
+    }
+
+    // In C++ (row major)
+    // Weights: iOutDataNumChannels x m_iCols
+    // m_vMatrix: m_iRows x m_iCols
+    // dC: iOutDataNumChannels x m_iRows
+
+    // In column major that means...
+    // Weights: m_iCols x iOutDataNumChannels
+    // m_vMatrix: m_iCols x m_iRows
+    // dC: m_iRows x iOutDataNumChannels
+
+    // For weights:
+    // dW = M*dC = m_iCols x iOutDataNumChannels
+    //
+    // For data:
+    // dM = W*dC^T = m_iCols x m_iRows
+    //
+
+    if (p_inWeightsGradient != nullptr) {
+      for (int i = 0; i < iOuterNum; ++i) {
+        for (int j = 0; j < iInDataNumChannels; ++j) {
+          m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + i*iInnerNum + j*iInDataChannelSize, clImageSize.data());
+
+          cpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_vMatrix.data(), m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient, m_iCols);
+        }
+      }
+    }
+
+    if (p_inDataGradient != nullptr) {
+      m_clImageToMatrix.ExtractIndexMatrix(m_vIndexMatrix.data(), clImageSize.data()); // This never changes
+
+      for (int i = 0; i < iOuterNum; ++i) {
+        for (int j = 0; j < iInDataNumChannels; ++j) {
+          //m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + i*iInnerNum + j*iInDataChannelSize, clImageSize.data());
+
+          cpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights, m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(0), m_vMatrix.data(), m_iCols);
+
+          //for (int index : m_vIndexMatrix) {
+          for (size_t k = 0; k < m_vIndexMatrix.size(); ++k) {
+            const int index = m_vIndexMatrix[k];
+            if (index >= 0)
+              p_inDataGradient[i*iInnerNum + j*iInDataChannelSize + index] += m_vMatrix[k];
+          }
+        }
+      }
+    }
   }
 
 protected:
-  Convolution()
-  : m_vPadding(GetDimension(), 0), m_vStride(GetDimension(), 1), m_vDilate(GetDimension(), 0) { }
-
-  const std::vector<int> & GetPadding() const {
-    return m_vPadding;
-  }
-
-  const std::vector<int> & GetStride() const {
-    return m_vStride;
-  }
-
-  const std::vector<int> & GetDilate() const {
-    return m_vDilate;
-  }
+  Convolution() = default;
 
 private:
   std::vector<int> m_vPadding;
   std::vector<int> m_vStride;
   std::vector<int> m_vDilate;
+
+  ImageToMatrixType m_clImageToMatrix;
+
+  int m_iRows = 0;
+  int m_iCols = 0;
+
+  // Row major!!!!
+  std::vector<RealType> m_vMatrix; // m_iRows x m_iCols
+  std::vector<int> m_vIndexMatrix;
 };
 
 template<typename RealType>
-class Convolution<RealType, 0> { };
+class Convolution3D : public Convolution<RealType, 3> {
+public:
+  typedef Convolution<RealType, 3> WorkAroundVarArgsType;
+
+  bleakNewVertex(Convolution3D, WorkAroundVarArgsType);
+};
+
+template<typename RealType>
+class Convolution2D : public Convolution<RealType, 2> {
+public:
+  typedef Convolution<RealType, 2> WorkAroundVarArgsType;
+
+  bleakNewVertex(Convolution2D, WorkAroundVarArgsType);
+};
+
+template<typename RealType>
+class Convolution1D : public Convolution<RealType, 1> {
+public:
+  typedef Convolution<RealType, 1> WorkAroundVarArgsType;
+
+  bleakNewVertex(Convolution1D, WorkAroundVarArgsType);
+};
 
 } // end namespace bleak
 

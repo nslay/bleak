@@ -25,7 +25,8 @@
 
 #include "VertexFactory.h"
 
-#include "Convolution2D.h"
+#include "ConvolutionNaive.h"
+#include "Convolution.h"
 
 namespace bleak {
 
@@ -33,7 +34,10 @@ template<typename RealType>
 void InitializeImageModuleTemplate() {
   VertexFactory<RealType> &clVertexFactory = VertexFactory<RealType>::GetInstance();
 
+  clVertexFactory.template Register<ConvolutionNaive2D<RealType>>();
+  clVertexFactory.template Register<Convolution1D<RealType>>();
   clVertexFactory.template Register<Convolution2D<RealType>>();
+  clVertexFactory.template Register<Convolution3D<RealType>>();
 }
 
 void InitializeImageModule() {

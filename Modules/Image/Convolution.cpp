@@ -36,4 +36,13 @@ template class Convolution<double, 2>;
 template class Convolution<float, 3>;
 template class Convolution<double, 3>;
 
+template class Convolution1D<float>;
+template class Convolution1D<double>;
+
+template class Convolution2D<float>;
+template class Convolution2D<double>;
+
+template class Convolution3D<float>;
+template class Convolution3D<double>;
+
 } // end namespace bleak
