@@ -129,7 +129,7 @@ class ImageToMatrixBase {
 public:
   static_assert(Dimension > 0, "Dimension must be larger than 0");
 
-  typedef typename RasterCurve<Dimension> RasterType;
+  typedef RasterCurve<Dimension> RasterType;
   typedef typename RasterType::SizeType SizeType;
   typedef typename RasterType::CoordType CoordType;
 
