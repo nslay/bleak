@@ -27,10 +27,10 @@ macro(bleakNewModule name)
     set(dependencies "")
     
     foreach (dependency ${bleak${name}_MODULE_DEPENDS})
-      set(dependencies "bleak${dependency} ${dependencies}")
+      set(dependencies "bleak${dependency}" ${dependencies})
     endforeach()
     
-    set(dependencies "${dependencies} ${bleak${name}_LIBRARIES}")
+    set(dependencies ${dependencies} ${bleak${name}_LIBRARIES})
     
     # Remove leading/trailing white space
     string(REGEX REPLACE "^[ \t\r\n]+" "" dependencies "${dependencies}")

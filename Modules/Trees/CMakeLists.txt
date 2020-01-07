@@ -7,6 +7,7 @@ bleakNewModule(Trees SOURCES
   RandomHingeForest.h RandomHingeForest.cpp
   TreeLorenzLoss.h TreeLorenzLoss.cpp
   TreeL2Regularization.h TreeL2Regularization.cpp
+  HingeTreeCommon.h HingeTreeCommon.cpp
   MODULE_DEPENDS Common
 )
 

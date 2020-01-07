@@ -4,6 +4,7 @@ bleakNewModule(Image SOURCES
   InitializeImageModule.cpp
   Convolution.h Convolution.cpp
   Convolution2D.h Convolution2D.cpp
+  ImageToMatrix.h ImageToMatrix.cpp
   MODULE_DEPENDS Common
 )
 
