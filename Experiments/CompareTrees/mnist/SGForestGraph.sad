@@ -16,9 +16,9 @@ subgraph SGForestGraph {
   include "SGInnerProduct.sad"
   include "SGForest.sad"
   include "SGSum.sad"
-  include "SGConvolutionNaive2D.sad"
+  include "SGConvolution2D.sad"
   
-  SGConvolution2D {
+  SGConvolutionNaive2D {
     width = $convWidth;
     height = $convHeight;
     stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
