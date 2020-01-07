@@ -3,11 +3,10 @@ project(bleakTreesModule C CXX)
 bleakNewModule(Trees SOURCES
   InitializeTreesModule.cpp
   FeatureSelectionAnnealing.h FeatureSelectionAnnealing.cpp
-  RandomHingeFerns.h RandomHingeFerns.cpp
-  RandomHingeForest.h RandomHingeForest.cpp
   TreeLorenzLoss.h TreeLorenzLoss.cpp
   TreeL2Regularization.h TreeL2Regularization.cpp
   HingeTreeCommon.h HingeTreeCommon.cpp
+  RandomHingeForest.h RandomHingeForest.cpp
   MODULE_DEPENDS Common
 )
 

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017 Nathan Lay (enslay@gmail.com)
+ * Copyright (c) 2019 Nathan Lay (enslay@gmail.com)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -26,6 +26,9 @@
 #include "RandomHingeForest.h"
 
 namespace bleak {
+
+template class RandomHingeFerns<float>;
+template class RandomHingeFerns<double>;
 
 template class RandomHingeForest<float>;
 template class RandomHingeForest<double>;

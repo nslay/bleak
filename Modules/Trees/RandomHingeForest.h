@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017 Nathan Lay (enslay@gmail.com)
+ * Copyright (c) 2019 Nathan Lay (enslay@gmail.com)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,21 +28,17 @@
 #ifndef BLEAK_RANDOMHINGEFOREST_H
 #define BLEAK_RANDOMHINGEFOREST_H
 
-#include <cstdint>
-#include <climits>
-#include <algorithm>
-#include <limits>
 #include <random>
-#include <utility>
-#include "Common.h"
 #include "Vertex.h"
+#include "Common.h"
+#include "HingeTreeCommon.h"
 
 namespace bleak {
 
-template<typename RealType>
-class RandomHingeForest : public Vertex<RealType> {
+template<typename RealType, typename TreeTraitsType>
+class RandomHingeForestTemplate : public Vertex<RealType> {
 public:
-  bleakNewVertex(RandomHingeForest, Vertex<RealType>,
+  bleakNewAbstractVertex(RandomHingeForestTemplate, Vertex<RealType>,
     bleakAddInput("inOrdinals"),
     bleakAddInput("inThresholds"),
     bleakAddInput("inWeights"),
@@ -51,27 +47,9 @@ public:
 
   bleakForwardVertexTypedefs();
 
-  typedef uint32_t KeyType;
+  typedef typename TreeTraitsType::KeyType KeyType;
 
-  // This limits the depth of the tree to 32 (so thresholds size should be 32 or less)
-  static constexpr KeyType GetMaxTreeDepth() {
-    return CHAR_BIT*sizeof(KeyType);
-  }
-
-  static bool IsPowerOfTwo(KeyType x) {
-    return (x & (x-1)) == 0;
-  }
-
-  static KeyType FloorLog2(KeyType x) {
-    KeyType count = 0;
-
-    for ( ; x != 0; x >>= 1)
-      ++count;
-
-    return count-1;
-  }
-
-  virtual ~RandomHingeForest() = default;
+  virtual ~RandomHingeForestTemplate() = default;
 
   virtual bool SetSizes() override {
     bleakGetAndCheckInput(p_clOrdinals, "inOrdinals", false);
@@ -91,7 +69,7 @@ public:
     }
 
     if (p_clOrdinals->GetGradient().GetSize().Valid()) {
-      std::cerr << GetName() << ": Error: inOrdinals appears learnable. However, RandomHingeForest has its own custom updates for this input." << std::endl;
+      std::cerr << GetName() << ": Error: inOrdinals appears learnable. However, RandomHingeForest/Fern has its own custom updates for this input." << std::endl;
       return false;
     }
 
@@ -118,8 +96,15 @@ public:
       return false;
     }
 
-    if (!IsPowerOfTwo(clWeights.GetSize()[1])) {
+    m_iTreeDepth = TreeTraitsType::ComputeDepth(clWeights.GetSize()[1]);
+
+    if (m_iTreeDepth <= 0) {
       std::cerr << GetName() << ": Error: inWeights is expected to have a power of 2 size for its second dimension." << std::endl;
+      return false;
+    }
+
+    if (m_iTreeDepth > TreeTraitsType::GetMaxDepth()) {
+      std::cerr << GetName() << ": Error: Tree depth is calculated to be " << m_iTreeDepth << " which exceeds the compiled-in limitation of " << TreeTraitsType::GetMaxDepth() << '.' << std::endl;
       return false;
     }
 
@@ -128,19 +113,10 @@ public:
       return false;
     }
 
-    if (clThresholds.GetSize()[1]+1 != clWeights.GetSize()[1]) {
-      std::cerr << GetName() << ": Error: inThresholds and inOrdinals should be a sum of powers of two such that second dimension+1 matches the number of weights." << std::endl;
+    if (clThresholds.GetSize()[1] != TreeTraitsType::GetThresholdCount(m_iTreeDepth)) {
+      std::cerr << GetName() << ": Error: inThresholds/inOrdinals have an unexpected number of elements (" << clThresholds.GetSize()[1] << " != " << TreeTraitsType::GetThresholdCount(m_iTreeDepth) << ")." << std::endl;
       return false;
     }
-
-    const KeyType treeDepth = FloorLog2(clWeights.GetSize()[1]);
-
-    if (treeDepth > GetMaxTreeDepth()) {
-      std::cerr << GetName() << ": Error: Tree depth is calculated to be " << treeDepth << " which exceeds the compiled-in limitation of " << GetMaxTreeDepth() << '.' << std::endl;
-      return false;
-    }
-
-    m_treeDepth = treeDepth;
 
     Size clOutSize;
 
@@ -161,10 +137,8 @@ public:
   virtual bool Initialize() override {
     bleakGetAndCheckInput(p_clWeights, "inWeights", false);
 
-    if (p_clWeights->GetData().GetSize().GetDimension() < 2 || !IsPowerOfTwo(p_clWeights->GetData().GetSize()[1]))
+    if (p_clWeights->GetData().GetSize().GetDimension() < 2 || (m_iTreeDepth = TreeTraitsType::ComputeDepth(p_clWeights->GetData().GetSize()[1])) <= 0)
       return false;
-
-    m_treeDepth = FloorLog2(p_clWeights->GetData().GetSize()[1]);
 
     return AssignTreeIndices();
   }
@@ -200,8 +174,8 @@ public:
       for (int j = 0; j < iNumTrees; ++j) {
         for (int k = 0; k < iInnerDataNum; ++k) {
           // p_inData[(i*iNumChannels + l)*iInnerDataNum + k]
-          const auto clKeyMarginTuple = ComputeKeyAndSignedMargin(p_inData + ((i*iNumChannels + 0)*iInnerDataNum + k), 
-            p_thresholds + (j*iNumDecisionsPerTree + 0), p_ordinals + (j*iNumDecisionsPerTree + 0), iInnerDataNum);
+          const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_inData + ((i*iNumChannels + 0)*iInnerDataNum + k), 
+            p_thresholds + (j*iNumDecisionsPerTree + 0), p_ordinals + (j*iNumDecisionsPerTree + 0), m_iTreeDepth, iInnerDataNum);
 
           const KeyType leafKey = std::get<0>(clKeyMarginTuple);
           const RealType margin = std::get<1>(clKeyMarginTuple); // Signed margin
@@ -255,15 +229,15 @@ public:
         for(int j = 0; j < iNumTrees; ++j) {
           for (int k = 0; k < iInnerDataNum; ++k) {
             // p_inData[(i*iNumChannels + l)*iInnerNum + k]
-            const auto clKeyMarginTuple = ComputeKeyAndSignedMargin(p_inData + ((i*iNumChannels + 0)*iInnerDataNum + k), 
-              p_thresholds + (j*iNumDecisionsPerTree + 0), p_ordinals + (j*iNumDecisionsPerTree + 0), iInnerDataNum);
+            const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_inData + ((i*iNumChannels + 0)*iInnerDataNum + k), 
+              p_thresholds + (j*iNumDecisionsPerTree + 0), p_ordinals + (j*iNumDecisionsPerTree + 0), m_iTreeDepth, iInnerDataNum);
 
             const KeyType leafKey = std::get<0>(clKeyMarginTuple);
             const RealType margin = std::get<1>(clKeyMarginTuple); // Signed margin
             const KeyType treeIndex = std::get<2>(clKeyMarginTuple);
 
             const int iInputIndex = (int)p_ordinals[j*iNumDecisionsPerTree + treeIndex];
-            const RealType sign = (RealType(0) < margin) - (margin < RealType(0));
+            const RealType sign = RealType((RealType(0) < margin) - (margin < RealType(0)));
 
             for (int m = 0; m < iInnerWeightsNum; ++m) {
               p_inDataGradient[(i*iNumChannels + iInputIndex)*iInnerDataNum + k] += sign * p_weights[(j*iNumLeavesPerTree + leafKey)*iInnerWeightsNum + m] * p_outDataGradient[((i*iNumTrees + j)*iInnerDataNum + k)*iInnerWeightsNum + m];
@@ -278,14 +252,14 @@ public:
         for (int j = 0; j < iNumTrees; ++j) {
           for (int k = 0; k < iInnerDataNum; ++k) {
             // p_inData[(i*iNumChannels + l)*iInnerNum + k]
-            const auto clKeyMarginTuple = ComputeKeyAndSignedMargin(p_inData + ((i*iNumChannels + 0)*iInnerDataNum + k), 
-              p_thresholds + (j*iNumDecisionsPerTree + 0), p_ordinals + (j*iNumDecisionsPerTree + 0), iInnerDataNum);
+            const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_inData + ((i*iNumChannels + 0)*iInnerDataNum + k), 
+              p_thresholds + (j*iNumDecisionsPerTree + 0), p_ordinals + (j*iNumDecisionsPerTree + 0), m_iTreeDepth, iInnerDataNum);
 
             const KeyType leafKey = std::get<0>(clKeyMarginTuple);
             const RealType margin = std::get<1>(clKeyMarginTuple); // Signed margin
             const KeyType treeIndex = std::get<2>(clKeyMarginTuple);
 
-            const RealType sign = (RealType(0) < margin) - (margin < RealType(0));
+            const RealType sign = RealType((RealType(0) < margin) - (margin < RealType(0)));
 
             for (int m = 0; m < iInnerWeightsNum; ++m) {
               p_thresholdsGradient[j*iNumDecisionsPerTree + treeIndex] += -sign * p_weights[(j*iNumLeavesPerTree + leafKey)*iInnerWeightsNum + m] * p_outDataGradient[((i*iNumTrees + j)*iInnerDataNum + k)*iInnerWeightsNum + m];
@@ -300,8 +274,8 @@ public:
         for (int j = 0; j < iNumTrees; ++j) {
           for (int k = 0; k < iInnerDataNum; ++k) {
             // p_inData[(i*iNumChannels + l)*iInnerNum + k]
-            const auto clKeyMarginTuple = ComputeKeyAndSignedMargin(p_inData + ((i*iNumChannels + 0)*iInnerDataNum + k), 
-              p_thresholds + (j*iNumDecisionsPerTree + 0), p_ordinals + (j*iNumDecisionsPerTree + 0), iInnerDataNum);
+            const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_inData + ((i*iNumChannels + 0)*iInnerDataNum + k), 
+              p_thresholds + (j*iNumDecisionsPerTree + 0), p_ordinals + (j*iNumDecisionsPerTree + 0), m_iTreeDepth, iInnerDataNum);
 
             const KeyType leafKey = std::get<0>(clKeyMarginTuple);
             const RealType margin = std::get<1>(clKeyMarginTuple); // Signed margin
@@ -317,35 +291,10 @@ public:
   }
 
 protected:
-  RandomHingeForest() = default;
+  RandomHingeForestTemplate() = default;
 
 private:
-  KeyType m_treeDepth = 0;
-
-  typedef std::tuple<KeyType,RealType,KeyType> KeyMarginTupleType;
-
-  KeyMarginTupleType ComputeKeyAndSignedMargin(const RealType *p_data, const RealType *p_thresholds, const RealType *p_ordinals, int iStride) {
-    KeyType leafKey = KeyType();
-    KeyType treeIndex = KeyType();
-    RealType minMargin = p_data[iStride * (int)p_ordinals[0]] - p_thresholds[0];
-    KeyType minTreeIndex = KeyType();
-
-    for (KeyType i = 0; i < m_treeDepth; ++i) {
-      const int j = (int)p_ordinals[treeIndex];
-      const RealType margin = p_data[j*iStride] - p_thresholds[treeIndex];
-      const KeyType bit = (margin > RealType(0));
-
-      if (std::abs(margin) < std::abs(minMargin)) {
-        minMargin = margin;
-        minTreeIndex = treeIndex;
-      }
-
-      leafKey |= (bit << i);
-      treeIndex = 2*treeIndex + 1 + bit;
-    }
-
-    return std::make_tuple(leafKey, minMargin, minTreeIndex);
-  }
+  int m_iTreeDepth = 0;
 
   bool AssignTreeIndices() {
     bleakGetAndCheckInput(p_clOrdinals, "inOrdinals", false);
@@ -358,7 +307,7 @@ private:
     const int iNumDecisionsPerTree = clOrdinals.GetSize()[1];
     const int iNumChannels = clInData.GetSize()[1];
 
-    if (!IsPowerOfTwo(iNumDecisionsPerTree+1))
+    if (iNumDecisionsPerTree != TreeTraitsType::GetThresholdCount(m_iTreeDepth))
       return false;
 
     RealType * const p_ordinals = clOrdinals.data();
@@ -370,10 +319,31 @@ private:
       for (int j = 0; j < iNumDecisionsPerTree; ++j) {
         p_ordinals[i*iNumDecisionsPerTree + j] = RealType(clRandomFeature(GetGenerator()));
       }
+
+      if (m_iTreeDepth == iNumDecisionsPerTree) {
+        // Fern decisions are invariant to ordering, so might as well optimize for memory access
+        std::sort(p_ordinals + (i*m_iTreeDepth + 0), p_ordinals + ((i+1)*m_iTreeDepth + 0));
+      }
     }
 
     return true;
   }
+};
+
+template<typename RealType>
+class RandomHingeFerns : public RandomHingeForestTemplate<RealType, HingeFernCommon<RealType>> {
+public:
+  typedef RandomHingeForestTemplate<RealType, HingeFernCommon<RealType>> WorkAroundVarArgsType;
+
+  bleakNewVertex(RandomHingeFerns, WorkAroundVarArgsType);
+};
+
+template<typename RealType>
+class RandomHingeForest : public RandomHingeForestTemplate<RealType, HingeTreeCommon<RealType>> {
+public:
+  typedef RandomHingeForestTemplate<RealType, HingeTreeCommon<RealType>> WorkAroundVarArgsType;
+
+  bleakNewVertex(RandomHingeForest, WorkAroundVarArgsType);
 };
 
 } // end namespace bleak

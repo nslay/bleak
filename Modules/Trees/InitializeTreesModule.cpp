@@ -26,7 +26,6 @@
 #include "VertexFactory.h"
 
 #include "FeatureSelectionAnnealing.h"
-#include "RandomHingeFerns.h"
 #include "RandomHingeForest.h"
 #include "TreeLorenzLoss.h"
 #include "TreeL2Regularization.h"

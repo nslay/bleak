@@ -44,8 +44,12 @@ void Usage(const char *p_cArg0) {
 }
 
 uint32_t FromBigEndianU32(uint32_t &x) {
-  // TODO: Make no-op on big endian machines
-  std::reverse((uint8_t *)&x, ((uint8_t *)&x) + sizeof(x));
+  static const uint16_t ui16Tmp = 1;
+  static const bool bHostBigEndian = ((*(uint8_t *)&ui16Tmp) == 0);
+
+  if (!bHostBigEndian)
+    std::reverse((uint8_t *)&x, ((uint8_t *)&x) + sizeof(x));
+
   return x;
 }
 
