@@ -9,6 +9,7 @@ set(bleakModules "" CACHE INTERNAL "Modules")
 set(bleakLibraries "" CACHE INTERNAL "Libraries")
 
 include("cmake/bleakModuleMacros.cmake")
+include("CheckCSourceCompiles")
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wno-unused-value")
@@ -35,6 +36,24 @@ add_library(lmdb
 )
 target_link_libraries(lmdb PUBLIC ${PLATFORM_LIBS})
 target_include_directories(lmdb PUBLIC lmdb/libraries/liblmdb)
+
+if (UNIX)
+  check_c_source_compiles(
+  "
+#include <sys/sem.h>
+int main(int argc, char **argv) { 
+#ifndef _SEM_SEMUN_UNDEFINED
+  union semun semu;
+#endif
+  return 0;
+}
+  "
+  HAS_SEMUN_OR_DEF)
+
+  if (NOT HAS_SEMUN_OR_DEF)
+    target_compile_definitions(lmdb PRIVATE -D_SEM_SEMUN_UNDEFINED=1)
+  endif()
+endif()
   
 file(GLOB moduleFolders Modules/*)
 foreach (moduleFolder ${moduleFolders})
