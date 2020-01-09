@@ -53,14 +53,13 @@ template<> double asum<double>(int n, const double *x, int incx);
 template<> int amax<float>(int n, const float *x, int incx);
 template<> int amax<double>(int n, const double *x, int incx);
 
+// Level 2
 template<> void gemv<float>(char trans, int m, int n, const float &alpha, const float *a, int lda, const float *x, int incx, const float &beta, float *y, int incy);
 template<> void gemv<double>(char trans, int m, int n, const double &alpha, const double *a, int lda, const double *x, int incx, const double &beta, double *y, int incy);
 
+// Level 3
 template<> void gemm<float>(char transa, char transb, int m, int n, int k, const float &alpha, const float *a, int lda, const float *b, int ldb, const float &beta, float *c, int ldc);
 template<> void gemm<double>(char transa, char transb, int m, int n, int k, const double &alpha, const double *a, int lda, const double *b, int ldb, const double &beta, double *c, int ldc);
-
-// Level 2
-// Level 3
 
 } // end namespace cpu_blas
 } // end namespace bleak

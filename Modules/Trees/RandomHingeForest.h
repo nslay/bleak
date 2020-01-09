@@ -290,6 +290,31 @@ public:
 
   }
 
+  virtual bool LoadFromDatabase(const std::unique_ptr<Cursor> &p_clCursor) override {
+    if (!SuperType::LoadFromDatabase(p_clCursor))
+      return false;
+
+    bleakGetAndCheckInput(p_clInOrdinals, "inOrdinals", false);
+    bleakGetAndCheckInput(p_clInData, "inData", false);
+
+    const ArrayType &clInOrdinals = p_clInOrdinals->GetData();
+    const ArrayType &clInData = p_clInData->GetData();
+
+    if (clInData.GetSize().GetDimension() < 2)
+      return false;
+
+    const int iNumChannels = clInData.GetSize()[1];
+
+    for (const RealType &value : clInOrdinals) {
+      if (value < RealType(0) || value >= RealType(iNumChannels)) {
+        std::cerr << GetName() << ": Error: Invalid ordinal index found." << std::endl;
+        return false;
+      }
+    }
+
+    return true;
+  }
+
 protected:
   RandomHingeForestTemplate() = default;
 

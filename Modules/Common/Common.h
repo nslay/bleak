@@ -43,6 +43,12 @@ void Trim(std::string &strValue);
 
 std::string DirName(std::string strPath);
 
+bool FileExists(const std::string &strPath);
+bool IsFolder(const std::string &strPath);
+
+void FindFiles(const char *p_cDir, const char *p_cPattern, std::vector<std::string> &vFiles, bool bRecursive = false);
+void FindFolders(const char *p_cDir, const char *p_cPattern, std::vector<std::string> &vFolders, bool bRecursive = false);
+
 template<typename ValueType>
 std::vector<ValueType> SplitString(const std::string &strValue,const std::string &strDelim);
 
