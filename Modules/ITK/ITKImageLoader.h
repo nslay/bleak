@@ -246,7 +246,7 @@ private:
 
   template<unsigned int NumComponents>
   RealType * LoadImgHelper(const std::string &strPath, RealType *p_outData) const {
-    if (m_vSize.size() != 2 + Dimension || m_vSize[1] != (int)NumComponents)
+    if (m_vSize.size() != 2 + GetDimension() || m_vSize[1] != (int)NumComponents)
       return nullptr;
 
     typedef PixelTraitsByComponents<RealType, NumComponents> PixelTraitsType;
@@ -303,7 +303,7 @@ private:
 
   template<unsigned int NumComponents>
   RealType * LoadDicomHelper(const std::string &strPath, RealType *p_outData) const {
-    if (m_vSize.size() != 2 + Dimension || m_vSize[1] != (int)NumComponents || GetDimension() != 3 || !IsFolder(strPath))
+    if (m_vSize.size() != 2 + GetDimension() || m_vSize[1] != (int)NumComponents || GetDimension() != 3 || !IsFolder(strPath))
       return nullptr;
 
     typedef PixelTraitsByComponents<RealType, NumComponents> PixelTraitsType;
@@ -373,7 +373,7 @@ private:
   }
 
   RealType * LoadImg(const std::string &strPath, RealType *p_outData) const {
-    if (m_vSize.size() != 2 + Dimension)
+    if (m_vSize.size() != 2 + GetDimension())
       return nullptr;
 
     if (!FileExists(strPath))

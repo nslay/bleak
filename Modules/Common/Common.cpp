@@ -120,7 +120,7 @@ void FindFiles(const char *p_cDir, const char *p_cPattern, std::vector<std::stri
 
   WIN32_FIND_DATA stFindData;
 
-  memset(&stFindData, 0, sizeof(stFindData));
+  std::memset(&stFindData, 0, sizeof(stFindData));
   
   HANDLE hFind = FindFirstFile(strPattern.c_str(), &stFindData);
 
@@ -142,7 +142,7 @@ void FindFiles(const char *p_cDir, const char *p_cPattern, std::vector<std::stri
     strPattern = p_cDir;
     strPattern += "\\*";
 
-    memset(&stFindData, 0, sizeof(stFindData));
+    std::memset(&stFindData, 0, sizeof(stFindData));
 
     hFind = FindFirstFile(strPattern.c_str(), &stFindData);
 
@@ -266,7 +266,7 @@ void FindFolders(const char *p_cDir, const char *p_cPattern, std::vector<std::st
 }
 #endif // _WIN32
 
-#ifdef __unix___
+#ifdef __unix__
 void FindFolders(const char *p_cDir, const char *p_cPattern, std::vector<std::string> &vFolders, bool bRecursive) {
   glob_t stGlob;
 
