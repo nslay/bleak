@@ -26,9 +26,7 @@ fi
 
 for file in *.tar.gz
 do
-  base=`basename "${file}" .gz`
-
-  gunzip -c "${file}" > "${base}.raw"
+  tar -xvzf "${file}"
 done
 
 "${makeDBCmd}" -f -o cifar10_train.lmdb -v cifar10_val.lmdb -V 0.2 -k 10 cifar-10-batches-bin/data_batch_1.bin cifar-10-batches-bin/data_batch_2.bin cifar-10-batches-bin/data_batch_3.bin cifar-10-batches-bin/data_batch_4.bin cifar-10-batches-bin/data_batch_5.bin
