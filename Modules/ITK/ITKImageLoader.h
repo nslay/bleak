@@ -260,6 +260,8 @@ private:
     if (!p_clImageIO)
       return nullptr;
 
+    p_clImageIO->SetFileName(strPath);
+
     try {
       p_clImageIO->ReadImageInformation();
     }
