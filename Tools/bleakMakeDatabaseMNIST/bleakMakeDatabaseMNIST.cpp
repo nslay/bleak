@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
   std::cout << "Info: Processing '" << p_cImagesFile << "' and '" << p_cLabelsFile << "' ..." << std::endl;
 
   if (!LoadMNIST(vData, p_cImagesFile, p_cLabelsFile)) {
-    std::cerr << "Error: Failed to read CSV." << std::endl;
+    std::cerr << "Error: Failed to read binary data." << std::endl;
     return -1;
   }
 

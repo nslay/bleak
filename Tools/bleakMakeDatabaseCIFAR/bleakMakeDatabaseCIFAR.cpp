@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017 Nathan Lay (enslay@gmail.com)
+ * Copyright (c) 2020 Nathan Lay (enslay@gmail.com)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
