@@ -7,7 +7,8 @@ bleakNewModule(Trees SOURCES
   TreeL2Regularization.h TreeL2Regularization.cpp
   HingeTreeCommon.h HingeTreeCommon.cpp
   RandomHingeForest.h RandomHingeForest.cpp
-  MODULE_DEPENDS Common
+  HingeTreeConv.h HingeTreeConv.cpp
+  MODULE_DEPENDS Common Image
 )
 
 #target_link_libraries(bleakTrees PUBLIC bleakCommon) # Even when static, tell bleakTrees about bleakCommon's include directory

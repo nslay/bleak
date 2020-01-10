@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017 Nathan Lay (enslay@gmail.com)
+ * Copyright (c) 2018 Nathan Lay (enslay@gmail.com)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,36 +23,26 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "VertexFactory.h"
-
-#include "FeatureSelectionAnnealing.h"
-#include "RandomHingeForest.h"
-#include "TreeLorenzLoss.h"
-#include "TreeL2Regularization.h"
 #include "HingeTreeConv.h"
 
 namespace bleak {
 
-template<typename RealType>
-void InitializeTreesModuleTemplate() {
-  VertexFactory<RealType> &clVertexFactory = VertexFactory<RealType>::GetInstance();
+template class HingeFernConv1D<float>;
+template class HingeFernConv1D<double>;
 
-  clVertexFactory.template Register<FeatureSelectionAnnealing<RealType>>();
-  clVertexFactory.template Register<RandomHingeFerns<RealType>>();
-  clVertexFactory.template Register<RandomHingeForest<RealType>>();
-  clVertexFactory.template Register<TreeLorenzLoss<RealType>>();
-  clVertexFactory.template Register<TreeL2Regularization<RealType>>();
-  clVertexFactory.template Register<HingeFernConv1D<RealType>>();
-  clVertexFactory.template Register<HingeFernConv2D<RealType>>();
-  clVertexFactory.template Register<HingeFernConv3D<RealType>>();
-  clVertexFactory.template Register<HingeTreeConv1D<RealType>>();
-  clVertexFactory.template Register<HingeTreeConv2D<RealType>>();
-  clVertexFactory.template Register<HingeTreeConv3D<RealType>>();
-}
+template class HingeFernConv2D<float>;
+template class HingeFernConv2D<double>;
 
-void InitializeTreesModule() {
-  InitializeTreesModuleTemplate<float>();
-  InitializeTreesModuleTemplate<double>();
-}
+template class HingeFernConv3D<float>;
+template class HingeFernConv3D<double>;
+
+template class HingeTreeConv1D<float>;
+template class HingeTreeConv1D<double>;
+
+template class HingeTreeConv2D<float>;
+template class HingeTreeConv2D<double>;
+
+template class HingeTreeConv3D<float>;
+template class HingeTreeConv3D<double>;
 
 } // end namespace bleak
