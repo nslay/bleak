@@ -22,7 +22,7 @@ bleakBuildFolder="/mnt/c/Work/Build/Bleak"
 bleakWin32SourceFolder=`GetWindowsPath "${bleakSourceFolder}"`
 bleakWin32BuildFolder=`GetWindowsPath "${bleakBuildFolder}"`
 
-PATH="${PATH}:${bleakBuildFolder}/Tools/bleakTool/Release:${bleakBuildFolder}/Tools/bleakMakeDatabase/Release:${bleakBuildFolder}/Tools/bleakSadToDot/Release:${bleakBuildFolder}/Tools/bleakMakeDatabaseMNIST/Release"
+PATH="${PATH}:${bleakBuildFolder}/Tools/bleakTool/Release:${bleakBuildFolder}/Tools/bleakMakeDatabase/Release:${bleakBuildFolder}/Tools/bleakSadToDot/Release:${bleakBuildFolder}/Tools/bleakMakeDatabaseMNIST/Release:${bleakBuildFolder}/Tools/bleakMakeDatabaseCIFAR/Release"
 toolFlags="-I ${bleakWin32SourceFolder}/Modules/Common/Subgraphs -I ${bleakWin32SourceFolder}/Modules/Trees/Subgraphs -I ${bleakWin32SourceFolder}/Modules/Image/Subgraphs"
 
 export PATH toolFlags
