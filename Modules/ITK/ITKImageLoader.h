@@ -260,6 +260,14 @@ private:
     if (!p_clImageIO)
       return nullptr;
 
+    try {
+      p_clImageIO->ReadImageInformation();
+    }
+    catch (itk::ExceptionObject &e) {
+      std::cerr << GetName() << ": Error: Failed to read image information for '" << strPath << "': " << e << std::endl;
+      return nullptr;
+    }
+
     if (p_clImageIO->GetNumberOfDimensions() != GetDimension())
       return nullptr;
 
