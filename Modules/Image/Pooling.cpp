@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2018 Nathan Lay (enslay@gmail.com)
+ * Copyright (c) 2020 Nathan Lay (enslay@gmail.com)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,30 +23,17 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "VertexFactory.h"
-
-#include "ConvolutionNaive.h"
-#include "Convolution.h"
 #include "Pooling.h"
 
 namespace bleak {
 
-template<typename RealType>
-void InitializeImageModuleTemplate() {
-  VertexFactory<RealType> &clVertexFactory = VertexFactory<RealType>::GetInstance();
+template class MaxPooling1D<float>;
+template class MaxPooling1D<double>;
 
-  clVertexFactory.template Register<ConvolutionNaive2D<RealType>>();
-  clVertexFactory.template Register<Convolution1D<RealType>>();
-  clVertexFactory.template Register<Convolution2D<RealType>>();
-  clVertexFactory.template Register<Convolution3D<RealType>>();
-  clVertexFactory.template Register<MaxPooling1D<RealType>>();
-  clVertexFactory.template Register<MaxPooling2D<RealType>>();
-  clVertexFactory.template Register<MaxPooling3D<RealType>>();
-}
+template class MaxPooling2D<float>;
+template class MaxPooling2D<double>;
 
-void InitializeImageModule() {
-  InitializeImageModuleTemplate<float>();
-  InitializeImageModuleTemplate<double>();
-}
+template class MaxPooling3D<float>;
+template class MaxPooling3D<double>;
 
 } // end namespace bleak
