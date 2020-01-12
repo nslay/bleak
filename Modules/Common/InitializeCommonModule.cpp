@@ -28,6 +28,7 @@
 #include "DatabaseFactory.h"
 
 #include "Input.h"
+#include "Output.h"
 #include "Parameters.h"
 #include "CsvReader.h"
 #include "DatabaseReader.h"
@@ -60,6 +61,7 @@ void InitializeCommonModuleTemplate() {
   OptimizerFactory<RealType> &clOptimizerFactory = OptimizerFactory<RealType>::GetInstance();
   
   clVertexFactory.template Register<Input<RealType>>();
+  clVertexFactory.template Register<Output<RealType>>();
   clVertexFactory.template Register<Parameters<RealType>>();
   clVertexFactory.template Register<CsvReader<RealType>>();
   clVertexFactory.template Register<DatabaseReader<RealType>>();
