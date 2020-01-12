@@ -73,8 +73,14 @@ void gemm(char transa, char transb, int m, int n, int k, const RealType &alpha, 
 } // end namespace cpu_blas
 } // end namespace bleak
 
-// This is the default bleak BLAS (it sucks!). Will later wrap other hard-to-compile-on-Windows BLAS in the future!
+#if defined(BLEAK_HAVE_SLOWBLAS)
+// This is the default bleak BLAS (it sucks!).
 // But it's inlined templated, so hopefully some compiler optimization will come of it?
 #include "SlowBlas.h"
+#elif defined(BLEAK_HAVE_OPENBLAS)
+#include "OpenBlasWrapper.h"
+#else
+#error "No BLAS selected."
+#endif // BLAS checks
 
 #endif // !BLASWRAPPER_H

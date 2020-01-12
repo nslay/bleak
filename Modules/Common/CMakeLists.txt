@@ -1,5 +1,22 @@
 project(bleakCommonModule C CXX)
 
+set(bleakBLASType "slowblas" CACHE STRING "BLAS library implementation")
+
+if (bleakBLASType STREQUAL "slowblas")
+  set(BLAS_DEFINITIONS -DBLEAK_HAVE_SLOWBLAS=1 CACHE INTERNAL "BLAS definitions")
+  set(BLAS_SOURCES SlowBlas.h SlowBlas.cpp CACHE INTERNAL "BLAS sources")
+  set(BLAS_LIBRARIES CACHE INTERNAL "BLAS libraries")
+  set(BLAS_INCLUDE_DIRS CACHE INTERNAL "BLAS include directories")
+elseif (bleakBLASType STREQUAL "openblas")
+  find_package(OpenBLAS REQUIRED)
+  set(BLAS_DEFINITIONS -DBLEAK_HAVE_OPENBLAS=1 CACHE INTERNAL "BLAS definitions")
+  set(BLAS_SOURCES OpenBlasWrapper.h OpenBlasWrapper.cpp CACHE INTERNAL "BLAS sources")
+  set(BLAS_LIBRARIES ${OpenBLAS_LIBRARIES} CACHE INTERNAL "BLAS libraries")
+  set(BLAS_INCLUDE_DIRS ${OpenBLAS_INCLUDE_DIRS} CACHE INTERNAL "BLAS include directories")
+else()
+  message(FATAL_ERROR "Unrecognized BLAS type ${bleakBLASType}")
+endif()
+
 bleakNewModule(Common SOURCES
 Parser/y.tab.h Parser/y.tab.c
 Parser/lex.yy.h Parser/lex.yy.c
@@ -24,6 +41,7 @@ Property.h Property.cpp
 IniFile.h IniFile.cpp
 Graph.h Graph.cpp
 Input.h Input.cpp
+Output.h Output.cpp
 Parameters.h Parameters.cpp
 InnerProduct.h InnerProduct.cpp
 Scale.h Scale.cpp
@@ -53,10 +71,12 @@ DatabaseFactory.h DatabaseFactory.cpp
 LMDBDatabase.h LMDBDatabase.cpp
 
 BlasWrapper.h
-SlowBlas.h SlowBlas.cpp
+${BLAS_SOURCES}
 
 InitializeCommonModule.cpp
-LIBRARIES lmdb
+LIBRARIES lmdb ${BLAS_LIBRARIES}
+INCLUDE_DIRECTORIES ${BLAS_INCLUDE_DIRS}
+DEFINITIONS ${BLAS_DEFINITIONS}
 ENABLE_BY_DEFAULT
 )
 

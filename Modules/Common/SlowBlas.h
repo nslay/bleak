@@ -25,8 +25,8 @@
 
 #pragma once
 
-#ifndef SLOWBLAS_H
-#define SLOWBLAS_H
+#ifndef BLEAK_SLOWBLAS_H
+#define BLEAK_SLOWBLAS_H
 
 #include <cmath>
 #include <algorithm>
@@ -420,4 +420,4 @@ void gemm(char transa, char transb, int m, int n, int k, const RealType &alpha, 
 } // end namespace cpu_blas
 } // end namespace bleak
 
-#endif // !SLOWBLAS_H
+#endif // !BLEAK_SLOWBLAS_H

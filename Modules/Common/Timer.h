@@ -136,8 +136,10 @@ public:
   }
 
   void Print() const {
-    if (m_p_outStream != nullptr)
+    if (m_p_outStream != nullptr) {
       Print(*m_p_outStream);
+      *m_p_outStream << std::endl;
+    }
   }
 
 private:

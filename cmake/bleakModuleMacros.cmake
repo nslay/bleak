@@ -5,7 +5,7 @@ macro(bleakNewModule name)
   
   set(optionKeyWords ENABLE_BY_DEFAULT)
   set(oneValueKeyWords "")
-  set(multiValueKeyWords MODULE_DEPENDS LIBRARIES SOURCES)
+  set(multiValueKeyWords MODULE_DEPENDS LIBRARIES SOURCES INCLUDE_DIRECTORIES DEFINITIONS)
   
   cmake_parse_arguments("bleak${name}" "${optionKeyWords}" "${oneValueKeyWords}" "${multiValueKeyWords}" ${ARGN} )
   
@@ -37,7 +37,8 @@ macro(bleakNewModule name)
     string(REGEX REPLACE "[ \t\r\n]+$" "" dependencies "${dependencies}")
     
     target_link_libraries("bleak${name}" PUBLIC ${dependencies})
-    target_include_directories("bleak${name}" PUBLIC "${PROJECT_SOURCE_DIR}")
+    target_include_directories("bleak${name}" PUBLIC "${PROJECT_SOURCE_DIR}" ${bleak${name}_INCLUDE_DIRECTORIES})
+    target_compile_definitions("bleak${name}" PUBLIC ${bleak${name}_DEFINITIONS})
   endif()
   
   list(APPEND bleakModules "${name}")

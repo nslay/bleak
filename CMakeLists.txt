@@ -20,24 +20,19 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
   add_definitions(-DYY_NO_UNISTD_H=1 -D_USE_MATH_DEFINES=1)
 endif()
 
-if (WIN32)
-  set(PLATFORM_LIBS ntdll)
-elseif(UNIX)
-  set(PLATFORM_LIBS pthread)
-else()
-  set(PLATFORM_LIBS )
-endif()
-
 # NOTE: Needs ntdll on Windows
 add_library(lmdb
   lmdb/libraries/liblmdb/lmdb.h   
   lmdb/libraries/liblmdb/mdb.c
   lmdb/libraries/liblmdb/midl.h lmdb/libraries/liblmdb/midl.c
 )
-target_link_libraries(lmdb PUBLIC ${PLATFORM_LIBS})
 target_include_directories(lmdb PUBLIC lmdb/libraries/liblmdb)
 
-if (UNIX)
+if (WIN32)
+  target_link_libraries(lmdb PUBLIC ntdll)
+elseif (UNIX)
+  target_link_libraries(lmdb PUBLIC pthread)
+
   check_c_source_compiles(
   "
 #include <sys/sem.h>
