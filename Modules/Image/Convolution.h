@@ -31,6 +31,7 @@
 #include "Vertex.h"
 #include "ImageToMatrix.h"
 #include "BlasWrapper.h"
+#include "Timer.h"
 
 namespace bleak {
 
@@ -93,8 +94,14 @@ public:
     }
 
     // inData: Batch size x Channels x Z x Y x X
-    if (clInWeights.GetSize().GetDimension() != GetDimension()+1 || clInData.GetSize().GetDimension() != GetDimension() + 2) {
+    // inWeights: numKernels x Channels x Z x Y x X
+    if (clInWeights.GetSize().GetDimension() != GetDimension()+2 || clInData.GetSize().GetDimension() != GetDimension()+2) {
       std::cerr << GetName() << ": Error: Unexpected dimension for inData and/or inWeights." << std::endl;
+      return false;
+    }
+
+    if (clInWeights.GetSize()[1] != clInData.GetSize()[1]) {
+      std::cerr << GetName() << ": Error: inWeights and inData channel size must match (" << clInWeights.GetSize()[1] << " != " << clInData.GetSize()[1] << ")." << std::endl;
       return false;
     }
 
@@ -109,6 +116,7 @@ public:
         return false;
       }
 
+      // numKernels x Channels
       if (clInBias.GetSize().GetDimension() != 1) {
         std::cerr << GetName() << ": Error: inBias is expected to be 1D." << std::endl;
         return false;
@@ -130,7 +138,7 @@ public:
       const int iStride = m_vStride[i-2];
       const int iDilate = m_vDilate[i-2];
       const int iInputLength = 2*m_vPadding[i-2] + clInData.GetSize()[i];
-      const int iKernelLength = clInWeights.GetSize()[i-1]*(1 + iDilate) - iDilate; // Alternate form of K + (K-1)*D
+      const int iKernelLength = clInWeights.GetSize()[i]*(1 + iDilate) - iDilate; // Alternate form of K + (K-1)*D
 
       if (iInputLength <= iKernelLength) {
         std::cerr << GetName() << ": Error: inWeights dimensions " << clInWeights.GetSize().SubSize(1) << 
@@ -155,13 +163,12 @@ public:
     bleakGetAndCheckOutput(p_clOutData, "outData", false);
 
     //m_clImageToMatrix.SetImageSize(p_clInData->GetData().GetSize().SubSize(1).data());
-    m_clImageToMatrix.SetKernelSize(p_clInWeights->GetData().GetSize().SubSize(1).data());
+    m_clImageToMatrix.SetKernelSize(p_clInWeights->GetData().GetSize().SubSize(2).data());
     m_clImageToMatrix.SetStride(m_vStride.data());
     m_clImageToMatrix.SetPadding(m_vPadding.data());
     m_clImageToMatrix.SetDilate(m_vDilate.data());
 
-    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
-    clImageSize[0] = 1; // Process 1 channel at a time
+    const Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
 
     if (!m_clImageToMatrix.Good(clImageSize.data()))
       return false;
@@ -186,8 +193,7 @@ public:
     const ArrayType &clInWeights = p_clInWeights->GetData();
     ArrayType &clOutData = p_clOutData->GetData();
 
-    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
-    clImageSize[0] = 1; // Process 1 channel at a time
+    const Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
 
     const RealType * const p_inData = clInData.data();
     const RealType * const p_inWeights = clInWeights.data();
@@ -196,11 +202,9 @@ public:
 
     const int iOuterNum = clInData.GetSize()[0];
     const int iInnerNum = clInData.GetSize().Product(1);
-    const int iInDataNumChannels = clInData.GetSize()[1];
     const int iOutDataNumChannels = clOutData.GetSize()[1]; // Synonym for weights/bias channels
     const int iOutDataChannelSize = clOutData.GetSize().Product(2);
     const int iOutDataInnerNum = clOutData.GetSize().Product(1);
-    const int iInDataChannelSize = clInData.GetSize().Product(2);
 
     if (p_inBias != nullptr) {
       for (int i = 0; i < iOuterNum; ++i) {
@@ -226,10 +230,8 @@ public:
     // So we need m_vMatrix^T * Weights = m_iRows x iOutDataNumChannels
 
     for (int i = 0; i < iOuterNum; ++i) {
-      for (int j = 0; j < iInDataNumChannels; ++j) {
-        m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iInnerNum + j*iInDataChannelSize), clImageSize.data());
-        cpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_vMatrix.data(), m_iCols, p_inWeights, m_iCols, RealType(1), clOutData.data() + i*iOutDataInnerNum, m_iRows);
-      }
+      m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + i*iInnerNum, clImageSize.data());
+      cpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_vMatrix.data(), m_iCols, p_inWeights, m_iCols, RealType(1), clOutData.data() + i*iOutDataInnerNum, m_iRows);
     }
   }
 
@@ -247,8 +249,7 @@ public:
     const ArrayType &clOutData = p_clOutData->GetData();
     const ArrayType &clOutDataGradient = p_clOutData->GetGradient();
 
-    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
-    clImageSize[0] = 1; // Process 1 channel at a time
+    const Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
 
     const RealType * const p_inData = clInData.data();
     RealType * const p_inDataGradient = clInDataGradient.data();
@@ -261,8 +262,6 @@ public:
 
     const int iOuterNum = clInData.GetSize()[0];
     const int iInnerNum = clInData.GetSize().Product(1);
-    const int iInDataNumChannels = clInData.GetSize()[1];
-    const int iInWeightsChannelSize = clInWeights.GetSize().Product(1);
     const int iOutDataNumChannels = clOutData.GetSize()[1];
     const int iOutDataInnerNum = clOutData.GetSize().Product(1);
     const int iOutDataChannelSize = clOutData.GetSize().Product(2);
@@ -296,11 +295,9 @@ public:
 
     if (p_inWeightsGradient != nullptr) {
       for (int i = 0; i < iOuterNum; ++i) {
-        for (int j = 0; j < iInDataNumChannels; ++j) {
-          m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + i*iInnerNum + j*iInDataChannelSize, clImageSize.data());
+        m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + i*iInnerNum, clImageSize.data());
 
-          cpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_vMatrix.data(), m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient, m_iCols);
-        }
+        cpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_vMatrix.data(), m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient, m_iCols);
       }
     }
 
@@ -310,12 +307,10 @@ public:
       for (int i = 0; i < iOuterNum; ++i) {
         cpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights, m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(0), m_vMatrix.data(), m_iCols);
 
-        for (int j = 0; j < iInDataNumChannels; ++j) {
-          for (size_t k = 0; k < m_vIndexMatrix.size(); ++k) {
-            const int index = m_vIndexMatrix[k];
-            if (index >= 0)
-              p_inDataGradient[i*iInnerNum + j*iInDataChannelSize + index] += m_vMatrix[k];
-          }
+        for (size_t j = 0; j < m_vIndexMatrix.size(); ++j) {
+          const int index = m_vIndexMatrix[j];
+          if (index >= 0)
+            p_inDataGradient[i*iInnerNum + index] += m_vMatrix[j];
         }
       }
     }

@@ -2,6 +2,7 @@ subgraph SGConvolution2D {
   padding = [ 0, 0 ];
   stride = [ 1, 1 ];
   dilate = [ 0, 0 ];
+  numInputs = 3;
   numOutputs = 16;
   height = 9;
   width = 9;
@@ -9,7 +10,7 @@ subgraph SGConvolution2D {
   learningRateMultiplier = 1.0;
   
   Parameters {
-    size = [ $numOutputs, $height, $width ];
+    size = [ $numOutputs, $numInputs, $height, $width ];
     learnable = true;
     initType="gaussian";
     mu=0.0;

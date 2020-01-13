@@ -131,7 +131,7 @@ public:
     m_vMatrix.resize(m_iRows*m_iCols, RealType(0));
     m_vIndexMatrix.resize(m_vMatrix.size(), 0);
 
-    return true; // Nothing to do
+    return true;
   }
 
 protected:
