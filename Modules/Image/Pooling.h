@@ -114,6 +114,9 @@ public:
     const auto tmpSize = m_clImageToMatrix.ComputeOutputSize(clImageSize.data());
     std::copy(tmpSize.begin(), tmpSize.end(), clOutSize.data()+2);
 
+    p_clOutData->GetData().SetSize(clOutSize);
+    p_clOutData->GetGradient().SetSize(clOutSize);
+
     return true;
   }
 

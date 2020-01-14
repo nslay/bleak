@@ -141,7 +141,7 @@ public:
       const int iKernelLength = clInWeights.GetSize()[i]*(1 + iDilate) - iDilate; // Alternate form of K + (K-1)*D
 
       if (iInputLength <= iKernelLength) {
-        std::cerr << GetName() << ": Error: inWeights dimensions " << clInWeights.GetSize().SubSize(1) << 
+        std::cerr << GetName() << ": Error: inWeights dimensions " << clInWeights.GetSize().SubSize(2) << 
           " exceed the dimensions of inData " << clInData.GetSize().SubSize(2) << 
           ". Check inWeights or dilate property." << std::endl;
 
