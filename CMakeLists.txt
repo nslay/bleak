@@ -20,7 +20,20 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
   add_definitions(-DYY_NO_UNISTD_H=1 -D_USE_MATH_DEFINES=1)
 endif()
 
-# NOTE: Needs ntdll on Windows
+set(bleakUseOpenMP OFF CACHE BOOL "Compile with OpenMP support (if available).")
+
+if (bleakUseOpenMP)
+  find_package(OpenMP)
+  
+  if(OPENMP_FOUND)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+  else()
+    message(WARNING "OpenMP not found. Disabling.")
+    set(bleakUseOpenMP OFF CACHE BOOL "" FORCE)
+  endif()
+endif()
+
 add_library(lmdb
   lmdb/libraries/liblmdb/lmdb.h   
   lmdb/libraries/liblmdb/mdb.c

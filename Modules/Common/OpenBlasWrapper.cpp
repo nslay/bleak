@@ -23,10 +23,38 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <cstring>
+#include <cstdlib>
+#include <iostream>
 #include "OpenBlasWrapper.h"
 
 namespace bleak {
 namespace cpu_blas {
+
+void Initialize() { 
+  switch (openblas_get_parallel()) {
+  case OPENBLAS_SEQUENTIAL:
+    break;
+  case OPENBLAS_THREAD:
+    {
+      int iNumThreads = openblas_get_num_procs();
+      const char * const p_cNumThreads = getenv("OMP_NUM_THREADS"); // Let's respect this variable anyway...
+      if (p_cNumThreads != nullptr && p_cNumThreads[0] != '\0') {
+        char *p = nullptr;
+        const int iTmp = (int)strtoul(p_cNumThreads, &p, 10);
+        if (*p == '\0' && iTmp > 0)
+          iNumThreads = iTmp;
+      }
+      openblas_set_num_threads(iNumThreads);
+    }
+    break;
+  case OPENBLAS_OPENMP:
+    // OMP_NUM_THREADS is already respected
+    break;
+  default:
+    break;
+  }
+}
 
 // Level 2
 template<>

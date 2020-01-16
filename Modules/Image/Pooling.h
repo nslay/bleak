@@ -195,6 +195,7 @@ public:
       for (int j = 0; j < iNumChannels; ++j) {
         m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iNumChannels + j)*iInChannelSize, clImageSize.data());
 
+#pragma omp parallel for
         for (int k = 0; k < m_iRows; ++k) {
           const RealType * const p_row = m_vMatrix.data() + k*m_iCols;
           p_outData[(i*iNumChannels + j)*m_iRows + k] = *std::max_element(p_row, p_row + m_iCols);
@@ -232,6 +233,7 @@ public:
       for (int j = 0; j < iNumChannels; ++j) {
         m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iNumChannels + j)*iInChannelSize, clImageSize.data());
 
+#pragma omp parallel for
         for (int k = 0; k < m_iRows; ++k) {
           const RealType * const p_row = m_vMatrix.data() + k*m_iCols;
           const int * const p_indexRow = m_vIndexMatrix.data() + k*m_iCols;
@@ -239,8 +241,10 @@ public:
           const int iFeatureIndex = (int)(std::max_element(p_row, p_row + m_iCols) - p_row);
           const int index = p_indexRow[iFeatureIndex];
 
-          if (index >= 0)
+          if (index >= 0) {
+#pragma omp atomic
             p_inDataGradient[(i*iNumChannels + j)*iInChannelSize + index] += p_outDataGradient[(i*iNumChannels + j)*m_iRows + k];
+          }
         }
       }
     }

@@ -215,6 +215,7 @@ public:
         m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iInNumChannels + c)*iInChannelSize, clImageSize.data());
 
         // Iterate over output kernels
+#pragma omp parallel for
         for (int j = 0; j < iNumTrees; ++j) {
           const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
           const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
@@ -284,6 +285,7 @@ public:
         for (int c = 0; c < iInNumChannels; ++c) {
           m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iInNumChannels + c)*iInChannelSize, clImageSize.data());
 
+#pragma omp parallel for
           for (int j = 0; j < iNumTrees; ++j) {
             const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
             const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
@@ -314,6 +316,7 @@ public:
         for (int c = 0; c < iInNumChannels; ++c) {
           m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iInNumChannels + c)*iInChannelSize, clImageSize.data());
 
+#pragma omp parallel for
           for (int j = 0; j < iNumTrees; ++j) {
             const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
             const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
@@ -344,6 +347,7 @@ public:
         for (int c = 0; c < iInNumChannels; ++c) {
           m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iInNumChannels + c)*iInChannelSize, clImageSize.data());
 
+#pragma omp parallel for
           for (int j = 0; j < iNumTrees; ++j) {
             const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
             const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
@@ -365,8 +369,10 @@ public:
 
                 const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key);
 
-                for (int l = 0; l < iInnerWeightsNum; ++l)
+                for (int l = 0; l < iInnerWeightsNum; ++l) {
+#pragma omp atomic
                   p_inDataGradient[(i*iInNumChannels + c)*iInChannelSize + iImageIndex] += sign * p_leafWeights[l] * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
+                }
               }
             }
           }

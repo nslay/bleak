@@ -34,8 +34,6 @@
 namespace bleak {
 namespace cpu_blas {
 
-inline void Initialize() { } // Nothing to do...
-
 // Level 1
 template<>
 inline void swap<float>(int n, float *x, int incx, float *y, int incy) { cblas_sswap(n, x, incx, y, incy); }

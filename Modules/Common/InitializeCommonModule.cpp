@@ -53,6 +53,8 @@
 #include "AdaGrad.h"
 #include "Adam.h"
 
+#include "BlasWrapper.h"
+
 namespace bleak {
 
 template<typename RealType>
@@ -88,6 +90,8 @@ void InitializeCommonModuleTemplate() {
 }
 
 void InitializeCommonModule() {
+  cpu_blas::Initialize();
+
   DatabaseFactory &clDBFactory = DatabaseFactory::GetInstance();
   
   clDBFactory.Register<LMDBDatabase>();
