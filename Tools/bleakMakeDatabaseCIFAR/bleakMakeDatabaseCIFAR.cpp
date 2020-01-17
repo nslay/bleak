@@ -195,7 +195,7 @@ int main(int argc, char **argv) {
     count = 0;
     std::cout << "Info: Writing validation entries..." << std::endl;
 
-    for (size_t i = trainBegin; i < trainEnd; ++i) {
+    for (size_t i = validationBegin; i < validationEnd; ++i) {
       const std::vector<double> &vRow = vData[i];
 
       snprintf(a_cKey, sizeof(a_cKey), "%09u", (unsigned int)count);
