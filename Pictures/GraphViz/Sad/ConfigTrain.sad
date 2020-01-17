@@ -1,0 +1,2 @@
+include "Config.sad"
+dataBasePath = "../../../../Data/cifar/cifar10_train.lmdb";

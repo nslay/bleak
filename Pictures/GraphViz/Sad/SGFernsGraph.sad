@@ -1,0 +1,168 @@
+subgraph SGFernsGraph {
+  inputWidth=32;
+  inputHeight=32;
+  inputChannels=3;
+  convWidth=3;
+  convHeight=3;
+  strideX=1;
+  strideY=1;
+  dilateX=0;
+  dilateY=0;
+  numClasses=2;
+  numTrees=10;
+  treeDepth=5;
+  numConvolutions=40;
+  learningRateMultiplier=1.0;
+
+  # Convenience stuff
+  private conv1Width = ($inputWidth - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1;
+  private conv1Height = ($inputHeight - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1;
+  private features1Width = ($conv1Width - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1;
+  private features1Height = ($conv1Height - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1;
+  private conv2Width = ($features1Width - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1;
+  private conv2Height = ($features1Height - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1;
+  private features2Width = ($conv2Width - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1;
+  private features2Height = ($conv2Height - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1;
+  private conv3Width = ($features2Width - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1;
+  private conv3Height = ($features2Height - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1;
+  private features3Width = ($conv3Width - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1;
+  private features3Height = ($conv3Height - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1;
+  private conv4Width = ($features3Width - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1;
+  private conv4Height = ($features3Height - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1;
+  private features4Width = ($conv4Width - $convWidth - ($convWidth-1)*$dilateX)/$strideX + 1;
+  private features4Height = ($conv4Height - $convHeight - ($convHeight-1)*$dilateY)/$strideY + 1;
+  
+  include "SGInnerProduct.sad"
+  include "SGForest.sad"
+  include "SGSum.sad"
+  include "SGHingeFernConv2D.sad"
+  include "SGConvolution2D.sad"
+  
+  SGConvolution2D {
+    stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
+    dilate = [ $dilateY, $dilateX ];
+    padding = [ 0, 0 ];
+    width = $convWidth;
+    height = $convHeight;
+    numInputs = $inputChannels;
+    numOutputs = $numConvolutions;
+    useBias = false;
+  } conv1;
+  
+  SGHingeFernConv2D {
+    width = $convWidth;
+    height = $convHeight;
+    #numChannels = $inputChannels;
+    numChannels = $numConvolutions;
+    treeDepth=3;
+    stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
+    dilate = [ $dilateY, $dilateX ];
+    padding = [ 0, 0 ];
+    numTrees=$numConvolutions;
+  } features1;
+
+  SGConvolution2D {
+    stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
+    dilate = [ $dilateY, $dilateX ];
+    padding = [ 0, 0 ];
+    width = $convWidth;
+    height = $convHeight;
+    numInputs = $numConvolutions;
+    numOutputs = $numConvolutions;
+    useBias = false;
+  } conv2;
+  
+  SGHingeFernConv2D {
+    width = $convWidth;
+    height = $convHeight;
+    numChannels = $numConvolutions;
+    treeDepth=3;
+    stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
+    dilate = [ $dilateY, $dilateX ];
+    padding = [ 0, 0 ];
+    numTrees=$numConvolutions;
+  } features2;
+  
+  SGConvolution2D {
+    stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
+    dilate = [ $dilateY, $dilateX ];
+    padding = [ 0, 0 ];
+    width = $convWidth;
+    height = $convHeight;
+    numInputs = $numConvolutions;
+    numOutputs = $numConvolutions;
+    useBias = false;
+  } conv3;
+  
+  SGHingeFernConv2D {
+    width = $convWidth;
+    height = $convHeight;
+    treeDepth=3;
+    numChannels = $numConvolutions;
+    stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
+    dilate = [ $dilateY, $dilateX ];
+    padding = [ 0, 0 ];
+    numTrees=$numConvolutions;
+  } features3;
+  
+  SGConvolution2D {
+    stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
+    dilate = [ $dilateY, $dilateX ];
+    padding = [ 0, 0 ];
+    width = $convWidth;
+    height = $convHeight;
+    numInputs = $numConvolutions;
+    numOutputs = $numConvolutions;
+    useBias = false;
+  } conv4;
+  
+  SGHingeFernConv2D {
+    width = $convWidth;
+    height = $convHeight;
+    treeDepth=3;
+    numChannels = $numConvolutions;    
+    stride = [ $strideY, $strideX ]; # Yes, this is intentionally backward
+    dilate = [ $dilateY, $dilateX ];
+    padding = [ 0, 0 ];
+    numTrees=$numConvolutions;
+  } features4;
+  
+  Reshape {
+    size = [ $numConvolutions * $features4Height * $features4Width ];
+  } reshapeFeatures;
+  
+  SGForest {
+    numInputs = [ $numConvolutions * $features4Height * $features4Width ];
+    numOutputs=$numClasses;
+    numTrees=$numTrees;
+    treeDepth=$treeDepth;
+    learningRateMultiplier=$learningRateMultiplier;
+  } ferns;
+  
+  SGSum {
+    numInputs=$numTrees;
+    numOutputs=1;
+  } fernsAgg;
+  
+  Reshape { size = [ $numClasses ]; } reshape;
+  
+  conv1.outData -> features1.inData;
+  features1.outData -> conv2.inData;
+  conv2.outData -> features2.inData;
+  features2.outData -> conv3.inData;
+  conv3.outData -> features3.inData;
+  features3.outData -> conv4.inData;
+  conv4.outData -> features4.inData;
+  
+  features4.outData -> reshapeFeatures.inData;
+  
+  reshapeFeatures.outData -> ferns.inData;
+  ferns.outData -> fernsAgg.inData;
+  
+  fernsAgg.outData -> reshape.inData;
+  
+  this.inData -> conv1.inData;
+  reshape.outData -> this.outData;
+  
+  ferns.outData -> this.outTreeData;
+};

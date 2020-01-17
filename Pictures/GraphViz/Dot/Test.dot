@@ -1,0 +1,213 @@
+digraph SadGraph {
+  node [shape=record];
+  1 [ label="{{<inData> inData}|reshapeFeatures|{<outData> outData}}" ];
+  2 [ label="{{<inData> inData}|reshape|{<outData> outData}}" ];
+  3 [ label="{No Inputs|ordinals|{<outData> outData}}" ];
+  4 [ label="{No Inputs|thresholds|{<outData> outData}}" ];
+  5 [ label="{{<inThresholds> inThresholds|<inData> inData|<inWeights> inWeights|<inOrdinals> inOrdinals}|conv2D|{<outData> outData}}" ];
+  6 [ label="{No Inputs|weights|{<outData> outData}}" ];
+  7 [ label="{No Inputs|batchMeans|{<outData> outData}}" ];
+  8 [ label="{No Inputs|batchVars|{<outData> outData}}" ];
+  9 [ label="{{<inMeans> inMeans|<inData> inData|<inVariances> inVariances}|batchNorm|{<outData> outData}}" ];
+  10 [ label="{{<inOrdinals> inOrdinals|<inData> inData|<inThresholds> inThresholds|<inWeights> inWeights}|forest|{<outData> outData}}" ];
+  11 [ label="{No Inputs|thresholds|{<outData> outData}}" ];
+  12 [ label="{No Inputs|weights|{<outData> outData}}" ];
+  13 [ label="{No Inputs|ordinals|{<outData> outData}}" ];
+  14 [ label="{{<inMeans> inMeans|<inData> inData|<inVariances> inVariances}|batchNorm|{<outData> outData}}" ];
+  15 [ label="{No Inputs|batchVars|{<outData> outData}}" ];
+  16 [ label="{No Inputs|batchMeans|{<outData> outData}}" ];
+  17 [ label="{No Inputs|weights|{<outData> outData}}" ];
+  18 [ label="{No Inputs|ordinals|{<outData> outData}}" ];
+  19 [ label="{{<inThresholds> inThresholds|<inData> inData|<inWeights> inWeights|<inOrdinals> inOrdinals}|conv2D|{<outData> outData}}" ];
+  20 [ label="{No Inputs|thresholds|{<outData> outData}}" ];
+  21 [ label="{No Inputs|batchMeans|{<outData> outData}}" ];
+  22 [ label="{No Inputs|batchVars|{<outData> outData}}" ];
+  23 [ label="{{<inMeans> inMeans|<inData> inData|<inVariances> inVariances}|batchNorm|{<outData> outData}}" ];
+  24 [ label="{No Inputs|weights|{<outData> outData}}" ];
+  25 [ label="{{<inThresholds> inThresholds|<inData> inData|<inWeights> inWeights|<inOrdinals> inOrdinals}|conv2D|{<outData> outData}}" ];
+  26 [ label="{No Inputs|ordinals|{<outData> outData}}" ];
+  27 [ label="{No Inputs|thresholds|{<outData> outData}}" ];
+  28 [ label="{{<inMeans> inMeans|<inData> inData|<inVariances> inVariances}|batchNorm|{<outData> outData}}" ];
+  29 [ label="{No Inputs|batchVars|{<outData> outData}}" ];
+  30 [ label="{No Inputs|batchMeans|{<outData> outData}}" ];
+  31 [ label="{No Inputs|weights|{<outData> outData}}" ];
+  32 [ label="{No Inputs|bias|{<outData> outData}}" ];
+  33 [ label="{{<inData> inData|<inWeights> inWeights|<inBias> inBias}|conv2D|{<outData> outData}}" ];
+  34 [ label="{{<inData> inData|<inWeights> inWeights|<inBias> inBias}|conv2D|{<outData> outData}}" ];
+  35 [ label="{No Inputs|bias|{<outData> outData}}" ];
+  36 [ label="{No Inputs|weights|{<outData> outData}}" ];
+  37 [ label="{No Inputs|weights|{<outData> outData}}" ];
+  38 [ label="{{<inThresholds> inThresholds|<inData> inData|<inWeights> inWeights|<inOrdinals> inOrdinals}|conv2D|{<outData> outData}}" ];
+  39 [ label="{No Inputs|ordinals|{<outData> outData}}" ];
+  40 [ label="{No Inputs|thresholds|{<outData> outData}}" ];
+  41 [ label="{No Inputs|batchVars|{<outData> outData}}" ];
+  42 [ label="{No Inputs|batchMeans|{<outData> outData}}" ];
+  43 [ label="{{<inMeans> inMeans|<inData> inData|<inVariances> inVariances}|batchNorm|{<outData> outData}}" ];
+  44 [ label="{No Inputs|weights|{<outData> outData}}" ];
+  45 [ label="{{<inData> inData|<inWeights> inWeights|<inBias> inBias}|innerProduct|{<outData> outData}}" ];
+  46 [ label="{No Inputs|bias|{<outData> outData}}" ];
+  47 [ label="{No Inputs|weights|{<outData> outData}}" ];
+  48 [ label="{{<inData> inData|<inWeights> inWeights|<inBias> inBias}|conv2D|{<outData> outData}}" ];
+  49 [ label="{No Inputs|weights|{<outData> outData}}" ];
+  50 [ label="{No Inputs|bias|{<outData> outData}}" ];
+  51 [ label="{{<inData> inData|<inWeights> inWeights|<inBias> inBias}|conv2D|{<outData> outData}}" ];
+  52 [ label="{No Inputs|data|{<outData> outData|<outLabels> outLabels}}" ];
+  53 [ label="{{<inData> inData}|avgLoss|No Outputs}" ];
+  54 [ label="{{<inData> inData|<inLabels> inLabels}|loss|{<outProbabilities> outProbabilities|<outLoss> outLoss}}" ];
+  55 [ label="{{<inLabels> inLabels|<inProbabilities> inProbabilities}|acc|No Outputs}" ];
+  subgraph cluster1{
+    label = "graph";
+    1;
+    2;
+    subgraph cluster2{
+      label = "features1";
+      3;
+      4;
+      5;
+      6;
+      subgraph cluster3{
+        label = "batchNorm";
+        7;
+        8;
+        9;
+      }
+    }
+    subgraph cluster4{
+      label = "ferns";
+      10;
+      11;
+      12;
+      13;
+      subgraph cluster5{
+        label = "batchNorm";
+        14;
+        15;
+        16;
+      }
+    }
+    subgraph cluster6{
+      label = "features2";
+      17;
+      18;
+      19;
+      20;
+      subgraph cluster7{
+        label = "batchNorm";
+        21;
+        22;
+        23;
+      }
+    }
+    subgraph cluster8{
+      label = "features3";
+      24;
+      25;
+      26;
+      27;
+      subgraph cluster9{
+        label = "batchNorm";
+        28;
+        29;
+        30;
+      }
+    }
+    subgraph cluster10{
+      label = "conv1";
+      31;
+      32;
+      33;
+    }
+    subgraph cluster11{
+      label = "conv3";
+      34;
+      35;
+      36;
+    }
+    subgraph cluster12{
+      label = "features4";
+      37;
+      38;
+      39;
+      40;
+      subgraph cluster13{
+        label = "batchNorm";
+        41;
+        42;
+        43;
+      }
+    }
+    subgraph cluster14{
+      label = "fernsAgg";
+      44;
+      45;
+    }
+    subgraph cluster15{
+      label = "conv4";
+      46;
+      47;
+      48;
+    }
+    subgraph cluster16{
+      label = "conv2";
+      49;
+      50;
+      51;
+    }
+  }
+  1:outData -> 14:inData;
+  2:outData -> 54:inData;
+  2:outData -> 55:inProbabilities;
+  3:outData -> 5:inOrdinals;
+  4:outData -> 5:inThresholds;
+  5:outData -> 51:inData;
+  6:outData -> 5:inWeights;
+  7:outData -> 9:inMeans;
+  8:outData -> 9:inVariances;
+  9:outData -> 5:inData;
+  10:outData -> 45:inData;
+  11:outData -> 10:inThresholds;
+  12:outData -> 10:inWeights;
+  13:outData -> 10:inOrdinals;
+  14:outData -> 10:inData;
+  15:outData -> 14:inVariances;
+  16:outData -> 14:inMeans;
+  17:outData -> 19:inWeights;
+  18:outData -> 19:inOrdinals;
+  19:outData -> 34:inData;
+  20:outData -> 19:inThresholds;
+  21:outData -> 23:inMeans;
+  22:outData -> 23:inVariances;
+  23:outData -> 19:inData;
+  24:outData -> 25:inWeights;
+  25:outData -> 48:inData;
+  26:outData -> 25:inOrdinals;
+  27:outData -> 25:inThresholds;
+  28:outData -> 25:inData;
+  29:outData -> 28:inVariances;
+  30:outData -> 28:inMeans;
+  31:outData -> 33:inWeights;
+  32:outData -> 33:inBias;
+  33:outData -> 9:inData;
+  34:outData -> 28:inData;
+  35:outData -> 34:inBias;
+  36:outData -> 34:inWeights;
+  37:outData -> 38:inWeights;
+  38:outData -> 1:inData;
+  39:outData -> 38:inOrdinals;
+  40:outData -> 38:inThresholds;
+  41:outData -> 43:inVariances;
+  42:outData -> 43:inMeans;
+  43:outData -> 38:inData;
+  44:outData -> 45:inWeights;
+  45:outData -> 2:inData;
+  46:outData -> 48:inBias;
+  47:outData -> 48:inWeights;
+  48:outData -> 43:inData;
+  49:outData -> 51:inWeights;
+  50:outData -> 51:inBias;
+  51:outData -> 23:inData;
+  52:outData -> 33:inData;
+  52:outLabels -> 54:inLabels;
+  52:outLabels -> 55:inLabels;
+  54:outLoss -> 53:inData;
+}

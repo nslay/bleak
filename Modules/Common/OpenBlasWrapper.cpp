@@ -66,6 +66,8 @@ void gemv<float>(char trans, int m, int n, const float &alpha, const float *a, i
   case 'N':
     eTrans = CblasNoTrans;
     break;
+  case 'c':
+  case 'C':
   case 't':
   case 'T':
     eTrans = CblasTrans;
@@ -86,6 +88,8 @@ void gemv<double>(char trans, int m, int n, const double &alpha, const double *a
   case 'N':
     eTrans = CblasNoTrans;
     break;
+  case 'c':
+  case 'C':
   case 't':
   case 'T':
     eTrans = CblasTrans;
@@ -107,6 +111,8 @@ void gemm<float>(char transa, char transb, int m, int n, int k, const float &alp
   case 'N':
     eTransA = CblasNoTrans;
     break;
+  case 'c':
+  case 'C':
   case 't':
   case 'T':
     eTransA = CblasTrans;
@@ -120,6 +126,8 @@ void gemm<float>(char transa, char transb, int m, int n, int k, const float &alp
   case 'N':
     eTransB = CblasNoTrans;
     break;
+  case 'c':
+  case 'C':
   case 't':
   case 'T':
     eTransB = CblasTrans;
@@ -140,6 +148,8 @@ void gemm<double>(char transa, char transb, int m, int n, int k, const double &a
   case 'N':
     eTransA = CblasNoTrans;
     break;
+  case 'c':
+  case 'C':
   case 't':
   case 'T':
     eTransA = CblasTrans;
@@ -153,6 +163,8 @@ void gemm<double>(char transa, char transb, int m, int n, int k, const double &a
   case 'N':
     eTransB = CblasNoTrans;
     break;
+  case 'c':
+  case 'C':
   case 't':
   case 'T':
     eTransB = CblasTrans;
