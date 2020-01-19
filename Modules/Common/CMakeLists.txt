@@ -17,6 +17,12 @@ else()
   message(FATAL_ERROR "Unrecognized BLAS type ${bleakBLASType}")
 endif()
 
+if (bleakUseCUDA)
+  set(BLAS_DEFINITIONS ${BLAS_DEFINITIONS} -DBLEAK_HAVE_CUBLAS=1 CACHE INTERNAL "BLAS definitions") # Be consistent
+  set(BLAS_SOURCES ${BLAS_SOURCES} CuBlasWrapper.h CuBlasWrapper.cpp CACHE INTERNAL "")
+  set(BLAS_LIBRARIES ${BLAS_LIBRARIES} cublas)
+endif()
+
 bleakNewModule(Common SOURCES
 Parser/y.tab.h Parser/y.tab.c
 Parser/lex.yy.h Parser/lex.yy.c

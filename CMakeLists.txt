@@ -10,6 +10,7 @@ set(bleakLibraries "" CACHE INTERNAL "Libraries")
 
 include("cmake/bleakModuleMacros.cmake")
 include("CheckCSourceCompiles")
+include("CheckLanguage")
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wno-unused-value")
@@ -21,6 +22,7 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
 endif()
 
 set(bleakUseOpenMP OFF CACHE BOOL "Compile with OpenMP support (if available).")
+set(bleakUseCUDA OFF CACHE BOOL "Compile with CUDA support (if available).")
 
 if (bleakUseOpenMP)
   find_package(OpenMP)
@@ -31,6 +33,18 @@ if (bleakUseOpenMP)
   else()
     message(WARNING "OpenMP not found. Disabling.")
     set(bleakUseOpenMP OFF CACHE BOOL "" FORCE)
+  endif()
+endif()
+
+if (bleakUseCUDA)
+  check_language(CUDA)
+  
+  if (CMAKE_CUDA_COMPILER)
+    enable_language(CUDA)
+    add_definitions(-DBLEAK_USE_CUDA=1)
+  else()
+    message(WARNING "CUDA not found. Disabling.")
+    set(bleakUseCUDA OFF CACHE BOOL "" FORCE)
   endif()
 endif()
 

@@ -25,6 +25,7 @@
 
 #include <cstring>
 #include <cstdlib>
+#include <stdexcept>
 #include <iostream>
 #include "OpenBlasWrapper.h"
 
@@ -73,7 +74,8 @@ void gemv<float>(char trans, int m, int n, const float &alpha, const float *a, i
     eTrans = CblasTrans;
     break;
   default:
-    return;
+    std::cerr << "Error: Invalid op '" << trans << "'." << std::endl;
+    throw std::runtime_error(std::string("Error: Invalid op '") + trans + "'.");
   }
 
   cblas_sgemv(CblasColMajor, eTrans, m, n, alpha, a, lda, x, incx, beta, y, incy); 
@@ -95,7 +97,8 @@ void gemv<double>(char trans, int m, int n, const double &alpha, const double *a
     eTrans = CblasTrans;
     break;
   default:
-    return;
+    std::cerr << "Error: Invalid op '" << trans << "'." << std::endl;
+    throw std::runtime_error(std::string("Error: Invalid op '") + trans + "'.");
   }
 
   cblas_dgemv(CblasColMajor, eTrans, m, n, alpha, a, lda, x, incx, beta, y, incy); 
@@ -118,7 +121,8 @@ void gemm<float>(char transa, char transb, int m, int n, int k, const float &alp
     eTransA = CblasTrans;
     break;
   default:
-    return;
+    std::cerr << "Error: Invalid op '" << transa << "'." << std::endl;
+    throw std::runtime_error(std::string("Error: Invalid op '") + transa + "'.");
   }
 
   switch (transb) {
@@ -133,7 +137,8 @@ void gemm<float>(char transa, char transb, int m, int n, int k, const float &alp
     eTransB = CblasTrans;
     break;
   default:
-    return;
+    std::cerr << "Error: Invalid op '" << transb << "'." << std::endl;
+    throw std::runtime_error(std::string("Error: Invalid op '") + transb + "'.");
   }
 
   cblas_sgemm(CblasColMajor, eTransA, eTransB, m, n, k, alpha, a, lda, b, ldb, beta, c, ldc);
@@ -155,7 +160,8 @@ void gemm<double>(char transa, char transb, int m, int n, int k, const double &a
     eTransA = CblasTrans;
     break;
   default:
-    return;
+    std::cerr << "Error: Invalid op '" << transa << "'." << std::endl;
+    throw std::runtime_error(std::string("Error: Invalid op '") + transa + "'.");
   }
 
   switch (transb) {
@@ -170,7 +176,8 @@ void gemm<double>(char transa, char transb, int m, int n, int k, const double &a
     eTransB = CblasTrans;
     break;
   default:
-    return;
+    std::cerr << "Error: Invalid op '" << transb << "'." << std::endl;
+    throw std::runtime_error(std::string("Error: Invalid op '") + transb + "'.");
   }
 
   cblas_dgemm(CblasColMajor, eTransA, eTransB, m, n, k, alpha, a, lda, b, ldb, beta, c, ldc);

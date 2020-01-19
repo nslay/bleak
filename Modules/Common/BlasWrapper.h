@@ -25,8 +25,8 @@
 
 #pragma once
 
-#ifndef BLASWRAPPER_H
-#define BLASWRAPPER_H
+#ifndef BLEAK_BLASWRAPPER_H
+#define BLEAK_BLASWRAPPER_H
 
 // This is a ZERO-INDEXED COLUMN-MAJOR wrapper to BLAS
 // All type prefixes removed from function names since it's templated...
@@ -54,13 +54,25 @@ template<typename RealType>
 RealType dot(int n, const RealType *x, int incx, const RealType *y, int incy);
 
 template<typename RealType>
+void dot(int n, const RealType *x, int incx, const RealType *y, int incy, RealType &result); // For cuBLAS
+
+template<typename RealType>
 RealType nrm2(int n, const RealType *x, int incx);
+
+template<typename RealType>
+void nrm2(int n, const RealType *x, int incx, RealType &result); // For cuBLAS
 
 template<typename RealType>
 RealType asum(int n, const RealType *x, int incx);
 
 template<typename RealType>
+void asum(int n, const RealType *x, int incx, RealType &result); // For cuBLAS
+
+template<typename RealType>
 int amax(int n, const RealType *x, int incx);
+
+template<typename RealType>
+void amax(int n, const RealType *x, int incx, int &result); // For cuBLAS
 
 // Level 2
 template<typename RealType>
@@ -71,7 +83,66 @@ template<typename RealType>
 void gemm(char transa, char transb, int m, int n, int k, const RealType &alpha, const RealType *a, int lda, const RealType *b, int ldb, const RealType &beta, RealType *c, int ldc);
 
 } // end namespace cpu_blas
+
+#ifdef BLEAK_USE_CUDA
+namespace gpu_blas {
+
+// Setup per-thread context
+void Initialize();
+
+// Level 1
+template<typename RealType>
+void swap(int n, RealType *x, int incx, RealType *y, int incy);
+
+template<typename RealType>
+void scal(int n, const RealType &a, RealType *x, int incx);
+
+template<typename RealType>
+void copy(int n, const RealType *x, int incx, RealType *y, int incy);
+
+template<typename RealType>
+void axpy(int n, const RealType &a, const RealType *x, int incx, RealType *y, int incy);
+
+template<typename RealType>
+RealType dot(int n, const RealType *x, int incx, const RealType *y, int incy);
+
+template<typename RealType>
+void dot(int n, const RealType *x, int incx, const RealType *y, int incy, RealType &result); // For cuBLAS
+
+template<typename RealType>
+RealType nrm2(int n, const RealType *x, int incx);
+
+template<typename RealType>
+void nrm2(int n, const RealType *x, int incx, RealType &result); // For cuBLAS
+
+template<typename RealType>
+RealType asum(int n, const RealType *x, int incx);
+
+template<typename RealType>
+void asum(int n, const RealType *x, int incx, RealType &result); // For cuBLAS
+
+template<typename RealType>
+int amax(int n, const RealType *x, int incx);
+
+template<typename RealType>
+void amax(int n, const RealType *x, int incx, int &result); // For cuBLAS
+
+// Level 2
+template<typename RealType>
+void gemv(char trans, int m, int n, const RealType &alpha, const RealType *a, int lda, const RealType *x, int incx, const RealType &beta, RealType *y, int incy);
+
+// Level 3
+template<typename RealType>
+void gemm(char transa, char transb, int m, int n, int k, const RealType &alpha, const RealType *a, int lda, const RealType *b, int ldb, const RealType &beta, RealType *c, int ldc);
+
+} // end namespace gpu_blas
+#endif // BLEAK_USE_CUDA
+
 } // end namespace bleak
+
+#ifdef BLEAK_USE_CUDA
+#include "CuBlasWrapper.h"
+#endif // BLEAK_USE_CUDA
 
 #if defined(BLEAK_HAVE_SLOWBLAS)
 // This is the default bleak BLAS (it sucks!).
@@ -83,4 +154,4 @@ void gemm(char transa, char transb, int m, int n, int k, const RealType &alpha, 
 #error "No BLAS selected."
 #endif // BLAS checks
 
-#endif // !BLASWRAPPER_H
+#endif // !BLEAK_BLASWRAPPER_H

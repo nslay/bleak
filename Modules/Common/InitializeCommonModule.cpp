@@ -92,6 +92,10 @@ void InitializeCommonModuleTemplate() {
 void InitializeCommonModule() {
   cpu_blas::Initialize();
 
+#ifdef BLEAK_USE_CUDA
+  gpu_blas::Initialize();
+#endif // BLEAK_USE_CUDA
+
   DatabaseFactory &clDBFactory = DatabaseFactory::GetInstance();
   
   clDBFactory.Register<LMDBDatabase>();
