@@ -62,7 +62,7 @@ public:
   MemoryLocation GetLocation() const { return m_p_stMem->eMemoryLocation; } // You shouldn't need this!
 
   // Horrible name, but necessary since you can really screw yourself up with this... You must be deliberate with this.
-  RealType * data_no_copy(MemoryLocation eMemoryLocation = CPU) {
+  RealType * data_no_sync(MemoryLocation eMemoryLocation = CPU) {
     switch (eMemoryLocation) {
     case CPU:
       m_p_stMem->eMemoryLocation = CPU;
@@ -249,8 +249,10 @@ public:
   }
 
   void Fill(const RealType &value) {
+    const MemoryLocation eLocationBefore = m_p_stMem->eMemoryLocation;
     m_p_stMem->eMemoryLocation = CPU;
     std::fill(begin(), end(), value);
+    CopyTo(eLocationBefore);
   }
 
   void Clear() {
@@ -303,7 +305,7 @@ private:
       return;
 
     RealType *p_buffer = nullptr;
-    if (cudaMalloc(&p_buffer, sizeof(RealType)*m_clSize.Count()) != cudaSuccess) {
+    if (cudaMalloc(&p_buffer, sizeof(RealType)*GetSize().Count()) != cudaSuccess) {
       std::cerr << "Error: cudaMalloc failed. Out of memory?" << std::endl;
       throw std::runtime_error("Error: cudaMalloc failed. Out of memory?");
     }

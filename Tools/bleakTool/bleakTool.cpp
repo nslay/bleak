@@ -35,6 +35,10 @@
 #include "InitializeModules.h"
 #include "bsdgetopt.h"
 
+#ifdef BLEAK_USE_CUDA
+#include "cuda_runtime.h"
+#endif // BLEAK_USE_CUDA
+
 std::string g_strGraphFile;
 std::string g_strParameterFile;
 std::string g_strWeightsDatabasePath;
@@ -42,7 +46,7 @@ unsigned int g_uiMaxIterations = 0;
 std::vector<std::string> g_vIncludeDirs;
 
 void Usage(const char *p_cArg0) {
-  std::cerr << "Usage: " << p_cArg0 << " train|test [-h] [-t float|double] -c configFile [-n maxIterations] [-s seedString] [-I includeDir] -g graphFile -w weightsDatabasePath" << std::endl;
+  std::cerr << "Usage: " << p_cArg0 << " train|test [-h] [-t float|double] -c configFile [-d gpuDeviceIndex] [-n maxIterations] [-s seedString] [-I includeDir] -g graphFile -w weightsDatabasePath" << std::endl;
   exit(1);
 }
 
@@ -61,11 +65,10 @@ bool SaveWeights(const std::shared_ptr<bleak::Graph<RealType>> &p_clGraph,const 
 int main(int argc, char **argv) {
   const char * const p_cArg0 = argv[0];
 
-  bleak::InitializeModules();
-
   if (argc < 2)
     Usage(p_cArg0);
 
+  int iDevice = -1;
   std::string strType = "float";
   std::string strMode = argv[1];
   std::string strSeedString = "bleak";
@@ -77,10 +80,18 @@ int main(int argc, char **argv) {
   --argc;
 
   int c = 0;
-  while ((c = getopt(argc, argv, "c:g:hn:s:t:w:I:")) != -1) {
+  while ((c = getopt(argc, argv, "c:d:g:hn:s:t:w:I:")) != -1) {
     switch (c) {
     case 'c':
       g_strParameterFile = optarg;
+      break;
+    case 'd':
+      {
+        char *p = nullptr;
+        iDevice = strtol(optarg, &p, 10);
+        if (*p != '\0')
+          Usage(p_cArg0);
+      }
       break;
     case 'g':
       g_strGraphFile = optarg;
@@ -119,6 +130,30 @@ int main(int argc, char **argv) {
     std::cerr << "Error: Graph file not specified." << std::endl;
     Usage(p_cArg0);
   }
+
+  if (iDevice < 0) {
+    bleak::SetUseGPU(false);
+    std::cout << "Info: Using CPU." << std::endl;
+  }
+  else {
+#ifdef BLEAK_USE_CUDA
+    // TODO: Multi-GPU setup
+    if (cudaSetDevice(iDevice) != cudaSuccess) {
+      std::cerr << "Error: Could not use GPU " << iDevice << '.' << std::endl;
+      return -1;
+    }
+
+    bleak::SetUseGPU(true);
+    std::cout << "Info: Using GPU " << iDevice << '.' << std::endl;
+
+#else // !BLEAK_USE_CUDA
+    std::cerr << "Error: GPU support is not compiled in." << std::endl;
+    return -1;
+#endif // BLEAK_USE_CUDA
+  }
+
+  // Now initialize...
+  bleak::InitializeModules();
 
   std::cout << "Info: Using seed string '" << strSeedString << "'." << std::endl;
 

@@ -415,8 +415,10 @@ public:
   }
 
   bool SetUseGPU(const bool &bUseGPU) {
-    if (bUseGPU && !bleak::GetUseGPU())
+    if (bUseGPU && !bleak::GetUseGPU()) {
       std::cerr << GetName() << ": Warning: Setting useGPU=true when GPU acceleration is globally disabled." << std::endl;
+      return true;
+    }
     m_bUseGPU = bUseGPU;
     return true;
   }
@@ -477,7 +479,7 @@ protected:
 private:
   std::string m_strName;
   bool m_bSaveOutputs = false; // Whether or not to save this Vertex's output to the database (usually false).
-  bool m_bUseGPU = true; // Whether or not to execute this vertex in GPU mode (usually true). Does nothing if GPU support is not compiled in.
+  bool m_bUseGPU = false; // Whether or not to execute this vertex in GPU mode. Does nothing if GPU support is not compiled in.
 
   OutputMapType m_mOutputs;
   InputMapType m_mInputs;

@@ -45,7 +45,7 @@ namespace bleak {
 namespace {
 
 #ifdef BLEAK_USE_CUDA
-bool g_bUseGPU = true;
+bool g_bUseGPU = false;
 #endif // BLEAK_USE_CUDA
 
 } // end anonymous namespace
