@@ -39,6 +39,11 @@ macro(bleakNewModule name)
     target_link_libraries("bleak${name}" PUBLIC ${dependencies})
     target_include_directories("bleak${name}" PUBLIC "${PROJECT_SOURCE_DIR}" ${bleak${name}_INCLUDE_DIRECTORIES})
     target_compile_definitions("bleak${name}" PUBLIC ${bleak${name}_DEFINITIONS})
+    
+    # Not sure we need this yet...
+    #if (bleakUseCUDA)
+    #  set_property(TARGET "bleak${name}" PROPERTY CUDA_SEPARABLE_COMPILATION ON)
+    #endif()
   endif()
   
   list(APPEND bleakModules "${name}")

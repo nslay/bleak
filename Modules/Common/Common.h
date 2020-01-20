@@ -39,6 +39,10 @@ typedef std::mt19937_64 GeneratorType;
 
 GeneratorType & GetGenerator();
 
+// Global control over whether to use GPU or not!
+bool GetUseGPU();
+void SetUseGPU(bool bUseGPU);
+
 void Trim(std::string &strValue);
 
 std::string DirName(std::string strPath);

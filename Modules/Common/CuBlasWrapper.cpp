@@ -24,6 +24,7 @@
  */
 
 #include <stdexcept>
+#include <string>
 #include <iostream>
 #include "CuBlasWrapper.h"
 
@@ -41,10 +42,10 @@ namespace {
 bool g_bInitialized = false;
 cublasHandle_t g_handle = cublasHandle_t();
 #pragma omp threadprivate(g_handle, g_bInitialized)
-#else
+#else // !_OPENMP
 thread_local bool g_bInitialized = false;
 thread_local cublasHandle_t g_handle = cublasHandle_t();
-#endif
+#endif // _OPENMP
 
 } // end anonymous namespace
 

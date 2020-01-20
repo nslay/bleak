@@ -36,6 +36,7 @@
 #include <vector>
 #include <functional>
 #include <unordered_map>
+#include "Common.h"
 #include "Property.h"
 #include "Edge.h"
 #include "Database.h"
@@ -153,8 +154,26 @@ public:
 
   virtual bool SetSizes() = 0;
   virtual bool Initialize() = 0;
-  virtual void Forward() = 0;
-  virtual void Backward() = 0;
+
+  virtual void Forward() {
+    if (m_bUseGPU)
+      ForwardGPU();
+    else
+      ForwardCPU();
+  }
+
+  virtual void Backward() {
+    if (m_bUseGPU)
+      BackwardGPU();
+    else
+      BackwardCPU();
+  }
+
+  virtual void ForwardCPU() { }
+  virtual void ForwardGPU() { ForwardCPU(); }
+
+  virtual void BackwardCPU() { }
+  virtual void BackwardGPU() { BackwardCPU(); }
 
   // This is a convenience function. Memory for vertices can be setup externally!
   bool Allocate(bool bForTraining) {
@@ -287,21 +306,21 @@ public:
     }
   }
 
-  std::shared_ptr<EdgeType> GetOutput(const std::string &strName) {
+  std::shared_ptr<EdgeType> GetOutput(const std::string &strName) const {
     auto itr = m_mOutputs.find(strName);
     return itr != m_mOutputs.end() ? itr->second : std::shared_ptr<EdgeType>();
   }
 
-  std::shared_ptr<EdgeType> GetInput(const std::string &strName) {
+  std::shared_ptr<EdgeType> GetInput(const std::string &strName) const {
     auto itr = m_mInputs.find(strName);
     return itr != m_mInputs.end() ? itr->second.lock() : std::shared_ptr<EdgeType>();
   }
 
-  const OutputMapType & GetAllOutputs() {
+  const OutputMapType & GetAllOutputs() const {
     return m_mOutputs;
   }
 
-  const InputMapType & GetAllInputs() {
+  const InputMapType & GetAllInputs() const {
     return m_mInputs;
   }
 
@@ -395,12 +414,27 @@ public:
     return true;
   }
 
+  bool SetUseGPU(const bool &bUseGPU) {
+    if (bUseGPU && !bleak::GetUseGPU())
+      std::cerr << GetName() << ": Warning: Setting useGPU=true when GPU acceleration is globally disabled." << std::endl;
+    m_bUseGPU = bUseGPU;
+    return true;
+  }
+
+  bool GetUseGPU(bool &bUseGpu) const { 
+    bUseGpu = m_bUseGPU; 
+    return true;
+  }
+
 protected:
   Vertex() = default;
 
   virtual void OnCreateWithNew() {
+    m_bUseGPU = bleak::GetUseGPU();
+
     RegisterProperty("name", m_strName);
     RegisterProperty("saveOutputs", m_bSaveOutputs);
+    RegisterGetterSetter("useGPU", std::bind(&Vertex::GetUseGPU, this, std::placeholders::_1), std::bind(&Vertex::SetUseGPU, this, std::placeholders::_1));
   }
 
   bool RegisterOutput(const std::string &strName) {
@@ -443,6 +477,7 @@ protected:
 private:
   std::string m_strName;
   bool m_bSaveOutputs = false; // Whether or not to save this Vertex's output to the database (usually false).
+  bool m_bUseGPU = true; // Whether or not to execute this vertex in GPU mode (usually true). Does nothing if GPU support is not compiled in.
 
   OutputMapType m_mOutputs;
   InputMapType m_mInputs;

@@ -20,7 +20,7 @@ endif()
 if (bleakUseCUDA)
   set(BLAS_DEFINITIONS ${BLAS_DEFINITIONS} -DBLEAK_HAVE_CUBLAS=1 CACHE INTERNAL "BLAS definitions") # Be consistent
   set(BLAS_SOURCES ${BLAS_SOURCES} CuBlasWrapper.h CuBlasWrapper.cpp CACHE INTERNAL "")
-  set(BLAS_LIBRARIES ${BLAS_LIBRARIES} cublas)
+  set(BLAS_LIBRARIES ${BLAS_LIBRARIES} cublas cudart)
 endif()
 
 bleakNewModule(Common SOURCES

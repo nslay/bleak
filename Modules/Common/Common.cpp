@@ -37,13 +37,41 @@
 #include <cstring>
 #include <algorithm>
 #include <string>
+#include <iostream>
 #include "Common.h"
 
 namespace bleak {
 
+namespace {
+
+#ifdef BLEAK_USE_CUDA
+bool g_bUseGPU = true;
+#endif // BLEAK_USE_CUDA
+
+} // end anonymous namespace
+
 GeneratorType & GetGenerator() {
   static GeneratorType clGenerator;
   return clGenerator;
+}
+
+bool GetUseGPU() {
+#ifdef BLEAK_USE_CUDA
+  return g_bUseGPU;
+#else // !BLEAK_USE_CUDA
+  return false;
+#endif // BLEAK_USE_CUDA
+}
+
+void SetUseGPU(bool bUseGPU) {
+#ifdef BLEAK_USE_CUDA
+  g_bUseGPU = bUseGPU;
+#else // !BLEAK_USE_CUDA
+  if (bUseGPU) {
+    std::cerr << "Warning: Trying to enable GPU acceleration when GPU support is not compiled in." << std::endl;
+    return;
+  }
+#endif // BLEAK_USE_CUDA
 }
 
 void Trim(std::string &strValue) {
