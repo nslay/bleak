@@ -48,23 +48,30 @@ public:
   typedef RealType * iterator;
   typedef const RealType * const_iterator;
 
+  // Allows for the full context to be shareable (e.g. in a Reshape, p_gpuBuffer may be allocated which will be reflected in input/output no matter where it happens).
+  struct MemoryTuple {
+    MemoryLocation eMemoryLocation = CPU;
+    std::shared_ptr<RealType> p_cpuBuffer;
+    std::shared_ptr<RealType> p_gpuBuffer;
+  };
+
   Array() { 
-    m_p_eMemoryLocation = std::make_shared<MemoryLocation>(CPU);
+    m_p_stMem = std::make_shared<MemoryTuple>();
   }
 
-  MemoryLocation GetLocation() const { return *m_p_eMemoryLocation; } // You shouldn't need this!
+  MemoryLocation GetLocation() const { return m_p_stMem->eMemoryLocation; } // You shouldn't need this!
 
   // Horrible name, but necessary since you can really screw yourself up with this... You must be deliberate with this.
   RealType * data_no_copy(MemoryLocation eMemoryLocation = CPU) {
     switch (eMemoryLocation) {
     case CPU:
-      *m_p_eMemoryLocation = CPU;
-      return m_p_cpuBuffer.get();
+      m_p_stMem->eMemoryLocation = CPU;
+      return m_p_stMem->p_cpuBuffer.get();
     case GPU:
       AllocateGPU();
-      if (m_p_gpuBuffer != nullptr)
-        *m_p_eMemoryLocation = GPU;
-      return m_p_gpuBuffer.get();
+      if (m_p_stMem->p_gpuBuffer != nullptr)
+        m_p_stMem->eMemoryLocation = GPU;
+      return m_p_stMem->p_gpuBuffer.get();
     }
     return nullptr; // Not reached
   }
@@ -73,9 +80,9 @@ public:
     CopyTo(eMemoryLocation);
     switch (eMemoryLocation) {
     case CPU:
-      return m_p_cpuBuffer.get();
+      return m_p_stMem->p_cpuBuffer.get();
     case GPU:
-      return m_p_gpuBuffer.get();
+      return m_p_stMem->p_gpuBuffer.get();
     }
     return nullptr; // Not reached
   }
@@ -84,9 +91,9 @@ public:
     CopyTo(eMemoryLocation);
     switch (eMemoryLocation) {
     case CPU:
-      return m_p_cpuBuffer.get();
+      return m_p_stMem->p_cpuBuffer.get();
     case GPU:
-      return m_p_gpuBuffer.get();
+      return m_p_stMem->p_gpuBuffer.get();
     }
     return nullptr; // Not reached
   }
@@ -105,18 +112,18 @@ public:
     if (p_buffer == nullptr) {
       Free();
     }
-    else if (p_buffer != m_p_cpuBuffer.get()) {
-      m_p_cpuBuffer.reset(p_buffer, [](RealType *) { });
-      m_p_gpuBuffer.reset();
-      *m_p_eMemoryLocation = CPU;
+    else if (p_buffer != m_p_stMem->p_cpuBuffer.get()) {
+      m_p_stMem->p_cpuBuffer.reset(p_buffer, [](RealType *) { });
+      m_p_stMem->p_gpuBuffer.reset();
+      m_p_stMem->eMemoryLocation = CPU;
     }
   }
 
   // CPU memory!
   void SetData(const std::shared_ptr<RealType> &p_buffer) {
-    m_p_cpuBuffer = p_buffer;
-    m_p_gpuBuffer.reset();
-    *m_p_eMemoryLocation = CPU;
+    m_p_stMem->p_cpuBuffer = p_buffer;
+    m_p_stMem->p_gpuBuffer.reset();
+    m_p_stMem->eMemoryLocation = CPU;
   }
 
   void CopyFrom(const RealType *p_buffer, MemoryLocation eMemoryLocation = CPU) {
@@ -128,7 +135,7 @@ public:
         std::copy(p_buffer, p_buffer + GetSize().Count(), begin());
         break;
       case GPU:
-        if (cudaMemcpy(m_p_gpuBuffer.get(), p_buffer, sizeof(RealType)*GetSize().Count(), cudaMemcpyHostToDevice) != cudaSuccess) {
+        if (cudaMemcpy(m_p_stMem->p_gpuBuffer.get(), p_buffer, sizeof(RealType)*GetSize().Count(), cudaMemcpyHostToDevice) != cudaSuccess) {
           std::cerr << "Error: Failed to copy host memory to GPU memory." << std::endl;
           throw std::runtime_error("Error: Failed to copy host memory to GPU memory.");
         }
@@ -138,13 +145,13 @@ public:
     case GPU:
       switch (GetLocation()) {
       case CPU:
-        if (cudaMemcpy(m_p_cpuBuffer.get(), p_buffer, sizeof(RealType)*GetSize().Count(), cudaMemcpyDeviceToHost) != cudaSuccess) {
+        if (cudaMemcpy(m_p_stMem->p_cpuBuffer.get(), p_buffer, sizeof(RealType)*GetSize().Count(), cudaMemcpyDeviceToHost) != cudaSuccess) {
           std::cerr << "Error: Failed to copy GPU memory to host memory." << std::endl;
           throw std::runtime_error("Error: Failed to copy GPU memory to host memory.");
         }
         break;
       case GPU:
-        if (cudaMemcpy(m_p_gpuBuffer.get(), p_buffer, sizeof(RealType)*GetSize().Count(), cudaMemcpyDeviceToDevice) != cudaSuccess) {
+        if (cudaMemcpy(m_p_stMem->p_gpuBuffer.get(), p_buffer, sizeof(RealType)*GetSize().Count(), cudaMemcpyDeviceToDevice) != cudaSuccess) {
           std::cerr << "Error: Failed to copy GPU memory to GPU memory." << std::endl;
           throw std::runtime_error("Error: Failed to copy GPU memory to GPU memory.");
         }
@@ -166,7 +173,7 @@ public:
         std::copy(begin(), end(), p_buffer);
         break;
       case GPU:
-        if (cudaMemcpy(p_buffer, m_p_gpuBuffer.get(), sizeof(RealType)*GetSize().Count(), cudaMemcpyDeviceToHost) != cudaSuccess) {
+        if (cudaMemcpy(p_buffer, m_p_stMem->p_gpuBuffer.get(), sizeof(RealType)*GetSize().Count(), cudaMemcpyDeviceToHost) != cudaSuccess) {
           std::cerr << "Error: Failed to copy GPU memory to host memory." << std::endl;
           throw std::runtime_error("Error: Failed to copy GPU memory to host memory.");
         }
@@ -176,13 +183,13 @@ public:
     case GPU:
       switch (GetLocation()) {
       case CPU:
-        if (cudaMemcpy(p_buffer, m_p_cpuBuffer.get(), sizeof(RealType)*GetSize().Count(), cudaMemcpyHostToDevice) != cudaSuccess) {
+        if (cudaMemcpy(p_buffer, m_p_stMem->p_cpuBuffer.get(), sizeof(RealType)*GetSize().Count(), cudaMemcpyHostToDevice) != cudaSuccess) {
           std::cerr << "Error: Failed to copy host memory to GPU memory." << std::endl;
           throw std::runtime_error("Error: Failed to copy host memory to GPU memory.");
         }
         break;
       case GPU:
-        if (cudaMemcpy(p_buffer, m_p_gpuBuffer.get(), sizeof(RealType)*GetSize().Count(), cudaMemcpyDeviceToDevice) != cudaSuccess) {
+        if (cudaMemcpy(p_buffer, m_p_stMem->p_gpuBuffer.get(), sizeof(RealType)*GetSize().Count(), cudaMemcpyDeviceToDevice) != cudaSuccess) {
           std::cerr << "Error: Failed to copy GPU memory to GPU memory." << std::endl;
           throw std::runtime_error("Error: Failed to copy GPU memory to GPU memory.");
         }
@@ -192,7 +199,7 @@ public:
     }
 #else // !BLEAK_USE_CUDA
     std::copy(begin(), end(), p_buffer);
-#endif
+#endif // BLEAK_USE_CUDA
   }
 
   void CopyTo(Array &clOther) const {
@@ -209,9 +216,7 @@ public:
 
   // XXX: This is very hackish
   void ShareWith(Array &clOther) {
-    clOther.m_p_cpuBuffer = m_p_cpuBuffer;
-    clOther.m_p_gpuBuffer = m_p_gpuBuffer;
-    clOther.m_p_eMemoryLocation = m_p_eMemoryLocation;
+    clOther.m_p_stMem = m_p_stMem;
   }
 
   void SetSize(const Size &clSize) {
@@ -223,28 +228,28 @@ public:
   }
 
   bool Valid() const {
-    return m_p_cpuBuffer != nullptr && GetSize().Valid();
+    return m_p_stMem->p_cpuBuffer != nullptr && GetSize().Valid();
   }
 
   bool Allocate() {
     if (GetSize().Valid()) {
-      m_p_cpuBuffer.reset(new RealType[GetSize().Count()], [](RealType *p_mem) { delete [] p_mem; });
-      m_p_gpuBuffer.reset();
-      *m_p_eMemoryLocation = CPU;
-      return m_p_cpuBuffer != nullptr;
+      m_p_stMem->p_cpuBuffer.reset(new RealType[GetSize().Count()], [](RealType *p_mem) { delete [] p_mem; });
+      m_p_stMem->p_gpuBuffer.reset();
+      m_p_stMem->eMemoryLocation = CPU;
+      return m_p_stMem->p_cpuBuffer != nullptr;
     }
 
     return false;
   }
 
   void Free() {
-    m_p_cpuBuffer.reset();
-    m_p_gpuBuffer.reset();
-    *m_p_eMemoryLocation = CPU;
+    m_p_stMem->p_cpuBuffer.reset();
+    m_p_stMem->p_gpuBuffer.reset();
+    m_p_stMem->eMemoryLocation = CPU;
   }
 
   void Fill(const RealType &value) {
-    *m_p_eMemoryLocation = CPU;
+    m_p_stMem->eMemoryLocation = CPU;
     std::fill(begin(), end(), value);
   }
 
@@ -254,43 +259,39 @@ public:
   }
 
   void Swap(Array<RealType> &clOther) {
-    m_p_cpuBuffer.swap(clOther.m_p_cpuBuffer);
-    m_p_gpuBuffer.swap(clOther.m_p_gpuBuffer);
-    m_p_eMemoryLocation.swap(clOther.m_p_eMemoryLocation);
+    m_p_stMem.swap(clOther.m_p_stMem);
     m_clSize.Swap(clOther.m_clSize);
   }
 
 private:
   Size m_clSize;
-  std::shared_ptr<MemoryLocation> m_p_eMemoryLocation; // Needed as a shared_ptr for sharing between Arrays
-  std::shared_ptr<RealType> m_p_cpuBuffer;
-  mutable std::shared_ptr<RealType> m_p_gpuBuffer; // Mutable for lazy allocation in const contexts
+  std::shared_ptr<MemoryTuple> m_p_stMem;
 
   // cudaMallocManaged looks attractive... but not all vertices will need to keep data on the GPU. So let's not use cudaMallocManaged. We'll allocate memory in a lazy fashion.
   // This design is inspired by Caffe.
   void CopyTo(MemoryLocation eMemoryLocation) const {
 #ifdef BLEAK_USE_CUDA
-    if (*m_p_eMemoryLocation == eMemoryLocation || !Valid())
+    if (m_p_stMem->eMemoryLocation == eMemoryLocation || !Valid())
       return;
 
     switch (eMemoryLocation) {
     case CPU:
-      if (cudaMemcpy(m_p_cpuBuffer.get(), m_p_gpuBuffer.get(), sizeof(RealType)*GetSize().Count(), cudaMemcpyDeviceToHost) != cudaSuccess) {
+      if (cudaMemcpy(m_p_stMem->p_cpuBuffer.get(), m_p_stMem->p_gpuBuffer.get(), sizeof(RealType)*GetSize().Count(), cudaMemcpyDeviceToHost) != cudaSuccess) {
         std::cerr << "Error: Failed to copy GPU memory to host memory." << std::endl;
         throw std::runtime_error("Error: Failed to copy GPU memory to host memory.");
       }
 
-      *m_p_eMemoryLocation = CPU;
+      m_p_stMem->eMemoryLocation = CPU;
       break;
     case GPU:
       AllocateGPU();
 
-      if (cudaMemcpy(m_p_gpuBuffer.get(), m_p_cpuBuffer.get(), sizeof(RealType)*GetSize().Count(), cudaMemcpyHostToDevice) != cudaSuccess) {
+      if (cudaMemcpy(m_p_stMem->p_gpuBuffer.get(), m_p_stMem->p_cpuBuffer.get(), sizeof(RealType)*GetSize().Count(), cudaMemcpyHostToDevice) != cudaSuccess) {
         std::cerr << "Error: Failed to copy host memory to GPU." << std::endl;
         throw std::runtime_error("Error: Failed to copy host memory to GPU.");
       }
 
-      *m_p_eMemoryLocation = GPU;
+      m_p_stMem->eMemoryLocation = GPU;
       break;
     }
 #endif // BLEAK_USE_CUDA
@@ -298,17 +299,17 @@ private:
 
   void AllocateGPU() const {
 #ifdef BLEAK_USE_CUDA
-    if (m_p_gpuBuffer != nullptr || !Valid())
+    if (m_p_stMem->p_gpuBuffer != nullptr || !Valid())
       return;
 
-    RealType *buffer = nullptr;
-    if (cudaMalloc(&buffer, sizeof(RealType)*m_clSize.Count()) != cudaSuccess) {
+    RealType *p_buffer = nullptr;
+    if (cudaMalloc(&p_buffer, sizeof(RealType)*m_clSize.Count()) != cudaSuccess) {
       std::cerr << "Error: cudaMalloc failed. Out of memory?" << std::endl;
       throw std::runtime_error("Error: cudaMalloc failed. Out of memory?");
     }
 
-    m_p_gpuBuffer.reset(buffer, &cudaFree);
-#endif
+    m_p_stMem->p_gpuBuffer.reset(p_buffer, &cudaFree);
+#endif // BLEAK_USE_CUDA
   }
 
   Array(const Array &) = delete;

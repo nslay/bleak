@@ -421,8 +421,8 @@ public:
     return true;
   }
 
-  bool GetUseGPU(bool &bUseGpu) const { 
-    bUseGpu = m_bUseGPU; 
+  bool GetUseGPU(bool &bUseGPU) const { 
+    bUseGPU = m_bUseGPU; 
     return true;
   }
 
