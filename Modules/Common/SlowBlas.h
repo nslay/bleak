@@ -144,7 +144,7 @@ RealType nrm2(int n, const RealType *x, int incx) {
   for (int i = 0; i < n; ++i, x += incx) {
     if (*x != RealType(0)) {
       const RealType tmp = std::abs(*x);
-      if (scale < x) {
+      if (scale < *x) {
         ssq = RealType(1) + ssq * RealType(std::pow(scale/tmp, 2));
         scale = tmp;
       }
@@ -158,7 +158,7 @@ RealType nrm2(int n, const RealType *x, int incx) {
 }
 
 template<typename RealType>
-void nrm2(int n, const RealType *x, int incx, RealType &result) { result = nrm2<RealType>(n, x, incx, y, incy); }
+void nrm2(int n, const RealType *x, int incx, RealType &result) { result = nrm2<RealType>(n, x, incx); }
 
 template<typename RealType>
 RealType asum(int n, const RealType *x, int incx) {
@@ -267,7 +267,7 @@ void gemv(char trans, int m, int n, const RealType &alpha, const RealType *a, in
   case 'T':
     {
       for (int j = 0; j < n; ++j, y += incy) {
-        RealType *xt = x;
+        const RealType *xt = x;
         RealType tmp = RealType(0);
         for (int i = 0; i < m; ++m, xt += incx)
           tmp += (*xt) * a[lda*j + i];
