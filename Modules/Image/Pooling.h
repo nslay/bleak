@@ -131,8 +131,15 @@ public:
 
     m_clImageToMatrix.ComputeMatrixDimensions(m_iRows, m_iCols, clImageSize.data());
 
-    m_vMatrix.resize(m_iRows*m_iCols, RealType(0));
-    m_vIndexMatrix.resize(m_vMatrix.size(), 0);
+    Size clMatrixSize = { m_iRows, m_iCols };
+
+    m_clMatrix.SetSize(clMatrixSize);
+    m_clMatrix.Allocate();
+
+    m_clIndexMatrix.SetSize(clMatrixSize);
+    m_clIndexMatrix.Allocate();
+
+    m_clImageToMatrix.ExtractIndexMatrix(m_clIndexMatrix.data_no_sync(), clImageSize.data()); // This never changes
 
     return true;
   }
@@ -142,8 +149,8 @@ protected:
 
   ImageToMatrixType m_clImageToMatrix;
 
-  std::vector<RealType> m_vMatrix;
-  std::vector<int> m_vIndexMatrix;
+  Array<RealType> m_clMatrix;
+  Array<int> m_clIndexMatrix;
 
   // Row major!
   int m_iRows = 0;
@@ -165,15 +172,15 @@ public:
 
   bleakForwardVertexTypedefs();
 
-  using SuperType::m_vMatrix;
-  using SuperType::m_vIndexMatrix;
+  using SuperType::m_clMatrix;
+  using SuperType::m_clIndexMatrix;
   using SuperType::m_clImageToMatrix;
   using SuperType::m_iRows;
   using SuperType::m_iCols;
 
   virtual ~MaxPooling() = default;
 
-  virtual void Forward() override {
+  virtual void ForwardCPU() override {
     bleakGetAndCheckInput(p_clInData, "inData");
     bleakGetAndCheckOutput(p_clOutData, "outData");
 
@@ -181,7 +188,7 @@ public:
     ArrayType &clOutData = p_clOutData->GetData();
 
     const RealType * const p_inData = clInData.data();
-    RealType * const p_outData = clOutData.data();
+    RealType * const p_outData = clOutData.data_no_sync();
 
     Size clImageSize = clInData.GetSize().SubSize(1);
     clImageSize[0] = 1; // One channel at a time!
@@ -193,18 +200,18 @@ public:
 
     for (int i = 0; i < iOuterNum; ++i) {
       for (int j = 0; j < iNumChannels; ++j) {
-        m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iNumChannels + j)*iInChannelSize, clImageSize.data());
+        m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iNumChannels + j)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
 
 #pragma omp parallel for
         for (int k = 0; k < m_iRows; ++k) {
-          const RealType * const p_row = m_vMatrix.data() + k*m_iCols;
+          const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
           p_outData[(i*iNumChannels + j)*m_iRows + k] = *std::max_element(p_row, p_row + m_iCols);
         }
       }
     }
   }
 
-  virtual void Backward() override {
+  virtual void BackwardCPU() override {
     bleakGetAndCheckInput(p_clInData, "inData");
     bleakGetAndCheckOutput(p_clOutData, "outData");
 
@@ -227,16 +234,14 @@ public:
     const int iInChannelSize = clInData.GetSize().Product(2);
     //const int iOutChannelSize = clOutData.GetSize().Product(2); // Same as m_iRows
 
-    m_clImageToMatrix.ExtractIndexMatrix(m_vIndexMatrix.data(), clImageSize.data()); // This never changes
-
     for (int i = 0; i < iOuterNum; ++i) {
       for (int j = 0; j < iNumChannels; ++j) {
-        m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iNumChannels + j)*iInChannelSize, clImageSize.data());
+        m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iNumChannels + j)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
 
 #pragma omp parallel for
         for (int k = 0; k < m_iRows; ++k) {
-          const RealType * const p_row = m_vMatrix.data() + k*m_iCols;
-          const int * const p_indexRow = m_vIndexMatrix.data() + k*m_iCols;
+          const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
+          const int * const p_indexRow = m_clIndexMatrix.data() + k*m_iCols;
 
           const int iFeatureIndex = (int)(std::max_element(p_row, p_row + m_iCols) - p_row);
           const int index = p_indexRow[iFeatureIndex];
@@ -249,6 +254,11 @@ public:
       }
     }
   }
+
+#ifdef BLEAK_USE_CUDA
+  virtual void ForwardGPU() override;
+  virtual void BackwardGPU() override;
+#endif // BLEAK_USE_CUDA
 
 protected:
   MaxPooling() = default;
