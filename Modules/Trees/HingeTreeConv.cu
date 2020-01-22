@@ -249,28 +249,6 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::ForwardGPU() {
       ForwardKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), 
         p_inThresholds + c*iNumDecisionsPerTree, p_inOrdinals + c*iNumDecisionsPerTree, p_inWeights + c*iNumLeavesPerTree*iInnerWeightsNum,
         p_outData + i*iNumTrees*m_iRows*iInnerWeightsNum, m_iTreeDepth, iThresholdStride, iWeightsStride, iInnerWeightsNum, iNumTrees, m_iRows, m_iCols);
-
-      //// Iterate over output kernels
-      //for (int j = 0; j < iNumTrees; ++j) {
-      //  const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
-      //  const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
-      //
-      //  // Iterate over extracted patches
-      //  for (int k = 0; k < m_iRows; ++k) {
-      //    const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
-      //
-      //    const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
-      //
-      //    const KeyType key = std::get<0>(clKeyMarginTuple);
-      //    const RealType signedMargin = std::get<1>(clKeyMarginTuple);
-      //    const RealType margin = std::abs(signedMargin);
-      //
-      //    const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
-      //
-      //    for (int l = 0; l < iInnerWeightsNum; ++l)
-      //      p_outData[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l] += p_leafWeights[l]*margin;
-      //  }
-      //}
     }
   }
 }
@@ -306,7 +284,7 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::BackwardGPU() {
   const RealType * const p_inThresholds = clInThresholds.data(GPU);
   RealType * const p_inThresholdsGradient = clInThresholdsGradient.data(GPU);
   const RealType * const p_inOrdinals = clInOrdinals.data(GPU);
-  //const RealType * const p_outData = clOutData.data();
+  //const RealType * const p_outData = clOutData.data(GPU);
   const RealType * const p_outDataGradient = clOutDataGradient.data(GPU);
 
   const int iOuterDataNum = clInData.GetSize()[0];
@@ -355,7 +333,7 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::BackwardGPU() {
   if (p_inDataGradient != nullptr) {
     for (int i = 0; i < iOuterDataNum; ++i) {
       for (int c = 0; c < iInNumChannels; ++c) {
-        m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(GPU), p_inData + (i*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(GPU), clImageSize.data());
+        m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + (i*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(GPU), clImageSize.data());
 
         BackwardDataKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), m_clIndexMatrix.data(GPU),
           p_inThresholds + c*iNumDecisionsPerTree, p_inOrdinals + c*iNumDecisionsPerTree, p_inWeights + c*iNumLeavesPerTree*iInnerWeightsNum,
