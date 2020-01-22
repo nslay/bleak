@@ -42,6 +42,9 @@ if (bleakUseCUDA)
   if (CMAKE_CUDA_COMPILER)
     enable_language(CUDA)
     add_definitions(-DBLEAK_USE_CUDA=1)
+    
+    # Disable annoying warnings in nvcc
+    set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -Xcudafe --diag_suppress=expr_has_no_effect -Xcudafe --diag_suppress=set_but_not_used")
   else()
     message(WARNING "CUDA not found. Disabling.")
     set(bleakUseCUDA OFF CACHE BOOL "" FORCE)

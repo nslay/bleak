@@ -170,13 +170,20 @@ public:
 
     m_clImageToMatrix.ComputeMatrixDimensions(m_iRows, m_iCols, clImageSize.data());
 
-    m_vMatrix.resize(m_iRows*m_iCols, RealType(0));
-    m_vIndexMatrix.resize(m_vMatrix.size(), 0);
+    Size clMatrixSize = { m_iRows, m_iCols };
+
+    m_clMatrix.SetSize(clMatrixSize);
+    m_clMatrix.Allocate();
+
+    m_clIndexMatrix.SetSize(clMatrixSize);
+    m_clIndexMatrix.Allocate();
+
+    m_clImageToMatrix.ExtractIndexMatrix(m_clIndexMatrix.data_no_sync(), clImageSize.data()); // This never changes
 
     return AssignTreeIndices();
   }
 
-  virtual void Forward() override {
+  virtual void ForwardCPU() override {
     bleakGetAndCheckInput(p_clInData, "inData");
     bleakGetAndCheckInput(p_clInWeights, "inWeights");
     bleakGetAndCheckInput(p_clInThresholds, "inThresholds");
@@ -196,7 +203,7 @@ public:
     const RealType * const p_inWeights = clInWeights.data();
     const RealType * const p_inOrdinals = clInOrdinals.data();
     const RealType * const p_inThresholds = clInThresholds.data();
-    RealType * const p_outData = clOutData.data();
+    RealType * const p_outData = clOutData.data_no_sync();
 
     const int iOuterDataNum = clInData.GetSize()[0];
     const int iInnerDataNum = clInData.GetSize().Product(1);
@@ -212,7 +219,7 @@ public:
 
     for (int i = 0; i < iOuterDataNum; ++i) {
       for (int c = 0; c < iInNumChannels; ++c) {
-        m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iInNumChannels + c)*iInChannelSize, clImageSize.data());
+        m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
 
         // Iterate over output kernels
 #pragma omp parallel for
@@ -222,7 +229,7 @@ public:
 
           // Iterate over extracted patches
           for (int k = 0; k < m_iRows; ++k) {
-            const RealType * const p_row = m_vMatrix.data() + k*m_iCols;
+            const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
 
             const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
 
@@ -230,7 +237,7 @@ public:
             const RealType signedMargin = std::get<1>(clKeyMarginTuple);
             const RealType margin = std::abs(signedMargin);
 
-            const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key);
+            const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
 
             for (int l = 0; l < iInnerWeightsNum; ++l)
               p_outData[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l] += p_leafWeights[l]*margin;
@@ -240,7 +247,7 @@ public:
     }
   }
 
-  virtual void Backward() override {
+  virtual void BackwardCPU() override {
     bleakGetAndCheckInput(p_clInData, "inData");
     bleakGetAndCheckInput(p_clInWeights, "inWeights");
     bleakGetAndCheckInput(p_clInThresholds, "inThresholds");
@@ -283,7 +290,7 @@ public:
     if (p_inThresholdsGradient != nullptr) {
       for (int i = 0; i < iOuterDataNum; ++i) {
         for (int c = 0; c < iInNumChannels; ++c) {
-          m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iInNumChannels + c)*iInChannelSize, clImageSize.data());
+          m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
 
 #pragma omp parallel for
           for (int j = 0; j < iNumTrees; ++j) {
@@ -291,7 +298,7 @@ public:
             const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
 
             for (int k = 0; k < m_iRows; ++k) {
-              const RealType * const p_row = m_vMatrix.data() + k*m_iCols;
+              const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
 
               const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
 
@@ -301,7 +308,7 @@ public:
 
               const RealType sign = RealType((RealType(0) < signedMargin) - (signedMargin < RealType(0)));
 
-              const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key);
+              const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
 
               for (int l = 0; l < iInnerWeightsNum; ++l)
                 p_inThresholdsGradient[(j*iInNumChannels + c)*iNumDecisionsPerTree + iThresholdIndex] += -sign * p_leafWeights[l] * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
@@ -314,7 +321,7 @@ public:
     if (p_inWeightsGradient != nullptr) {
       for (int i = 0; i < iOuterDataNum; ++i) {
         for (int c = 0; c < iInNumChannels; ++c) {
-          m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iInNumChannels + c)*iInChannelSize, clImageSize.data());
+          m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
 
 #pragma omp parallel for
           for (int j = 0; j < iNumTrees; ++j) {
@@ -322,7 +329,7 @@ public:
             const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
 
             for (int k = 0; k < m_iRows; ++k) {
-              const RealType * const p_row = m_vMatrix.data() + k*m_iCols;
+              const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
 
               const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
 
@@ -341,11 +348,9 @@ public:
     }
 
     if (p_inDataGradient != nullptr) {
-      m_clImageToMatrix.ExtractIndexMatrix(m_vIndexMatrix.data(), clImageSize.data()); // This doesn't change
-
       for (int i = 0; i < iOuterDataNum; ++i) {
         for (int c = 0; c < iInNumChannels; ++c) {
-          m_clImageToMatrix.ExtractMatrix(m_vMatrix.data(), p_inData + (i*iInNumChannels + c)*iInChannelSize, clImageSize.data());
+          m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
 
 #pragma omp parallel for
           for (int j = 0; j < iNumTrees; ++j) {
@@ -353,8 +358,8 @@ public:
             const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
 
             for (int k = 0; k < m_iRows; ++k) {
-              const RealType * const p_row = m_vMatrix.data() + k*m_iCols;
-              const int * const p_iIndexRow = m_vIndexMatrix.data() + k*m_iCols;
+              const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
+              const int * const p_iIndexRow = m_clIndexMatrix.data() + k*m_iCols;
 
               const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
 
@@ -367,7 +372,7 @@ public:
               if (iImageIndex >= 0) { // Check if it's not padding!
                 const RealType sign = RealType((RealType(0) < signedMargin) - (signedMargin < RealType(0)));
 
-                const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key);
+                const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
 
                 for (int l = 0; l < iInnerWeightsNum; ++l) {
 #pragma omp atomic
@@ -380,6 +385,11 @@ public:
       }
     }
   }
+
+#ifdef BLEAK_USE_CUDA
+  virtual void ForwardGPU() override;
+  virtual void BackwardGPU() override;
+#endif // BLEAK_USE_CUDA
 
   virtual bool LoadFromDatabase(const std::unique_ptr<Cursor> &p_clCursor) override {
     if (!SuperType::LoadFromDatabase(p_clCursor))
@@ -416,8 +426,8 @@ private:
   int m_iCols = 0;
   int m_iTreeDepth = 0;
 
-  std::vector<RealType> m_vMatrix;
-  std::vector<int> m_vIndexMatrix;
+  Array<RealType> m_clMatrix;
+  Array<int> m_clIndexMatrix;
 
   bool AssignTreeIndices() {
     bleakGetAndCheckInput(p_clInOrdinals, "inOrdinals", false);

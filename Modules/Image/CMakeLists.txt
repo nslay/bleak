@@ -6,6 +6,7 @@ bleakNewModule(Image SOURCES
   ConvolutionNaive.h ConvolutionNaive.cpp
   ImageToMatrix.h ImageToMatrix.cpp
   Pooling.h Pooling.cpp
+  CUDA_SOURCES ImageToMatrix.cu
   MODULE_DEPENDS Common
 )
 

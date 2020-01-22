@@ -51,6 +51,7 @@
   using SuperType::ComputeOutputCount; \
   using SuperType::ComputeKernelCount; \
   using SuperType::ComputeWindowSize; \
+  using SuperType::ExtractMatrix; \
   using SuperType::Good
 
 namespace bleak {
@@ -223,6 +224,40 @@ public:
     iRows = ComputeOutputCount(a_iImageSize);
     iCols = ComputeKernelCount() * a_iImageSize[0];
   }
+
+  void ExtractMatrix(RealType *p_matrix, const RealType *p_image, const int *p_indexMatrix, const int a_iImageSize[Dimension+1]) const {
+    int iRows = 0;
+    int iCols = 0;
+    ComputeMatrixDimensions(iRows, iCols, a_iImageSize);
+
+    for (int j = 0; j < iCols; ++j) {
+      for (int i = 0; i < iRows; ++i) {
+        // This seems less efficient, but it keeps locality better in p_image (or should in most cases)
+        const int index = p_indexMatrix[iCols*i + j];
+        p_matrix[iCols*i + j] = (index < 0) ? padValue : p_image[index];
+      }
+    }
+  }
+
+  void MapAndAdd(RealType *p_diff, int iStride, const RealType *p_matrix, const int *p_indexMatrix, const int a_iImageSize[Dimension+1]) const {
+    int iRows = 0;
+    int iCols = 0;
+    ComputeMatrixDimensions(iRows, iCols, a_iImageSize);
+
+    for (int j = 0; j < iCols; ++j) {
+      for (int i = 0; i < iRows; ++i) {
+        const int index = p_indexMatrix[iCols*i + j];
+        if (index >= 0)
+          p_diff[index*iStride] += p_matrix[iCols*i + j];
+      }
+    }
+  }
+
+#ifdef BLEAK_USE_CUDA
+  void ExtractMatrixGPU(RealType *d_matrix, const RealType *d_image, const int *d_indexMatrix, const int a_iImageSize[Dimension+1]) const;
+  void MapAndAddGPU(RealType *d_diff, int iStride, const RealType *d_matrix, const int *d_indexMatrix, const int a_iImageSize[Dimension+1]) const;
+#endif // BLEAK_USE_CUDA
+
 };
 
 template<typename RealType, unsigned int Dimension>
