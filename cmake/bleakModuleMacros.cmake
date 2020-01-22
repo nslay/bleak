@@ -5,7 +5,7 @@ macro(bleakNewModule name)
   
   set(optionKeyWords ENABLE_BY_DEFAULT)
   set(oneValueKeyWords "")
-  set(multiValueKeyWords MODULE_DEPENDS LIBRARIES SOURCES INCLUDE_DIRECTORIES DEFINITIONS)
+  set(multiValueKeyWords MODULE_DEPENDS LIBRARIES SOURCES CUDA_SOURCES INCLUDE_DIRECTORIES DEFINITIONS)
   
   cmake_parse_arguments("bleak${name}" "${optionKeyWords}" "${oneValueKeyWords}" "${multiValueKeyWords}" ${ARGN} )
   
@@ -22,7 +22,11 @@ macro(bleakNewModule name)
   string(REGEX REPLACE "[ \t\r\n]+$" "" bleak${name}_SOURCES "${bleak${name}_SOURCES}")
   
   if (bleak${name}_ENABLE)
-    add_library("bleak${name}" ${bleak${name}_SOURCES})
+    if (bleakUseCUDA)
+      add_library("bleak${name}" ${bleak${name}_SOURCES} ${bleak${name}_CUDA_SOURCES})
+    else()
+      add_library("bleak${name}" ${bleak${name}_SOURCES})
+    endif()
     
     set(dependencies "")
     
