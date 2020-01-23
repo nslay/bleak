@@ -42,8 +42,16 @@ public:
   typedef HingeFernCommon<RealType, KeyType> TreeTraitsType;
   typedef typename TreeTraitsType::RealType RealType;
   typedef typename TreeTraitsType::KeyType KeyType;
-  typedef double3 KeyMarginTupleType; // leaf key, margin, and threshold/ordinal index
-  //typedef typename TreeTraitsType::KeyMarginTupleType KeyMarginTupleType;
+
+  struct KeyMarginTuple {
+    KeyType leafKey;
+    RealType signedMargin;
+    KeyType thresholdIndex;
+    __device__ KeyMarginTuple(const KeyType &leafKey_, const RealType &signedMargin_, const KeyType &thresholdIndex_)
+    : leafKey(leafKey_), signedMargin(signedMargin_), thresholdIndex(thresholdIndex_) { }
+  };
+
+  typedef KeyMarginTuple KeyMarginTupleType;
 
   // Returns leaf key, signed margin and threshold/ordinal index
   __device__ static KeyMarginTupleType ComputeKeyAndSignedMargin(const RealType *p_data, const RealType *p_thresholds, const RealType *p_ordinals, int iTreeDepth, int iStride = 1) {
@@ -64,8 +72,7 @@ public:
       }
     }
 
-    //return std::make_tuple(leafKey, minMargin, minFernIndex);
-    return make_double3(RealType(leafKey), minMargin, RealType(minFernIndex));
+    return KeyMarginTupleType(leafKey, minMargin, minFernIndex);
   }
 };
 
@@ -76,8 +83,16 @@ public:
   typedef HingeTreeCommon<RealType, KeyType> TreeTraitsType;
   typedef typename TreeTraitsType::RealType RealType;
   typedef typename TreeTraitsType::KeyType KeyType;
-  typedef double3 KeyMarginTupleType; // leaf key, margin, and threshold/ordinal index
-  //typedef typename TreeTraitsType::KeyMarginTupleType KeyMarginTupleType; 
+
+  struct KeyMarginTuple {
+    KeyType leafKey;
+    RealType signedMargin;
+    KeyType thresholdIndex;
+    __device__ KeyMarginTuple(const KeyType &leafKey_, const RealType &signedMargin_, const KeyType &thresholdIndex_)
+    : leafKey(leafKey_), signedMargin(signedMargin_), thresholdIndex(thresholdIndex_) { }
+  };
+
+  typedef KeyMarginTuple KeyMarginTupleType;
 
   // Returns leaf key, signed margin and threshold/ordinal index
   __device__ static KeyMarginTupleType ComputeKeyAndSignedMargin(const RealType *p_data, const RealType *p_thresholds, const RealType *p_ordinals, int iTreeDepth, int iStride = 1) {
@@ -100,8 +115,7 @@ public:
       treeIndex = 2*treeIndex + 1 + bit;
     }
 
-    //return std::make_tuple(leafKey, minMargin, minTreeIndex);
-    return make_double3(RealType(leafKey), minMargin, RealType(minTreeIndex));
+    return KeyMarginTuple(leafKey, minMargin, minTreeIndex);
   }
 };
 
