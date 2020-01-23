@@ -72,10 +72,10 @@ __global__ void ForwardKernel(const RealType *d_matrix, const RealType *d_inThre
     const RealType * const d_row = d_matrix + k*iCols;
 
     // leaf key, margin, ordinal index
-    const double3 keyMarginTuple = TreeTraitsTypeGPU::ComputeKeyAndSignedMargin(d_row, d_thresholds, d_ordinals, iTreeDepth, 1);
+    const auto keyMarginTuple = TreeTraitsTypeGPU::ComputeKeyAndSignedMargin(d_row, d_thresholds, d_ordinals, iTreeDepth, 1);
 
-    const KeyType key = KeyType(keyMarginTuple.x);
-    const RealType signedMargin = RealType(keyMarginTuple.y);
+    const KeyType key = keyMarginTuple.leafKey;
+    const RealType signedMargin = keyMarginTuple.signedMargin;
     const RealType margin = std::abs(signedMargin);
 
     const RealType * const d_leafWeights = d_inWeights + (j*iWeightsStride + key)*iInnerWeightsNum;
@@ -104,11 +104,11 @@ __global__ void BackwardThresholdsKernel(const RealType *d_matrix, const RealTyp
     const RealType * const d_row = d_matrix + k*iCols;
 
     // leaf key, margin, ordinal index
-    const double3 keyMarginTuple = TreeTraitsTypeGPU::ComputeKeyAndSignedMargin(d_row, d_thresholds, d_ordinals, iTreeDepth, 1);
+    const auto keyMarginTuple = TreeTraitsTypeGPU::ComputeKeyAndSignedMargin(d_row, d_thresholds, d_ordinals, iTreeDepth, 1);
 
-    const KeyType key = KeyType(keyMarginTuple.x);
-    const RealType signedMargin = RealType(keyMarginTuple.y);
-    const KeyType thresholdIndex = KeyType(keyMarginTuple.z);
+    const KeyType key = keyMarginTuple.leafKey;
+    const RealType signedMargin = keyMarginTuple.signedMargin;
+    const KeyType thresholdIndex = keyMarginTuple.thresholdIndex;
 
     const RealType sign = RealType((RealType(0) < signedMargin) - (signedMargin < RealType(0)));
 
@@ -137,10 +137,10 @@ __global__ void BackwardWeightsKernel(const RealType *d_matrix, const RealType *
     const RealType * const d_row = d_matrix + k*iCols;
 
     // leaf key, margin, ordinal index
-    const double3 keyMarginTuple = TreeTraitsTypeGPU::ComputeKeyAndSignedMargin(d_row, d_thresholds, d_ordinals, iTreeDepth, 1);
+    const auto keyMarginTuple = TreeTraitsTypeGPU::ComputeKeyAndSignedMargin(d_row, d_thresholds, d_ordinals, iTreeDepth, 1);
 
-    const KeyType key = KeyType(keyMarginTuple.x);
-    const RealType signedMargin = RealType(keyMarginTuple.y);
+    const KeyType key = keyMarginTuple.leafKey;
+    const RealType signedMargin = keyMarginTuple.signedMargin;
     const RealType margin = std::abs(signedMargin);
 
     const RealType * const d_outGradient = d_outDataGradient + (j*iRows + k)*iInnerWeightsNum;
@@ -169,11 +169,11 @@ __global__ void BackwardDataKernel(const RealType *d_matrix, const int *d_indexM
     const int * const d_iIndexRow = d_indexMatrix + k*iCols;
 
     // leaf key, margin, ordinal index
-    const double3 keyMarginTuple = TreeTraitsTypeGPU::ComputeKeyAndSignedMargin(d_row, d_thresholds, d_ordinals, iTreeDepth, 1);
+    const auto keyMarginTuple = TreeTraitsTypeGPU::ComputeKeyAndSignedMargin(d_row, d_thresholds, d_ordinals, iTreeDepth, 1);
 
-    const KeyType key = KeyType(keyMarginTuple.x);
-    const RealType signedMargin = RealType(keyMarginTuple.y);
-    const KeyType thresholdIndex = KeyType(keyMarginTuple.z);
+    const KeyType key = keyMarginTuple.leafKey;
+    const RealType signedMargin = keyMarginTuple.signedMargin;
+    const KeyType thresholdIndex = keyMarginTuple.thresholdIndex;
     const int iFeatureIndex = (int)d_ordinals[thresholdIndex];
     const int iImageIndex = d_iIndexRow[iFeatureIndex];
 
