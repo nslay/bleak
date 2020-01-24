@@ -1,0 +1,17 @@
+subgraph SGAdder8 {
+  fill=-1e-7;
+  
+  include "SGAdder4.sad"
+  
+  SGAdder4 { fill=$fill; } adder1;
+  SGAdder4 { fill=$fill; } adder2;
+  
+  this.inData0 -> adder1.inData0;
+  this.inData1 -> adder1.inData1;
+  
+  adder1.outSum -> adder2.inData0;
+  adder1.outCarry -> adder2.inData1;
+  
+  adder2.outSum -> this.outSum;
+  adder2.outCarry -> this.outCarry;
+};

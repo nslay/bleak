@@ -1,0 +1,31 @@
+subgraph SGInnerProductPlusOr {
+  numInputs=10;
+  numOutputs=100;
+  learningRateMultiplier=1.0;
+  useBias=false;
+  fill=-1e-7;
+  
+  Parameters {
+    size = [ $numOutputs, $numInputs ];
+    initType="gaussian";
+    learnable = true;
+    mu=0.0;
+    sigma=1.0;
+    learningRateMultiplier=$learningRateMultiplier;
+  } weights;
+  
+  Parameters {
+    size = [ $numOutputs ];
+    learnable=$useBias;
+    fill=$fill;
+    learningRateMultiplier=$learningRateMultiplier;
+  } bias;
+  
+  InnerProductPlusOr innerProduct;
+  
+  weights.outData -> innerProduct.inWeights;
+  bias.outData -> innerProduct.inBias;
+  
+  this.inData -> innerProduct.inData;
+  innerProduct.outData -> this.outData;
+};

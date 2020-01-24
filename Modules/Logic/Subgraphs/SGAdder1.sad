@@ -1,0 +1,20 @@
+subgraph SGAdder1 {
+  fill=-1e-7;
+  
+  PlusXor xor;
+  PlusAnd and;
+  LeftShift {
+    shift=1;
+    fill=$fill;
+  } leftShift;
+  
+  this.inData0 -> xor.inData0;
+  this.inData1 -> xor.inData1;
+  this.inData0 -> and.inData0;
+  this.inData1 -> and.inData1;
+  
+  and.outData -> leftShift.inData;
+  
+  xor.outData -> this.outSum;
+  leftShift.outData -> this.outCarry;
+};
