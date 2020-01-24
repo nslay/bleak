@@ -158,11 +158,6 @@ public:
       //}
     }
 
-
-
-
-
-
     if (iInnerNum == 1) {
       // In this case, just apply this operation on the entire batch directly!
 
