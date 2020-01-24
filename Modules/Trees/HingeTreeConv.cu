@@ -236,8 +236,7 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::ForwardGPU() {
   const dim3 threadsPerBlock(16, 16);
   const dim3 numBlocks((iNumTrees + threadsPerBlock.x-1) / threadsPerBlock.x, (m_iRows + threadsPerBlock.y-1) / threadsPerBlock.y);
 
-  //clOutData.Fill(RealType());
-  cudaMemset(p_outData, 0, sizeof(RealType) * clOutData.GetSize().Count());
+  clOutData.Fill(RealType());
 
   const int iWeightsStride = iInNumChannels * iNumLeavesPerTree;
   const int iThresholdStride = iInNumChannels * iNumDecisionsPerTree;

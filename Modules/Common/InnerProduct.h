@@ -161,7 +161,7 @@ public:
     if (iInnerNum == 1) {
       // In this case, just apply this operation on the entire batch directly!
 
-      // In C/C++ the following are row major (ignoring batch size)
+      // In C/C++ the following are row major
       // p_inData = iOuterNum x iNumChannels
       // p_weights = iNumOutputs x iNumChannels
       // p_outData = iOuterNum x iNumOutputs
@@ -261,7 +261,7 @@ public:
 
     // In the case of iInnerNum == 1, just apply this operation on the entire batch directly!
     
-    // In C/C++ the following are row major (ignoring batch size)
+    // In C/C++ the following are row major
     // p_inData = iOuterNum x iNumChannels
     // p_inDataGradient = iOuterNum x iNumChannels
     // p_weights = iNumOutputs x iNumChannels

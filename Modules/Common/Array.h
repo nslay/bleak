@@ -249,10 +249,32 @@ public:
   }
 
   void Fill(const RealType &value) {
+    if (!Valid())
+      return;
+
+#ifdef BLEAK_USE_CUDA
     const MemoryLocation eLocationBefore = m_p_stMem->eMemoryLocation;
-    m_p_stMem->eMemoryLocation = CPU;
+    switch (eLocationBefore) {
+    case CPU:
+      std::fill(begin(), end(), value);
+      break;
+    case GPU:
+      if (value == RealType(0)) {
+        if (cudaMemset(m_p_stMem->p_gpuBuffer.get(), 0, sizeof(RealType)*GetSize().Count()) != cudaSuccess) {
+          std::cerr << "Error: Failed to memset GPU memory." << std::endl;
+          throw std::runtime_error("Error: Failed to memset GPU memory.");
+        }
+      }
+      else {
+        m_p_stMem->eMemoryLocation = CPU;
+        std::fill(begin(), end(), value);
+        CopyTo(eLocationBefore);
+      }
+      break;
+    }
+#else // !BLEAK_USE_CUDA
     std::fill(begin(), end(), value);
-    CopyTo(eLocationBefore);
+#endif // BLEAK_USE_CUDA
   }
 
   void Clear() {
