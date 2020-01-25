@@ -20,6 +20,7 @@ subgraph SGForest {
     b = 3;
     #learningRateMultiplier=$learningRateMultiplier * $treeDepth;
     learningRateMultiplier=$learningRateMultiplier;
+    applyWeightDecay=false;
   } thresholds;
   
   Parameters {
