@@ -143,7 +143,7 @@ public:
     return AssignTreeIndices();
   }
 
-  virtual void Forward() override {
+  virtual void ForwardCPU() override {
     bleakGetAndCheckInput(p_clOrdinals, "inOrdinals");
     bleakGetAndCheckInput(p_clThresholds, "inThresholds");
     bleakGetAndCheckInput(p_clWeights, "inWeights");
@@ -160,7 +160,7 @@ public:
     const RealType * const p_thresholds = clThresholds.data();
     const RealType * const p_weights = clWeights.data();
     const RealType * const p_inData = clInData.data();
-    RealType * const p_outData = clOutData.data();
+    RealType * const p_outData = clOutData.data_no_sync();
 
     const int iOuterNum = clInData.GetSize()[0];
     const int iNumChannels = clInData.GetSize()[1];
@@ -189,7 +189,7 @@ public:
 
   }
 
-  virtual void Backward() override {
+  virtual void BackwardCPU() override {
     bleakGetAndCheckInput(p_clOrdinals, "inOrdinals");
     bleakGetAndCheckInput(p_clThresholds, "inThresholds");
     bleakGetAndCheckInput(p_clWeights, "inWeights");
@@ -213,7 +213,7 @@ public:
     RealType * const p_weightsGradient = clWeightsGradient.data();
     const RealType * const p_inData = clInData.data();
     RealType * p_inDataGradient = clInDataGradient.data();
-    const RealType * const p_outData = clOutData.data();
+    //const RealType * const p_outData = clOutData.data();
     const RealType * const p_outDataGradient = clOutDataGradient.data();
 
     const int iOuterNum = clInData.GetSize()[0];
@@ -289,6 +289,11 @@ public:
     }
 
   }
+
+#ifdef BLEAK_USE_CUDA
+  virtual void ForwardGPU() override;
+  virtual void BackwardGPU() override;
+#endif // BLEAK_USE_CUDA
 
   virtual bool LoadFromDatabase(const std::unique_ptr<Cursor> &p_clCursor) override {
     if (!SuperType::LoadFromDatabase(p_clCursor))

@@ -9,7 +9,7 @@ bleakNewModule(Trees SOURCES
   RandomHingeForest.h RandomHingeForest.cpp
   HingeTreeConv.h HingeTreeConv.cpp
   CUDA_SOURCES 
-  HingeTreeCommon.cuh HingeTreeCommon.cu HingeTreeConv.cu
+  HingeTreeCommon.cuh HingeTreeCommon.cu HingeTreeConv.cu RandomHingeForest.cu
   MODULE_DEPENDS Common Image
 )
 
