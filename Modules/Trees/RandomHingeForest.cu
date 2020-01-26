@@ -241,10 +241,6 @@ void RandomHingeForestTemplate<RealType, TreeTraitsType>::ForwardGPU() {
   const dim3 threadsPerBlock(8,8,8);
   const dim3 numBlocks((iOuterNum + threadsPerBlock.x-1)/threadsPerBlock.x, (iNumTrees + threadsPerBlock.y-1)/threadsPerBlock.y, (iInnerDataNum + threadsPerBlock.z-1)/threadsPerBlock.z);
 
-//__global__ void ForwardKernel(const RealType *d_inData, const RealType *d_inThresholds, const RealType *d_inOrdinals, const RealType *d_inWeights, RealType *d_outData, 
-//    int iTreeDepth, int iThresholdStride, int iWeightsStride, int iInnerWeightsNum, int iNumTrees, int iOuterNum, int iNumChannels, int iInnerDataNum) {
-
-
   ForwardKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(p_inData, p_thresholds, p_ordinals, p_weights, p_outData, 
     m_iTreeDepth, iNumDecisionsPerTree, iNumLeavesPerTree, iInnerWeightsNum, iNumTrees, iOuterNum, iNumChannels, iInnerDataNum);
 }

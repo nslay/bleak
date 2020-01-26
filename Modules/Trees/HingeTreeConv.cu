@@ -115,8 +115,16 @@ __global__ void BackwardThresholdsKernel(const RealType *d_matrix, const RealTyp
     const RealType * const d_leafWeights = d_inWeights + (j*iWeightsStride + key)*iInnerWeightsNum;
     const RealType * const d_outGradient = d_outDataGradient + (j*iRows + k)*iInnerWeightsNum;
 
+    RealType tmpSum = RealType(0);
+
     for (int l = 0; l < iInnerWeightsNum; ++l)
-      d_thresholdsGradient[thresholdIndex] += -sign * d_leafWeights[l] * d_outGradient[l];
+      tmpSum += d_leafWeights[l] * d_outGradient[l];
+
+    tmpSum *= -sign;
+
+    atomicAdd(d_thresholdsGradient + thresholdIndex, tmpSum); // Do this just once
+
+      //d_thresholdsGradient[thresholdIndex] += -sign * d_leafWeights[l] * d_outGradient[l];
   }
 }
 
@@ -146,8 +154,10 @@ __global__ void BackwardWeightsKernel(const RealType *d_matrix, const RealType *
     const RealType * const d_outGradient = d_outDataGradient + (j*iRows + k)*iInnerWeightsNum;
     RealType * const d_leafWeightsGradient = d_inWeightsGradient + (j*iWeightsStride + key)*iInnerWeightsNum;
 
-    for (int l = 0; l < iInnerWeightsNum; ++l)
-      d_leafWeightsGradient[l] += margin * d_outGradient[l];
+    for (int l = 0; l < iInnerWeightsNum; ++l) {
+      atomicAdd(d_leafWeightsGradient + l, margin * d_outGradient[l]); // Really bad!
+      //d_leafWeightsGradient[l] += margin * d_outGradient[l];
+    }
   }
 }
 
