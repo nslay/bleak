@@ -31,6 +31,7 @@
 #include <algorithm>
 #include "ParameterContainer.h"
 #include "Graph.h"
+#include "BlasWrapper.h"
 
 #define bleakForwardOptimizerTypedefs() \
   typedef typename SuperType::GraphType GraphType; \
@@ -162,10 +163,19 @@ protected:
       if (!clWeights.Valid() || !clWeightsGradient.Valid() || !ShouldApplyWeightDecay(p_clEdge)) // Should not happen
         continue;
 
-      std::transform(clWeights.begin(), clWeights.end(), clWeightsGradient.begin(), clWeightsGradient.begin(),
-        [this](const RealType &weight, const RealType &weightGradient) -> RealType {
-          return weightGradient + this->m_weightDecay * weight * RealType(2);
-        });
+      if (GetUseGPU()) {
+#ifdef BLEAK_USE_CUDA
+        gpu_blas::axpy(clWeights.GetSize().Count(), RealType(this->m_weightDecay * 2), clWeights.data(GPU), 1, clWeightsGradient.data(GPU), 1);
+#endif // BLEAK_USE_CUDA
+      }
+      else {
+        cpu_blas::axpy(clWeights.GetSize().Count(), RealType(this->m_weightDecay * 2), clWeights.data(), 1, clWeightsGradient.data(), 1);
+      }
+
+      //std::transform(clWeights.begin(), clWeights.end(), clWeightsGradient.begin(), clWeightsGradient.begin(),
+      //  [this](const RealType &weight, const RealType &weightGradient) -> RealType {
+      //    return weightGradient + this->m_weightDecay * weight * RealType(2);
+      //  });
     }
   }
 
