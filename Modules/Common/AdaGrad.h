@@ -36,6 +36,7 @@
 #include "Array.h"
 #include "Edge.h"
 #include "IterativeOptimizer.h"
+#include "BlasWrapper.h"
 
 namespace bleak {
 
@@ -89,16 +90,35 @@ protected:
       ArrayType &clGradientSum = *std::get<1>(clTuple);
       ArrayType &clGradientHistory = *std::get<2>(clTuple);
 
-      std::transform(clGradient.begin(),clGradient.end(),clGradientHistory.begin(),clGradientHistory.begin(),
-        [](const RealType &grad,const RealType &gradHistory) -> RealType {
-        //return std::sqrt(gradHistory*gradHistory + grad*grad);
-        return std::hypot(gradHistory,grad);
-      });
+      const int iNumElements = clGradient.GetSize().Count();
 
-      std::transform(clGradient.begin(),clGradient.end(),clGradientSum.begin(),clGradientSum.begin(),
-        [&scaleForThisEdge](const RealType &grad,const RealType &gradSum) -> RealType {
-        return scaleForThisEdge * grad + gradSum;
-      });
+      const RealType * const p_gradient = clGradient.data();
+      RealType * const p_gradientHistory = clGradientHistory.data();
+
+#pragma omp parallel for
+      for (int i = 0; i < iNumElements; ++i) {
+        p_gradientHistory[i] += std::hypot(p_gradientHistory[i], p_gradient[i]);
+      }
+
+      //std::transform(clGradient.begin(),clGradient.end(),clGradientHistory.begin(),clGradientHistory.begin(),
+      //  [](const RealType &grad,const RealType &gradHistory) -> RealType {
+      //  //return std::sqrt(gradHistory*gradHistory + grad*grad);
+      //  return std::hypot(gradHistory,grad);
+      //});
+
+      if (GetUseGPU()) {
+#ifdef BLEAK_USE_CUDA
+        gpu_blas::axpy(clGradient.GetSize().Count(), scaleForThisEdge, clGradient.data(GPU), 1, clGradientSum.data(GPU), 1);
+#endif // BLEAK_USE_CUDA
+      }
+      else {
+        cpu_blas::axpy(clGradient.GetSize().Count(), scaleForThisEdge, clGradient.data(), 1, clGradientSum.data(), 1);
+      }
+
+      //std::transform(clGradient.begin(),clGradient.end(),clGradientSum.begin(),clGradientSum.begin(),
+      //  [&scaleForThisEdge](const RealType &grad,const RealType &gradSum) -> RealType {
+      //  return scaleForThisEdge * grad + gradSum;
+      //});
     }
   }
 
@@ -112,10 +132,11 @@ protected:
       const RealType * const p_gradientSum = clGradientSum.data();
       const RealType * const p_gradientHistory = clGradientHistory.data();
 
-      const size_t numElements = clData.GetSize().Product();
+      const int iNumElements = clData.GetSize().Product();
 
-      for(size_t i = 0; i < numElements; ++i) {
-        if(p_gradientHistory[i] > RealType(0))
+#pragma omp parallel for
+      for (int i = 0; i < iNumElements; ++i) {
+        if (p_gradientHistory[i] > RealType(0))
           p_data[i] += p_gradientSum[i] / p_gradientHistory[i];
       }
 

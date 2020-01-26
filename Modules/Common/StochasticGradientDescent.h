@@ -36,6 +36,7 @@
 #include "Array.h"
 #include "Edge.h"
 #include "IterativeOptimizer.h"
+#include "BlasWrapper.h"
 
 namespace bleak {
 
@@ -97,10 +98,19 @@ protected:
       ArrayType &clGradient = clPair.first->GetGradient();
       ArrayType &clMomentum = *clPair.second;
 
-      std::transform(clGradient.begin(),clGradient.end(),clMomentum.begin(),clMomentum.begin(),
-        [&scaleForThisEdge](const RealType &grad,const RealType &mom) -> RealType {
-        return scaleForThisEdge * grad + mom;
-      });
+      if (GetUseGPU()) {
+#ifdef BLEAK_USE_CUDA
+        gpu_blas::axpy(clGradient.GetSize().Count(), scaleForThisEdge, clGradient.data(GPU), 1, clMomentum.data(GPU), 1);
+#endif // BLEAK_USE_CUDA
+      }
+      else {
+        cpu_blas::axpy(clGradient.GetSize().Count(), scaleForThisEdge, clGradient.data(), 1, clMomentum.data(), 1);
+      }
+
+      //std::transform(clGradient.begin(),clGradient.end(),clMomentum.begin(),clMomentum.begin(),
+      //  [&scaleForThisEdge](const RealType &grad,const RealType &mom) -> RealType {
+      //  return scaleForThisEdge * grad + mom;
+      //});
     }
   }
 
@@ -109,7 +119,16 @@ protected:
       ArrayType &clData = clPair.first->GetData();
       ArrayType &clMomentum = *clPair.second;
 
-      std::transform(clData.begin(),clData.end(),clMomentum.begin(),clData.begin(),std::plus<RealType>());
+      if (GetUseGPU()) {
+#ifdef BLEAK_USE_CUDA
+        gpu_blas::axpy(clData.GetSize().Count(), RealType(1), clMomentum.data(GPU), 1, clData.data(GPU), 1);
+#endif // BLEAK_USE_CUDA
+      }
+      else {
+        cpu_blas::axpy(clData.GetSize().Count(), RealType(1), clMomentum.data(), 1, clData.data(), 1);
+      }
+
+      //std::transform(clData.begin(),clData.end(),clMomentum.begin(),clData.begin(),std::plus<RealType>());
     }
   }
 
@@ -147,10 +166,19 @@ private:
     for (auto &clPair : m_vEdgeAndMomentum) {
       ArrayType &clMomentum = *clPair.second;
 
-      std::transform(clMomentum.begin(), clMomentum.end(), clMomentum.begin(), 
-        [this](const RealType &value) -> RealType {
-          return this->m_momentum * value;
-        });
+      if (GetUseGPU()) {
+#ifdef BLEAK_USE_CUDA
+        gpu_blas::scal(clMomentum.GetSize().Count(), this->m_momentum, clMomentum.data(GPU), 1);
+#endif // BLEAK_USE_CUDA
+      }
+      else {
+        cpu_blas::scal(clMomentum.GetSize().Count(), this->m_momentum, clMomentum.data(), 1);
+      }
+
+      //std::transform(clMomentum.begin(), clMomentum.end(), clMomentum.begin(), 
+      //  [this](const RealType &value) -> RealType {
+      //    return this->m_momentum * value;
+      //  });
     }
   }
 };
