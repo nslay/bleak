@@ -117,6 +117,13 @@ protected:
   }
 
   virtual void GradientUpdate() override {
+#ifdef BLEAK_USE_CUDA
+    if (GetUseGPU()) {
+      GradientUpdateGPU();
+      return;
+    }
+#endif // BLEAK_USE_CUDA
+
     const unsigned int uiNumBatchesPerIteration = GetNumBatchesPerIteration();
 
     for (auto &clTuple : m_vEdgeAndHistory) {
@@ -126,37 +133,21 @@ protected:
       ArrayType &clGradientMoment1 = *std::get<2>(clTuple);
       ArrayType &clGradientMoment2 = *std::get<3>(clTuple);
 
-      if (GetUseGPU()) {
-#ifdef BLEAK_USE_CUDA
-        gpu_blas::scal(clGradientMoment1.GetSize().Count(), this->m_beta1, clGradientMoment1.data(GPU), 1);
-        gpu_blas::axpy(clGradientMoment1.GetSize().Count(), (RealType(1) - this->m_beta1)/RealType(uiNumBatchesPerIteration), clGradientSum.data(GPU), 1, clGradientMoment1.data(GPU), 1);
+      const int iNumElements = clData.GetSize().Count();
 
-        //gpu_blas::scal(clGradientMoment2.GetSize().Count(), this->m_beta2, clGradientMoment2.data(GPU), 1);
+      cpu_blas::scal(iNumElements, this->m_beta1, clGradientMoment1.data(), 1);
+      cpu_blas::axpy(iNumElements, (RealType(1) - this->m_beta1)/RealType(uiNumBatchesPerIteration), clGradientSum.data(), 1, clGradientMoment1.data(), 1);
 
-        const int iNumElements = clGradientSum.GetSize().Count();
-        const RealType * const p_gradientSum = clGradientSum.data();
-        RealType * const p_gradientMoment2 = clGradientMoment2.data();
+      //cpu_blas::scal(clGradientMoment2.GetSize().Count(), this->m_beta2, clGradientMoment2.data(), 1);
 
-#pragma omp parallel for
-        for (int i = 0; i < iNumElements; ++i) {
-          p_gradientMoment2[i] = (RealType(1) - this->m_beta2) * std::pow(p_gradientSum[i] / RealType(uiNumBatchesPerIteration), 2) + this->m_beta2 * p_gradientMoment2[i];
-        }
-#endif // BLEAK_USE_CUDA
-      }
-      else {
-        cpu_blas::scal(clGradientMoment1.GetSize().Count(), this->m_beta1, clGradientMoment1.data(), 1);
-        cpu_blas::axpy(clGradientMoment1.GetSize().Count(), (RealType(1) - this->m_beta1)/RealType(uiNumBatchesPerIteration), clGradientSum.data(), 1, clGradientMoment1.data(), 1);
-
-        //cpu_blas::scal(clGradientMoment2.GetSize().Count(), this->m_beta2, clGradientMoment2.data(), 1);
-
-        const int iNumElements = clGradientSum.GetSize().Count();
-        const RealType * const p_gradientSum = clGradientSum.data();
-        RealType * const p_gradientMoment2 = clGradientMoment2.data();
+      RealType * const p_data = clData.data();
+      const RealType * const p_gradientSum = clGradientSum.data();
+      RealType * const p_gradientMoment1 = clGradientMoment1.data();
+      RealType * const p_gradientMoment2 = clGradientMoment2.data();
 
 #pragma omp parallel for
-        for (int i = 0; i < iNumElements; ++i) {
-          p_gradientMoment2[i] = (RealType(1) - this->m_beta2) * std::pow(p_gradientSum[i] / RealType(uiNumBatchesPerIteration), 2) + this->m_beta2 * p_gradientMoment2[i];
-        }
+      for (int i = 0; i < iNumElements; ++i) {
+        p_gradientMoment2[i] = (RealType(1) - this->m_beta2) * std::pow(p_gradientSum[i] / RealType(uiNumBatchesPerIteration), 2) + this->m_beta2 * p_gradientMoment2[i];
       }
 
       //std::transform(clGradientSum.begin(), clGradientSum.end(), clGradientMoment1.begin(), clGradientMoment1.begin(),
@@ -168,13 +159,6 @@ protected:
       //  [this,uiNumBatchesPerIteration](const RealType &gradientSum, const RealType &gradientMoment2) -> RealType {
       //    return (RealType(1) - this->m_beta2) * std::pow(gradientSum / RealType(uiNumBatchesPerIteration), 2) + this->m_beta2 * gradientMoment2;
       //  });
-
-      RealType * const p_data = clData.data();
-      const RealType * const p_gradientSum = clGradientSum.data();
-      const RealType * const p_gradientMoment1 = clGradientMoment1.data();
-      const RealType * const p_gradientMoment2 = clGradientMoment2.data();
-
-      const int iNumElements = clData.GetSize().Product();
 
       const RealType gradientMoment1Divisor = RealType(1) - RealType(std::pow(m_beta1, GetIteration()+1)); // Indexed from 1
       const RealType gradientMoment2Divisor = RealType(1) - RealType(std::pow(m_beta2, GetIteration()+1)); // Indexed from 1
@@ -196,6 +180,10 @@ private:
   RealType m_small;
 
   GradientHistoryVectorType m_vEdgeAndHistory;
+
+#ifdef BLEAK_USE_CUDA
+  void GradientUpdateGPU();
+#endif // BLEAK_USE_CUDA
 
   bool PrepareGradientHistory() {
     m_vEdgeAndHistory.clear();
