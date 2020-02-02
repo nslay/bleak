@@ -279,6 +279,42 @@ void gemv(char trans, int m, int n, const RealType &alpha, const RealType *a, in
   }
 }
 
+template<typename RealType>
+void ger(int m, int n, const RealType &alpha, const RealType *x, int incx, const RealType *y, int incy, RealType *a, int lda) {
+  if (m < 0 || n < 0 || incx == 0 || incy == 0 || lda < std::max(1, m))
+    return; // Error
+
+  if (m == 0 || n == 0 || alpha == RealType(0)) 
+    return; // Nothing to do
+
+  int jy = 0;
+  if (incy < 0)
+    jy = -(n-1)*incy;
+
+  if (incx == 1) {
+    for (int j = 0; j < n; ++j, jy += incy) {
+      if (y[jy] != RealType(0)) {
+        const RealType tmp = alpha * y[jy];
+        for (int i = 0; i < m; ++i)
+          a[lda*j + i] += tmp * x[i];
+      }
+    }
+  }
+  else {
+    int kx = 0;
+    if (incx < 0)
+      kx = -(m-1)*incx;
+
+    for (int j = 0; j < n; ++j, jy += incy) {
+      if (y[jy] != RealType(0)) {
+        const RealType tmp = alpha * y[jy];
+        for (int i = 0, ix = kx; i < m; ++i, ix += incx)
+          a[lda*j + i] += tmp * x[ix];
+      }
+    }
+  }
+}
+
 // Level 3
 template<typename RealType>
 void gemm(char transa, char transb, int m, int n, int k, const RealType &alpha, const RealType *a, int lda, const RealType *b, int ldb, const RealType &beta, RealType *c, int ldc) {

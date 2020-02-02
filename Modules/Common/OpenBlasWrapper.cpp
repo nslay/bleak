@@ -32,6 +32,27 @@
 namespace bleak {
 namespace cpu_blas {
 
+namespace {
+
+CBLAS_TRANSPOSE GetTrans(char trans) {
+  switch (trans) {
+  case 'n':
+  case 'N':
+    return CblasNoTrans;
+  case 'c':
+  case 'C':
+  case 't':
+  case 'T':
+    return CblasTrans;
+  }
+
+  std::cerr << "Error: Invalid op '" << trans << "'." << std::endl;
+  throw std::runtime_error(std::string("Error: Invalid op '") + trans + "'.");
+  // Not reached
+}
+
+} // end anonymous namespace
+
 void Initialize() { 
   switch (openblas_get_parallel()) {
   case OPENBLAS_SEQUENTIAL:
@@ -60,127 +81,33 @@ void Initialize() {
 // Level 2
 template<>
 void gemv<float>(char trans, int m, int n, const float &alpha, const float *a, int lda, const float *x, int incx, const float &beta, float *y, int incy) { 
-  CBLAS_TRANSPOSE eTrans;
-
-  switch (trans) {
-  case 'n':
-  case 'N':
-    eTrans = CblasNoTrans;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTrans = CblasTrans;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << trans << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + trans + "'.");
-  }
-
-  cblas_sgemv(CblasColMajor, eTrans, m, n, alpha, a, lda, x, incx, beta, y, incy); 
+  cblas_sgemv(CblasColMajor, GetTrans(trans), m, n, alpha, a, lda, x, incx, beta, y, incy); 
 }
 
 template<>
 void gemv<double>(char trans, int m, int n, const double &alpha, const double *a, int lda, const double *x, int incx, const double &beta, double *y, int incy) { 
-  CBLAS_TRANSPOSE eTrans;
+  cblas_dgemv(CblasColMajor, GetTrans(trans), m, n, alpha, a, lda, x, incx, beta, y, incy); 
+}
 
-  switch (trans) {
-  case 'n':
-  case 'N':
-    eTrans = CblasNoTrans;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTrans = CblasTrans;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << trans << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + trans + "'.");
-  }
+template<>
+void ger<float>(int m, int n, const float &alpha, const float *x, int incx, const float *y, int incy, float *a, int lda) {
+  cblas_sger(CblasColMajor, m, n, alpha, x, incx, y, incy, a, lda);
+}
 
-  cblas_dgemv(CblasColMajor, eTrans, m, n, alpha, a, lda, x, incx, beta, y, incy); 
+template<>
+void ger<double>(int m, int n, const double &alpha, const double *x, int incx, const double *y, int incy, double *a, int lda) {
+  cblas_dger(CblasColMajor, m, n, alpha, x, incx, y, incy, a, lda);
 }
 
 // Level 3
 template<>
 void gemm<float>(char transa, char transb, int m, int n, int k, const float &alpha, const float *a, int lda, const float *b, int ldb, const float &beta, float *c, int ldc) {
-  CBLAS_TRANSPOSE eTransA, eTransB;
-
-  switch (transa) {
-  case 'n':
-  case 'N':
-    eTransA = CblasNoTrans;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTransA = CblasTrans;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << transa << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + transa + "'.");
-  }
-
-  switch (transb) {
-  case 'n':
-  case 'N':
-    eTransB = CblasNoTrans;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTransB = CblasTrans;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << transb << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + transb + "'.");
-  }
-
-  cblas_sgemm(CblasColMajor, eTransA, eTransB, m, n, k, alpha, a, lda, b, ldb, beta, c, ldc);
+  cblas_sgemm(CblasColMajor, GetTrans(transa), GetTrans(transb), m, n, k, alpha, a, lda, b, ldb, beta, c, ldc);
 }
 
 template<>
 void gemm<double>(char transa, char transb, int m, int n, int k, const double &alpha, const double *a, int lda, const double *b, int ldb, const double &beta, double *c, int ldc) {
-  CBLAS_TRANSPOSE eTransA, eTransB;
-
-  switch (transa) {
-  case 'n':
-  case 'N':
-    eTransA = CblasNoTrans;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTransA = CblasTrans;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << transa << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + transa + "'.");
-  }
-
-  switch (transb) {
-  case 'n':
-  case 'N':
-    eTransB = CblasNoTrans;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTransB = CblasTrans;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << transb << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + transb + "'.");
-  }
-
-  cblas_dgemm(CblasColMajor, eTransA, eTransB, m, n, k, alpha, a, lda, b, ldb, beta, c, ldc);
+  cblas_dgemm(CblasColMajor, GetTrans(transa), GetTrans(transb), m, n, k, alpha, a, lda, b, ldb, beta, c, ldc);
 }
 
 } // end namespace cpu_blas

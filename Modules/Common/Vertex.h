@@ -248,8 +248,10 @@ public:
       size_t bufferSize = 0;
       const double * const p_dBuffer = (double *)p_clCursor->Value(bufferSize);
 
-      if (bufferSize != clData.GetSize().Product()*sizeof(double))
+      if (bufferSize != clData.GetSize().Product()*sizeof(double)) {
+        std::cerr << GetName() << ": Error: Expected size " << clData.GetSize() << " (" << clData.GetSize().Product() * sizeof(double) << ") but got " << bufferSize << '.' << std::endl;
         return false;
+      }
 
       std::transform(p_dBuffer, p_dBuffer + clData.GetSize().Product(), clData.begin(),
         [](const double &x) -> RealType {

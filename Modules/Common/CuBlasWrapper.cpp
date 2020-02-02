@@ -47,6 +47,23 @@ thread_local bool g_bInitialized = false;
 thread_local cublasHandle_t g_handle = cublasHandle_t();
 #endif // _OPENMP
 
+cublasOperation_t GetTrans(char trans) {
+  switch (trans) {
+  case 'n':
+  case 'N':
+    return CUBLAS_OP_N;
+  case 'c':
+  case 'C':
+  case 't':
+  case 'T':
+    return CUBLAS_OP_T;
+  }
+
+  std::cerr << "Error: Invalid op '" << trans << "'." << std::endl;
+  throw std::runtime_error(std::string("Error: Invalid op '") + trans + "'.");
+  // Not reached
+}
+
 } // end anonymous namespace
 
 // Setup per-thread context
@@ -175,129 +192,33 @@ void amax<double>(int n, const double *x, int incx, int &result) { CheckCuBLASCa
 // Level 2
 template<>
 void gemv<float>(char trans, int m, int n, const float &alpha, const float *a, int lda, const float *x, int incx, const float &beta, float *y, int incy) {
-  cublasOperation_t eTrans;
-
-  switch (trans) {
-  case 'n':
-  case 'N':
-    eTrans = CUBLAS_OP_N;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTrans = CUBLAS_OP_T;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << trans << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + trans + "'.");
-  }
-
-  CheckCuBLASCall(cublasSgemv, g_handle, eTrans, m, n, &alpha, a, lda, x, incx, &beta, y, incy);
+  CheckCuBLASCall(cublasSgemv, g_handle, GetTrans(trans), m, n, &alpha, a, lda, x, incx, &beta, y, incy);
 }
 
 template<>
 void gemv<double>(char trans, int m, int n, const double &alpha, const double *a, int lda, const double *x, int incx, const double &beta, double *y, int incy) {
-  cublasOperation_t eTrans;
+  CheckCuBLASCall(cublasDgemv, g_handle, GetTrans(trans), m, n, &alpha, a, lda, x, incx, &beta, y, incy);
+}
 
-  switch (trans) {
-  case 'n':
-  case 'N':
-    eTrans = CUBLAS_OP_N;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTrans = CUBLAS_OP_T;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << trans << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + trans + "'.");
-  }
+template<> 
+void ger<float>(int m, int n, const float &alpha, const float *x, int incx, const float *y, int incy, float *a, int lda) {
+  CheckCuBLASCall(cublasSger, g_handle, m, n, &alpha, x, incx, y, incy, a, lda);
+}
 
-  CheckCuBLASCall(cublasDgemv, g_handle, eTrans, m, n, &alpha, a, lda, x, incx, &beta, y, incy);
+template<> 
+void ger<double>(int m, int n, const double &alpha, const double *x, int incx, const double *y, int incy, double *a, int lda) {
+  CheckCuBLASCall(cublasDger, g_handle, m, n, &alpha, x, incx, y, incy, a, lda);
 }
 
 // Level 3
 template<>
 void gemm<float>(char transa, char transb, int m, int n, int k, const float &alpha, const float *a, int lda, const float *b, int ldb, const float &beta, float *c, int ldc) {
-  cublasOperation_t eTransA;
-  cublasOperation_t eTransB;
-
-  switch (transa) {
-  case 'n':
-  case 'N':
-    eTransA = CUBLAS_OP_N;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTransA = CUBLAS_OP_T;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << transa << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + transa + "'.");
-  }
-
-  switch (transb) {
-  case 'n':
-  case 'N':
-    eTransB = CUBLAS_OP_N;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTransB = CUBLAS_OP_T;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << transb << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + transb + "'.");
-  }
-
-  CheckCuBLASCall(cublasSgemm, g_handle, eTransA, eTransB, m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc);
+  CheckCuBLASCall(cublasSgemm, g_handle, GetTrans(transa), GetTrans(transb), m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc);
 }
 
 template<>
 void gemm<double>(char transa, char transb, int m, int n, int k, const double &alpha, const double *a, int lda, const double *b, int ldb, const double &beta, double *c, int ldc) {
-  cublasOperation_t eTransA;
-  cublasOperation_t eTransB;
-
-  switch (transa) {
-  case 'n':
-  case 'N':
-    eTransA = CUBLAS_OP_N;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTransA = CUBLAS_OP_T;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << transa << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + transa + "'.");
-  }
-
-  switch (transb) {
-  case 'n':
-  case 'N':
-    eTransB = CUBLAS_OP_N;
-    break;
-  case 'c':
-  case 'C':
-  case 't':
-  case 'T':
-    eTransB = CUBLAS_OP_T;
-    break;
-  default:
-    std::cerr << "Error: Invalid op '" << transb << "'." << std::endl;
-    throw std::runtime_error(std::string("Error: Invalid op '") + transb + "'.");
-  }
-
-  CheckCuBLASCall(cublasDgemm, g_handle, eTransA, eTransB, m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc);
+  CheckCuBLASCall(cublasDgemm, g_handle, GetTrans(transa), GetTrans(transb), m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc);
 }
 
 } // end namespace gpu_blas

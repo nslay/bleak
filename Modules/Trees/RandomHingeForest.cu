@@ -238,7 +238,7 @@ void RandomHingeForestTemplate<RealType, TreeTraitsType>::ForwardGPU() {
   const int iNumLeavesPerTree = clWeights.GetSize()[1];
   const int iInnerWeightsNum = clWeights.GetSize().Product(2);
 
-  const dim3 threadsPerBlock(8,8,8);
+  const dim3 threadsPerBlock(8,16,4);
   const dim3 numBlocks((iOuterNum + threadsPerBlock.x-1)/threadsPerBlock.x, (iNumTrees + threadsPerBlock.y-1)/threadsPerBlock.y, (iInnerDataNum + threadsPerBlock.z-1)/threadsPerBlock.z);
 
   ForwardKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(p_inData, p_thresholds, p_ordinals, p_weights, p_outData, 
@@ -284,7 +284,7 @@ void RandomHingeForestTemplate<RealType, TreeTraitsType>::BackwardGPU() {
   const int iNumLeavesPerTree = clWeights.GetSize()[1];
   const int iInnerWeightsNum = clWeights.GetSize().Product(2);
 
-  const dim3 threadsPerBlock(8,8,8);
+  const dim3 threadsPerBlock(8,16,4);
   const dim3 numBlocks((iOuterNum + threadsPerBlock.x-1)/threadsPerBlock.x, (iNumTrees + threadsPerBlock.y-1)/threadsPerBlock.y, (iInnerDataNum + threadsPerBlock.z-1)/threadsPerBlock.z);
 
   BackwardDataKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(p_inData, p_thresholds, p_ordinals, p_weights, p_outDataGradient, p_inDataGradient, 

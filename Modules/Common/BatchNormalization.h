@@ -130,7 +130,7 @@ public:
     const int iInnerNum = clInData.GetSize().Product(2);
 
     const RealType * const p_inData = clInData.data();
-    RealType * const p_outData = clOutData.data();
+    RealType * const p_outData = clOutData.data_no_sync();
     const RealType * const p_means = clMeans.data();
     const RealType * const p_vars = clVars.data();
 
@@ -166,7 +166,7 @@ public:
 
     const RealType * const p_inData = clInData.data();
     RealType * const p_inDataGradient = clInDataGradient.data();
-    const RealType * const p_outData = clOutData.data();
+    //const RealType * const p_outData = clOutData.data();
     const RealType * const p_outDataGradient = clOutDataGradient.data();
     RealType * const p_means = clMeans.data();
     RealType * const p_vars = clVars.data();

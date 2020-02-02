@@ -78,6 +78,9 @@ void amax(int n, const RealType *x, int incx, int &result); // For cuBLAS
 template<typename RealType>
 void gemv(char trans, int m, int n, const RealType &alpha, const RealType *a, int lda, const RealType *x, int incx, const RealType &beta, RealType *y, int incy);
 
+template<typename RealType>
+void ger(int m, int n, const RealType &alpha, const RealType *x, int incx, const RealType *y, int incy, RealType *a, int lda);
+
 // Level 3
 template<typename RealType>
 void gemm(char transa, char transb, int m, int n, int k, const RealType &alpha, const RealType *a, int lda, const RealType *b, int ldb, const RealType &beta, RealType *c, int ldc);
@@ -130,6 +133,9 @@ void amax(int n, const RealType *x, int incx, int &result); // For cuBLAS
 // Level 2
 template<typename RealType>
 void gemv(char trans, int m, int n, const RealType &alpha, const RealType *a, int lda, const RealType *x, int incx, const RealType &beta, RealType *y, int incy);
+
+template<typename RealType>
+void ger(int m, int n, const RealType &alpha, const RealType *x, int incx, const RealType *y, int incy, RealType *a, int lda);
 
 // Level 3
 template<typename RealType>
