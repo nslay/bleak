@@ -82,7 +82,7 @@ ${BLAS_SOURCES}
 InitializeCommonModule.cpp
 
 CUDA_SOURCES
-Array.cu
+Array.cu BatchNormalization.cu
 
 LIBRARIES lmdb ${BLAS_LIBRARIES}
 INCLUDE_DIRECTORIES ${BLAS_INCLUDE_DIRS}
