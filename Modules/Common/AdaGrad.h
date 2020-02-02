@@ -82,6 +82,13 @@ public:
 
 protected:
   virtual void CollectGradients() override {
+#ifdef BLEAK_USE_CUDA
+    if (GetUseGPU()) {
+      CollectGradientsGPU();
+      return;
+    }
+#endif // BLEAK_USE_CUDA
+
     const RealType scale = -GetLearningRate() / RealType(GetNumBatchesPerIteration());
 
     for(auto &clTuple : m_vEdgeAndHistory) {
@@ -106,14 +113,7 @@ protected:
       //  return std::hypot(gradHistory,grad);
       //});
 
-      if (GetUseGPU()) {
-#ifdef BLEAK_USE_CUDA
-        gpu_blas::axpy(clGradient.GetSize().Count(), scaleForThisEdge, clGradient.data(GPU), 1, clGradientSum.data(GPU), 1);
-#endif // BLEAK_USE_CUDA
-      }
-      else {
-        cpu_blas::axpy(clGradient.GetSize().Count(), scaleForThisEdge, clGradient.data(), 1, clGradientSum.data(), 1);
-      }
+      cpu_blas::axpy(iNumElements, scaleForThisEdge, clGradient.data(), 1, clGradientSum.data(), 1);
 
       //std::transform(clGradient.begin(),clGradient.end(),clGradientSum.begin(),clGradientSum.begin(),
       //  [&scaleForThisEdge](const RealType &grad,const RealType &gradSum) -> RealType {
@@ -123,6 +123,13 @@ protected:
   }
 
   virtual void GradientUpdate() override {
+#ifdef BLEAK_USE_CUDA
+    if (GetUseGPU()) {
+      GradientUpdateGPU();
+      return;
+    }
+#endif // BLEAK_USE_CUDA
+
     for(auto &clTuple : m_vEdgeAndHistory) {
       ArrayType &clData = std::get<0>(clTuple)->GetData();
       ArrayType &clGradientSum = *std::get<1>(clTuple);
@@ -132,7 +139,7 @@ protected:
       const RealType * const p_gradientSum = clGradientSum.data();
       const RealType * const p_gradientHistory = clGradientHistory.data();
 
-      const int iNumElements = clData.GetSize().Product();
+      const int iNumElements = clData.GetSize().Count();
 
 #pragma omp parallel for
       for (int i = 0; i < iNumElements; ++i) {
@@ -146,6 +153,11 @@ protected:
 
 private:
   GradientHistoryVectorType m_vEdgeAndHistory;
+
+#ifdef BLEAK_USE_CUDA
+  void CollectGradientsGPU();
+  void GradientUpdateGPU();
+#endif // BLEAK_USE_CUDA
 
   bool PrepareGradientHistory() {
     m_vEdgeAndHistory.clear();
