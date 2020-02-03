@@ -138,16 +138,20 @@ public:
       clOutData.Fill(RealType());
     }
     else {
-      // Usually iInnerNum == 1 or is very small
-      for (int i = 0; i < iOuterNum; ++i) {
-        cpu_blas::copy(iNumOutputs, p_bias, 1, p_outData + i*iNumOutputs, iInnerNum);
+      if (iInnerNum == 1) {
+        // p_outData is BatchSize x iNumOutputs
+        // Need to stripe the copies
+        for (int i = 0; i < iOuterNum; ++i)
+          cpu_blas::copy(iNumOutputs, p_bias, 1, p_outData + i*iNumOutputs, 1);
       }
-
-      //for (int i = 0; i < iOuterNum; ++i) {
-      //  for (int j = 0; j < iNumOutputs; ++j) {
-      //    cpu_blas::copy(iInnerNum, p_bias + j, 0, p_outData + (i*iNumOutputs + j)*iInnerNum, 1);
-      //  }
-      //}
+      else {
+        // p_outData is BatchSize x iNumOutputs x iInnerNum
+        // Need to fill each iNumOutput with InnerNum copies of bias
+        for (int i = 0; i < iOuterNum; ++i) {
+          for (int j = 0; j < iNumOutputs; ++j)
+            cpu_blas::copy(iInnerNum, p_bias + j, 0, p_outData + (i*iNumOutputs + j)*iInnerNum, 1);
+        }
+      }
 
       //for (int i = 0; i < iOuterNum; ++i) {
       //  for (int k = 0; k < iInnerNum; ++k) {
@@ -238,10 +242,22 @@ public:
     const int iInnerNum = clInData.GetSize().Product(2);
 
     if (p_biasGradient != nullptr) {
-      // iInnerNum is usually small
 
-      for (int i = 0; i < iOuterNum; ++i) {
-        cpu_blas::axpy(iNumOutputs, RealType(1), p_outDataGradient + i*iNumOutputs, iInnerNum, p_biasGradient, 1);
+      if (iInnerNum == 1) {
+        // p_outDataGradient is BatchSize x iNumOutputs
+        // So sum each iNumOutput elements into biasGradient
+
+        for (int i = 0; i < iOuterNum; ++i)
+          cpu_blas::axpy(iNumOutputs, RealType(1), p_outDataGradient + i*iNumOutputs, 1, p_biasGradient, 1);
+      }
+      else {
+        // p_outDataGradient is BatchSize x iNumOutputs x iInnerNum
+        // We need to sum the iInnerNum elements into each p_biasGradient individually
+
+        for (int i = 0; i < iOuterNum; ++i) {
+          for (int j = 0; j < iNumOutputs; ++j)
+            cpu_blas::axpy(iInnerNum, RealType(1), p_outDataGradient + (i*iNumOutputs + j)*iInnerNum, 1, p_biasGradient + j, 0);
+        }
       }
 
       //for (int i = 0; i < iOuterNum; ++i) {
@@ -370,9 +386,19 @@ public:
       clOutData.Fill(RealType());
     }
     else {
-      // Usually iInnerNum == 1 or is very small
-      for (int i = 0; i < iOuterNum; ++i) {
-        gpu_blas::copy(iNumOutputs, p_bias, 1, p_outData + i*iNumOutputs, iInnerNum);
+      if (iInnerNum == 1) {
+        // p_outData is BatchSize x iNumOutputs
+        // Need to stripe the copies
+        for (int i = 0; i < iOuterNum; ++i)
+          gpu_blas::copy(iNumOutputs, p_bias, 1, p_outData + i*iNumOutputs, 1);
+      }
+      else {
+        // p_outData is BatchSize x iNumOutputs x iInnerNum
+        // Need to fill each iNumOutput with InnerNum copies of bias
+        for (int i = 0; i < iOuterNum; ++i) {
+          for (int j = 0; j < iNumOutputs; ++j)
+            gpu_blas::copy(iInnerNum, p_bias + j, 0, p_outData + (i*iNumOutputs + j)*iInnerNum, 1);
+        }
       }
     }
 
@@ -446,10 +472,21 @@ public:
     const int iInnerNum = clInData.GetSize().Product(2);
 
     if (p_biasGradient != nullptr) {
-      // iInnerNum is usually small
+      if (iInnerNum == 1) {
+        // p_outDataGradient is BatchSize x iNumOutputs
+        // So sum each iNumOutput elements into biasGradient
 
-      for (int i = 0; i < iOuterNum; ++i) {
-        gpu_blas::axpy(iNumOutputs, RealType(1), p_outDataGradient + i*iNumOutputs, iInnerNum, p_biasGradient, 1);
+        for (int i = 0; i < iOuterNum; ++i)
+          gpu_blas::axpy(iNumOutputs, RealType(1), p_outDataGradient + i*iNumOutputs, 1, p_biasGradient, 1);
+      }
+      else {
+        // p_outDataGradient is BatchSize x iNumOutputs x iInnerNum
+        // We need to sum the iInnerNum elements into each p_biasGradient individually
+
+        for (int i = 0; i < iOuterNum; ++i) {
+          for (int j = 0; j < iNumOutputs; ++j)
+            gpu_blas::axpy(iInnerNum, RealType(1), p_outDataGradient + (i*iNumOutputs + j)*iInnerNum, 1, p_biasGradient + j, 0);
+        }
       }
 
       //for (int i = 0; i < iOuterNum; ++i) {
