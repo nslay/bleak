@@ -55,7 +55,7 @@ namespace bleak {
 namespace {
 
 template<typename RealType>
-__global__ void ForwardKernel(const RealType *d_matrix, RealType *d_outData, int iRows, int iCols) {
+__global__ void MaxForwardKernel(const RealType *d_matrix, RealType *d_outData, int iRows, int iCols) {
   const int k = blockIdx.x * blockDim.x + threadIdx.x;
 
   if (k < iRows) {
@@ -70,7 +70,7 @@ __global__ void ForwardKernel(const RealType *d_matrix, RealType *d_outData, int
 }
 
 template<typename RealType>
-__global__ void BackwardKernel(const RealType *d_matrix, const int *d_indexMatrix, const RealType *d_outDataGradient, RealType *d_inDataGradient, int iRows, int iCols) {
+__global__ void MaxBackwardKernel(const RealType *d_matrix, const int *d_indexMatrix, const RealType *d_outDataGradient, RealType *d_inDataGradient, int iRows, int iCols) {
   const int k = blockIdx.x * blockDim.x + threadIdx.x;
 
   if (k < iRows) {
@@ -90,6 +90,23 @@ __global__ void BackwardKernel(const RealType *d_matrix, const int *d_indexMatri
 
     if (index >= 0)
       atomicAdd(d_inDataGradient + index, d_outDataGradient[k]);
+  }
+}
+
+template<typename RealType>
+__global__ void MeanBackwardKernel(const RealType *d_matrix, const int *d_indexMatrix, const RealType *d_outDataGradient, RealType *d_inDataGradient, int iRows, int iCols) {
+  const int k = blockIdx.x * blockDim.x + threadIdx.x;
+
+  if (k < iRows) {
+    const RealType * const d_row = d_matrix + k*iCols;
+    const int * const d_indexRow = d_indexMatrix + k*iCols;
+    const RealType grad = d_outDataGradient[k] / RealType(iCols);
+
+    for (int i = 0; i < iCols; ++i) {
+      const int index = d_indexRow[i];
+      if (index >= 0)
+        atomicAdd(d_inDataGradient + index, grad);
+    }
   }
 }
 
@@ -121,7 +138,7 @@ void MaxPooling<RealType, Dimension>::ForwardGPU() {
     for (int j = 0; j < iNumChannels; ++j) {
       m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + (i*iNumChannels + j)*iInChannelSize, m_clIndexMatrix.data(GPU), clImageSize.data());
 
-      ForwardKernel<<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), p_outData + (i*iNumChannels + j)*m_iRows, m_iRows, m_iCols);
+      MaxForwardKernel<<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), p_outData + (i*iNumChannels + j)*m_iRows, m_iRows, m_iCols);
     }
   }
 }
@@ -157,7 +174,75 @@ void MaxPooling<RealType, Dimension>::BackwardGPU() {
     for (int j = 0; j < iNumChannels; ++j) {
       m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + (i*iNumChannels + j)*iInChannelSize, m_clIndexMatrix.data(GPU), clImageSize.data());
 
-      BackwardKernel<<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), m_clIndexMatrix.data(GPU), 
+      MaxBackwardKernel<<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), m_clIndexMatrix.data(GPU), 
+        p_outDataGradient + (i*iNumChannels + j)*m_iRows, p_inDataGradient + (i*iNumChannels + j)*iInChannelSize, m_iRows, m_iCols);
+    }
+  }
+}
+
+template<typename RealType, unsigned int Dimension>
+void MeanPooling<RealType, Dimension>::ForwardGPU() {
+  bleakGetAndCheckInput(p_clInData, "inData");
+  bleakGetAndCheckOutput(p_clOutData, "outData");
+
+  const ArrayType &clInData = p_clInData->GetData();
+  ArrayType &clOutData = p_clOutData->GetData();
+
+  const RealType * const p_inData = clInData.data(GPU);
+  RealType * const p_outData = clOutData.data_no_sync(GPU);
+
+  Size clImageSize = clInData.GetSize().SubSize(1);
+  clImageSize[0] = 1; // One channel at a time!
+
+  const int iOuterNum = clInData.GetSize()[0];
+  const int iNumChannels = clInData.GetSize()[1];
+  const int iInChannelSize = clInData.GetSize().Product(2);
+  //const int iOutChannelSize = clOutData.GetSize().Product(2); // Same as m_iRows
+
+  //const dim3 threadsPerBlock(256);
+  //const dim3 numBlocks((m_iRows + threadsPerBlock.x-1) / threadsPerBlock.x);
+
+  for (int i = 0; i < iOuterNum; ++i) {
+    for (int j = 0; j < iNumChannels; ++j) {
+      m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + (i*iNumChannels + j)*iInChannelSize, m_clIndexMatrix.data(GPU), clImageSize.data());
+
+      gpu_blas::gemv('T', m_iCols, m_iRows, RealType(1)/RealType(m_iCols), m_clMatrix.data(GPU), m_iCols, m_clOnes.data(GPU), 1, RealType(0), p_outData + (i*iNumChannels + j)*m_iRows, 1);
+    }
+  }
+}
+
+template<typename RealType, unsigned int Dimension>
+void MeanPooling<RealType, Dimension>::BackwardGPU() {
+  bleakGetAndCheckInput(p_clInData, "inData");
+  bleakGetAndCheckOutput(p_clOutData, "outData");
+
+  const ArrayType &clInData = p_clInData->GetData();
+  ArrayType &clInDataGradient = p_clInData->GetGradient();
+  const ArrayType &clOutDataGradient = p_clOutData->GetGradient();
+
+  if (!clInDataGradient.Valid())
+    return; // Nothing to do
+
+  const RealType * const p_inData = clInData.data(GPU);
+  RealType * const p_inDataGradient = clInDataGradient.data(GPU);
+  const RealType * const p_outDataGradient = clOutDataGradient.data(GPU);
+
+  Size clImageSize = clInData.GetSize().SubSize(1);
+  clImageSize[0] = 1; // One channel at a time!
+
+  const int iOuterNum = clInData.GetSize()[0];
+  const int iNumChannels = clInData.GetSize()[1];
+  const int iInChannelSize = clInData.GetSize().Product(2);
+  //const int iOutChannelSize = clOutData.GetSize().Product(2); // Same as m_iRows
+
+  const dim3 threadsPerBlock(256);
+  const dim3 numBlocks((m_iRows + threadsPerBlock.x-1) / threadsPerBlock.x);
+
+  for (int i = 0; i < iOuterNum; ++i) {
+    for (int j = 0; j < iNumChannels; ++j) {
+      m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + (i*iNumChannels + j)*iInChannelSize, m_clIndexMatrix.data(GPU), clImageSize.data());
+
+      MeanBackwardKernel<<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), m_clIndexMatrix.data(GPU), 
         p_outDataGradient + (i*iNumChannels + j)*m_iRows, p_inDataGradient + (i*iNumChannels + j)*iInChannelSize, m_iRows, m_iCols);
     }
   }
@@ -170,5 +255,13 @@ template class MaxPooling<float, 3>;
 template class MaxPooling<double, 1>;
 template class MaxPooling<double, 2>;
 template class MaxPooling<double, 3>;
+
+template class MeanPooling<float, 1>;
+template class MeanPooling<float, 2>;
+template class MeanPooling<float, 3>;
+
+template class MeanPooling<double, 1>;
+template class MeanPooling<double, 2>;
+template class MeanPooling<double, 3>;
 
 } // end namespace bleak

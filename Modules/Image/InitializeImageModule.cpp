@@ -42,6 +42,9 @@ void InitializeImageModuleTemplate() {
   clVertexFactory.template Register<MaxPooling1D<RealType>>();
   clVertexFactory.template Register<MaxPooling2D<RealType>>();
   clVertexFactory.template Register<MaxPooling3D<RealType>>();
+  clVertexFactory.template Register<MeanPooling1D<RealType>>();
+  clVertexFactory.template Register<MeanPooling2D<RealType>>();
+  clVertexFactory.template Register<MeanPooling3D<RealType>>();
 }
 
 void InitializeImageModule() {

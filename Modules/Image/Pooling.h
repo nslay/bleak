@@ -31,6 +31,7 @@
 #include <algorithm>
 #include "Vertex.h"
 #include "ImageToMatrix.h"
+#include "BlasWrapper.h"
 
 namespace bleak {
 
@@ -283,6 +284,151 @@ class MaxPooling3D : public MaxPooling<RealType, 3> {
 public:
   typedef MaxPooling<RealType, 3> WorkAroundVarArgsType;
   bleakNewVertex(MaxPooling3D, WorkAroundVarArgsType);
+};
+
+template<typename RealType, unsigned int Dimension>
+class MeanPooling : public Pooling<RealType, Dimension> {
+public:
+  typedef Pooling<RealType, Dimension> WorkAroundVarArgsType;
+
+  bleakNewAbstractVertex(MeanPooling, WorkAroundVarArgsType);
+
+  bleakForwardVertexTypedefs();
+
+  using SuperType::m_clMatrix;
+  using SuperType::m_clIndexMatrix;
+  using SuperType::m_clImageToMatrix;
+  using SuperType::m_iRows;
+  using SuperType::m_iCols;
+
+  virtual ~MeanPooling() = default;
+
+  virtual bool Initialize() override {
+    if (!SuperType::Initialize())
+      return false;
+
+    const Size clOnesSize = { m_iCols };
+    m_clOnes.SetSize(clOnesSize);
+    m_clOnes.Allocate();
+    m_clOnes.Fill(RealType(1));
+
+    return true;
+  }
+
+  virtual void ForwardCPU() override {
+    bleakGetAndCheckInput(p_clInData, "inData");
+    bleakGetAndCheckOutput(p_clOutData, "outData");
+
+    const ArrayType &clInData = p_clInData->GetData();
+    ArrayType &clOutData = p_clOutData->GetData();
+
+    const RealType * const p_inData = clInData.data();
+    RealType * const p_outData = clOutData.data_no_sync();
+
+    Size clImageSize = clInData.GetSize().SubSize(1);
+    clImageSize[0] = 1; // One channel at a time!
+
+    const int iOuterNum = clInData.GetSize()[0];
+    const int iNumChannels = clInData.GetSize()[1];
+    const int iInChannelSize = clInData.GetSize().Product(2);
+    //const int iOutChannelSize = clOutData.GetSize().Product(2); // Same as m_iRows
+
+    // in C/C++
+    // m_clMatrix is m_iRows x m_iCols
+    // Each channel of p_outData is m_iRows
+    //
+    // We would want m_clMatrix * 1/N = p_outData
+    //
+    // In Fortran m_clMatrix is m_iCols x m_iRows
+    // We would want m_clMatrix^T * 1/N = p_outData
+
+    for (int i = 0; i < iOuterNum; ++i) {
+      for (int j = 0; j < iNumChannels; ++j) {
+        m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iNumChannels + j)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
+
+        cpu_blas::gemv('T', m_iCols, m_iRows, RealType(1)/RealType(m_iCols), m_clMatrix.data(), m_iCols, m_clOnes.data(), 1, RealType(0), p_outData + (i*iNumChannels + j)*m_iRows, 1);
+      }
+    }
+  }
+
+  virtual void BackwardCPU() override {
+    bleakGetAndCheckInput(p_clInData, "inData");
+    bleakGetAndCheckOutput(p_clOutData, "outData");
+
+    const ArrayType &clInData = p_clInData->GetData();
+    ArrayType &clInDataGradient = p_clInData->GetGradient();
+    const ArrayType &clOutDataGradient = p_clOutData->GetGradient();
+
+    if (!clInDataGradient.Valid())
+      return; // Nothing to do
+
+    const RealType * const p_inData = clInData.data();
+    RealType * const p_inDataGradient = clInDataGradient.data();
+    const RealType * const p_outDataGradient = clOutDataGradient.data();
+
+    Size clImageSize = clInData.GetSize().SubSize(1);
+    clImageSize[0] = 1; // One channel at a time!
+
+    const int iOuterNum = clInData.GetSize()[0];
+    const int iNumChannels = clInData.GetSize()[1];
+    const int iInChannelSize = clInData.GetSize().Product(2);
+    //const int iOutChannelSize = clOutData.GetSize().Product(2); // Same as m_iRows
+
+    for (int i = 0; i < iOuterNum; ++i) {
+      for (int j = 0; j < iNumChannels; ++j) {
+        m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iNumChannels + j)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
+
+#pragma omp parallel for
+        for (int k = 0; k < m_iRows; ++k) {
+          const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
+          const int * const p_indexRow = m_clIndexMatrix.data() + k*m_iCols;
+
+          const RealType grad = p_outDataGradient[(i*iNumChannels + j)*m_iRows + k]/RealType(m_iCols);
+
+          for (int l = 0; l < m_iCols; ++l) {
+            const int index = p_indexRow[l];
+
+            if (index >= 0) {
+#pragma omp atomic
+              p_inDataGradient[(i*iNumChannels + j)*iInChannelSize + index] += grad;
+            }
+          }
+        }
+      }
+    }
+  }
+
+#ifdef BLEAK_USE_CUDA
+  virtual void ForwardGPU() override;
+  virtual void BackwardGPU() override;
+#endif // BLEAK_USE_CUDA
+
+protected:
+  MeanPooling() = default;
+
+private:
+  ArrayType m_clOnes;
+};
+
+template<typename RealType>
+class MeanPooling1D : public MeanPooling<RealType, 1> {
+public:
+  typedef MeanPooling<RealType, 1> WorkAroundVarArgsType;
+  bleakNewVertex(MeanPooling1D, WorkAroundVarArgsType);
+};
+
+template<typename RealType>
+class MeanPooling2D : public MeanPooling<RealType, 2> {
+public:
+  typedef MeanPooling<RealType, 2> WorkAroundVarArgsType;
+  bleakNewVertex(MeanPooling2D, WorkAroundVarArgsType);
+};
+
+template<typename RealType>
+class MeanPooling3D : public MeanPooling<RealType, 3> {
+public:
+  typedef MeanPooling<RealType, 3> WorkAroundVarArgsType;
+  bleakNewVertex(MeanPooling3D, WorkAroundVarArgsType);
 };
 
 } // end namespace bleak

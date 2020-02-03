@@ -36,4 +36,13 @@ template class MaxPooling2D<double>;
 template class MaxPooling3D<float>;
 template class MaxPooling3D<double>;
 
+template class MeanPooling1D<float>;
+template class MeanPooling1D<double>;
+
+template class MeanPooling2D<float>;
+template class MeanPooling2D<double>;
+
+template class MeanPooling3D<float>;
+template class MeanPooling3D<double>;
+
 } // end namespace bleak
