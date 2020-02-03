@@ -179,7 +179,7 @@ public:
 
       // p_outData = p_weights^T * p_inData = iNumOutputs x iOuterNum
 
-      cpu_blas::gemm('T', 'N', iNumOutputs, iOuterNum, iNumChannels, RealType(1), p_weights, iNumChannels, p_inData, iNumChannels, RealType(0), p_outData, iNumOutputs);
+      cpu_blas::gemm('T', 'N', iNumOutputs, iOuterNum, iNumChannels, RealType(1), p_weights, iNumChannels, p_inData, iNumChannels, RealType(1), p_outData, iNumOutputs);
     }
     else {
       // In C/C++ the following are row major (ignoring batch size)
@@ -197,7 +197,7 @@ public:
       // p_outData = p_inData * p_weights = iInnerNum x iNumOutputs
 
       for (int i = 0; i < iOuterNum; ++i) {
-        cpu_blas::gemm('N', 'N', iInnerNum, iNumOutputs, iNumChannels, RealType(1), p_inData + i*iNumChannels*iInnerNum, iInnerNum, p_weights, iNumChannels, RealType(0), p_outData + i*iNumOutputs*iInnerNum, iInnerNum);
+        cpu_blas::gemm('N', 'N', iInnerNum, iNumOutputs, iNumChannels, RealType(1), p_inData + i*iNumChannels*iInnerNum, iInnerNum, p_weights, iNumChannels, RealType(1), p_outData + i*iNumOutputs*iInnerNum, iInnerNum);
       }
     }
 
@@ -419,7 +419,7 @@ public:
 
       // p_outData = p_weights^T * p_inData = iNumOutputs x iOuterNum
 
-      gpu_blas::gemm('T', 'N', iNumOutputs, iOuterNum, iNumChannels, RealType(1), p_weights, iNumChannels, p_inData, iNumChannels, RealType(0), p_outData, iNumOutputs);
+      gpu_blas::gemm('T', 'N', iNumOutputs, iOuterNum, iNumChannels, RealType(1), p_weights, iNumChannels, p_inData, iNumChannels, RealType(1), p_outData, iNumOutputs);
     }
     else {
       // In C/C++ the following are row major (ignoring batch size)
@@ -437,7 +437,7 @@ public:
       // p_outData = p_inData * p_weights = iInnerNum x iNumOutputs
 
       for (int i = 0; i < iOuterNum; ++i) {
-        gpu_blas::gemm('N', 'N', iInnerNum, iNumOutputs, iNumChannels, RealType(1), p_inData + i*iNumChannels*iInnerNum, iInnerNum, p_weights, iNumChannels, RealType(0), p_outData + i*iNumOutputs*iInnerNum, iInnerNum);
+        gpu_blas::gemm('N', 'N', iInnerNum, iNumOutputs, iNumChannels, RealType(1), p_inData + i*iNumChannels*iInnerNum, iInnerNum, p_weights, iNumChannels, RealType(1), p_outData + i*iNumOutputs*iInnerNum, iInnerNum);
       }
     }
   }
