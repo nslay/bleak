@@ -30,6 +30,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <utility>
 #include <unordered_map>
 #include <fstream>
 #include "InitializeModules.h"
@@ -39,7 +40,7 @@
 #include "bsdgetopt.h"
 
 void Usage(const char *p_cArg0) {
-  std::cerr << "Usage: " << p_cArg0 << " [-h] [-f] [-t databaseType] [-k numClasses] -o trainOutputPath [-v validationOutputPath] [-V validationRatio] batchFile [batchFile2 ...]" << std::endl;
+  std::cerr << "Usage: " << p_cArg0 << " [-a] [-h] [-f] [-t databaseType] [-k numClasses] -o trainOutputPath [-v validationOutputPath] [-V validationRatio] batchFile [batchFile2 ...]" << std::endl;
   exit(1);
 }
 
@@ -60,6 +61,7 @@ std::shared_ptr<bleak::Database> OpenDatabase(const std::string &strOutputPath, 
 }
 
 bool LoadCIFAR(std::vector<std::vector<double>> &vData, const std::string &strImagesFile, unsigned int uiNumClasses);
+void FlipImages(std::vector<std::vector<double>> &vData); // Horizontal flip
 
 int main(int argc, char **argv) {
   bleak::InitializeModules();
@@ -70,12 +72,16 @@ int main(int argc, char **argv) {
   std::string strTrainOutputPath;
   std::string strValidationOutputPath;
   bool bShuffle = false;
+  bool bAugment = false;
   unsigned int uiNumClasses = 0;
-  double dValidationRatio = 0.2;
+  double dValidationRatio = 0.0;
 
   int c = 0;
-  while ((c = getopt(argc, argv, "fhk:o:t:v:V:")) != -1) {
+  while ((c = getopt(argc, argv, "afhk:o:t:v:V:")) != -1) {
     switch (c) {
+    case 'a':
+      bAugment = true;
+      break;
     case 'f':
       bShuffle = true;
       break;
@@ -163,11 +169,29 @@ int main(int argc, char **argv) {
   if (bShuffle)
     std::shuffle(vData.begin(), vData.end(), bleak::GetGenerator());
 
-  const size_t validationSize = (size_t)(dValidationRatio * vData.size());
-  const size_t trainBegin = 0;
-  const size_t trainEnd = vData.size() - validationSize;
-  const size_t validationBegin = trainEnd;
-  const size_t validationEnd = vData.size();
+  size_t validationSize = (size_t)(dValidationRatio * vData.size());
+  size_t trainBegin = 0;
+  size_t trainEnd = vData.size() - validationSize;
+  size_t validationBegin = trainEnd;
+  size_t validationEnd = vData.size();
+
+  if (bAugment) {
+    std::cout << "Info: Augmenting with flipped images ..." << std::endl;
+
+    FlipImages(vData);
+
+    // vData is now double the size with original0, flipped0, original1, flipped1, etc...
+    trainBegin *= 2;
+    trainEnd *= 2;
+    validationBegin *= 2;
+    validationEnd *= 2;
+
+    // Shuffle again within training/validation sets (can't pollute training with validation and vice versa!)
+    if (bShuffle) {
+      std::shuffle(vData.begin() + trainBegin, vData.begin() + trainEnd, bleak::GetGenerator());
+      std::shuffle(vData.begin() + validationBegin, vData.begin() + validationEnd, bleak::GetGenerator());
+    }
+  }
 
   std::cout << "Info: Writing training entries..." << std::endl;
 
@@ -285,4 +309,34 @@ bool LoadCIFAR(std::vector<std::vector<double>> &vData, const std::string &strIm
   }
 
   return true;
+}
+
+void FlipImages(std::vector<std::vector<double>> &vData) {
+  if (vData.empty() || vData[0].size() != 3073)
+    return;
+
+  std::vector<std::vector<double>> vCombined;
+  vCombined.reserve(2*vData.size());
+
+  std::vector<double> vNewRow(3073);
+
+  for (auto &vRow : vData) {
+    vNewRow[0] = vRow[0];
+
+    const double * const p_dImage = vRow.data()+1;
+    double * const p_dNewImage = vNewRow.data()+1;
+
+    for (int c = 0; c < 3; ++c) {
+      for (int y = 0; y < 32; ++y) {
+        for (int x = 0; x < 32; ++x) {
+          p_dNewImage[(c*32 + y)*32 + 31 - x] = p_dImage[(c*32 + y)*32 + x];
+        }
+      }
+    }
+
+    vCombined.push_back(std::move(vRow));
+    vCombined.push_back(vNewRow);
+  }
+
+  vData.swap(vCombined);
 }
