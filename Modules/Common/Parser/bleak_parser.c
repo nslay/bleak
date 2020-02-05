@@ -140,6 +140,13 @@ void bleak_parser_free(bleak_parser *p_stParser) {
 
   for ( ; i >= 0; --i) {
     free(p_stParser->a_cDirStack[i]);
+
+    /* lex does not close files */
+    if (p_stParser->a_stIncludeStack[i]->yy_input_file != NULL) {
+      fclose(p_stParser->a_stIncludeStack[i]->yy_input_file);
+      p_stParser->a_stIncludeStack[i]->yy_input_file = NULL;
+    }
+
     yy_delete_buffer(p_stParser->a_stIncludeStack[i], p_stParser->lexScanner);
   }
 

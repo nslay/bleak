@@ -62,6 +62,7 @@ void Array<RealType>::Fill(const RealType &value) {
 // Instantiate to pull in the above function
 template class Array<float>;
 template class Array<double>;
+template class Array<int>;
 
 } // end namespace bleak
 

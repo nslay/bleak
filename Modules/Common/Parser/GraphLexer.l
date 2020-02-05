@@ -98,6 +98,11 @@
     yyterminate();
   }
   else {
+    /* lex does not close files */
+    if (YY_CURRENT_BUFFER->yy_input_file != NULL) {
+      fclose(YY_CURRENT_BUFFER->yy_input_file);
+      YY_CURRENT_BUFFER->yy_input_file = NULL;
+    }
     yy_delete_buffer(YY_CURRENT_BUFFER, yyscanner);
 
     /* We decremented above! */

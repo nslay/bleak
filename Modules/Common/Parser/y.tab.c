@@ -5,7 +5,7 @@
 #define YYBYACC 1
 #define YYMAJOR 1
 #define YYMINOR 9
-#define YYPATCH 20170709
+#define YYPATCH 20191125
 
 #define YYEMPTY        (-1)
 #define yyclearin      (yychar = YYEMPTY)
@@ -349,8 +349,9 @@ static const char *const yyrule[] = {
 };
 #endif
 
+#if YYDEBUG
 int      yydebug;
-int      yynerrs;
+#endif
 
 #if defined(YYLTYPE) || defined(YYLTYPE_IS_DECLARED)
 #ifndef YYLLOC_DEFAULT
@@ -359,17 +360,17 @@ do \
 { \
     if (n == 0) \
     { \
-        (loc).first_line   = ((rhs)[-1]).last_line; \
-        (loc).first_column = ((rhs)[-1]).last_column; \
-        (loc).last_line    = ((rhs)[-1]).last_line; \
-        (loc).last_column  = ((rhs)[-1]).last_column; \
+        (loc).first_line   = YYRHSLOC(rhs, 0).last_line; \
+        (loc).first_column = YYRHSLOC(rhs, 0).last_column; \
+        (loc).last_line    = YYRHSLOC(rhs, 0).last_line; \
+        (loc).last_column  = YYRHSLOC(rhs, 0).last_column; \
     } \
     else \
     { \
-        (loc).first_line   = ((rhs)[ 0 ]).first_line; \
-        (loc).first_column = ((rhs)[ 0 ]).first_column; \
-        (loc).last_line    = ((rhs)[n-1]).last_line; \
-        (loc).last_column  = ((rhs)[n-1]).last_column; \
+        (loc).first_line   = YYRHSLOC(rhs, 1).first_line; \
+        (loc).first_column = YYRHSLOC(rhs, 1).first_column; \
+        (loc).last_line    = YYRHSLOC(rhs, n).last_line; \
+        (loc).last_column  = YYRHSLOC(rhs, n).last_column; \
     } \
 } while (0)
 #endif /* YYLLOC_DEFAULT */
@@ -437,7 +438,7 @@ void yyerror(bleak_parser *p_stParser, yyscan_t scanner, const char *p_cErrorMsg
   fputc('\n', stderr);
 }
 
-#line 441 "y.tab.c"
+#line 442 "y.tab.c"
 
 /* Release memory associated with symbol. */
 #if ! defined YYDESTRUCT_IS_DECLARED
@@ -450,17 +451,17 @@ YYDESTRUCT_DECL()
 #line 104 "GraphGrammar.y"
 	{ free((*val).p_cValue); }
 	break;
-#line 454 "y.tab.c"
+#line 455 "y.tab.c"
 	case 267:
 #line 104 "GraphGrammar.y"
 	{ free((*val).p_cValue); }
 	break;
-#line 459 "y.tab.c"
+#line 460 "y.tab.c"
 	case 268:
 #line 104 "GraphGrammar.y"
 	{ free((*val).p_cValue); }
 	break;
-#line 464 "y.tab.c"
+#line 465 "y.tab.c"
 	case 271:
 #line 84 "GraphGrammar.y"
 	{ 
@@ -468,12 +469,12 @@ YYDESTRUCT_DECL()
     bleak_graph_free((*val).p_stGraph); 
 }
 	break;
-#line 472 "y.tab.c"
+#line 473 "y.tab.c"
 	case 272:
 #line 104 "GraphGrammar.y"
 	{ free((*val).p_cValue); }
 	break;
-#line 477 "y.tab.c"
+#line 478 "y.tab.c"
 	case 273:
 #line 84 "GraphGrammar.y"
 	{ 
@@ -481,27 +482,27 @@ YYDESTRUCT_DECL()
     bleak_graph_free((*val).p_stGraph); 
 }
 	break;
-#line 485 "y.tab.c"
+#line 486 "y.tab.c"
 	case 274:
 #line 105 "GraphGrammar.y"
 	{ bleak_value_free((*val).p_stValue); }
 	break;
-#line 490 "y.tab.c"
+#line 491 "y.tab.c"
 	case 275:
 #line 105 "GraphGrammar.y"
 	{ bleak_value_free((*val).p_stValue); }
 	break;
-#line 495 "y.tab.c"
+#line 496 "y.tab.c"
 	case 276:
 #line 105 "GraphGrammar.y"
 	{ bleak_value_free((*val).p_stValue); }
 	break;
-#line 500 "y.tab.c"
+#line 501 "y.tab.c"
 	case 277:
 #line 105 "GraphGrammar.y"
 	{ bleak_value_free((*val).p_stValue); }
 	break;
-#line 505 "y.tab.c"
+#line 506 "y.tab.c"
 	case 278:
 #line 106 "GraphGrammar.y"
 	{
@@ -509,17 +510,17 @@ YYDESTRUCT_DECL()
   bleak_vector_value_free((*val).p_stValues);
 }
 	break;
-#line 513 "y.tab.c"
+#line 514 "y.tab.c"
 	case 279:
 #line 111 "GraphGrammar.y"
 	{ bleak_kvp_free((*val).p_stKvp); }
 	break;
-#line 518 "y.tab.c"
+#line 519 "y.tab.c"
 	case 280:
 #line 111 "GraphGrammar.y"
 	{ bleak_kvp_free((*val).p_stKvp); }
 	break;
-#line 523 "y.tab.c"
+#line 524 "y.tab.c"
 	case 281:
 #line 112 "GraphGrammar.y"
 	{ 
@@ -527,7 +528,7 @@ YYDESTRUCT_DECL()
   bleak_vector_kvp_free((*val).p_stKvps);
 }
 	break;
-#line 531 "y.tab.c"
+#line 532 "y.tab.c"
 	case 282:
 #line 112 "GraphGrammar.y"
 	{ 
@@ -535,12 +536,12 @@ YYDESTRUCT_DECL()
   bleak_vector_kvp_free((*val).p_stKvps);
 }
 	break;
-#line 539 "y.tab.c"
+#line 540 "y.tab.c"
 	case 283:
 #line 117 "GraphGrammar.y"
 	{ bleak_vertex_free((*val).p_stVertex); }
 	break;
-#line 544 "y.tab.c"
+#line 545 "y.tab.c"
 	case 284:
 #line 118 "GraphGrammar.y"
 	{ 
@@ -548,12 +549,12 @@ YYDESTRUCT_DECL()
   bleak_vector_vertex_free((*val).p_stVertices);
 }
 	break;
-#line 552 "y.tab.c"
+#line 553 "y.tab.c"
 	case 285:
 #line 123 "GraphGrammar.y"
 	{ bleak_connection_free((*val).p_stConnection); }
 	break;
-#line 557 "y.tab.c"
+#line 558 "y.tab.c"
 	case 286:
 #line 124 "GraphGrammar.y"
 	{
@@ -561,7 +562,7 @@ YYDESTRUCT_DECL()
   bleak_vector_connection_free((*val).p_stConnections);
 }
 	break;
-#line 565 "y.tab.c"
+#line 566 "y.tab.c"
 	case 287:
 #line 89 "GraphGrammar.y"
 	{ 
@@ -579,7 +580,7 @@ YYDESTRUCT_DECL()
   bleak_vector_graph_free((*val).p_stGraphs);
 }
 	break;
-#line 583 "y.tab.c"
+#line 584 "y.tab.c"
     }
 }
 #define YYDESTRUCT_IS_DECLARED 1
@@ -720,6 +721,8 @@ YYPARSE_DECL()
     int      yychar;
     YYSTYPE  yyval;
     YYSTYPE  yylval;
+    int      yynerrs;
+
 #if defined(YYLTYPE) || defined(YYLTYPE_IS_DECLARED)
     YYLTYPE  yyloc; /* position returned by actions */
     YYLTYPE  yylloc; /* position from the lexer */
@@ -772,7 +775,7 @@ YYPARSE_DECL()
     YYParseState *yyerrctx = NULL;
 #endif /* YYBTYACC */
 #if defined(YYLTYPE) || defined(YYLTYPE_IS_DECLARED)
-    YYLTYPE  yyerror_loc_range[2]; /* position of error start & end */
+    YYLTYPE  yyerror_loc_range[3]; /* position of error start/end (0 unused) */
 #endif
 #if YYDEBUG
     const char *yys;
@@ -848,10 +851,10 @@ yyloop:
                 size_t s = (size_t) (yylvlim - yylvals);
 
                 s += YYLVQUEUEGROWTH;
-                if ((yylexemes = realloc(yylexemes, s * sizeof(YYINT))) == NULL) goto yyenomem;
-                if ((yylvals   = realloc(yylvals, s * sizeof(YYSTYPE))) == NULL) goto yyenomem;
+                if ((yylexemes = (YYINT *)realloc(yylexemes, s * sizeof(YYINT))) == NULL) goto yyenomem;
+                if ((yylvals   = (YYSTYPE *)realloc(yylvals, s * sizeof(YYSTYPE))) == NULL) goto yyenomem;
 #if defined(YYLTYPE) || defined(YYLTYPE_IS_DECLARED)
-                if ((yylpsns   = realloc(yylpsns, s * sizeof(YYLTYPE))) == NULL) goto yyenomem;
+                if ((yylpsns   = (YYLTYPE *)realloc(yylpsns, s * sizeof(YYLTYPE))) == NULL) goto yyenomem;
 #endif
                 yylvp   = yylve = yylvals + p;
                 yylvlim = yylvals + s;
@@ -962,7 +965,7 @@ yyloop:
                 /* If this is a first conflict in the stack, start saving lexemes */
                 if (!yylexemes)
                 {
-                    yylexemes = malloc((YYLVQUEUEGROWTH) * sizeof(YYINT));
+                    yylexemes = (YYINT *) malloc((YYLVQUEUEGROWTH) * sizeof(YYINT));
                     if (yylexemes == NULL) goto yyenomem;
                     yylvals   = (YYSTYPE *) malloc((YYLVQUEUEGROWTH) * sizeof(YYSTYPE));
                     if (yylvals == NULL) goto yyenomem;
@@ -1172,7 +1175,7 @@ yyerrhandler:
 
     YYERROR_CALL("syntax error");
 #if defined(YYLTYPE) || defined(YYLTYPE_IS_DECLARED)
-    yyerror_loc_range[0] = yylloc; /* lookahead position is error start position */
+    yyerror_loc_range[1] = yylloc; /* lookahead position is error start position */
 #endif
 
 #if !YYBTYACC
@@ -1201,7 +1204,7 @@ yyinrecovery:
                 *++yystack.l_mark = yylval;
 #if defined(YYLTYPE) || defined(YYLTYPE_IS_DECLARED)
                 /* lookahead position is error end position */
-                yyerror_loc_range[1] = yylloc;
+                yyerror_loc_range[2] = yylloc;
                 YYLLOC_DEFAULT(yyloc, yyerror_loc_range, 2); /* position of error span */
                 *++yystack.p_mark = yyloc;
 #endif
@@ -1217,7 +1220,7 @@ yyinrecovery:
                 if (yystack.s_mark <= yystack.s_base) goto yyabort;
 #if defined(YYLTYPE) || defined(YYLTYPE_IS_DECLARED)
                 /* the current TOS position is the error start position */
-                yyerror_loc_range[0] = *yystack.p_mark;
+                yyerror_loc_range[1] = *yystack.p_mark;
 #endif
 #if defined(YYDESTRUCT_CALL)
 #if YYBTYACC
@@ -1303,10 +1306,10 @@ yyreduce:
     if (!yytrial)
 #endif /* YYBTYACC */
     {
-        YYLLOC_DEFAULT(yyloc, &yystack.p_mark[1-yym], yym);
+        YYLLOC_DEFAULT(yyloc, &yystack.p_mark[-yym], yym);
         /* just in case YYERROR is invoked within the action, save
            the start of the rhs as the error start position */
-        yyerror_loc_range[0] = yystack.p_mark[1-yym];
+        yyerror_loc_range[1] = yystack.p_mark[1-yym];
     }
 #endif
 
@@ -1815,7 +1818,7 @@ case 44:
 #line 534 "GraphGrammar.y"
 	{ yyval.p_cValue = strdup("this") ; }
 break;
-#line 1819 "y.tab.c"
+#line 1822 "y.tab.c"
     default:
         break;
     }
@@ -1870,12 +1873,12 @@ break;
                     size_t s = (size_t) (yylvlim - yylvals);
 
                     s += YYLVQUEUEGROWTH;
-                    if ((yylexemes = realloc(yylexemes, s * sizeof(YYINT))) == NULL)
+                    if ((yylexemes = (YYINT *)realloc(yylexemes, s * sizeof(YYINT))) == NULL)
                         goto yyenomem;
-                    if ((yylvals   = realloc(yylvals, s * sizeof(YYSTYPE))) == NULL)
+                    if ((yylvals   = (YYSTYPE *)realloc(yylvals, s * sizeof(YYSTYPE))) == NULL)
                         goto yyenomem;
 #if defined(YYLTYPE) || defined(YYLTYPE_IS_DECLARED)
-                    if ((yylpsns   = realloc(yylpsns, s * sizeof(YYLTYPE))) == NULL)
+                    if ((yylpsns   = (YYLTYPE *)realloc(yylpsns, s * sizeof(YYLTYPE))) == NULL)
                         goto yyenomem;
 #endif
                     yylvp   = yylve = yylvals + p;

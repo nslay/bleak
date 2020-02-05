@@ -971,6 +971,11 @@ case YY_STATE_EOF(INITIAL):
     yyterminate();
   }
   else {
+    /* lex does not close files */
+    if (YY_CURRENT_BUFFER->yy_input_file != NULL) {
+      fclose(YY_CURRENT_BUFFER->yy_input_file);
+      YY_CURRENT_BUFFER->yy_input_file = NULL;
+    }
     yy_delete_buffer(YY_CURRENT_BUFFER, yyscanner);
 
     /* We decremented above! */
@@ -983,28 +988,28 @@ case YY_STATE_EOF(INITIAL):
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 111 "GraphLexer.l"
+#line 116 "GraphLexer.l"
 {
   return SUBGRAPH;
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 115 "GraphLexer.l"
+#line 120 "GraphLexer.l"
 {
   return THIS;
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 119 "GraphLexer.l"
+#line 124 "GraphLexer.l"
 {
   return PRIVATE;
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 123 "GraphLexer.l"
+#line 128 "GraphLexer.l"
 { 
   yylval->p_cValue = strdup(yytext); 
   return IDENTIFIER;
@@ -1012,7 +1017,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 128 "GraphLexer.l"
+#line 133 "GraphLexer.l"
 {
   yylval->p_cValue = strdup(yytext+1); 
   return REFERENCE;
@@ -1021,7 +1026,7 @@ YY_RULE_SETUP
 case 12:
 /* rule 12 can match eol */
 YY_RULE_SETUP
-#line 133 "GraphLexer.l"
+#line 138 "GraphLexer.l"
 {
   char *p_cValue = strdup(yytext+1);
   p_cValue[strlen(p_cValue)-1] = '\0';  
@@ -1031,7 +1036,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 140 "GraphLexer.l"
+#line 145 "GraphLexer.l"
 {
   yylval->iValue = strtol(yytext,NULL,10);
   return INTEGER;
@@ -1039,7 +1044,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 145 "GraphLexer.l"
+#line 150 "GraphLexer.l"
 {
   /* Formats: x.y or x. or .x */
   yylval->fValue = strtof(yytext,NULL);
@@ -1048,7 +1053,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 151 "GraphLexer.l"
+#line 156 "GraphLexer.l"
 {
   /* Formats: x.yEz or .xEz or x.Ez */
   yylval->fValue = strtof(yytext,NULL);
@@ -1057,30 +1062,30 @@ YY_RULE_SETUP
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 157 "GraphLexer.l"
+#line 162 "GraphLexer.l"
 { return RIGHT_ARROW; }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 158 "GraphLexer.l"
+#line 163 "GraphLexer.l"
 { return LEFT_ARROW; }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 159 "GraphLexer.l"
+#line 164 "GraphLexer.l"
 { return '^'; }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 160 "GraphLexer.l"
+#line 165 "GraphLexer.l"
 { return yytext[0]; }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 162 "GraphLexer.l"
+#line 167 "GraphLexer.l"
 ECHO;
 	YY_BREAK
-#line 1083 "lex.yy.c"
+#line 1088 "lex.yy.c"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -2271,4 +2276,4 @@ void yyfree (void * ptr , yyscan_t yyscanner)
 
 #define YYTABLES_NAME "yytables"
 
-#line 162 "GraphLexer.l"
+#line 167 "GraphLexer.l"

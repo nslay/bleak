@@ -29,5 +29,6 @@ namespace bleak {
 
 template class Array<float>;
 template class Array<double>;
+template class Array<int>;
 
 } // end namespace bleak
