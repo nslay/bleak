@@ -130,25 +130,25 @@ void bleak_parser_free(bleak_parser *p_stParser) {
 
   bleak_graph_free(p_stParser->p_stGraph);
 
-  /* Do this in the same order */
-  i = p_stParser->iStackSize;
+  free(p_stParser->a_cDirStack[0]); /* This will always be set (see bleak_parser_load_graph) */
 
-  if (i < 0) /* This could happen since GraphLexer may decrement to -1 on last closed file */
-    i = 0;
-
-  /*free(p_stParser->a_cDirStack[i--]);*/ /* +1 extra element on a_cDirStack */
-
-  for ( ; i >= 0; --i) {
+  for (i = 1; i < p_stParser->iStackSize; ++i) {
     free(p_stParser->a_cDirStack[i]);
 
-    /* lex does not close files, but the first file handle will be closed by the caller */
-    if (i > 0 && p_stParser->a_stIncludeStack[i]->yy_input_file != NULL) {
+    /* lex does not close files. The first file handle will be closed by the caller */
+    if (p_stParser->a_stIncludeStack[i]->yy_input_file != NULL) {
       fclose(p_stParser->a_stIncludeStack[i]->yy_input_file);
       p_stParser->a_stIncludeStack[i]->yy_input_file = NULL;
     }
 
     /* We do no need to call this explicitly as flex will delete its own stack of buffer states */
     /*yy_delete_buffer(p_stParser->a_stIncludeStack[i], p_stParser->lexScanner);*/
+  }
+
+  /* This could be decremented to -1 on last closed file, so need to check */
+  if (p_stParser->iStackSize > 0) {
+    /* +1 element on a_cDirStack */
+    free(p_stParser->a_cDirStack[p_stParser->iStackSize]);
   }
 
   yylex_destroy(p_stParser->lexScanner);
