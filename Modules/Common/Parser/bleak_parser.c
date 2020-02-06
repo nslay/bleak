@@ -141,8 +141,8 @@ void bleak_parser_free(bleak_parser *p_stParser) {
   for ( ; i >= 0; --i) {
     free(p_stParser->a_cDirStack[i]);
 
-    /* lex does not close files */
-    if (p_stParser->a_stIncludeStack[i]->yy_input_file != NULL) {
+    /* lex does not close files, also the first stack entry will have already been closed! */
+    if (i > 0 && p_stParser->a_stIncludeStack[i]->yy_input_file != NULL) {
       fclose(p_stParser->a_stIncludeStack[i]->yy_input_file);
       p_stParser->a_stIncludeStack[i]->yy_input_file = NULL;
     }
