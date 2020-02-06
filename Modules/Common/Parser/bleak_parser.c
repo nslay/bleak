@@ -141,13 +141,16 @@ void bleak_parser_free(bleak_parser *p_stParser) {
   for ( ; i >= 0; --i) {
     free(p_stParser->a_cDirStack[i]);
 
-    /* lex does not close files, also the first stack entry will have already been closed! */
-    if (i > 0 && p_stParser->a_stIncludeStack[i]->yy_input_file != NULL) {
-      fclose(p_stParser->a_stIncludeStack[i]->yy_input_file);
-      p_stParser->a_stIncludeStack[i]->yy_input_file = NULL;
-    }
+    /* The first file handle will be closed by caller, the first buffer state will be destroyed by yylex_destroy() */
+    if (i > 0) {
+      /* lex does not close files */
+      if (p_stParser->a_stIncludeStack[i]->yy_input_file != NULL) {
+        fclose(p_stParser->a_stIncludeStack[i]->yy_input_file);
+        p_stParser->a_stIncludeStack[i]->yy_input_file = NULL;
+      }
 
-    yy_delete_buffer(p_stParser->a_stIncludeStack[i], p_stParser->lexScanner);
+      yy_delete_buffer(p_stParser->a_stIncludeStack[i], p_stParser->lexScanner);
+    }
   }
 
   yylex_destroy(p_stParser->lexScanner);
