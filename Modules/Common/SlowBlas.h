@@ -105,8 +105,11 @@ void axpy(int n, const RealType &a, const RealType *x, int incx, RealType *y, in
   if (incy < 0)
     y += -(n-1)*incy;
 
-  for (int i = 0; i < n; ++i, x += incx, y += incy)
+  for (int i = 0; i < n; ++i) {
     *y += a*(*x);
+    x += incx;
+    y += incy;
+  }
 }
 
 template<typename RealType>
@@ -121,8 +124,11 @@ RealType dot(int n, const RealType *x, int incx, const RealType *y, int incy) {
     y += -(n-1)*incy;
 
   RealType sum = RealType(0);
-  for (int i = 0; i < n; ++i, x += incx, y += incy)
+  for (int i = 0; i < n; ++i) {
     sum += (*x) * (*y);
+    x += incx;
+    y += incy;
+  }
 
   return sum;
 }

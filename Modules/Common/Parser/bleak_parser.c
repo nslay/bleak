@@ -24,15 +24,87 @@
  */
 
 #include <stdlib.h>
+#include <ctype.h>
 #include <string.h>
 #include "bleak_parser.h"
 
-static void bleak_dirname(char *p_cFilePath) {
+#ifdef _WIN32
+/* Return position in path where drive letter/hostname (UNC) are no longer visible */
+static char * bleak_ignore_windows(char *p_cPath) {
+  size_t length = strlen(p_cPath);
+
+  if (length >= 2) {
+    /* drive letter? */
+    if (isalpha(p_cPath[0]) && p_cPath[1] == ':')
+      return p_cPath+2;
+
+    /* UNC path? */
+    if (p_cPath[0] == '\\' && p_cPath[1] == '\\') {
+      char *p = strpbrk(p_cPath+2, "/\\");
+
+      if (p == NULL)
+        return p_cPath + length;
+
+      return p;
+    }
+  }
+
+  return p_cPath;
+}
+#endif /* _WIN32 */
+
+static void bleak_basename(char *p_cFullFilePath) {
   size_t length = 0;
   char *p_cDelim = NULL;
+  char *p_cFilePath = p_cFullFilePath;
 
-  if (p_cFilePath == NULL)
+  if (p_cFullFilePath == NULL)
     return;
+
+#ifdef _WIN32
+  p_cFilePath = bleak_ignore_windows(p_cFullFilePath);
+#endif /* _WIN32 */
+
+  length = strlen(p_cFilePath);
+
+  /* Remove trailing delimiters */
+#ifdef _WIN32
+  while (length > 1 && (p_cFilePath[length-1] == '/' || p_cFilePath[length-1] == '\\'))
+    p_cFilePath[--length] = '\0';
+#else /* !_WIN32 */
+  while (length > 1 && p_cFilePath[length-1] == '/')
+    p_cFilePath[--length] = '\0';
+#endif /* _WIN32 */
+
+  if (length <= 1)
+    return;
+
+  p_cDelim = strrchr(p_cFilePath, '/');
+
+#ifdef _WIN32
+  {
+    char *p_cDelim2 = strrchr(p_cFilePath, '\\');
+
+    if (p_cDelim == NULL || p_cDelim2 > p_cDelim)
+      p_cDelim = p_cDelim2;
+  }
+#endif /* _WIN32 */
+
+  if (p_cDelim != NULL)
+    memmove(p_cFullFilePath, p_cDelim+1, strlen(p_cDelim+1)+1); /* +1 for '\0' */
+}
+
+static void bleak_dirname(char *p_cFullFilePath) {
+  size_t length = 0;
+  char *p_cDelim = NULL;
+  char *p_cFilePath = p_cFullFilePath;
+
+  if (p_cFullFilePath == NULL)
+    return;
+
+#ifdef _WIN32
+  p_cFilePath = bleak_ignore_windows(p_cFullFilePath);
+#endif /* _WIN32 */
 
   length = strlen(p_cFilePath);
 
@@ -59,8 +131,12 @@ static void bleak_dirname(char *p_cFilePath) {
   }
 #endif /* _WIN32 */
 
-  if (p_cDelim == NULL)
-    strcpy(p_cFilePath, "."); /* Size guaranteed to be at least 1 + \0 */
+  if (p_cDelim == NULL) {
+    if (p_cFilePath == p_cFullFilePath)
+      strcpy(p_cFilePath, "."); /* Size guaranteed to be at least 1 + \0 */
+    else
+      *p_cFilePath = '\0'; /* Windows drive/UNC prefix is present already */
+  }
   else if (p_cDelim == p_cFilePath)
     *(p_cDelim+1) = '\0'; /* Cover case where dirname is / */
   else
@@ -82,6 +158,7 @@ bleak_parser * bleak_parser_alloc() {
 }
 
 bleak_graph * bleak_parser_load_graph(bleak_parser *p_stParser, const char *p_cFileName) {
+  char *p_cFileNameForStack = NULL;
   char *p_cDirName = NULL;
   FILE *pFile = NULL;
   int iRet = 0;
@@ -96,15 +173,17 @@ bleak_graph * bleak_parser_load_graph(bleak_parser *p_stParser, const char *p_cF
   if (pFile == NULL)
     return NULL;
 
+  p_cFileNameForStack = strdup(p_cFileName);
   p_cDirName = strdup(p_cFileName);
 
-  if (p_cDirName == NULL) {
+  if (p_cDirName == NULL || p_cFileNameForStack == NULL) {
     fclose(pFile);
     return NULL;
   }
 
   bleak_dirname(p_cDirName);
 
+  p_stParser->a_cFileStack[0] = p_cFileNameForStack;
   p_stParser->a_cDirStack[0] = p_cDirName;
 
   yyset_in(pFile, p_stParser->lexScanner);
@@ -131,9 +210,11 @@ void bleak_parser_free(bleak_parser *p_stParser) {
   bleak_graph_free(p_stParser->p_stGraph);
 
   free(p_stParser->a_cDirStack[0]); /* This will always be set (see bleak_parser_load_graph) */
+  free(p_stParser->a_cFileStack[0]); /* Ditto */
 
   for (i = 1; i < p_stParser->iStackSize; ++i) {
     free(p_stParser->a_cDirStack[i]);
+    free(p_stParser->a_cFileStack[i]);
 
     /* lex does not close files. The first file handle will be closed by the caller */
     if (p_stParser->a_stIncludeStack[i]->yy_input_file != NULL) {
@@ -149,6 +230,7 @@ void bleak_parser_free(bleak_parser *p_stParser) {
   if (p_stParser->iStackSize > 0) {
     /* +1 element on a_cDirStack */
     free(p_stParser->a_cDirStack[p_stParser->iStackSize]);
+    free(p_stParser->a_cFileStack[p_stParser->iStackSize]);
   }
 
   yylex_destroy(p_stParser->lexScanner);
@@ -156,17 +238,18 @@ void bleak_parser_free(bleak_parser *p_stParser) {
   free(p_stParser);
 }
 
-FILE * bleak_parser_open_include(bleak_parser *p_stParser, const char *p_cFileName, char **p_cDirName) {
+FILE * bleak_parser_open_include(bleak_parser *p_stParser, const char *p_cFileName, char **p_cDirName, char **p_cResolvedFileName) {
   FILE *pFile = NULL;
   size_t fileNameLen = 0;
   char *p_cFilePath = NULL;
   const char *p_cSearchDir = NULL;
   int i = 0;
 
-  if (p_cDirName == NULL)
+  if (p_cDirName == NULL || p_cResolvedFileName == NULL)
     return NULL;
 
   *p_cDirName = NULL;
+  *p_cResolvedFileName = NULL;
 
   if (p_stParser == NULL || p_cFileName == NULL)
     return NULL;
@@ -199,9 +282,18 @@ FILE * bleak_parser_open_include(bleak_parser *p_stParser, const char *p_cFileNa
     return NULL;
   }
 
-  *p_cDirName = p_cFilePath;
+  *p_cDirName = strdup(p_cFilePath);
+
+  if (*p_cDirName == NULL) {
+    free(p_cFilePath);
+    fclose(pFile);
+    return NULL;
+  }
 
   bleak_dirname(*p_cDirName);
 
+  *p_cResolvedFileName = p_cFilePath;
+
   return pFile;
 }
+

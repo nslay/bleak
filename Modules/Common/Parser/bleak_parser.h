@@ -47,7 +47,8 @@ extern "C" {
 typedef struct bleak_parser_ {
   bleak_graph *p_stGraph; /* This will be freed in bleak_parser_free() */
   YY_BUFFER_STATE a_stIncludeStack[BLEAK_MAX_INCLUDE_DEPTH];
-  char *a_cDirStack[BLEAK_MAX_INCLUDE_DEPTH+1]; /* dirnames of include files, starting with the first graph file. These should be allocated! */
+  char *a_cFileStack[BLEAK_MAX_INCLUDE_DEPTH+1]; /* File paths of currently opened files starting with the first graph file. These should be allocated! */
+  char *a_cDirStack[BLEAK_MAX_INCLUDE_DEPTH+1]; /* dirnames of include files starting with the first graph file. These should be allocated! */
   int iStackSize;
   const char **p_cIncludeDirs; /* NULL terminated! */
   yyscan_t lexScanner;
@@ -62,7 +63,7 @@ bleak_graph * bleak_parser_load_graph(bleak_parser *p_stParser, const char *p_cF
 
 
 /* Find and open an include file, return the dirname of the path in p_cDirName */
-FILE * bleak_parser_open_include(bleak_parser *p_stParser, const char *p_cFileName, char **p_cDirName);
+FILE * bleak_parser_open_include(bleak_parser *p_stParser, const char *p_cFileName, char **p_cDirName, char **p_cResolvedFileName);
 
 /* Function prototypes for flex and byacc */
 

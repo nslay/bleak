@@ -32,7 +32,6 @@
 #include "y.tab.h"
 %}
 
-
 %option noyywrap
 %option reentrant
 %option bison-bridge
@@ -74,7 +73,7 @@
   }
 
   p_stParser->a_stIncludeStack[p_stParser->iStackSize] = YY_CURRENT_BUFFER;
-  yyin = bleak_parser_open_include(p_stParser, p_cFileName, p_stParser->a_cDirStack + p_stParser->iStackSize + 1);
+  yyin = bleak_parser_open_include(p_stParser, p_cFileName, p_stParser->a_cDirStack + p_stParser->iStackSize + 1, p_stParser->a_cFileStack + p_stParser->iStackSize + 1);
   
   if (yyin == NULL) {
     yyerror(p_stParser, yyscanner, "Could not open include file '%s'.", p_cFileName);

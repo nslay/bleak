@@ -537,9 +537,12 @@ vertex_identifier   :   IDENTIFIER
 %%
 
 void yyerror(bleak_parser *p_stParser, yyscan_t scanner, const char *p_cErrorMsg, ...) {
+  const char * const p_cCurrentFile = p_stParser->a_cFileStack[p_stParser->iStackSize];
   va_list ap;
 
   fputs("Error: ", stderr);
+
+  fprintf(stderr, "In file '%s' line %d: ", p_cCurrentFile, (int)yyget_lineno(scanner));
 
   va_start(ap, p_cErrorMsg);
   vfprintf(stderr, p_cErrorMsg, ap);
