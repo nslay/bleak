@@ -39,52 +39,97 @@ void Initialize();
 
 // Level 1
 
-extern template void swap<float>(int n, float *x, int incx, float *y, int incy);
-extern template void swap<double>(int n, double *x, int incx, double *y, int incy);
+template<> 
+void swap<float>(int n, float *x, int incx, float *y, int incy);
 
-extern template void scal<float>(int n, const float &a, float *x, int incx);
-extern template void scal<double>(int n, const double &a, double *x, int incx);
+template<> 
+void swap<double>(int n, double *x, int incx, double *y, int incy);
 
-extern template void copy<float>(int n, const float *x, int incx, float *y, int incy);
-extern template void copy<double>(int n, const double *x, int incx, double *y, int incy);
+template<>
+void scal<float>(int n, const float &a, float *x, int incx);
 
-extern template void axpy<float>(int n, const float &a, const float *x, int incx, float *y, int incy);
-extern template void axpy<double>(int n, const double &a, const double *x, int incx, double *y, int incy);
+template<>
+void scal<double>(int n, const double &a, double *x, int incx);
 
-extern template float dot<float>(int n, const float *x, int incx, const float *y, int incy);
-extern template double dot<double>(int n, const double *x, int incx, const double *y, int incy);
+template<>
+void copy<float>(int n, const float *x, int incx, float *y, int incy);
 
-extern template void dot<float>(int n, const float *x, int incx, const float *y, int incy, float &result);
-extern template void dot<double>(int n, const double *x, int incx, const double *y, int incy, double &result);
+template<>
+void copy<double>(int n, const double *x, int incx, double *y, int incy);
 
-extern template float nrm2<float>(int n, const float *x, int incx);
-extern template double nrm2<double>(int n, const double *x, int incx);
+template<>
+void axpy<float>(int n, const float &a, const float *x, int incx, float *y, int incy);
 
-extern template void nrm2<float>(int n, const float *x, int incx, float &result);
-extern template void nrm2<double>(int n, const double *x, int incx, double &result);
+template<>
+void axpy<double>(int n, const double &a, const double *x, int incx, double *y, int incy);
 
-extern template float asum<float>(int n, const float *x, int incx);
-extern template double asum<double>(int n, const double *x, int incx);
+template<>
+float dot<float>(int n, const float *x, int incx, const float *y, int incy);
 
-extern template void asum<float>(int n, const float *x, int incx, float &result);
-extern template void asum<double>(int n, const double *x, int incx, double &result);
+template<>
+double dot<double>(int n, const double *x, int incx, const double *y, int incy);
 
-extern template int amax<float>(int n, const float *x, int incx);
-extern template int amax<double>(int n, const double *x, int incx);
+template<>
+void dot<float>(int n, const float *x, int incx, const float *y, int incy, float &result);
 
-extern template void amax<float>(int n, const float *x, int incx, int &result);
-extern template void amax<double>(int n, const double *x, int incx, int &result);
+template<>
+void dot<double>(int n, const double *x, int incx, const double *y, int incy, double &result);
+
+template<>
+float nrm2<float>(int n, const float *x, int incx);
+
+template<>
+double nrm2<double>(int n, const double *x, int incx);
+
+template<>
+void nrm2<float>(int n, const float *x, int incx, float &result);
+
+template<>
+void nrm2<double>(int n, const double *x, int incx, double &result);
+
+template<>
+float asum<float>(int n, const float *x, int incx);
+
+template<>
+double asum<double>(int n, const double *x, int incx);
+
+template<>
+void asum<float>(int n, const float *x, int incx, float &result);
+
+template<>
+void asum<double>(int n, const double *x, int incx, double &result);
+
+template<>
+int amax<float>(int n, const float *x, int incx);
+
+template<>
+int amax<double>(int n, const double *x, int incx);
+
+template<>
+void amax<float>(int n, const float *x, int incx, int &result);
+
+template<>
+void amax<double>(int n, const double *x, int incx, int &result);
 
 // Level 2
-extern template void gemv<float>(char trans, int m, int n, const float &alpha, const float *a, int lda, const float *x, int incx, const float &beta, float *y, int incy);
-extern template void gemv<double>(char trans, int m, int n, const double &alpha, const double *a, int lda, const double *x, int incx, const double &beta, double *y, int incy);
+template<>
+void gemv<float>(char trans, int m, int n, const float &alpha, const float *a, int lda, const float *x, int incx, const float &beta, float *y, int incy);
 
-extern template void ger<float>(int m, int n, const float &alpha, const float *x, int incx, const float *y, int incy, float *a, int lda);
-extern template void ger<double>(int m, int n, const double &alpha, const double *x, int incx, const double *y, int incy, double *a, int lda);
+template<>
+void gemv<double>(char trans, int m, int n, const double &alpha, const double *a, int lda, const double *x, int incx, const double &beta, double *y, int incy);
+
+template<>
+void ger<float>(int m, int n, const float &alpha, const float *x, int incx, const float *y, int incy, float *a, int lda);
+
+template<>
+void ger<double>(int m, int n, const double &alpha, const double *x, int incx, const double *y, int incy, double *a, int lda);
 
 // Level 3
-extern template void gemm<float>(char transa, char transb, int m, int n, int k, const float &alpha, const float *a, int lda, const float *b, int ldb, const float &beta, float *c, int ldc);
-extern template void gemm<double>(char transa, char transb, int m, int n, int k, const double &alpha, const double *a, int lda, const double *b, int ldb, const double &beta, double *c, int ldc);
+template<>
+void gemm<float>(char transa, char transb, int m, int n, int k, const float &alpha, const float *a, int lda, const float *b, int ldb, const float &beta, float *c, int ldc);
+
+template<>
+void gemm<double>(char transa, char transb, int m, int n, int k, const double &alpha, const double *a, int lda, const double *b, int ldb, const double &beta, double *c, int ldc);
 
 } // end namespace gpu_blas
 } // end namespace bleak

@@ -56,6 +56,7 @@ add_library(lmdb
   lmdb/libraries/liblmdb/mdb.c
   lmdb/libraries/liblmdb/midl.h lmdb/libraries/liblmdb/midl.c
 )
+include_directories(BEFORE lmdb/libraries/liblmdb)
 target_include_directories(lmdb PUBLIC lmdb/libraries/liblmdb)
 
 if (WIN32)
