@@ -105,11 +105,8 @@ void axpy(int n, const RealType &a, const RealType *x, int incx, RealType *y, in
   if (incy < 0)
     y += -(n-1)*incy;
 
-  for (int i = 0; i < n; ++i) {
+  for (int i = 0; i < n; ++i, x += incx, y += incy)
     *y += a*(*x);
-    x += incx;
-    y += incy;
-  }
 }
 
 template<typename RealType>
@@ -124,11 +121,8 @@ RealType dot(int n, const RealType *x, int incx, const RealType *y, int incy) {
     y += -(n-1)*incy;
 
   RealType sum = RealType(0);
-  for (int i = 0; i < n; ++i) {
+  for (int i = 0; i < n; ++i, x += incx, y += incy)
     sum += (*x) * (*y);
-    x += incx;
-    y += incy;
-  }
 
   return sum;
 }
@@ -275,7 +269,7 @@ void gemv(char trans, int m, int n, const RealType &alpha, const RealType *a, in
       for (int j = 0; j < n; ++j, y += incy) {
         const RealType *xt = x;
         RealType tmp = RealType(0);
-        for (int i = 0; i < m; ++m, xt += incx)
+        for (int i = 0; i < m; ++i, xt += incx)
           tmp += (*xt) * a[lda*j + i];
 
         *y += alpha*tmp;
@@ -428,7 +422,7 @@ void gemm(char transa, char transb, int m, int n, int k, const RealType &alpha, 
 
         for (int l = 0; l < k; ++l) {
           const RealType tmp = alpha*b[ldb*l + j];
-          for (int i = 0; i < m; ++m)
+          for (int i = 0; i < m; ++i)
             c[ldc*j + i] += tmp*a[lda*l + i];
         }
       }

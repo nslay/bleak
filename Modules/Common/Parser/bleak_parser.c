@@ -177,6 +177,8 @@ bleak_graph * bleak_parser_load_graph(bleak_parser *p_stParser, const char *p_cF
   p_cDirName = strdup(p_cFileName);
 
   if (p_cDirName == NULL || p_cFileNameForStack == NULL) {
+    free(p_cDirName); /* One of these could be non-NULL */
+    free(p_cFileNameForStack); /* Ditto */
     fclose(pFile);
     return NULL;
   }
