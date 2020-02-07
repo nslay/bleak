@@ -430,9 +430,7 @@ void yyerror(bleak_parser *p_stParser, yyscan_t scanner, const char *p_cErrorMsg
   const char * const p_cCurrentFile = p_stParser->a_cFileStack[p_stParser->iStackSize];
   va_list ap;
 
-  fputs("Error: ", stderr);
-
-  fprintf(stderr, "In file '%s' line %d: ", p_cCurrentFile, (int)yyget_lineno(scanner));
+  fprintf(stderr, "Error: In file '%s' line %d: ", p_cCurrentFile, (int)yyget_lineno(scanner));
 
   va_start(ap, p_cErrorMsg);
   vfprintf(stderr, p_cErrorMsg, ap);
@@ -441,7 +439,7 @@ void yyerror(bleak_parser *p_stParser, yyscan_t scanner, const char *p_cErrorMsg
   fputc('\n', stderr);
 }
 
-#line 445 "y.tab.c"
+#line 443 "y.tab.c"
 
 /* Release memory associated with symbol. */
 #if ! defined YYDESTRUCT_IS_DECLARED
@@ -454,17 +452,17 @@ YYDESTRUCT_DECL()
 #line 104 "GraphGrammar.y"
 	{ free((*val).p_cValue); }
 	break;
-#line 458 "y.tab.c"
+#line 456 "y.tab.c"
 	case 267:
 #line 104 "GraphGrammar.y"
 	{ free((*val).p_cValue); }
 	break;
-#line 463 "y.tab.c"
+#line 461 "y.tab.c"
 	case 268:
 #line 104 "GraphGrammar.y"
 	{ free((*val).p_cValue); }
 	break;
-#line 468 "y.tab.c"
+#line 466 "y.tab.c"
 	case 271:
 #line 84 "GraphGrammar.y"
 	{ 
@@ -472,12 +470,12 @@ YYDESTRUCT_DECL()
     bleak_graph_free((*val).p_stGraph); 
 }
 	break;
-#line 476 "y.tab.c"
+#line 474 "y.tab.c"
 	case 272:
 #line 104 "GraphGrammar.y"
 	{ free((*val).p_cValue); }
 	break;
-#line 481 "y.tab.c"
+#line 479 "y.tab.c"
 	case 273:
 #line 84 "GraphGrammar.y"
 	{ 
@@ -485,27 +483,27 @@ YYDESTRUCT_DECL()
     bleak_graph_free((*val).p_stGraph); 
 }
 	break;
-#line 489 "y.tab.c"
+#line 487 "y.tab.c"
 	case 274:
 #line 105 "GraphGrammar.y"
 	{ bleak_value_free((*val).p_stValue); }
 	break;
-#line 494 "y.tab.c"
+#line 492 "y.tab.c"
 	case 275:
 #line 105 "GraphGrammar.y"
 	{ bleak_value_free((*val).p_stValue); }
 	break;
-#line 499 "y.tab.c"
+#line 497 "y.tab.c"
 	case 276:
 #line 105 "GraphGrammar.y"
 	{ bleak_value_free((*val).p_stValue); }
 	break;
-#line 504 "y.tab.c"
+#line 502 "y.tab.c"
 	case 277:
 #line 105 "GraphGrammar.y"
 	{ bleak_value_free((*val).p_stValue); }
 	break;
-#line 509 "y.tab.c"
+#line 507 "y.tab.c"
 	case 278:
 #line 106 "GraphGrammar.y"
 	{
@@ -513,17 +511,17 @@ YYDESTRUCT_DECL()
   bleak_vector_value_free((*val).p_stValues);
 }
 	break;
-#line 517 "y.tab.c"
+#line 515 "y.tab.c"
 	case 279:
 #line 111 "GraphGrammar.y"
 	{ bleak_kvp_free((*val).p_stKvp); }
 	break;
-#line 522 "y.tab.c"
+#line 520 "y.tab.c"
 	case 280:
 #line 111 "GraphGrammar.y"
 	{ bleak_kvp_free((*val).p_stKvp); }
 	break;
-#line 527 "y.tab.c"
+#line 525 "y.tab.c"
 	case 281:
 #line 112 "GraphGrammar.y"
 	{ 
@@ -531,7 +529,7 @@ YYDESTRUCT_DECL()
   bleak_vector_kvp_free((*val).p_stKvps);
 }
 	break;
-#line 535 "y.tab.c"
+#line 533 "y.tab.c"
 	case 282:
 #line 112 "GraphGrammar.y"
 	{ 
@@ -539,12 +537,12 @@ YYDESTRUCT_DECL()
   bleak_vector_kvp_free((*val).p_stKvps);
 }
 	break;
-#line 543 "y.tab.c"
+#line 541 "y.tab.c"
 	case 283:
 #line 117 "GraphGrammar.y"
 	{ bleak_vertex_free((*val).p_stVertex); }
 	break;
-#line 548 "y.tab.c"
+#line 546 "y.tab.c"
 	case 284:
 #line 118 "GraphGrammar.y"
 	{ 
@@ -552,12 +550,12 @@ YYDESTRUCT_DECL()
   bleak_vector_vertex_free((*val).p_stVertices);
 }
 	break;
-#line 556 "y.tab.c"
+#line 554 "y.tab.c"
 	case 285:
 #line 123 "GraphGrammar.y"
 	{ bleak_connection_free((*val).p_stConnection); }
 	break;
-#line 561 "y.tab.c"
+#line 559 "y.tab.c"
 	case 286:
 #line 124 "GraphGrammar.y"
 	{
@@ -565,7 +563,7 @@ YYDESTRUCT_DECL()
   bleak_vector_connection_free((*val).p_stConnections);
 }
 	break;
-#line 569 "y.tab.c"
+#line 567 "y.tab.c"
 	case 287:
 #line 89 "GraphGrammar.y"
 	{ 
@@ -583,7 +581,7 @@ YYDESTRUCT_DECL()
   bleak_vector_graph_free((*val).p_stGraphs);
 }
 	break;
-#line 587 "y.tab.c"
+#line 585 "y.tab.c"
     }
 }
 #define YYDESTRUCT_IS_DECLARED 1
@@ -1821,7 +1819,7 @@ case 44:
 #line 534 "GraphGrammar.y"
 	{ yyval.p_cValue = strdup("this") ; }
 break;
-#line 1825 "y.tab.c"
+#line 1823 "y.tab.c"
     default:
         break;
     }
