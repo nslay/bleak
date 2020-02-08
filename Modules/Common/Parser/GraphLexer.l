@@ -108,6 +108,9 @@
     free(p_stParser->a_cDirStack[p_stParser->iStackSize+1]);
     p_stParser->a_cDirStack[p_stParser->iStackSize+1] = NULL;
 
+    free(p_stParser->a_cFileStack[p_stParser->iStackSize+1]);
+    p_stParser->a_cFileStack[p_stParser->iStackSize+1] = NULL;
+
     yy_switch_to_buffer(p_stParser->a_stIncludeStack[p_stParser->iStackSize], yyscanner);
   }
 }
