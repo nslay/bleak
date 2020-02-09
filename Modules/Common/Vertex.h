@@ -124,7 +124,7 @@ public:
   virtual ~Vertex() {
     // Formally disconnect our outputs from targets' inputs (if any)
     for (auto &clPair : m_mOutputs) {
-      const auto &vTargets = clPair.second->GetAllTargets();
+      const auto vTargets = clPair.second->GetAllTargets(); // This can change on UnsetInput(), so it must be a copy
 
       for (const auto &p_clWeakTarget : vTargets) {
         std::shared_ptr<VertexType> p_clTarget = p_clWeakTarget.first.lock();
