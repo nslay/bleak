@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2020 Nathan Lay (enslay@gmail.com)
+ * Copyright (c) 2017 Nathan Lay (enslay@gmail.com)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,24 +23,11 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "VertexFactory.h"
-#include "ITKImageLoader.h"
 #include "CompressedDatabaseReader.h"
 
 namespace bleak {
 
-template<typename RealType>
-void InitializeITKModuleTemplate() {
-  VertexFactory<RealType> &clVertexFactory = VertexFactory<RealType>::GetInstance();
-
-  clVertexFactory.template Register<ITKImageLoader2D<RealType>>();
-  clVertexFactory.template Register<ITKImageLoader3D<RealType>>();
-  clVertexFactory.template Register<CompressedDatabaseReader<RealType>>();
-}
-
-void InitializeITKModule() {
-  InitializeITKModuleTemplate<float>();
-  InitializeITKModuleTemplate<double>();
-}
+template class CompressedDatabaseReader<float>;
+template class CompressedDatabaseReader<double>;
 
 } // end namespace bleak

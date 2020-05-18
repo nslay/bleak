@@ -13,6 +13,7 @@ endif()
 bleakNewModule(ITK SOURCES
   InitializeITKModule.cpp
   ITKImageLoader.h ITKImageLoader.cpp
+  CompressedDatabaseReader.h CompressedDatabaseReader.cpp
   MODULE_DEPENDS Common
   LIBRARIES ${ITK_LIBRARIES}
 )
