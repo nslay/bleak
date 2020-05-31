@@ -49,7 +49,7 @@ FindADCDir() {
 }
 
 FindBValueDir() {
-  tmpDir_=`find "$1" -mindepth 1 -maxdepth 1 -type d '(' -iname "*diff*" -a '!' -iname "*calc*" ')' -print -quit`
+  tmpDir_=`find "$1" -mindepth 1 -maxdepth 1 -type d '(' -iname "*diff*" -a '!' -iname "*calc*" -a '!' -iname "*adc*" ')' -print -quit`
   if [ -n "${tmpDir_}" ]
   then
     GetLatestSeriesDir "${tmpDir_}"
