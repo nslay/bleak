@@ -202,9 +202,9 @@ do
     rm -rf "${outT2wDir}" "${outAdcDir}" "${outBValueDir}"
     
     # Copy everything to output folder
-    "${sortCommand}" -e "${alignedT2wDir}" "${outT2wDir}/<z coordinate>.dcm"
-    "${sortCommand}" -e "${alignedAdcDir}" "${outAdcDir}/<z coordinate>.dcm"
-    "${sortCommand}" -e "${alignedB1500Dir}" "${outBValueDir}/<z coordinate>.dcm"
+    "${sortCommand}" -e "${alignedT2wDir}" "${outT2wDir}/<instance number>.dcm"
+    "${sortCommand}" -e "${alignedAdcDir}" "${outAdcDir}/<instance number>.dcm"
+    "${sortCommand}" -e "${alignedB1500Dir}" "${outBValueDir}/<instance number>.dcm"
     
     #exit
   done  
