@@ -89,7 +89,7 @@ public:
     const Size clInSize = p_clInData->GetData().GetSize();
 
     if (clInSize.GetDimension() != Dimension+2) {
-      std::cerr << GetName() << ": Error: Expected input data to be size " << Dimension+2 << "(got " << clInSize.GetDimension() << "). Size should reflect [ BatchSize, Channels, Z, Y, X, ... ]." << std::endl;
+      std::cerr << GetName() << ": Error: Expected input data to have dimension " << Dimension+2 << "(got " << clInSize.GetDimension() << "). Size should reflect [ BatchSize, Channels, Z, Y, X, ... ]." << std::endl;
       return false;
     }
 
@@ -106,6 +106,8 @@ public:
 
     if (p_clInData->GetGradient().GetSize().Valid()) // Backpropagate?
       p_clOutData->GetGradient().SetSize(clOutSize);
+    else
+      p_clOutData->GetGradient().Clear();
 
     return true;
   }
@@ -190,9 +192,10 @@ public:
     }
   }
 
+#ifdef BLEAK_USE_CUDA
   virtual void ForwardGPU() override;
   virtual void BackwardGPU() override;
-
+#endif // BLEAK_USE_CUDA
 
 protected:
   NearestNeighborResample() = default;
