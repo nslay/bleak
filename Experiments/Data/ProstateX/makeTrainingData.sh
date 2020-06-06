@@ -33,7 +33,17 @@ GetLatestSeriesDir() {
 }
 
 FindT2WDir() {
-  tmpDir_=`find "$1" -mindepth 1 -maxdepth 1 -type d '(' -iname "*t2*tra*" -a '!' -iname "*loc*" ')' -print -quit`
+  case "$1"
+  in
+  */ProstateX-0148/*)
+    echo "${1}/t2_tse_tra/4"
+    return
+    ;;
+  *)
+    tmpDir_=`find "$1" -mindepth 1 -maxdepth 1 -type d '(' -iname "*t2*tra*" -a '!' -iname "*loc*" ')' -print -quit`
+    ;;
+  esac
+  
   if [ -n "${tmpDir_}" ]
   then
     GetLatestSeriesDir "${tmpDir_}"
@@ -103,6 +113,7 @@ echo "Info: Step 2) Preprocess DICOMs..."
 mkdir -pv "${outT2wRoot}" "${outAdcRoot}" "${outBValueRoot}" "${logRoot}"
 
 #for patientDir in "${stageDir}"/ProstateX-0002
+#for patientDir in "${stageDir}"/ProstateX-0148
 for patientDir in "${stageDir}"/*
 do
   if [ ! -d "${patientDir}" ]
