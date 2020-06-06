@@ -33,7 +33,7 @@ GetLatestSeriesDir() {
 }
 
 FindT2WDir() {
-  tmpDir_=`find "$1" -mindepth 1 -maxdepth 1 -type d -iname "*t2*tra*" -print -quit`
+  tmpDir_=`find "$1" -mindepth 1 -maxdepth 1 -type d '(' -iname "*t2*tra*" -a '!' -iname "*loc*" ')' -print -quit`
   if [ -n "${tmpDir_}" ]
   then
     GetLatestSeriesDir "${tmpDir_}"
