@@ -188,8 +188,6 @@ public:
         Trim(strLine);
         m_vPaths.emplace_back(GetPath(strLine));
       }
-
-      return false;
     }
     else {
       FindFiles(m_strDirectory.c_str(), "*", m_vPaths);
@@ -288,8 +286,10 @@ private:
 
     itk::ImageIOBase::Pointer p_clImageIO = itk::ImageIOFactory::CreateImageIO(strPath.c_str(), itk::ImageIOFactory::ReadMode);
 
-    if (!p_clImageIO)
+    if (!p_clImageIO) {
+      std::cerr << GetName() << ": Error: Failed to create image factory for '" << strPath << "'." << std::endl;
       return nullptr;
+    }
 
     p_clImageIO->SetFileName(strPath);
 
@@ -301,8 +301,11 @@ private:
       return nullptr;
     }
 
-    if (p_clImageIO->GetNumberOfDimensions() != GetDimension())
-      return nullptr;
+    // Apparently sometimes DICOM slices are treated as 3D
+    //if (p_clImageIO->GetNumberOfDimensions() != GetDimension()) {
+    //  std::cerr << GetName() << ": Error: Dimension mismatch? (" << p_clImageIO->GetNumberOfDimensions() << " != " << GetDimension() << ")." << std::endl;
+    //  return nullptr;
+    //}
 
     itk::Size<Dimension> outSize;
     for (unsigned int d = 0; d < Dimension; ++d)
