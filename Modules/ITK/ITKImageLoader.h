@@ -45,6 +45,8 @@
 #include "itkImageIOBase.h"
 #include "itkImageIOFactory.h"
 #include "itkResampleImageFilter.h"
+#include "itkLinearInterpolateImageFunction.h"
+#include "itkNearestNeighborInterpolateImageFunction.h"
 
 // DICOM images
 #include "itkGDCMImageIO.h"
@@ -115,6 +117,7 @@ public:
     bleakAddProperty("imageFile", m_strImageFile), // For one image
     bleakAddProperty("listFile", m_strListFile), // For a list of files relative to "directory"
     bleakAddProperty("directory", m_strDirectory), // Or just search the directory for images...
+    bleakAddProperty("interpolationType", m_strInterpolationType), // Interpolation type
     bleakAddProperty("size", m_vSize), // BatchSize x C x Z x Y x X ...
     bleakAddOutput("outData")
   );
@@ -138,6 +141,11 @@ public:
 
     if (!outSize.Valid()) {
       std::cerr << GetName() << ": Error: 'size' is not valid (" << outSize << "). Components must be positive." << std::endl;
+      return false;
+    }
+
+    if (!MakeInterpolator<1>()) {
+      std::cerr << GetName() << ": Error: 'interpolationType' may only be one of 'nearest' or 'linear'." << std::endl; 
       return false;
     }
 
@@ -232,6 +240,7 @@ private:
   std::string m_strDirectory;
   std::string m_strListFile;
   std::string m_strImageFile;
+  std::string m_strInterpolationType = std::string("nearest");
   std::vector<int> m_vSize;
 
   std::vector<std::string> m_vPaths;
@@ -245,6 +254,27 @@ private:
   }
 
   template<unsigned int NumComponents>
+  auto MakeInterpolator() const {
+    typedef PixelTraitsByComponents<RealType, NumComponents> PixelTraitsType;
+    typedef typename PixelTraitsType::PixelType PixelType;
+    typedef itk::Image<PixelType, Dimension> ImageType;
+    typedef itk::InterpolateImageFunction<ImageType, RealType> InterpolatorType;
+    typedef itk::NearestNeighborInterpolateImageFunction<ImageType, RealType> NearestNeigborInterpolationType;
+    typedef itk::LinearInterpolateImageFunction<ImageType, RealType> LinearInterpolationType;
+
+    typename InterpolatorType::Pointer p_clInterpolator;
+
+    if (m_strInterpolationType == "nearest")
+      p_clInterpolator = NearestNeigborInterpolationType::New();
+    else if (m_strInterpolationType == "linear")
+      p_clInterpolator = LinearInterpolationType::New();
+    else
+      std::cerr << GetName() << ": Error: Unrecognized interpolation type '" << m_strInterpolationType << "'." << std::endl;
+
+    return p_clInterpolator;
+  }
+
+  template<unsigned int NumComponents>
   RealType * LoadImgHelper(const std::string &strPath, RealType *p_outData) const {
     if (m_vSize.size() != 2 + GetDimension() || m_vSize[1] != (int)NumComponents)
       return nullptr;
@@ -254,6 +284,7 @@ private:
     typedef itk::Image<PixelType, Dimension> ImageType;
     typedef itk::ImageFileReader<ImageType> ImageReaderType;
     typedef itk::ResampleImageFilter<ImageType, ImageType, RealType> ResampleImageType;
+    typedef itk::InterpolateImageFunction<ImageType, RealType> InterpolatorType;
 
     itk::ImageIOBase::Pointer p_clImageIO = itk::ImageIOFactory::CreateImageIO(strPath.c_str(), itk::ImageIOFactory::ReadMode);
 
@@ -288,6 +319,13 @@ private:
     p_clResampleImage->SetInput(p_clReader->GetOutput());
     p_clResampleImage->SetSize(outSize);
 
+    typename InterpolatorType::Pointer p_clInterpolator = MakeInterpolator<NumComponents>();
+
+    if (!p_clInterpolator)
+      return nullptr;
+
+    p_clResampleImage->SetInterpolator(p_clInterpolator);
+
     try {
       p_clResampleImage->Update();
     }
@@ -321,6 +359,7 @@ private:
     typedef itk::Image<PixelType, Dimension> ImageType;
     typedef itk::ImageSeriesReader<ImageType> ReaderType;
     typedef itk::ResampleImageFilter<ImageType, ImageType, RealType> ResampleImageType;
+    typedef itk::InterpolateImageFunction<ImageType, RealType> InterpolatorType;
     typedef itk::GDCMImageIO ImageIOType;
     typedef itk::GDCMSeriesFileNames FileNameGeneratorType;
 
@@ -358,6 +397,13 @@ private:
 
     p_clResampleImage->SetInput(p_clReader->GetOutput());
     p_clResampleImage->SetSize(outSize);
+
+    typename InterpolatorType::Pointer p_clInterpolator = MakeInterpolator<NumComponents>();
+
+    if (!p_clInterpolator)
+      return nullptr;
+
+    p_clResampleImage->SetInterpolator(p_clInterpolator);
 
     try {
       p_clResampleImage->Update();
