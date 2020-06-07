@@ -287,7 +287,7 @@ private:
     itk::ImageIOBase::Pointer p_clImageIO = itk::ImageIOFactory::CreateImageIO(strPath.c_str(), itk::ImageIOFactory::ReadMode);
 
     if (!p_clImageIO) {
-      std::cerr << GetName() << ": Error: Failed to create image factory for '" << strPath << "'." << std::endl;
+      std::cerr << GetName() << ": Error: Failed to create image IO from factory for '" << strPath << "'." << std::endl;
       return nullptr;
     }
 
