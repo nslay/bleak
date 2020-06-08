@@ -68,6 +68,10 @@ struct PixelTraitsByComponents {
     }
     return p_outData;
   }
+
+  static std::pair<RealType, RealType> MinMax(const PixelType *p_begin, const PixelType *p_end) {
+    return std::pair<RealType, RealType>(1.0, 0.0);
+  }
 };
 
 // Try to use specializations so scalar <-> RGB <-> RGBA automatically happen
@@ -77,6 +81,11 @@ struct PixelTraitsByComponents<RealType, 1> {
 
   static RealType * Copy(const PixelType *p_begin, const PixelType *p_end, RealType *p_outData) {
     return std::copy(p_begin, p_end, p_outData);
+  }
+
+  static std::pair<RealType, RealType> MinMax(const PixelType *p_begin, const PixelType *p_end) {
+    const auto stPair = std::minmax_element(p_begin, p_end);
+    return std::make_pair(*stPair.first, *stPair.second);
   }
 };
 
@@ -93,6 +102,10 @@ struct PixelTraitsByComponents<RealType, 3> {
     }
     return p_outData;
   }
+
+  static std::pair<RealType, RealType> MinMax(const PixelType *p_begin, const PixelType *p_end) {
+    return std::pair<RealType, RealType>(1.0, 0.0);
+  }
 };
 
 template<typename RealType>
@@ -107,6 +120,10 @@ struct PixelTraitsByComponents<RealType, 4> {
         });
     }
     return p_outData;
+  }
+
+  static std::pair<RealType, RealType> MinMax(const PixelType *p_begin, const PixelType *p_end) {
+    return std::pair<RealType, RealType>(1.0, 0.0);
   }
 };
 
@@ -217,7 +234,7 @@ public:
     for (int i = 0; i < iBatchSize; ++i) {
       const std::string &strPath = m_vPaths[m_iItr++];
 
-      if (m_iItr >= (int)m_vSize.size())
+      if (m_iItr >= (int)m_vPaths.size())
         m_iItr = 0;
 
       p_outData = LoadImg(strPath, p_outData);
@@ -307,9 +324,9 @@ private:
     //  return nullptr;
     //}
 
-    itk::Size<Dimension> outSize;
+    itk::Size<Dimension> clOutSize;
     for (unsigned int d = 0; d < Dimension; ++d)
-      outSize[Dimension-1-d] = itk::SizeValueType(m_vSize[2+d]);
+      clOutSize[Dimension-1-d] = itk::SizeValueType(m_vSize[2+d]);
 
     const int iImageSize = Size(m_vSize).Product(1);
 
@@ -318,9 +335,29 @@ private:
 
     p_clReader->SetImageIO(p_clImageIO);
     p_clReader->SetFileName(strPath);
+
+    try {
+      p_clReader->Update();
+    }
+    catch (itk::ExceptionObject &e) {
+      std::cerr << GetName() << ": Error: Failed to load image '" << strPath << "': " << e << std::endl;
+      return nullptr;
+    }
     
     p_clResampleImage->SetInput(p_clReader->GetOutput());
-    p_clResampleImage->SetSize(outSize);
+    p_clResampleImage->SetSize(clOutSize);
+    p_clResampleImage->SetOutputOrigin(p_clReader->GetOutput()->GetOrigin());
+    p_clResampleImage->SetOutputDirection(p_clReader->GetOutput()->GetDirection());
+
+    {
+      // Compute spacing
+      itk::Size<Dimension> clInSize = p_clReader->GetOutput()->GetBufferedRegion().GetSize();
+      typename ImageType::SpacingType clOutSpacing = p_clReader->GetOutput()->GetSpacing();
+      for (unsigned int d = 0; d < Dimension; ++d)
+        clOutSpacing[d] = clInSize[d]*clOutSpacing[d]/clOutSize[d];
+
+      p_clResampleImage->SetOutputSpacing(clOutSpacing);
+    }
 
     typename InterpolatorType::Pointer p_clInterpolator = MakeInterpolator<NumComponents>();
 
@@ -333,9 +370,21 @@ private:
       p_clResampleImage->Update();
     }
     catch (itk::ExceptionObject &e) {
-      std::cerr << GetName() << ": Error: Failed to load image '" << strPath << "': " << e << std::endl;
+      std::cerr << GetName() << ": Error: Failed to resample image '" << strPath << "': " << e << std::endl;
       return nullptr;
     }
+
+#if 0
+    {
+      typename ImageType::Pointer p_clImage = p_clReader->GetOutput();
+      const itk::SizeValueType imageSize = p_clImage->GetBufferedRegion().GetNumberOfPixels();
+
+      const PixelType * const p_buffer = p_clImage->GetBufferPointer();
+
+      const auto stPair = PixelTraitsType::MinMax(p_buffer, p_buffer + imageSize);
+      std::cout << GetName() << ": Info: '" << strPath << "': min = " << stPair.first << ", max = " << stPair.second << std::endl;
+    }
+#endif
 
     typename ImageType::Pointer p_clImage = p_clResampleImage->GetOutput();
 
@@ -348,6 +397,11 @@ private:
       return nullptr; // What?
 
     const PixelType * const p_buffer = p_clImage->GetBufferPointer();
+
+#if 0
+    const auto stPair = PixelTraitsType::MinMax(p_buffer, p_buffer + imageSize);
+    std::cout << GetName() << ": Info: '" << strPath << "': min = " << stPair.first << ", max = " << stPair.second << std::endl;
+#endif
 
     return PixelTraitsType::Copy(p_buffer, p_buffer + imageSize, p_outData);
   }
@@ -386,9 +440,9 @@ private:
     if (vDicomFiles.empty())
       return nullptr;
 
-    itk::Size<Dimension> outSize;
+    itk::Size<Dimension> clOutSize;
     for (unsigned int d = 0; d < Dimension; ++d)
-      outSize[Dimension-1-d] = itk::SizeValueType(m_vSize[2+d]);
+      clOutSize[Dimension-1-d] = itk::SizeValueType(m_vSize[2+d]);
 
     const int iImageSize = Size(m_vSize).Product(1);
 
@@ -398,8 +452,28 @@ private:
     p_clReader->SetImageIO(p_clImageIO);
     p_clReader->SetFileNames(vDicomFiles);
 
+    try {
+      p_clReader->Update();
+    }
+    catch (itk::ExceptionObject &e) {
+      std::cerr << GetName() << ": Error: Failed to load DICOM image '" << strPath << "': " << e << std::endl;
+      return nullptr;
+    }
+    
     p_clResampleImage->SetInput(p_clReader->GetOutput());
-    p_clResampleImage->SetSize(outSize);
+    p_clResampleImage->SetSize(clOutSize);
+    p_clResampleImage->SetOutputOrigin(p_clReader->GetOutput()->GetOrigin());
+    p_clResampleImage->SetOutputDirection(p_clReader->GetOutput()->GetDirection());
+
+    {
+      // Compute spacing
+      itk::Size<Dimension> clInSize = p_clReader->GetOutput()->GetBufferedRegion().GetSize();
+      typename ImageType::SpacingType clOutSpacing = p_clReader->GetOutput()->GetSpacing();
+      for (unsigned int d = 0; d < Dimension; ++d)
+        clOutSpacing[d] = clInSize[d]*clOutSpacing[d]/clOutSize[d];
+
+      p_clResampleImage->SetOutputSpacing(clOutSpacing);
+    }
 
     typename InterpolatorType::Pointer p_clInterpolator = MakeInterpolator<NumComponents>();
 
@@ -412,7 +486,7 @@ private:
       p_clResampleImage->Update();
     }
     catch (itk::ExceptionObject &e) {
-      std::cerr << GetName() << ": Error: Failed to load DICOM image '" << strPath << "': " << e << std::endl;
+      std::cerr << GetName() << ": Error: Failed to resample image '" << strPath << "': " << e << std::endl;
       return nullptr;
     }
 

@@ -218,6 +218,9 @@ public:
       for (int k = 0; k < iInnerNum; ++k) {
         const int iGTLabel = (int)(p_labels[i*iInnerNum + k]);
 
+        if (iGTLabel < 0 || iGTLabel >= iNumClasses)
+          continue;
+
         int iMaxLabel = 0;
         RealType maxProb = p_probs[(i*iNumClasses + 0)*iInnerNum + k];
 
