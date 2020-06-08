@@ -165,13 +165,14 @@ public:
       for (int k = 0; k < iInnerNum; ++k) {
         const int iLabel = (int)p_inLabels[iInnerNum*i + k];
 
+        // Do no learning on this example
+        if (iLabel < 0 || iLabel >= iNumOutputs)
+          continue;
+
         for (int j = 0; j < iNumOutputs; ++j) {
           const RealType prob = p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
           p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += scale*prob;
         }
-
-        if (iLabel < 0 || iLabel >= iNumOutputs)
-          continue;
 
         p_inGradient[(i*iNumOutputs + iLabel)*iInnerNum + k] -= scale;
       }

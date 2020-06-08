@@ -70,7 +70,7 @@ struct PixelTraitsByComponents {
   }
 
   static std::pair<RealType, RealType> MinMax(const PixelType *p_begin, const PixelType *p_end) {
-    return std::pair<RealType, RealType>(1.0, 0.0);
+    return std::pair<RealType, RealType>(RealType(1), RealType(0));
   }
 };
 
@@ -104,7 +104,7 @@ struct PixelTraitsByComponents<RealType, 3> {
   }
 
   static std::pair<RealType, RealType> MinMax(const PixelType *p_begin, const PixelType *p_end) {
-    return std::pair<RealType, RealType>(1.0, 0.0);
+    return std::pair<RealType, RealType>(RealType(1), RealType(0));
   }
 };
 
@@ -123,7 +123,7 @@ struct PixelTraitsByComponents<RealType, 4> {
   }
 
   static std::pair<RealType, RealType> MinMax(const PixelType *p_begin, const PixelType *p_end) {
-    return std::pair<RealType, RealType>(1.0, 0.0);
+    return std::pair<RealType, RealType>(RealType(1), RealType(0));
   }
 };
 
