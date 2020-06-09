@@ -29,6 +29,7 @@
 #define BLEAK_SOFTMAXLOSS_H
 
 #include <cmath>
+#include <vector>
 #include "Softmax.h"
 
 namespace bleak {
@@ -39,11 +40,33 @@ public:
   bleakNewVertex(SoftmaxLoss, Softmax<RealType>,
     bleakAddInput("inLabels"),
     bleakAddOutput("outLoss"),
-    bleakAddProperty("penaltyWeight", m_fPenaltyWeight));
+    bleakAddProperty("penaltyWeights", m_vPenaltyWeights),
+    bleakAddGetterSetter("penaltyWeight", &SoftmaxLoss::GetPenaltyWeight, &SoftmaxLoss::SetPenaltyWeight));
 
   bleakForwardVertexTypedefs();
 
   virtual ~SoftmaxLoss() = default;
+
+  bool GetPenaltyWeight(float &fPenaltyWeight) const {
+    switch (m_vPenaltyWeights.size()) {
+    case 0:
+      fPenaltyWeight = 1.0f;
+      break;
+    case 1:
+      fPenaltyWeight = m_vPenaltyWeights[0];
+      break;
+    default:
+      return false;
+    }
+
+    return true;
+  }
+
+  bool SetPenaltyWeight(const float &fPenaltyWeight) {
+    m_vPenaltyWeights.resize(1);
+    m_vPenaltyWeights[0] = fPenaltyWeight;
+    return true;
+  }
 
   virtual bool SetSizes() override {
     if (!SuperType::SetSizes())
@@ -56,6 +79,11 @@ public:
 
     const ArrayType &clInLabels = p_clInLabels->GetData();
     const ArrayType &clOutProbs = p_clOutProbs->GetData();
+
+    if (m_vPenaltyWeights.size() > 1 && (size_t)clOutProbs.GetSize()[1] != m_vPenaltyWeights.size()) {
+      std::cerr << GetName() << ": Error: Dimension mismatch between penaltyWeights and outProbabilities. Expected " << m_vPenaltyWeights.size() << " channels, but got " << clOutProbs.GetSize()[1] << " channels." << std::endl;
+      return false;
+    }
 
     // XXX: Not intuitive error message. Should be compared with inData.
     if (clInLabels.GetSize().GetDimension()+1 != clOutProbs.GetSize().GetDimension()) {
@@ -113,19 +141,22 @@ public:
       for (int j = 0; j < iInnerNum; ++j) {
         const int iLabel = (int)p_inLabels[iInnerNum*i + j];
 
-        if (iLabel < 0 || iLabel >= iNumOutputs) // TODO: Warning?
+        if (iLabel < 0 || iLabel >= iNumOutputs)
           continue;
+
+        const RealType weight = GetPenaltyWeightForLabel(iLabel, iNumOutputs);
 
         const RealType prob = p_outProbs[(i*iNumOutputs + iLabel)*iInnerNum + j];
 
         if (prob > RealType(1e-30))
-          outLoss -= std::log(prob);
+          outLoss -= std::log(prob) * weight;
         else
-          outLoss -= -100;
+          outLoss -= -100 * weight;
       }
     }
 
-    outLoss *= RealType(m_fPenaltyWeight)/RealType(iOuterNum);
+    outLoss /= RealType(iOuterNum);
+    //outLoss *= RealType(m_fPenaltyWeight)/RealType(iOuterNum);
   }
 
   virtual void Backward() override {
@@ -159,7 +190,8 @@ public:
     if (IsLeaf())
       outGradient = RealType(1);
 
-    const RealType scale = RealType(m_fPenaltyWeight)*outGradient/RealType(iOuterNum);
+    //const RealType scale = RealType(m_fPenaltyWeight)*outGradient/RealType(iOuterNum);
+    const RealType scale = outGradient/RealType(iOuterNum);
 
     for (int i = 0; i < iOuterNum; ++i) {
       for (int k = 0; k < iInnerNum; ++k) {
@@ -169,23 +201,39 @@ public:
         if (iLabel < 0 || iLabel >= iNumOutputs)
           continue;
 
+        const RealType weight = GetPenaltyWeightForLabel(iLabel, iNumOutputs);
+
         for (int j = 0; j < iNumOutputs; ++j) {
           const RealType prob = p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
-          p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += scale*prob;
+          p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += weight*scale*prob;
         }
 
-        p_inGradient[(i*iNumOutputs + iLabel)*iInnerNum + k] -= scale;
+        p_inGradient[(i*iNumOutputs + iLabel)*iInnerNum + k] -= weight*scale;
       }
     }
   }
 
 protected:
-  SoftmaxLoss() {
-    m_fPenaltyWeight = 1.0f;
+  SoftmaxLoss() = default;
+
+  RealType GetPenaltyWeightForLabel(int iLabel, int iNumClasses) const {
+    if (iLabel < 0 || iLabel >= iNumClasses) // No learning on these labels!
+      return RealType(0);
+
+    switch (m_vPenaltyWeights.size()) {
+    case 0: // Default weight
+      return RealType(1); 
+    case 1: // All labels use the same weight
+      return RealType(m_vPenaltyWeights[0]);
+    default:
+      return RealType(m_vPenaltyWeights[iLabel]);
+    }
+
+    return RealType(0); // Not reached
   }
 
 private:
-  float m_fPenaltyWeight;
+  std::vector<float> m_vPenaltyWeights = { 1.0f };
 };
 
 } // end namespace bleak

@@ -83,7 +83,7 @@
     yyterminate();
   }
 
-  ++p_stParser->iStackSize; /* This has to be done AFTER bleak_parser_open_include */
+  ++(p_stParser->iStackSize); /* This has to be done AFTER bleak_parser_open_include */
 
   free(p_cFileName);
 
@@ -93,7 +93,7 @@
 }
 
 <<EOF>> {
-  if (--p_stParser->iStackSize < 0) {
+  if (--(p_stParser->iStackSize) < 0) {
     yyterminate();
   }
   else {
