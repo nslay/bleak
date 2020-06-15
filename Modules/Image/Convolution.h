@@ -139,7 +139,7 @@ public:
       const int iStride = m_vStride[i-2];
       const int iDilate = m_vDilate[i-2];
       const int iInputLength = 2*m_vPadding[i-2] + clInData.GetSize()[i];
-      const int iKernelLength = clInWeights.GetSize()[i]*(1 + iDilate) - iDilate; // Alternate form of K + (K-1)*D
+      const int iKernelLength = clInWeights.GetSize()[i]*iDilate - (iDilate-1); // Alternate form of K + (K-1)*(D-1)
 
       if (iInputLength <= iKernelLength) {
         std::cerr << GetName() << ": Error: inWeights dimensions " << clInWeights.GetSize().SubSize(2) << 
