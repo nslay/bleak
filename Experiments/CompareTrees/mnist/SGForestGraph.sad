@@ -5,8 +5,8 @@ subgraph SGForestGraph {
   convHeight=5;
   strideX=3;
   strideY=3;
-  dilateX=0;
-  dilateY=0;
+  dilateX=1;
+  dilateY=1;
   numClasses=2;
   numTrees=10;
   treeDepth=5;

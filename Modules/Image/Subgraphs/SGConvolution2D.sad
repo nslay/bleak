@@ -1,7 +1,7 @@
 subgraph SGConvolution2D {
   padding = [ 0, 0 ];
   stride = [ 1, 1 ];
-  dilate = [ 0, 0 ];
+  dilate = [ 1, 1 ]; # No dilation by default
   numInputs = 3;
   numOutputs = 16;
   height = 9;
@@ -41,7 +41,7 @@ subgraph SGConvolution2D {
 subgraph SGConvolutionNaive2D {
   padding = [ 0, 0 ];
   stride = [ 1, 1 ];
-  dilate = [ 0, 0 ];
+  dilate = [ 1, 1 ]; # No dilation by default
   numOutputs = 16;
   height = 9;
   width = 9;

@@ -412,7 +412,8 @@ public:
   }
 
 protected:
-  HingeTreeConvTemplate() = default;
+  HingeTreeConvTemplate()
+  : m_vPadding(GetDimension(), 0), m_vStride(GetDimension(), 1), m_vDilate(GetDimension(), 1) { }
 
 private:
   std::vector<int> m_vPadding;

@@ -30,6 +30,7 @@ subgraph SGForest {
     initType="gaussian";
     mu=0.0;
     sigma=0.01;
+    applyWeightDecay=true;
   } weights;
   
   SGBatchNormalization {

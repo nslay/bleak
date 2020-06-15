@@ -83,8 +83,9 @@ public:
       return false;
     }
 
-    if (*std::min_element(m_vDilate.begin(), m_vDilate.end()) < 0) {
-      std::cerr << GetName() << ": Error: Dilate expected to be non-negative." << std::endl;
+    // TODO: Fix inconsistency with dilation
+    if (*std::min_element(m_vDilate.begin(), m_vDilate.end()) <= 0) {
+      std::cerr << GetName() << ": Error: Dilate expected to be positive." << std::endl;
       return false;
     }
 
@@ -479,7 +480,8 @@ public:
 #endif // BLEAK_USE_CUDA
 
 protected:
-  Convolution() = default;
+  Convolution()
+  : m_vPadding(GetDimension(), 0), m_vStride(GetDimension(), 1), m_vDilate(GetDimension(), 1) { }
 
 private:
   std::vector<int> m_vPadding;

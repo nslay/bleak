@@ -1,0 +1,59 @@
+subgraph SGHingeFernConv2D {
+  padding = [ 0, 0 ];
+  stride = [ 1, 1 ];
+  dilate = [ 1, 1 ];
+  numChannels = 3; # Channels
+  treeDepth = 5;
+  numTrees = 16;
+  height = 3;
+  width = 3;
+  learningRateMultiplier = 1.0;
+  
+  include "SGBatchNormalization.sad"
+  
+  Parameters {
+    size = [ $numTrees, $numChannels, $treeDepth ];
+    learnable=false;
+    saveOutputs=true;
+  } ordinals;
+  
+  Parameters {
+    size = [ $numTrees, $numChannels, $treeDepth ];
+    learnable=true;
+    initType="uniform";
+    a = -3;
+    b = 3;
+    #learningRateMultiplier=$learningRateMultiplier * $treeDepth;
+    learningRateMultiplier=$learningRateMultiplier;
+    applyWeightDecay=false;
+  } thresholds;
+  
+  Parameters {
+    size = [ $numTrees, $numChannels, 2^$treeDepth ];
+    learnable = true;
+    initType="gaussian";
+    mu=0.0;
+    sigma=0.01;
+    learningRateMultiplier = $learningRateMultiplier;
+    applyWeightDecay=true;
+  } weights;
+  
+  SGBatchNormalization {
+    numInputs=$numChannels;
+  } batchNorm;
+  
+  HingeFernConv2D {
+    stride = $stride;
+    padding = $padding;
+    dilate = $dilate;
+    kernelSize = [ $height, $width ];
+  } conv2D;
+  
+  thresholds.outData -> conv2D.inThresholds;
+  ordinals.outData -> conv2D.inOrdinals;
+  weights.outData -> conv2D.inWeights;
+  
+  this.inData -> batchNorm.inData;
+  batchNorm.outData -> conv2D.inData;
+  conv2D.outData -> this.outData;
+};

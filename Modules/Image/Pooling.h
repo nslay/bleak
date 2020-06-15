@@ -77,8 +77,8 @@ public:
       return false;
     }
 
-    if (*std::min_element(m_vDilate.begin(), m_vDilate.end()) < 0) {
-      std::cerr << GetName() << ": Error: Dilate expected to be non-negative." << std::endl;
+    if (*std::min_element(m_vDilate.begin(), m_vDilate.end()) <= 0) {
+      std::cerr << GetName() << ": Error: Dilate expected to be positive." << std::endl;
       return false;
     }
 
@@ -146,7 +146,8 @@ public:
   }
 
 protected:
-  Pooling() = default;
+  Pooling()
+  : m_vPadding(GetDimension(), 0), m_vStride(GetDimension(), 1), m_vDilate(GetDimension(), 1) { }
 
   ImageToMatrixType m_clImageToMatrix;
 

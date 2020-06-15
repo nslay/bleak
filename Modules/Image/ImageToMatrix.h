@@ -150,7 +150,7 @@ public:
     kernelSize.fill(0);
     padding.fill(0);
     stride.fill(1);
-    dilate.fill(0);
+    dilate.fill(1);
 
     padValue = RealType();
   }
@@ -164,7 +164,7 @@ public:
   bool Good() const {
     if (*std::min_element(kernelSize.begin(), kernelSize.end()) <= 0 ||
       *std::min_element(padding.begin(), padding.end()) < 0 ||
-      *std::min_element(dilate.begin(), dilate.end()) < 0 ||
+      *std::min_element(dilate.begin(), dilate.end()) <= 0 ||
       *std::min_element(stride.begin(), stride.end()) <= 0) {
       return false;
     }
@@ -195,7 +195,7 @@ public:
     SizeType winSize;
 
     for (unsigned int d = 0; d < Dimension; ++d)
-      winSize[d] = kernelSize[d] + (kernelSize[d] - 1)*dilate[d];
+      winSize[d] = kernelSize[d] + (kernelSize[d] - 1)*(dilate[d] - 1);
 
     return winSize;
   }
@@ -290,7 +290,7 @@ public:
         CoordType winCoord = kernRaster.Coordinate(j);
 
         for (unsigned int d = 0; d < Dimension; ++d)
-          winCoord[d] *= dilate[d] + 1;
+          winCoord[d] *= dilate[d];
 
         for (int i = 0; i < iOutCount; ++i) {
           CoordType coord = outRaster.Coordinate(i);
@@ -328,7 +328,7 @@ public:
         CoordType winCoord = kernRaster.Coordinate(j);
 
         for (unsigned int d = 0; d < Dimension; ++d)
-          winCoord[d] *= dilate[d] + 1;
+          winCoord[d] *= dilate[d];
 
         for (int i = 0; i < iOutCount; ++i) {
           CoordType coord = outRaster.Coordinate(i);

@@ -82,8 +82,8 @@ public:
       return false;
     }
 
-    if (*std::min_element(m_vDilate.begin(), m_vDilate.end()) < 0) {
-      std::cerr << GetName() << ": Error: Dilate expected to be non-negative." << std::endl;
+    if (*std::min_element(m_vDilate.begin(), m_vDilate.end()) <= 0) {
+      std::cerr << GetName() << ": Error: Dilate expected to be positive." << std::endl;
       return false;
     }
 
@@ -129,7 +129,7 @@ public:
       const int iStride = m_vStride[i-2];
       const int iDilate = m_vDilate[i-2];
       const int iInputLength = 2*m_vPadding[i-2] + clInData.GetSize()[i];
-      const int iKernelLength = clInWeights.GetSize()[i-1]*(1 + iDilate) - iDilate; // Simplified from K + (K-1)*D
+      const int iKernelLength = clInWeights.GetSize()[i-1]*iDilate - (iDilate - 1); // Simplified from K + (K-1)*(D-1)
 
       if (iInputLength <= iKernelLength) {
         std::cerr << GetName() << ": Error: inWeights dimensions " << clInWeights.GetSize().SubSize(1) << 
@@ -154,7 +154,7 @@ public:
 
 protected:
   ConvolutionNaive()
-  : m_vPadding(GetDimension(), 0), m_vStride(GetDimension(), 1), m_vDilate(GetDimension(), 0) { }
+  : m_vPadding(GetDimension(), 0), m_vStride(GetDimension(), 1), m_vDilate(GetDimension(), 1) { }
 
   const std::vector<int> & GetPadding() const {
     return m_vPadding;
@@ -224,11 +224,11 @@ public:
     const std::vector<int> &vStride = GetStride();
     const std::vector<int> &vDilate = GetDilate();
 
-    const int iKernelHeightDilate = iKernelHeight*(1 + vDilate[0]) - vDilate[0]; // Simplified from K + (K-1)*D
-    const int iKernelWidthDilate = iKernelWidth*(1 + vDilate[1]) - vDilate[1];
+    const int iKernelHeightDilate = iKernelHeight*vDilate[0] - (vDilate[0]-1); // Simplified from K + (K-1)*(D-1)
+    const int iKernelWidthDilate = iKernelWidth*vDilate[1] - (vDilate[1]-1);
 
-    const int yiStep = 1 + vDilate[0];
-    const int xiStep = 1 + vDilate[1];
+    const int yiStep = vDilate[0];
+    const int xiStep = vDilate[1];
 
     if (p_inBias == nullptr) {
       clOutData.Fill(RealType());
@@ -336,11 +336,11 @@ public:
     const std::vector<int> &vStride = GetStride();
     const std::vector<int> &vDilate = GetDilate();
 
-    const int iKernelHeightDilate = iKernelHeight*(1 + vDilate[0]) - vDilate[0]; // Simplified from K + (K-1)*D
-    const int iKernelWidthDilate = iKernelWidth*(1 + vDilate[1]) - vDilate[1];
+    const int iKernelHeightDilate = iKernelHeight*vDilate[0] - (vDilate[0]-1); // Simplified from K + (K-1)*(D-1)
+    const int iKernelWidthDilate = iKernelWidth*vDilate[1] - (vDilate[1]-1);
 
-    const int yiStep = 1 + vDilate[0];
-    const int xiStep = 1 + vDilate[1];
+    const int yiStep = vDilate[0];
+    const int xiStep = vDilate[1];
 
     if (p_inBiasGradient != nullptr) {
       // Derivative with respect to bias
