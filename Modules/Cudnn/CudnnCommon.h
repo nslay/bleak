@@ -79,7 +79,7 @@ public:
     return m_p_workspace; 
   }
 
-  size_t GetWorkspaceSize() const { return m_workspaceSize; }
+  size_t GetWorkspaceSize() const { return m_capacity; }
 
 private:
   uint8_t *m_p_workspace = nullptr;
