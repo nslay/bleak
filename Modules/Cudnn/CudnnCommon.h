@@ -101,7 +101,8 @@ public:
   CudnnTensorDescriptor() = default;
   ~CudnnTensorDescriptor() { Destroy(); }
 
-  bool SetFullyPacked(const Size &clSize) {
+  // Implied to be fully packed
+  bool Set(const Size &clSize) {
     Destroy();
 
     if (cudnnCreateTensorDescriptor(&m_desc) != CUDNN_STATUS_SUCCESS)
@@ -239,6 +240,43 @@ private:
 
   CudnnActivationDescriptor(const CudnnActivationDescriptor &) = delete;
   CudnnActivationDescriptor & operator=(const CudnnActivationDescriptor &) = delete;
+};
+
+class CudnnPoolingDescriptor {
+public:
+  CudnnPoolingDescriptor() = default;
+  ~CudnnPoolingDescriptor() { Destroy(); }
+
+  bool Set(cudnnPoolingMode_t mode, int iDimension, const int a_iWindowDim[], const int a_iPadding[], const int a_iStride[]) {
+    Destroy();
+
+    if (cudnnCreatePoolingDescriptor(&m_desc) != CUDNN_STATUS_SUCCESS)
+      return false;
+
+    if (cudnnSetPoolingNdDescriptor(m_desc, mode, CUDNN_NOT_PROPAGATE_NAN, iDimension, a_iWindowDim, a_iPadding, a_iStride) != CUDNN_STATUS_SUCCESS) {
+      Destroy();
+      return false;
+    }
+
+    return true;
+  }
+
+  bool GetOutputSize(const cudnnTensorDescriptor_t inputDesc, Size &clSize) const {
+    return cudnnGetPoolingNdForwardOutputDim(m_desc, inputDesc, clSize.GetDimension(), clSize.data()) == CUDNN_STATUS_SUCCESS;
+  }
+
+  void Destroy() {
+    cudnnDestroyPoolingDescriptor(m_desc);
+    m_desc = cudnnPoolingDescriptor_t();
+  }
+
+  operator const cudnnPoolingDescriptor_t() const { return m_desc; }
+
+private:
+  cudnnPoolingDescriptor_t m_desc = cudnnPoolingDescriptor_t();
+
+  CudnnPoolingDescriptor(const CudnnPoolingDescriptor &) = delete;
+  CudnnPoolingDescriptor & operator=(const CudnnPoolingDescriptor &) = delete;
 };
 
 class CudnnConvolutionFwdAlgorithm {
@@ -437,6 +475,42 @@ public:
 private:
   const CudnnTensorDescriptor<RealType> &m_clOutDataGradDesc;
   const CudnnTensorDescriptor<RealType> &m_clBiasGradDesc;
+};
+
+template<typename RealType>
+class CudnnPoolingForward {
+public:
+  CudnnPoolingForward(const CudnnPoolingDescriptor &clPoolingDesc, const CudnnTensorDescriptor<RealType> &clInDataDesc, const CudnnTensorDescriptor<RealType> &clOutDataDesc)
+  : m_clPoolingDesc(clPoolingDesc), m_clInDataDesc(clInDataDesc), m_clOutDataDesc(clOutDataDesc) { }
+
+  bool operator()(const RealType &alpha, const RealType *p_inData, const RealType &beta, RealType *p_outData) const {
+    return cudnnPoolingForward(GetCudnnHandle(), m_clPoolingDesc, &alpha, m_clInDataDesc, p_inData, &beta, m_clOutDataDesc, p_outData) == CUDNN_STATUS_SUCCESS;
+  }
+
+private:
+  const CudnnPoolingDescriptor &m_clPoolingDesc;
+  const CudnnTensorDescriptor<RealType> &m_clInDataDesc;
+  const CudnnTensorDescriptor<RealType> &m_clOutDataDesc;
+};
+
+template<typename RealType>
+class CudnnPoolingBackward {
+public:
+  CudnnPoolingBackward(const CudnnPoolingDescriptor &clPoolingDesc, const CudnnTensorDescriptor<RealType> &clOutDataDesc, const CudnnTensorDescriptor<RealType> &clOutDataGradDesc, 
+    const CudnnTensorDescriptor<RealType> &clInDataDesc, const CudnnTensorDescriptor<RealType> &clInDataGradDesc)
+  : m_clPoolingDesc(clPoolingDesc), m_clOutDataDesc(clOutDataDesc), m_clOutDataGradDesc(clOutDataGradDesc), m_clInDataDesc(clInDataDesc), m_clInDataGradDesc(clInDataGradDesc) { }
+
+  bool operator()(const RealType &alpha, const RealType *p_outData, const RealType *p_outDataGrad, const RealType *p_inData, const RealType &beta, RealType *p_inDataGrad) const {
+    return cudnnPoolingBackward(GetCudnnHandle(), m_clPoolingDesc, &alpha, m_clOutDataDesc, p_outData, 
+      m_clOutDataGradDesc, p_outDataGrad, m_clInDataDesc, p_inData, &beta, m_clInDataGradDesc, p_inDataGrad) == CUDNN_STATUS_SUCCESS;
+  }
+
+private:
+  const CudnnPoolingDescriptor &m_clPoolingDesc;
+  const CudnnTensorDescriptor<RealType> &m_clOutDataDesc;
+  const CudnnTensorDescriptor<RealType> &m_clOutDataGradDesc;
+  const CudnnTensorDescriptor<RealType> &m_clInDataDesc;
+  const CudnnTensorDescriptor<RealType> &m_clInDataGradDesc;
 };
 
 } // end namespace bleak

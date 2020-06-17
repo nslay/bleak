@@ -23,35 +23,27 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "CudnnCommon.h"
-#include "VertexFactory.h"
-#include "CudnnConvolution.h"
+
 #include "CudnnPooling.h"
 
 namespace bleak {
 
-template<typename RealType>
-void InitializeCudnnModuleTemplate() {
-  VertexFactory<RealType> &clVertexFactory = VertexFactory<RealType>::GetInstance();
+template class CudnnMaxPooling1D<float>;
+template class CudnnMaxPooling1D<double>;
 
-  clVertexFactory.template Register<CudnnConvolution1D<RealType>>();
-  clVertexFactory.template Register<CudnnConvolution2D<RealType>>();
-  clVertexFactory.template Register<CudnnConvolution3D<RealType>>();
+template class CudnnMaxPooling2D<float>;
+template class CudnnMaxPooling2D<double>;
 
-  clVertexFactory.template Register<CudnnMaxPooling1D<RealType>>();
-  clVertexFactory.template Register<CudnnMaxPooling2D<RealType>>();
-  clVertexFactory.template Register<CudnnMaxPooling3D<RealType>>();
+template class CudnnMaxPooling3D<float>;
+template class CudnnMaxPooling3D<double>;
 
-  clVertexFactory.template Register<CudnnMeanPooling1D<RealType>>();
-  clVertexFactory.template Register<CudnnMeanPooling2D<RealType>>();
-  clVertexFactory.template Register<CudnnMeanPooling3D<RealType>>();
-}
+template class CudnnMeanPooling1D<float>;
+template class CudnnMeanPooling1D<double>;
 
-void InitializeCudnnModule() {
-  InitializeCudnn();
+template class CudnnMeanPooling2D<float>;
+template class CudnnMeanPooling2D<double>;
 
-  InitializeCudnnModuleTemplate<float>();
-  InitializeCudnnModuleTemplate<double>();
-}
+template class CudnnMeanPooling3D<float>;
+template class CudnnMeanPooling3D<double>;
 
 } // end namespace bleak

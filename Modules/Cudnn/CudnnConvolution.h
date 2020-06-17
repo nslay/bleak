@@ -79,7 +79,7 @@ public:
     }
 
     if (*std::min_element(m_vDilate.begin(), m_vDilate.end()) <= 0) {
-      std::cerr << GetName() << ": Error: 'stride' expected to be positive." << std::endl;
+      std::cerr << GetName() << ": Error: 'dilate' expected to be positive." << std::endl;
       return false;
     }
 
@@ -87,7 +87,7 @@ public:
     const Size clInWeightsSize = p_clInWeights->GetData().GetSize();
 
     if (!clInDataSize.Valid() || !clInWeightsSize.Valid()) {
-      std::cerr << GetName() << ": Error: Invalid 'inData' or 'inWeights' size." << std::endl;
+      std::cerr << GetName() << ": Error: Invalid 'inData' (" << clInDataSize << ") or 'inWeights' size (" << clInWeightsSize << ")." << std::endl;
       return false;
     }
 
@@ -120,7 +120,7 @@ public:
       }
     }
 
-    if (!m_clInDataDesc.SetFullyPacked(clInDataSize)) {
+    if (!m_clInDataDesc.Set(clInDataSize)) {
       std::cerr << GetName() << ": Error: Could not set inData descriptor." << std::endl;
       return false;
     }
@@ -132,11 +132,11 @@ public:
 
     if (p_clInBias != nullptr) {
       //Size clBiasSize(clInWeightsSize.GetDimension());
-      Size clBiasSize(3); // Min size to tensor descriptor stuff is 3
+      Size clBiasSize(3); // Min size of tensor descriptor stuff is 3
 
       clBiasSize[1] = p_clInBias->GetData().GetSize()[0];
 
-      if (!m_clBiasDesc.SetFullyPacked(clBiasSize)) {
+      if (!m_clBiasDesc.Set(clBiasSize)) {
         std::cerr << GetName() << ": Error: Could not set inBias descriptor." << std::endl;
         return false;
       }
@@ -163,7 +163,7 @@ public:
 
     //std::cout << GetName() << ": Output size = " << clOutDataSize << std::endl;
 
-    if (!m_clOutDataDesc.SetFullyPacked(clOutDataSize)) {
+    if (!m_clOutDataDesc.Set(clOutDataSize)) {
       std::cerr << GetName() << ": Error: Could not set outData descriptor." << std::endl;
       return false;
     }
@@ -275,7 +275,7 @@ public:
 
       CudnnConvolutionBackwardBias<RealType> clBackward(m_clOutDataDesc, m_clBiasDesc);
 
-      if (!clBackward(RealType(1), p_outDataGrad, RealType(0), p_biasGrad)) {
+      if (!clBackward(RealType(1), p_outDataGrad, RealType(1), p_biasGrad)) {
         std::cerr << GetName() << ": Error: Backward convolution bias failed." << std::endl;
         return;
       }
@@ -284,7 +284,7 @@ public:
     if (p_weightsGrad != nullptr) {
       CudnnConvolutionBackwardFilter<RealType> clBackward(m_clInDataDesc, m_clOutDataDesc, m_clConvolutionDesc, m_clBackwardFilterAlgo, m_clWeightsDesc);
 
-      if (!clBackward(RealType(1), p_inData, p_outDataGrad, RealType(0), p_weightsGrad)) {
+      if (!clBackward(RealType(1), p_inData, p_outDataGrad, RealType(1), p_weightsGrad)) {
         std::cerr << GetName() << ": Error: Backward convolution filter failed." << std::endl;
         return;
       }
@@ -293,7 +293,7 @@ public:
     if (p_inDataGrad != nullptr) {
       CudnnConvolutionBackwardData<RealType> clBackward(m_clWeightsDesc, m_clOutDataDesc, m_clConvolutionDesc, m_clBackwardDataAlgo, m_clInDataDesc);
 
-      if (!clBackward(RealType(1), p_weights, p_outDataGrad, RealType(0), p_inDataGrad)) {
+      if (!clBackward(RealType(1), p_weights, p_outDataGrad, RealType(1), p_inDataGrad)) {
         std::cerr << GetName() << ": Error: Backward convolution data failed." << std::endl;
         return;
       }

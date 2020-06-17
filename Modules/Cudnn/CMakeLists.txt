@@ -23,6 +23,7 @@ bleakNewModule(Cudnn SOURCES
   InitializeCudnnModule.cpp
   CudnnCommon.h CudnnCommon.cpp
   CudnnConvolution.h CudnnConvolution.cpp
+  CudnnPooling.h CudnnPooling.cpp
   INCLUDE_DIRECTORIES "${bleakCudnnIncludeDir}"
   MODULE_DEPENDS Common
   LIBRARIES "${bleakCudnnLibrary}"
