@@ -79,7 +79,7 @@ public:
     return m_p_workspace; 
   }
 
-  size_t GetWorkspaceSize() const { return m_capacity; }
+  size_t GetWorkspaceSize() const { return m_workspaceSize; } // Technically, this should return m_capacity... but it may not be set when this is called! Lazy allocate will adjust m_capacity anyway.
 
 private:
   uint8_t *m_p_workspace = nullptr;
