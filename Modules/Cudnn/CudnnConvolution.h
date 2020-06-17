@@ -240,7 +240,7 @@ public:
 
       CudnnConvolutionBiasActivationForward<RealType> clForward(m_clInDataDesc, m_clWeightsDesc, m_clConvolutionDesc, m_clForwardAlgo, m_clOutDataDesc, m_clBiasDesc, m_clActivationDesc, m_clOutDataDesc);
 
-      if (!clForward(RealType(1), p_inData, p_weights, RealType(0), p_inData, p_bias, p_outData))
+      if (!clForward(RealType(1), p_inData, p_weights, RealType(0), p_outData, p_bias, p_outData))
         std::cerr << GetName() << ": Error: Forward convolution with bias failed." << std::endl;
 
       return;
