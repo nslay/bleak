@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
   std::string strOutCsvFile;
 
   int c = 0;
-  while ((c = getopt(argc, argv, "d:f:hl:")) != -1) {
+  while ((c = getopt(argc, argv, "d:f:hl:o:")) != -1) {
     switch (c) {
     case 'd':
       strProbMapRoot = optarg;
@@ -63,6 +63,7 @@ int main(int argc, char **argv) {
       strListFile = optarg;
       break;
     case 'o':
+      strOutCsvFile = optarg;
       break;
     case '?':
     default:
