@@ -40,12 +40,34 @@ public:
     bleakAddInput("inData"),
     bleakAddInput("inLabels"),
     bleakAddOutput("outLoss"),
-    bleakAddProperty("penaltyWeight", m_fPenaltyWeight),
+    bleakAddProperty("penaltyWeights", m_vPenaltyWeights),
+    bleakAddGetterSetter("penaltyWeight", &HingeLoss::GetPenaltyWeight, &HingeLoss::SetPenaltyWeight),
     bleakAddProperty("margin", m_fMargin));
 
   bleakForwardVertexTypedefs();
 
   virtual ~HingeLoss() = default;
+
+  bool GetPenaltyWeight(float &fPenaltyWeight) const {
+    switch (m_vPenaltyWeights.size()) {
+    case 0:
+      fPenaltyWeight = 1.0f;
+      break;
+    case 1:
+      fPenaltyWeight = m_vPenaltyWeights[0];
+      break;
+    default:
+      return false;
+    }
+
+    return true;
+  }
+
+  bool SetPenaltyWeight(const float &fPenaltyWeight) {
+    m_vPenaltyWeights.resize(1);
+    m_vPenaltyWeights[0] = fPenaltyWeight;
+    return true;
+  }
 
   virtual bool SetSizes() override {
     bleakGetAndCheckInput(p_clInData, "inData", false);
@@ -62,6 +84,11 @@ public:
 
     if (!clInData.GetSize().Valid() || !clInLabels.GetSize().Valid()) {
       std::cerr << GetName() << ": Error: inData and/or inLabel input sizes are invalid." << std::endl;
+      return false;
+    }
+
+    if (m_vPenaltyWeights.size() > 1 && (size_t)clInData.GetSize()[1] != m_vPenaltyWeights.size()) {
+      std::cerr << GetName() << ": Error: Dimension mismatch between penaltyWeights and outProbabilities. Expected " << m_vPenaltyWeights.size() << " channels, but got " << clInData.GetSize()[1] << " channels." << std::endl;
       return false;
     }
 
@@ -120,20 +147,22 @@ public:
       for (int k = 0; k < iInnerNum; ++k) {
         const int iLabel = (int)(p_inLabels[i*iInnerNum + k]);
 
-        if (iLabel < 0 || iLabel >= iNumClasses) // TODO: Warning?
+        if (iLabel < 0 || iLabel >= iNumClasses)
           continue;
+
+        const RealType weight = GetPenaltyWeightForLabel(iLabel, iNumClasses);
 
         const RealType labelInput = p_inData[(i*iNumClasses + iLabel)*iInnerNum + k];
 
         for (int j = 0; j < iLabel; ++j)
-          outLoss += std::max(RealType(0), p_inData[(i*iNumClasses + j)*iInnerNum + k] - labelInput + RealType(m_fMargin));
+          outLoss += std::max(RealType(0), p_inData[(i*iNumClasses + j)*iInnerNum + k] - labelInput + RealType(m_fMargin))*weight;
 
         for (int j = iLabel+1; j < iNumClasses; ++j)
-          outLoss += std::max(RealType(0), p_inData[(i*iNumClasses + j)*iInnerNum + k] - labelInput + RealType(m_fMargin));
+          outLoss += std::max(RealType(0), p_inData[(i*iNumClasses + j)*iInnerNum + k] - labelInput + RealType(m_fMargin))*weight;
       }
     }
 
-    outLoss *= RealType(m_fPenaltyWeight)/iOuterNum;
+    outLoss /= RealType(iOuterNum);
   }
 
   virtual void Backward() override {
@@ -162,25 +191,27 @@ public:
     const int iNumClasses = clInData.GetSize()[1];
     const int iInnerNum = clInData.GetSize().Product(2);
 
-    const RealType scale = RealType(m_fPenaltyWeight)*outLossGradient/RealType(iOuterNum);
+    const RealType scale = outLossGradient/RealType(iOuterNum);
 
     for (int i = 0; i < iOuterNum; ++i) {
       for (int k = 0; k < iInnerNum; ++k) {
         const int iLabel = (int)(p_inLabels[i*iInnerNum + k]);
 
-        if (iLabel < 0 || iLabel >= iNumClasses) // TODO: Warning
+        if (iLabel < 0 || iLabel >= iNumClasses)
           continue;
+
+        const RealType weight = GetPenaltyWeightForLabel(iLabel, iNumClasses);
 
         const RealType labelInput = p_inData[(i*iNumClasses + iLabel)*iInnerNum + k];
 
         for (int j = 0; j < iLabel; ++j) {
-          const RealType diff = (p_inData[(i*iNumClasses + j)*iInnerNum + k] - labelInput + RealType(m_fMargin) > RealType(0))*scale;
+          const RealType diff = (p_inData[(i*iNumClasses + j)*iInnerNum + k] - labelInput + RealType(m_fMargin) > RealType(0))*scale*weight;
           p_inDataGradient[(i*iNumClasses + j)*iInnerNum + k] += diff;
           p_inDataGradient[(i*iNumClasses + iLabel)*iInnerNum + k] -= diff;
         }
 
         for (int j = iLabel+1; j < iNumClasses; ++j) {
-          const RealType diff = (p_inData[(i*iNumClasses + j)*iInnerNum + k] - labelInput + RealType(m_fMargin) > RealType(0))*scale;
+          const RealType diff = (p_inData[(i*iNumClasses + j)*iInnerNum + k] - labelInput + RealType(m_fMargin) > RealType(0))*scale*weight;
           p_inDataGradient[(i*iNumClasses + j)*iInnerNum + k] += diff;
           p_inDataGradient[(i*iNumClasses + iLabel)*iInnerNum + k] -= diff;
         }
@@ -191,8 +222,24 @@ public:
 protected:
   HingeLoss() = default;
 
+  RealType GetPenaltyWeightForLabel(int iLabel, int iNumClasses) const {
+    if (iLabel < 0 || iLabel >= iNumClasses) // No learning on these labels!
+      return RealType(0);
+
+    switch (m_vPenaltyWeights.size()) {
+    case 0: // Default weight
+      return RealType(1); 
+    case 1: // All labels use the same weight
+      return RealType(m_vPenaltyWeights[0]);
+    default:
+      return RealType(m_vPenaltyWeights[iLabel]);
+    }
+
+    return RealType(0); // Not reached
+  }
+
 private:
-  float m_fPenaltyWeight = 1.0f;
+  std::vector<float> m_vPenaltyWeights = { 1.0f };
   float m_fMargin = 1.0f;
 };
 
