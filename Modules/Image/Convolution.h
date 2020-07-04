@@ -83,7 +83,6 @@ public:
       return false;
     }
 
-    // TODO: Fix inconsistency with dilation
     if (*std::min_element(m_vDilate.begin(), m_vDilate.end()) <= 0) {
       std::cerr << GetName() << ": Error: Dilate expected to be positive." << std::endl;
       return false;

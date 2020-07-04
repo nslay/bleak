@@ -115,6 +115,9 @@ public:
       for (int k = 0; k < iInnerNum; ++k) {
         const int iGTLabel = (int)(p_labels[i*iInnerNum + k]);
 
+        if (iGTLabel < 0 || iGTLabel >= iNumClasses)
+          continue;
+
         int iMinLabel = -1;
         RealType minCertaintyFor = RealType(1000000);
 
