@@ -37,19 +37,14 @@
 #include "BlasWrapper.h"
 #include "DatabaseFactory.h"
 #include "InitializeModules.h"
+#include "ProstateXCommon.h"
 
 #ifdef BLEAK_USE_CUDA
 #include "cuda_runtime.h"
 #endif // BLEAK_USE_CUDA
 
 // ITK stuff
-#include "itkImage.h"
-#include "itkImageFileReader.h"
-#include "itkImageFileWriter.h"
-#include "itkImageSeriesReader.h"
 #include "itkResampleImageFilter.h"
-#include "itkGDCMImageIO.h"
-#include "itkGDCMSeriesFileNames.h"
 
 void Usage(const char *p_cArg0) {
   std::cerr << "Usage: " << p_cArg0 << " [-h] [-d gpuDeviceIndex] [-I includeDir] [-t float|double] -g graphFile -w weightsDatabasePath -T t2wPath -A adcPath -B bValuePath [-o outputPath]" << std::endl;
@@ -105,18 +100,6 @@ private:
 
 template<typename PixelType, unsigned int Dimension>
 typename itk::Image<PixelType, Dimension>::Pointer ResampleBySize(typename itk::Image<PixelType, Dimension>::Pointer p_clImage, const itk::Size<Dimension> clNewSize);
-
-// From AlignVolumes
-template<typename PixelType, unsigned int Dimension>
-typename itk::Image<PixelType, Dimension>::Pointer LoadImg(const std::string &strPath);
-
-// From AlignVolumes
-template<typename PixelType, unsigned int Dimension>
-bool SaveImg(const itk::Image<PixelType, Dimension> *p_clImage, const std::string &strPath, bool bCompress);
-
-// From AlignVolumes
-template<typename PixelType, unsigned int Dimension>
-typename itk::Image<PixelType, Dimension>::Pointer LoadDicomImage(const std::string &strPath, const std::string &strSeriesUID = std::string());
 
 int main(int argc, char **argv) {
   const char * const p_cArg0 = argv[0];
@@ -177,6 +160,8 @@ int main(int argc, char **argv) {
 
   if (strGraphFile.empty() || strWeightsFile.empty() || strT2WPath.empty() || strADCPath.empty() || strBValuePath.empty())
     Usage(p_cArg0);
+
+  bleak::RegisterITKFactories();
 
   if (iDevice < 0) {
     bleak::SetUseGPU(false);
@@ -279,163 +264,6 @@ typename itk::Image<PixelType, Dimension>::Pointer ResampleBySize(typename itk::
   return p_clResampler->GetOutput();
 }
 
-template<typename PixelType, unsigned int Dimension>
-typename itk::Image<PixelType, Dimension>::Pointer LoadImg(const std::string &strPath) {
-  typedef itk::Image<PixelType, Dimension> ImageType;
-  typedef itk::ImageFileReader<ImageType> ReaderType;
-
-  typename ReaderType::Pointer p_clReader = ReaderType::New();
-
-  p_clReader->SetFileName(strPath);
-
-  try {
-    p_clReader->Update();
-  }
-  catch (itk::ExceptionObject &e) {
-    std::cerr << "Error: " << e << std::endl;
-    return typename ImageType::Pointer();
-  }
-
-  return p_clReader->GetOutput();
-}
-
-template<typename PixelType, unsigned int Dimension>
-bool SaveImg(const itk::Image<PixelType, Dimension> *p_clImage, const std::string &strPath, bool bCompress) {
-  typedef itk::Image<PixelType, Dimension> ImageType;
-  typedef itk::ImageFileWriter<ImageType> WriterType;
-
-  typename WriterType::Pointer p_clWriter = WriterType::New();
-
-  p_clWriter->SetFileName(strPath);
-  p_clWriter->SetUseCompression(bCompress);
-  p_clWriter->SetInput(p_clImage);
-
-  try {
-    p_clWriter->Update();
-  }
-  catch (itk::ExceptionObject &e) {
-    std::cerr << "Error: " << e << std::endl;
-    return false;
-  }
-
-  return true;
-}
-
-template<typename PixelType, unsigned int Dimension>
-typename itk::Image<PixelType, Dimension>::Pointer LoadDicomImage(const std::string &strPath, const std::string &strSeriesUID) {
-  typedef itk::Image<PixelType, Dimension> ImageType;
-  typedef itk::GDCMImageIO ImageIOType;
-  typedef itk::GDCMSeriesFileNames FileNameGeneratorType;
-
-  if (!bleak::FileExists(strPath)) // File or folder must exist
-    return typename ImageType::Pointer();
-
-  ImageIOType::Pointer p_clImageIO = ImageIOType::New();
-
-  p_clImageIO->LoadPrivateTagsOn();
-  p_clImageIO->KeepOriginalUIDOn();
-
-  if (Dimension == 2) {
-    // Read a 2D image
-    typedef itk::ImageFileReader<ImageType> ReaderType;
-
-    if (bleak::IsFolder(strPath)) // Must be a file
-      return typename ImageType::Pointer();
-    
-    if (!p_clImageIO->CanReadFile(strPath.c_str()))
-      return typename ImageType::Pointer();
-
-    typename ReaderType::Pointer p_clReader = ReaderType::New();
-
-    p_clReader->SetImageIO(p_clImageIO);
-    p_clReader->SetFileName(strPath);
-
-    try {
-      p_clReader->Update();
-    }
-    catch (itk::ExceptionObject &e) {
-      std::cerr << "Error: " << e << std::endl;
-      return typename ImageType::Pointer();
-    }
-
-    typename itk::Image<PixelType, Dimension>::Pointer p_clImage = p_clReader->GetOutput();
-    p_clImage->SetMetaDataDictionary(p_clImageIO->GetMetaDataDictionary());
-
-    return p_clImage;
-  }
-
-  // Passed a file, read the series UID (ignore the one provided, if any)
-  if (!bleak::IsFolder(strPath)) {
-
-    if (!p_clImageIO->CanReadFile(strPath.c_str()))
-      return typename ImageType::Pointer();
-
-    p_clImageIO->SetFileName(strPath.c_str());
-
-    try {
-      p_clImageIO->ReadImageInformation();
-    }
-    catch (itk::ExceptionObject &e) {
-      std::cerr << "Error: " << e << std::endl;
-      return typename ImageType::Pointer();
-    }
-
-    const itk::MetaDataDictionary &clDicomTags = p_clImageIO->GetMetaDataDictionary();
-
-    std::string strTmpSeriesUID;
-    if (!itk::ExposeMetaData(clDicomTags, "0020|000e", strTmpSeriesUID))
-      return typename ImageType::Pointer();
-
-    bleak::Trim(strTmpSeriesUID);
-
-    return LoadDicomImage<PixelType, Dimension>(bleak::DirName(strPath), strTmpSeriesUID); // Call this function again
-  }
-
-  FileNameGeneratorType::Pointer p_clFileNameGenerator = FileNameGeneratorType::New();
-
-  // Use the ACTUAL series UID ... not some custom ITK concatenations of lots of junk.
-  p_clFileNameGenerator->SetUseSeriesDetails(false); 
-  p_clFileNameGenerator->SetDirectory(strPath);
-
-  if (strSeriesUID.empty()) {
-    // Passed a folder but no series UID ... pick the first series UID
-    const FileNameGeneratorType::SeriesUIDContainerType &vSeriesUIDs = p_clFileNameGenerator->GetSeriesUIDs();
-
-    if (vSeriesUIDs.empty())
-      return typename ImageType::Pointer();
-
-    // Use first series UID
-    return LoadDicomImage<PixelType, Dimension>(strPath, vSeriesUIDs[0]);
-  }
-
-  const FileNameGeneratorType::FileNamesContainerType &vDicomFiles = p_clFileNameGenerator->GetFileNames(strSeriesUID);
-
-  if (vDicomFiles.empty())
-    return typename ImageType::Pointer();
-
-  // Read 3D or higher (but 4D probably doesn't work correctly)
-  typedef itk::ImageSeriesReader<ImageType> ReaderType;
-
-  typename ReaderType::Pointer p_clReader = ReaderType::New();
-
-  p_clReader->SetImageIO(p_clImageIO);
-  p_clReader->SetFileNames(vDicomFiles);
-
-  try {
-    p_clReader->Update();
-  }
-  catch (itk::ExceptionObject &e) {
-    std::cerr << "Error: " << e << std::endl;
-    return typename ImageType::Pointer();
-  }
-
-  typename itk::Image<PixelType, Dimension>::Pointer p_clImage = p_clReader->GetOutput();
-  p_clImage->SetMetaDataDictionary(p_clImageIO->GetMetaDataDictionary());
-
-  return p_clImage;
-  //return p_clReader->GetOutput();
-}
-
 ////////////////////////// ProstateXTool //////////////////////////
 
 // Everything is assumed to be initialized BEFORE this call
@@ -500,7 +328,7 @@ bool ProstateXTool<RealType>::SaveScoreMap(const std::string &strPath, bool bCom
   if (!m_p_clScoreMap)
     return false;
 
-  return ::SaveImg<RealType, 3>(m_p_clScoreMap, strPath, bCompress);
+  return bleak::SaveImg<RealType, 3>(m_p_clScoreMap, strPath, bCompress);
 }
 
 template<typename RealType>
@@ -658,9 +486,9 @@ auto ProstateXTool<RealType>::LoadImg(const std::string &strPath, const std::str
   typename ImageType::Pointer p_clImage;
 
   if (bleak::IsFolder(strPath)) // DICOM
-    p_clImage = LoadDicomImage<RealType, 3>(strPath);
+    p_clImage = bleak::LoadDicomImage<RealType, 3>(strPath);
   else
-    p_clImage = ::LoadImg<RealType, 3>(strPath);
+    p_clImage = bleak::LoadImg<RealType, 3>(strPath);
 
   if (!p_clImage) {
     std::cerr << "Error: Failed to load image '" << strPath << "'." << std::endl;
