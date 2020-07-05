@@ -197,7 +197,8 @@ int main(int argc, char **argv) {
         prob = vProbs[std::min((size_t)(dProbPerc*vProbs.size()), vProbs.size()-1)];
       }
 
-      outCsvStream << p_stFinding->strPatientId << ',' << p_stFinding->iFindingId << ',' << prob << '\n';
+      if (outCsvStream.good())
+        outCsvStream << p_stFinding->strPatientId << ',' << p_stFinding->iFindingId << ',' << prob << '\n';
 
       // If we're evaluating on unseen data... all of these should unknown labels!
       if (p_stFinding->eLabel != bleak::Finding::UnknownLabel)
