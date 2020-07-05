@@ -28,6 +28,7 @@
 #include <fstream>
 #include <vector>
 #include <unordered_map>
+#include <unordered_set>
 #include "Common.h"
 #include "ProstateXCommon.h"
 #include "bsdgetopt.h"
@@ -93,8 +94,15 @@ int main(int argc, char **argv) {
   std::vector<std::string> vPatientIds;
 
   if (strListFile.empty()) {
-    for (const auto &stPair : mFindingsMap)
-      vPatientIds.push_back(stPair.first);
+    std::unordered_set<std::string> sPatientIds;
+
+    vPatientIds.reserve(mFindingsMap.size());
+
+    // Make sure to keep these in order by traversing the findings vector directly
+    for (const bleak::Finding &stFinding : vFindings) {
+      if (sPatientIds.emplace(stFinding.strPatientId).second)
+        vPatientIds.push_back(stFinding.strPatientId);
+    }
   }
   else {
     std::ifstream listStream(strListFile);
@@ -186,7 +194,7 @@ int main(int argc, char **argv) {
 
       if (vProbs.size() > 0) {
         std::sort(vProbs.begin(), vProbs.end());
-        prob = vProbs[(size_t)(dProbPerc*vProbs.size())];
+        prob = vProbs[std::min((size_t)(dProbPerc*vProbs.size()), vProbs.size()-1)];
       }
 
       outCsvStream << p_stFinding->strPatientId << ',' << p_stFinding->iFindingId << ',' << prob << '\n';
