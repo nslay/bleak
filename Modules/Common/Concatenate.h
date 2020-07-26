@@ -195,6 +195,9 @@ public:
     const ArrayType &clOutData = p_clOutData->GetData();
     const ArrayType &clOutDataGradient = p_clOutData->GetGradient();
 
+    if (!clOutDataGradient.Valid())
+      return; // Nothing to do
+
     const RealType * const p_outDataGradient = clOutDataGradient.data();
 
     const int iOuterNum = clOutData.GetSize().Product(0, m_iAxis);
@@ -299,6 +302,9 @@ public:
 
     const ArrayType &clOutData = p_clOutData->GetData();
     const ArrayType &clOutDataGradient = p_clOutData->GetGradient();
+
+    if (!clOutDataGradient.Valid())
+      return; // Nothing to do
 
     const RealType * const p_outDataGradient = clOutDataGradient.data(GPU);
 
