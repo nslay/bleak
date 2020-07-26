@@ -124,10 +124,10 @@ double dot<double>(int n, const double *x, int incx, const double *y, int incy) 
 }
 
 template<>
-void dot<float>(int n, const float *x, int incx, const float *y, int incy, float &result) { CheckCuBLASCall(cublasSdot, g_handle, n, x, incx, y, incy, &result); }
+void dot<float>(int n, const float *x, int incx, const float *y, int incy, float *result) { CheckCuBLASCall(cublasSdot, g_handle, n, x, incx, y, incy, result); }
 
 template<>
-void dot<double>(int n, const double *x, int incx, const double *y, int incy, double &result) { CheckCuBLASCall(cublasDdot, g_handle, n, x, incx, y, incy, &result); }
+void dot<double>(int n, const double *x, int incx, const double *y, int incy, double *result) { CheckCuBLASCall(cublasDdot, g_handle, n, x, incx, y, incy, result); }
 
 template<>
 float nrm2<float>(int n, const float *x, int incx) {
@@ -144,10 +144,10 @@ double nrm2<double>(int n, const double *x, int incx) {
 }
 
 template<>
-void nrm2<float>(int n, const float *x, int incx, float &result) { CheckCuBLASCall(cublasSnrm2, g_handle, n, x, incx, &result); }
+void nrm2<float>(int n, const float *x, int incx, float *result) { CheckCuBLASCall(cublasSnrm2, g_handle, n, x, incx, result); }
 
 template<>
-void nrm2<double>(int n, const double *x, int incx, double &result) { CheckCuBLASCall(cublasDnrm2, g_handle, n, x, incx, &result); }
+void nrm2<double>(int n, const double *x, int incx, double *result) { CheckCuBLASCall(cublasDnrm2, g_handle, n, x, incx, result); }
 
 template<>
 float asum<float>(int n, const float *x, int incx) {
@@ -164,10 +164,10 @@ double asum<double>(int n, const double *x, int incx) {
 }
 
 template<>
-void asum<float>(int n, const float *x, int incx, float &result) { CheckCuBLASCall(cublasSasum, g_handle, n, x, incx, &result); }
+void asum<float>(int n, const float *x, int incx, float *result) { CheckCuBLASCall(cublasSasum, g_handle, n, x, incx, result); }
 
 template<>
-void asum<double>(int n, const double *x, int incx, double &result) { CheckCuBLASCall(cublasDasum, g_handle, n, x, incx, &result); }
+void asum<double>(int n, const double *x, int incx, double *result) { CheckCuBLASCall(cublasDasum, g_handle, n, x, incx, result); }
 
 template<>
 int amax<float>(int n, const float *x, int incx) {
@@ -184,10 +184,10 @@ int amax<double>(int n, const double *x, int incx) {
 }
 
 template<>
-void amax<float>(int n, const float *x, int incx, int &result) { CheckCuBLASCall(cublasIsamax, g_handle, n, x, incx, &result); }
+void amax<float>(int n, const float *x, int incx, int *result) { CheckCuBLASCall(cublasIsamax, g_handle, n, x, incx, result); }
 
 template<>
-void amax<double>(int n, const double *x, int incx, int &result) { CheckCuBLASCall(cublasIdamax, g_handle, n, x, incx, &result); }
+void amax<double>(int n, const double *x, int incx, int *result) { CheckCuBLASCall(cublasIdamax, g_handle, n, x, incx, result); }
 
 // Level 2
 template<>

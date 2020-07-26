@@ -30,6 +30,7 @@
 
 #include <algorithm>
 #include "Vertex.h"
+#include "BlasWrapper.h"
 
 namespace bleak {
 
@@ -70,6 +71,7 @@ public:
 
     // Check validity of inputs and sum up concatenation axis
     int iAxisSum = 0;
+    bool bHasLearnableInputs = false;
 
     // XXX: May need to revisit for Squeeze()?
     for (int i = 0; i < GetMaxInputs(); ++i) {
@@ -105,6 +107,9 @@ public:
       }
 
       iAxisSum += clData.GetSize()[m_iAxis];
+
+      if (p_clInput->GetGradient().GetSize().Valid())
+        bHasLearnableInputs = true;
     }
 
     if (p_clRefInput == nullptr) {
@@ -117,7 +122,11 @@ public:
     clOutSize[m_iAxis] = iAxisSum;
 
     p_clOutData->GetData().SetSize(clOutSize);
-    p_clOutData->GetGradient().SetSize(clOutSize);
+
+    if (bHasLearnableInputs)
+      p_clOutData->GetGradient().SetSize(clOutSize);
+    else
+      p_clOutData->GetGradient().Clear();
 
     return true;
   }
@@ -126,11 +135,11 @@ public:
     return true; // Nothing to do
   }
 
-  virtual void Forward() override {
+  virtual void ForwardCPU() override {
     bleakGetAndCheckOutput(p_clOutData, "outData");
 
     ArrayType &clOutData = p_clOutData->GetData();
-    RealType * const p_outData = clOutData.data();
+    RealType * const p_outData = clOutData.data_no_sync();
 
     const int iOuterNum = clOutData.GetSize().Product(0, m_iAxis);
     const int iAxisNum = clOutData.GetSize()[m_iAxis];
@@ -164,16 +173,23 @@ public:
         const int jBegin = j;
         const int jEnd = jBegin + iInputAxisNum;
 
-        for ( ; j < jEnd; ++j) {
-          for (int k = 0; k < iInnerNum; ++k) {
-            p_outData[(i*iAxisNum + j)*iInnerNum + k] = p_inData[(i*iInputAxisNum + j-jBegin)*iInnerNum + k];
-          }
+        if (p_inData != nullptr) {
+          const int iCount = (jEnd - jBegin)*iInnerNum;
+          cpu_blas::copy(iCount, p_inData + (i*iInputAxisNum + 0)*iInnerNum, 1, p_outData + (i*iAxisNum + jBegin)*iInnerNum, 1);
         }
+
+        j = jEnd;
+
+        //for ( ; j < jEnd; ++j) {
+        //  for (int k = 0; k < iInnerNum; ++k) {
+        //    p_outData[(i*iAxisNum + j)*iInnerNum + k] = p_inData[(i*iInputAxisNum + j-jBegin)*iInnerNum + k];
+        //  }
+        //}
       }
     }
   }
 
-  virtual void Backward() override {
+  virtual void BackwardCPU() override {
     bleakGetAndCheckOutput(p_clOutData, "outData");
 
     const ArrayType &clOutData = p_clOutData->GetData();
@@ -213,19 +229,121 @@ public:
         const int jBegin = j;
         const int jEnd = jBegin + iInputAxisNum;
 
-        if (p_inDataGradient == nullptr) {
-          j = jEnd;
-          continue;
+        if (p_inDataGradient != nullptr) {
+          const int iCount = (jEnd - jBegin)*iInnerNum;
+          cpu_blas::axpy(iCount, RealType(1), p_outDataGradient + (i*iAxisNum + jBegin)*iInnerNum, 1, p_inDataGradient + (i*iInputAxisNum + 0)*iInnerNum, 1);
         }
 
-        for ( ; j < jEnd; ++j) {
-          for (int k = 0; k < iInnerNum; ++k) {
-            p_inDataGradient[(i*iInputAxisNum + (j-jBegin))*iInnerNum + k] += p_outDataGradient[(i*iAxisNum + j)*iInnerNum + k];
-          }
-        }
+        j = jEnd;
+
+        //for ( ; j < jEnd; ++j) {
+        //  for (int k = 0; k < iInnerNum; ++k) {
+        //    p_inDataGradient[(i*iInputAxisNum + (j-jBegin))*iInnerNum + k] += p_outDataGradient[(i*iAxisNum + j)*iInnerNum + k];
+        //  }
+        //}
       }
     }
   }
+
+#ifdef BLEAK_USE_CUDA
+  virtual void ForwardGPU() override {
+    bleakGetAndCheckOutput(p_clOutData, "outData");
+
+    ArrayType &clOutData = p_clOutData->GetData();
+    RealType * const p_outData = clOutData.data_no_sync(GPU);
+
+    const int iOuterNum = clOutData.GetSize().Product(0, m_iAxis);
+    const int iAxisNum = clOutData.GetSize()[m_iAxis];
+    const int iInnerNum = clOutData.GetSize().Product(m_iAxis+1);
+
+    // Collect data pointers
+    const RealType * a_inData[GetMaxInputs()] = { nullptr };
+    int a_iInputAxisNums[GetMaxInputs()] = { 0 };
+
+    for (int i = 0; i < GetMaxInputs(); ++i) {
+      const char * const p_cInputName = GetInputName(i);
+
+      std::shared_ptr<EdgeType> p_clInData = GetInput(p_cInputName);
+
+      a_inData[i] = nullptr;
+      a_iInputAxisNums[i] = 0;
+
+      if (p_clInData != nullptr) {
+        a_inData[i] = p_clInData->GetData().data(GPU);
+        a_iInputAxisNums[i] = p_clInData->GetData().GetSize()[m_iAxis];
+      }
+    }
+
+    for (int i = 0; i < iOuterNum; ++i) {
+      int j = 0;
+
+      for (int l = 0; l < GetMaxInputs(); ++l) {
+        const RealType * const p_inData = a_inData[l];
+        const int iInputAxisNum = a_iInputAxisNums[l];
+
+        const int jBegin = j;
+        const int jEnd = jBegin + iInputAxisNum;
+
+        if (p_inData != nullptr) {
+          const int iCount = (jEnd - jBegin)*iInnerNum;
+          gpu_blas::copy(iCount, p_inData + (i*iInputAxisNum + 0)*iInnerNum, 1, p_outData + (i*iAxisNum + jBegin)*iInnerNum, 1);
+        }
+
+        j = jEnd;
+      }
+    }
+  }
+
+  virtual void BackwardGPU() override {
+    bleakGetAndCheckOutput(p_clOutData, "outData");
+
+    const ArrayType &clOutData = p_clOutData->GetData();
+    const ArrayType &clOutDataGradient = p_clOutData->GetGradient();
+
+    const RealType * const p_outDataGradient = clOutDataGradient.data(GPU);
+
+    const int iOuterNum = clOutData.GetSize().Product(0, m_iAxis);
+    const int iAxisNum = clOutData.GetSize()[m_iAxis];
+    const int iInnerNum = clOutData.GetSize().Product(m_iAxis+1);
+
+    // Collect data pointers
+    RealType * a_inDataGradient[GetMaxInputs()] = { nullptr };
+    int a_iInputAxisNums[GetMaxInputs()] = { 0 };
+
+    for (int i = 0; i < GetMaxInputs(); ++i) {
+      const char * const p_cInputName = GetInputName(i);
+
+      std::shared_ptr<EdgeType> p_clInData = GetInput(p_cInputName);
+
+      a_inDataGradient[i] = nullptr;
+      a_iInputAxisNums[i] = 0;
+
+      if (p_clInData != nullptr) {
+        a_inDataGradient[i] = p_clInData->GetGradient().data(GPU); // Should be nullptr if not learnable
+        a_iInputAxisNums[i] = p_clInData->GetData().GetSize()[m_iAxis];
+      }
+    }
+
+    for (int i = 0; i < iOuterNum; ++i) {
+      int j = 0;
+
+      for (int l = 0; l < GetMaxInputs(); ++l) {
+        RealType * const p_inDataGradient = a_inDataGradient[l];
+        const int iInputAxisNum = a_iInputAxisNums[l];
+
+        const int jBegin = j;
+        const int jEnd = jBegin + iInputAxisNum;
+
+        if (p_inDataGradient != nullptr) {
+          const int iCount = (jEnd - jBegin)*iInnerNum;
+          gpu_blas::axpy(iCount, RealType(1), p_outDataGradient + (i*iAxisNum + jBegin)*iInnerNum, 1, p_inDataGradient + (i*iInputAxisNum + 0)*iInnerNum, 1);
+        }
+
+        j = jEnd;
+      }
+    }
+  }
+#endif // BLEAK_USE_CUDA
 
 protected:
   Concatenate() = default;

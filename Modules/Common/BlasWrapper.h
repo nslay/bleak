@@ -54,25 +54,25 @@ template<typename RealType>
 RealType dot(int n, const RealType *x, int incx, const RealType *y, int incy);
 
 template<typename RealType>
-void dot(int n, const RealType *x, int incx, const RealType *y, int incy, RealType &result); // For cuBLAS
+void dot(int n, const RealType *x, int incx, const RealType *y, int incy, RealType *result); // For cuBLAS
 
 template<typename RealType>
 RealType nrm2(int n, const RealType *x, int incx);
 
 template<typename RealType>
-void nrm2(int n, const RealType *x, int incx, RealType &result); // For cuBLAS
+void nrm2(int n, const RealType *x, int incx, RealType *result); // For cuBLAS
 
 template<typename RealType>
 RealType asum(int n, const RealType *x, int incx);
 
 template<typename RealType>
-void asum(int n, const RealType *x, int incx, RealType &result); // For cuBLAS
+void asum(int n, const RealType *x, int incx, RealType *result); // For cuBLAS
 
 template<typename RealType>
 int amax(int n, const RealType *x, int incx);
 
 template<typename RealType>
-void amax(int n, const RealType *x, int incx, int &result); // For cuBLAS
+void amax(int n, const RealType *x, int incx, int *result); // For cuBLAS
 
 // Level 2
 template<typename RealType>
@@ -110,25 +110,25 @@ template<typename RealType>
 RealType dot(int n, const RealType *x, int incx, const RealType *y, int incy);
 
 template<typename RealType>
-void dot(int n, const RealType *x, int incx, const RealType *y, int incy, RealType &result); // For cuBLAS
+void dot(int n, const RealType *x, int incx, const RealType *y, int incy, RealType *result); // For cuBLAS
 
 template<typename RealType>
 RealType nrm2(int n, const RealType *x, int incx);
 
 template<typename RealType>
-void nrm2(int n, const RealType *x, int incx, RealType &result); // For cuBLAS
+void nrm2(int n, const RealType *x, int incx, RealType *result); // For cuBLAS
 
 template<typename RealType>
 RealType asum(int n, const RealType *x, int incx);
 
 template<typename RealType>
-void asum(int n, const RealType *x, int incx, RealType &result); // For cuBLAS
+void asum(int n, const RealType *x, int incx, RealType *result); // For cuBLAS
 
 template<typename RealType>
 int amax(int n, const RealType *x, int incx);
 
 template<typename RealType>
-void amax(int n, const RealType *x, int incx, int &result); // For cuBLAS
+void amax(int n, const RealType *x, int incx, int *result); // For cuBLAS
 
 // Level 2
 template<typename RealType>

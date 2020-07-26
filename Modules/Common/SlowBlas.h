@@ -128,7 +128,7 @@ RealType dot(int n, const RealType *x, int incx, const RealType *y, int incy) {
 }
 
 template<typename RealType>
-void dot(int n, const RealType *x, int incx, const RealType *y, int incy, RealType &result) { result = dot<RealType>(n, x, incx, y, incy); }
+void dot(int n, const RealType *x, int incx, const RealType *y, int incy, RealType *result) { *result = dot<RealType>(n, x, incx, y, incy); }
 
 template<typename RealType>
 RealType nrm2(int n, const RealType *x, int incx) {
@@ -158,7 +158,7 @@ RealType nrm2(int n, const RealType *x, int incx) {
 }
 
 template<typename RealType>
-void nrm2(int n, const RealType *x, int incx, RealType &result) { result = nrm2<RealType>(n, x, incx); }
+void nrm2(int n, const RealType *x, int incx, RealType *result) { *result = nrm2<RealType>(n, x, incx); }
 
 template<typename RealType>
 RealType asum(int n, const RealType *x, int incx) {
@@ -174,7 +174,7 @@ RealType asum(int n, const RealType *x, int incx) {
 }
 
 template<typename RealType>
-void asum(int n, const RealType *x, int incx, RealType &result) { result = asum<RealType>(n, x, incx); }
+void asum(int n, const RealType *x, int incx, RealType *result) { *result = asum<RealType>(n, x, incx); }
 
 template<typename RealType>
 int amax(int n, const RealType *x, int incx) {
@@ -201,7 +201,7 @@ int amax(int n, const RealType *x, int incx) {
 }
 
 template<typename RealType>
-void amax(int n, const RealType *x, int incx, int &result) { result = amax<RealType>(n, x, incx); }
+void amax(int n, const RealType *x, int incx, int *result) { *result = amax<RealType>(n, x, incx); }
 
 // Level 2
 template<typename RealType>

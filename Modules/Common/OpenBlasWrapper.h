@@ -66,7 +66,7 @@ template<>
 inline double dot<double>(int n, const double *x, int incx, const double *y, int incy) { return cblas_ddot(n, x, incx, y, incy); }
 
 template<typename RealType>
-inline void dot(int n, const RealType *x, int incx, const RealType *y, int incy, RealType &result) { result = dot<RealType>(n, x, incx, y, incy); }
+inline void dot(int n, const RealType *x, int incx, const RealType *y, int incy, RealType *result) { *result = dot<RealType>(n, x, incx, y, incy); }
 
 template<>
 inline float nrm2<float>(int n, const float *x, int incx) { return cblas_snrm2(n, x, incx); }
@@ -75,7 +75,7 @@ template<>
 inline double nrm2<double>(int n, const double *x, int incx) { return cblas_dnrm2(n, x, incx); }
 
 template<typename RealType>
-inline void nrm2(int n, const RealType *x, int incx, RealType &result) { result = nrm2<RealType>(n, x, incx); }
+inline void nrm2(int n, const RealType *x, int incx, RealType *result) { *result = nrm2<RealType>(n, x, incx); }
 
 template<>
 inline float asum<float>(int n, const float *x, int incx) { return cblas_sasum(n, x, incx); }
@@ -84,7 +84,7 @@ template<>
 inline double asum<double>(int n, const double *x, int incx) { return cblas_dasum(n, x, incx); }
 
 template<typename RealType>
-inline void asum(int n, const RealType *x, int incx, RealType &result) { result = asum<RealType>(n, x, incx); }
+inline void asum(int n, const RealType *x, int incx, RealType *result) { *result = asum<RealType>(n, x, incx); }
 
 template<>
 inline int amax<float>(int n, const float *x, int incx) { return (int)cblas_isamax(n, x, incx); }
@@ -93,7 +93,7 @@ template<>
 inline int amax<double>(int n, const double *x, int incx) { return (int)cblas_idamax(n, x, incx); }
 
 template<typename RealType>
-inline void amax(int n, const RealType *x, int incx, int &result) { result = amax<RealType>(n, x, incx); }
+inline void amax(int n, const RealType *x, int incx, int *result) { *result = amax<RealType>(n, x, incx); }
 
 // Level 2
 template<>
