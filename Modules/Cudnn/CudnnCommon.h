@@ -105,6 +105,16 @@ public:
   bool Set(const Size &clSize) {
     Destroy();
 
+    if (!clSize.Valid())
+      return false;
+
+    if (clSize.GetDimension() < 4) {
+      // cudnn recommends making a 4D tensor for lower dimensional data and setting unused dimensions to 1
+      Size clNewSize(4); // Fills with 1s by default
+      std::copy(clSize.begin(), clSize.end(), clNewSize.begin());
+      return Set(clNewSize);
+    }
+
     if (cudnnCreateTensorDescriptor(&m_desc) != CUDNN_STATUS_SUCCESS)
       return false;
 
@@ -145,6 +155,9 @@ public:
 
   bool Set(const Size &clSize) {
     Destroy();
+
+    if (!clSize.Valid())
+      return false;
 
     if (cudnnCreateFilterDescriptor(&m_desc) != CUDNN_STATUS_SUCCESS)
       return false;

@@ -132,7 +132,7 @@ public:
 
     if (p_clInBias != nullptr) {
       //Size clBiasSize(clInWeightsSize.GetDimension());
-      Size clBiasSize(3); // Min size of tensor descriptor stuff is 3
+      Size clBiasSize(4); // Min size of tensor descriptor stuff is 4
 
       clBiasSize[1] = p_clInBias->GetData().GetSize()[0];
 
