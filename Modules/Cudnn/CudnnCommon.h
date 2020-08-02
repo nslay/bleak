@@ -105,13 +105,18 @@ public:
   bool Set(const Size &clSize) {
     Destroy();
 
-    if (!clSize.Valid())
+    if (!clSize.Valid() || clSize.GetDimension() < 3)
       return false;
 
-    if (clSize.GetDimension() < 4) {
+    if (clSize.GetDimension() == 3) {
       // cudnn recommends making a 4D tensor for lower dimensional data and setting unused dimensions to 1
       Size clNewSize(4); // Fills with 1s by default
-      std::copy(clSize.begin(), clSize.end(), clNewSize.begin());
+
+      clNewSize[0] = clSize[0];
+      clNewSize[1] = clSize[1];
+      clNewSize[2] = 1;
+      clNewSize[3] = clSize[2];
+
       return Set(clNewSize);
     }
 
@@ -156,8 +161,18 @@ public:
   bool Set(const Size &clSize) {
     Destroy();
 
-    if (!clSize.Valid())
+    if (!clSize.Valid() || clSize.GetDimension() < 3)
       return false;
+
+    if (clSize.GetDimension() == 3) {
+      Size clNewSize(4);
+      clNewSize[0] = clSize[0];
+      clNewSize[1] = clSize[1];
+      clNewSize[2] = 1;
+      clNewSize[3] = clSize[2];
+
+      return Set(clNewSize);
+    }
 
     if (cudnnCreateFilterDescriptor(&m_desc) != CUDNN_STATUS_SUCCESS)
       return false;
@@ -193,6 +208,14 @@ public:
   bool Set(int iDimension, const int a_iPad[], const int a_iStride[], const int a_iDilate[]) {
     Destroy();
 
+    if (iDimension == 1) {
+      const int a_iNewPad[2] = { 0, a_iPad[0] };
+      const int a_iNewStride[2] = { 1, a_iStride[0] };
+      const int a_iNewDilate[2] = { 1, a_iDilate[0] };
+
+      return Set(2, a_iNewPad, a_iNewStride, a_iNewDilate);
+    }
+
     if (cudnnCreateConvolutionDescriptor(&m_desc) != CUDNN_STATUS_SUCCESS)
       return false;
 
@@ -205,6 +228,19 @@ public:
   }
 
   bool GetOutputSize(const cudnnTensorDescriptor_t inputDesc, const cudnnFilterDescriptor_t filterDesc, Size &clSize) const {
+    if (clSize.GetDimension() == 3) {
+      int a_iNewSize[4] = { clSize[0], clSize[1], 1, clSize[2] };
+
+      if (cudnnGetConvolutionNdForwardOutputDim(m_desc, inputDesc, filterDesc, 4, a_iNewSize) != CUDNN_STATUS_SUCCESS)
+        return false;
+     
+      clSize[0] = a_iNewSize[0];
+      clSize[1] = a_iNewSize[1];
+      clSize[2] = a_iNewSize[3];
+
+      return true; 
+    }
+
     return cudnnGetConvolutionNdForwardOutputDim(m_desc, inputDesc, filterDesc, clSize.GetDimension(), clSize.data()) == CUDNN_STATUS_SUCCESS;
   }
 
@@ -263,6 +299,14 @@ public:
   bool Set(cudnnPoolingMode_t mode, int iDimension, const int a_iWindowDim[], const int a_iPadding[], const int a_iStride[]) {
     Destroy();
 
+    if (iDimension == 1) {
+      const int a_iNewWindowDim[2] = { 1, a_iWindowDim[0] };
+      const int a_iNewPadding[2] = { 0, a_iPadding[0] };
+      const int a_iNewStride[2] = { 1, a_iStride[0] };
+
+      return Set(mode, 2, a_iNewWindowDim, a_iNewPadding, a_iNewStride);
+    }
+
     if (cudnnCreatePoolingDescriptor(&m_desc) != CUDNN_STATUS_SUCCESS)
       return false;
 
@@ -275,6 +319,19 @@ public:
   }
 
   bool GetOutputSize(const cudnnTensorDescriptor_t inputDesc, Size &clSize) const {
+    if (clSize.GetDimension() == 3) {
+      int a_iNewSize[4] = { clSize[0], clSize[1], 1, clSize[2] };
+
+      if (cudnnGetPoolingNdForwardOutputDim(m_desc, inputDesc, 4, a_iNewSize) != CUDNN_STATUS_SUCCESS)
+        return false;
+
+      clSize[0] = a_iNewSize[0];
+      clSize[1] = a_iNewSize[1];
+      clSize[2] = a_iNewSize[3];
+
+      return true;
+    }
+
     return cudnnGetPoolingNdForwardOutputDim(m_desc, inputDesc, clSize.GetDimension(), clSize.data()) == CUDNN_STATUS_SUCCESS;
   }
 

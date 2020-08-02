@@ -1,0 +1,5 @@
+include "Config.sad"
+
+numClasses=2;
+imageList="alcoholicValidationList.txt";
+labelsCsv="alcoholicValidationLabels.csv";

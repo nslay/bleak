@@ -1,0 +1,36 @@
+subgraph SGEEGLoader {
+  dataRoot="C:/Work/Source/Bleak/Experiments/Data/EEG";
+  batchSize=16;
+  numChannels=64;
+  imageWidth=256;
+  imageList="conditionTrainList.txt";
+  labelsCsv="conditionTrainLabels.csv";
+  
+  # EEG stored as 2D but actually 64 channels of 1D data
+  ITKImageLoader2D {
+    directory=$dataRoot;
+    listFile=$imageList;
+    size=[$batchSize, 1, $numChannels, $imageWidth];
+  } imageLoader;
+  
+  Reshape {
+    size=[ $numChannels, $imageWidth ];
+  } imageReshape;
+  
+  CsvReader {
+    batchSize=$batchSize;
+    skipLines=1; # Header
+    csvFileName=$labelsCsv;
+    shuffle=false; # Do NOT shuffle these (must be in correspondence with the image list)
+  } labelsReader;
+  
+  Reshape {
+    size=[];
+  } labelsReshape;
+  
+  imageLoader.outData -> imageReshape.inData;
+  labelsReader.outData -> labelsReshape.inData;
+  
+  imageReshape.outData -> this.outData;
+  labelsReshape.outData -> this.outLabels;
+};

@@ -1,0 +1,7 @@
+# Base configurations for all experiments
+dataRoot="C:/Work/Source/Bleak/Experiments/Data/eeg";
+batchSize=16;
+
+# Don't touch these
+numChannels=64;
+imageWidth=256;

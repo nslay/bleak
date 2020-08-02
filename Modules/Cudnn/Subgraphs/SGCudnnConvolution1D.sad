@@ -1,0 +1,39 @@
+subgraph SGCudnnConvolution1D {
+  padding = [ 0 ];
+  stride = [ 1 ];
+  dilate = [ 1 ]; # No dilation by default
+  numInputs = 3;
+  numOutputs = 16;
+  width = 9;
+  useBias = true;
+  learningRateMultiplier = 1.0;
+  
+  Parameters {
+    size = [ $numOutputs, $numInputs, $width ];
+    learnable = true;
+    initType="gaussian";
+    mu=0.0;
+    sigma=1.0;
+    learningRateMultiplier = $learningRateMultiplier;
+  } weights;
+  
+  Parameters {
+    size = [ $numOutputs ];
+    learnable = $useBias;
+    learningRateMultiplier = $learningRateMultiplier;
+  } bias;
+  
+  CudnnConvolution1D {
+    stride = $stride;
+    padding = $padding;
+    dilate = $dilate;
+    useGPU = true;
+  } conv1D;
+  
+  weights.outData -> conv1D.inWeights;
+  bias.outData -> conv1D.inBias;
+  
+  this.inData -> conv1D.inData;
+  conv1D.outData -> this.outData;
+};
+
