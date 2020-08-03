@@ -233,12 +233,12 @@ public:
 
       if (cudnnGetConvolutionNdForwardOutputDim(m_desc, inputDesc, filterDesc, 4, a_iNewSize) != CUDNN_STATUS_SUCCESS)
         return false;
-     
+
       clSize[0] = a_iNewSize[0];
       clSize[1] = a_iNewSize[1];
       clSize[2] = a_iNewSize[3];
 
-      return true; 
+      return a_iNewSize[2] == 1;
     }
 
     return cudnnGetConvolutionNdForwardOutputDim(m_desc, inputDesc, filterDesc, clSize.GetDimension(), clSize.data()) == CUDNN_STATUS_SUCCESS;
@@ -329,7 +329,7 @@ public:
       clSize[1] = a_iNewSize[1];
       clSize[2] = a_iNewSize[3];
 
-      return true;
+      return a_iNewSize[2] == 1;
     }
 
     return cudnnGetPoolingNdForwardOutputDim(m_desc, inputDesc, clSize.GetDimension(), clSize.data()) == CUDNN_STATUS_SUCCESS;
