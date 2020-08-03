@@ -48,8 +48,6 @@ function MakeConditionLists(conditionTable_) {
   for (label_ in conditionTable_)
     ++numClasses_
     
-  print numClasses_
-    
   for (label_ = 0; label_ < numClasses_; ++label_) {
     for (caseID_ in conditionTable_[label_]) {
       delete extArr_
@@ -64,11 +62,10 @@ function MakeConditionLists(conditionTable_) {
       RandomShuffle(extArr_)
       
       trainBegin_=0
-      trainEnd_=min(trainBegin_ + max(1, int(trainRatio * caseCount_)), caseCount_-1)
+      trainEnd_=min(trainBegin_ + int(trainRatio * caseCount_ + 0.5), caseCount_)
       valBegin_=trainEnd_
-      valEnd_=min(valBegin_ + max(1, int(validationRatio * caseCount_)), caseCount_-1)
+      valEnd_=min(valBegin_ + int(validationRatio * caseCount_ + 0.5), caseCount_)
 
-      
       trainSize_=trainEnd_ - trainBegin_
       valSize_=valEnd_ - valBegin_
       
@@ -115,9 +112,9 @@ function MakeAlcoholicLists(alcoholicTable_) {
       RandomShuffle(extArr_)
       
       trainBegin_=0
-      trainEnd_=min(trainBegin_ + max(1, int(trainRatio * caseCount_)), caseCount_-1)
+      trainEnd_=min(trainBegin_ + int(trainRatio * caseCount_ + 0.5), caseCount_)
       valBegin_=trainEnd_
-      valEnd_=min(valBegin_ + max(1, int(validationRatio * caseCount_)), caseCount_-1)
+      valEnd_=min(valBegin_ + int(validationRatio * caseCount_ + 0.5), caseCount_)
 
       
       trainSize_=trainEnd_ - trainBegin_
