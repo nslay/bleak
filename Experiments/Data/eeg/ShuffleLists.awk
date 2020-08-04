@@ -64,8 +64,6 @@ END {
     for (i = 0; i < list1Count; ++i)
       print list1[i] >> file1
     
-    close(file1)
-    
     srand(seed)
     RandomShuffle(list2)
     

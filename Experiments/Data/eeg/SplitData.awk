@@ -48,42 +48,69 @@ function MakeConditionLists(conditionTable_) {
   for (label_ in conditionTable_)
     ++numClasses_
     
+  # On the other hand, every case can be exposed to all conditions
+  # So let's just partition over all cases
+  
+  delete tmpTable_
   for (label_ = 0; label_ < numClasses_; ++label_) {
-    for (caseID_ in conditionTable_[label_]) {
-      delete extArr_
-      
-      caseCount_=0
-      for (caseExt_ in conditionTable_[label_][caseID_])
-        extArr_[caseCount_++] = caseExt_
-        
-      if (caseCount_ <= 0)
-        continue; # Uhh?
-        
-      RandomShuffle(extArr_)
-      
-      trainBegin_=0
-      trainEnd_=min(trainBegin_ + int(trainRatio * caseCount_ + 0.5), caseCount_)
-      valBegin_=trainEnd_
-      valEnd_=min(valBegin_ + int(validationRatio * caseCount_ + 0.5), caseCount_)
+    for (caseID_ in conditionTable_[label_])
+      tmpTable_[caseID_] = 1
+  }
+  
+  delete caseTable_
+  caseCount_=0
+  for (caseID_ in tmpTable_)
+    caseTable_[caseCount_++] = caseID_
+    
+  RandomShuffle(caseTable_)
 
-      trainSize_=trainEnd_ - trainBegin_
-      valSize_=valEnd_ - valBegin_
+  trainBegin_=0
+  trainEnd_=min(trainBegin_ + int(trainRatio * caseCount_ + 0.5), caseCount_)
+  valBegin_=trainEnd_
+  valEnd_=min(valBegin_ + int(validationRatio * caseCount_ + 0.5), caseCount_)
+
+  trainSize_=trainEnd_ - trainBegin_
+  valSize_=valEnd_ - valBegin_
+  
+  testBegin_=valEnd_
+  testEnd_=testBegin_ + caseCount_ - (trainSize_ + valSize_)
+  
+  for (label_ = 0; label_ < numClasses_; ++label_) {
+    for (i_ = trainBegin_; i_ < trainEnd_; ++i_) {
+      caseID_ = caseTable_[i_]
       
-      testBegin_=valEnd_
-      testEnd_=testBegin_ + caseCount_ - (trainSize_ + valSize_)
-      
-      for (i_ = trainBegin_; i_ < trainEnd_; ++i_) {
-        print pathPrefix caseID_ extArr_[i_] >> conditionTrainList
+      # Maybe it could happen that all S1 or S2 match/nomatch all err'd
+      if (!(caseID_ in conditionTable_[label_]))
+        continue
+        
+      for (caseExt_ in conditionTable_[label_][caseID_]) {
+        print pathPrefix caseID_ caseExt_ >> conditionTrainList
         print label_ >> conditionTrainLabelsCsv
       }
+    }
+    
+    for (i_ = valBegin_; i_ < valEnd_; ++i_) {
+      caseID_ = caseTable_[i_]
       
-      for (i_ = valBegin_; i_ < valEnd_; ++i_) {
-        print pathPrefix caseID_ extArr_[i_] >> conditionValidationList
+      # Maybe it could happen that all S1 or S2 match/nomatch all err'd
+      if (!(caseID_ in conditionTable_[label_]))
+        continue
+        
+      for (caseExt_ in conditionTable_[label_][caseID_]) {
+        print pathPrefix caseID_ caseExt_ >> conditionValidationList
         print label_ >> conditionValidationLabelsCsv
       }
+    }
+    
+    for (i_ = testBegin_; i_ < testEnd_; ++i_) {
+      caseID_ = caseTable_[i_]
       
-      for (i_ = testBegin_; i_ < testEnd_; ++i_) {
-        print pathPrefix caseID_ extArr_[i_] >> conditionTestList
+      # Maybe it could happen that all S1 or S2 match/nomatch all err'd
+      if (!(caseID_ in conditionTable_[label_]))
+        continue
+        
+      for (caseExt_ in conditionTable_[label_][caseID_]) {
+        print pathPrefix caseID_ caseExt_ >> conditionTestList
         print label_ >> conditionTestLabelsCsv
       }
     }
@@ -97,44 +124,56 @@ function MakeAlcoholicLists(alcoholicTable_) {
   
   for (label_ in alcoholicTable_)
     ++numClasses_
-    
+  
+  # A case can only be alcoholic or control
+  # So no mixture of cases between train, validation and test happens here
+  
   for (label_ = 0; label_ < numClasses_; ++label_) {
-    for (caseID_ in alcoholicTable_[label_]) {
-      delete extArr_
+    delete caseTable_
+    caseCount_ = 0
+    
+    for (caseID_ in alcoholicTable_[label_])
+      caseTable_[caseCount_++] = caseID_
       
-      caseCount_=0
-      for (caseExt_ in alcoholicTable_[label_][caseID_])
-        extArr_[caseCount_++] = caseExt_
-        
-      if (caseCount_ <= 0)
-        continue; # Uhh?
-        
-      RandomShuffle(extArr_)
+    if (caseCount_ <= 0)
+      continue; # Uhh?
       
-      trainBegin_=0
-      trainEnd_=min(trainBegin_ + int(trainRatio * caseCount_ + 0.5), caseCount_)
-      valBegin_=trainEnd_
-      valEnd_=min(valBegin_ + int(validationRatio * caseCount_ + 0.5), caseCount_)
-
+    RandomShuffle(caseTable_)
+    
+    trainBegin_=0
+    trainEnd_=min(trainBegin_ + int(trainRatio * caseCount_ + 0.5), caseCount_)
+    valBegin_=trainEnd_
+    valEnd_=min(valBegin_ + int(validationRatio * caseCount_ + 0.5), caseCount_)
+    
+    trainSize_=trainEnd_ - trainBegin_
+    valSize_=valEnd_ - valBegin_
       
-      trainSize_=trainEnd_ - trainBegin_
-      valSize_=valEnd_ - valBegin_
+    testBegin_=valEnd_
+    testEnd_=testBegin_ + caseCount_ - (trainSize_ + valSize_)
+    
+    for (i_ = trainBegin_; i_ < trainEnd_; ++i_) {
+      caseID_ = caseTable_[i_]
       
-      testBegin_=valEnd_
-      testEnd_=testBegin_ + caseCount_ - (trainSize_ + valSize_)
-      
-      for (i_ = trainBegin_; i_ < trainEnd_; ++i_) {
-        print pathPrefix caseID_ extArr_[i_] >> alcoholicTrainList
+      for (caseExt_ in alcoholicTable_[label_][caseID_]) {
+        print pathPrefix caseID_ caseExt_ >> alcoholicTrainList
         print label_ >> alcoholicTrainLabelsCsv
       }
+    }
+    
+    for (i_ = valBegin_; i_ < valEnd_; ++i_) {
+      caseID_ = caseTable_[i_]
       
-      for (i_ = valBegin_; i_ < valEnd_; ++i_) {
-        print pathPrefix caseID_ extArr_[i_] >> alcoholicValidationList
+      for (caseExt_ in alcoholicTable_[label_][caseID_]) {
+        print pathPrefix caseID_ caseExt_ >> alcoholicValidationList
         print label_ >> alcoholicValidationLabelsCsv
       }
+    }
+    
+    for (i_ = testBegin_; i_ < testEnd_; ++i_) {
+      caseID_ = caseTable_[i_]
       
-      for (i_ = testBegin_; i_ < testEnd_; ++i_) {
-        print pathPrefix caseID_ extArr_[i_] >> alcoholicTestList
+      for (caseExt_ in alcoholicTable_[label_][caseID_]) {
+        print pathPrefix caseID_ caseExt_ >> alcoholicTestList
         print label_ >> alcoholicTestLabelsCsv
       }
     }
