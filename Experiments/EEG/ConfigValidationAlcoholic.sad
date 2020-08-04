@@ -1,5 +1,6 @@
 include "Config.sad"
 
 numClasses=2;
-imageList="alcoholicValidationList.txt";
-labelsCsv="alcoholicValidationLabels.csv";
+batchSize=3;
+imageList=$dataRoot + "/alcoholicValidationList.txt";
+labelsCsv=$dataRoot + "/alcoholicValidationLabels.csv";
