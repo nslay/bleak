@@ -64,6 +64,7 @@ PrintOutput.h
 Accuracy.h Accuracy.cpp
 Residual.h Residual.cpp
 Average.h Average.cpp
+ROC.h ROC.cpp
 Concatenate.h Concatenate.cpp
 ArithmeticOperation.h ArithmeticOperation.cpp
 Optimizer.h Optimizer.cpp

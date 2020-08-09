@@ -41,6 +41,7 @@
 #include "Accuracy.h"
 #include "Residual.h"
 #include "Average.h"
+#include "ROC.h"
 #include "Scale.h"
 #include "BatchNormalization.h"
 #include "Concatenate.h"
@@ -74,6 +75,7 @@ void InitializeCommonModuleTemplate() {
   clVertexFactory.template Register<HingeLoss<RealType>>();
   clVertexFactory.template Register<LorenzLoss<RealType>>();
   clVertexFactory.template Register<Accuracy<RealType>>();
+  clVertexFactory.template Register<ROC<RealType>>();
   clVertexFactory.template Register<Residual<RealType>>();
   clVertexFactory.template Register<Average<RealType>>();
   clVertexFactory.template Register<Scale<RealType>>();
