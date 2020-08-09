@@ -36,8 +36,6 @@
 
 namespace bleak {
 
-
-
 template<typename RealType>
 class ROC : public PrintOutput<RealType, std::vector<std::pair<RealType, int>>> {
 public:
@@ -149,6 +147,12 @@ public:
     const std::vector<RealType> &vThresholds = std::get<0>(tplROC);
     const std::vector<RealType> &vTruePositiveRates = std::get<1>(tplROC);
     const std::vector<RealType> &vFalsePositiveRates = std::get<2>(tplROC);
+
+    if (vThresholds.empty() || vThresholds.size() != vTruePositiveRates.size() || vThresholds.size() != vFalsePositiveRates.size())
+      return ROCCurveType();
+
+    if (vThresholds.size() < uiNumEntries)
+      return tplROC; // Nothing to do
 
     ROCCurveType tplNewROC;
 
