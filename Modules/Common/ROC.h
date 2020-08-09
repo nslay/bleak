@@ -151,7 +151,7 @@ public:
     if (vThresholds.empty() || vThresholds.size() != vTruePositiveRates.size() || vThresholds.size() != vFalsePositiveRates.size())
       return ROCCurveType();
 
-    if (vThresholds.size() < uiNumEntries)
+    if (vThresholds.size() <= uiNumEntries)
       return tplROC; // Nothing to do
 
     ROCCurveType tplNewROC;
