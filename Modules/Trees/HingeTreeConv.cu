@@ -273,6 +273,9 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::BackwardGPU() {
   bleakGetAndCheckInput(p_clInOrdinals, "inOrdinals");
   bleakGetAndCheckOutput(p_clOutData, "outData");
 
+  if (!p_clOutData->GetGradient().Valid())
+    return; // Nothing to do
+
   const ArrayType &clInData = p_clInData->GetData();
   ArrayType &clInDataGradient = p_clInData->GetGradient();
   const ArrayType &clInWeights = p_clInWeights->GetData();
@@ -372,3 +375,4 @@ template class HingeTreeConvTemplate<float, 3, HingeTreeCommon<float>>;
 template class HingeTreeConvTemplate<double, 3, HingeTreeCommon<double>>;
 
 } // end namespace bleak
+

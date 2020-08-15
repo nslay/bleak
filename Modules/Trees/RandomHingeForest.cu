@@ -256,6 +256,9 @@ void RandomHingeForestTemplate<RealType, TreeTraitsType>::BackwardGPU() {
   bleakGetAndCheckInput(p_clInData, "inData");
   bleakGetAndCheckOutput(p_clOutData, "outData");
 
+  if (!p_clOutData->GetGradient().Valid())
+    return; // Nothing to do
+
   const ArrayType &clOrdinals = p_clOrdinals->GetData();
   const ArrayType &clThresholds = p_clThresholds->GetData();
   ArrayType &clThresholdsGradient = p_clThresholds->GetGradient();
@@ -287,14 +290,20 @@ void RandomHingeForestTemplate<RealType, TreeTraitsType>::BackwardGPU() {
   const dim3 threadsPerBlock(8,16,4);
   const dim3 numBlocks((iOuterNum + threadsPerBlock.x-1)/threadsPerBlock.x, (iNumTrees + threadsPerBlock.y-1)/threadsPerBlock.y, (iInnerDataNum + threadsPerBlock.z-1)/threadsPerBlock.z);
 
-  BackwardDataKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(p_inData, p_thresholds, p_ordinals, p_weights, p_outDataGradient, p_inDataGradient, 
-    m_iTreeDepth, iNumDecisionsPerTree, iNumLeavesPerTree, iInnerWeightsNum, iNumTrees, iOuterNum, iNumChannels, iInnerDataNum);
+  if (p_inDataGradient != nullptr) {
+    BackwardDataKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(p_inData, p_thresholds, p_ordinals, p_weights, p_outDataGradient, p_inDataGradient, 
+      m_iTreeDepth, iNumDecisionsPerTree, iNumLeavesPerTree, iInnerWeightsNum, iNumTrees, iOuterNum, iNumChannels, iInnerDataNum);
+  }
 
-  BackwardThresholdsKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(p_inData, p_thresholds, p_ordinals, p_weights, p_outDataGradient, p_thresholdsGradient, 
-    m_iTreeDepth, iNumDecisionsPerTree, iNumLeavesPerTree, iInnerWeightsNum, iNumTrees, iOuterNum, iNumChannels, iInnerDataNum);
+  if (p_thresholdsGradient != nullptr) {
+    BackwardThresholdsKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(p_inData, p_thresholds, p_ordinals, p_weights, p_outDataGradient, p_thresholdsGradient, 
+      m_iTreeDepth, iNumDecisionsPerTree, iNumLeavesPerTree, iInnerWeightsNum, iNumTrees, iOuterNum, iNumChannels, iInnerDataNum);
+  }
 
-  BackwardWeightsKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(p_inData, p_thresholds, p_ordinals, p_outDataGradient, p_weightsGradient, 
-    m_iTreeDepth, iNumDecisionsPerTree, iNumLeavesPerTree, iInnerWeightsNum, iNumTrees, iOuterNum, iNumChannels, iInnerDataNum);
+  if (p_weightsGradient != nullptr) {
+    BackwardWeightsKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(p_inData, p_thresholds, p_ordinals, p_outDataGradient, p_weightsGradient, 
+      m_iTreeDepth, iNumDecisionsPerTree, iNumLeavesPerTree, iInnerWeightsNum, iNumTrees, iOuterNum, iNumChannels, iInnerDataNum);
+  }
 }
 
 template class RandomHingeForestTemplate<float, HingeFernCommon<float>>;
@@ -304,3 +313,4 @@ template class RandomHingeForestTemplate<float, HingeTreeCommon<float>>;
 template class RandomHingeForestTemplate<double, HingeTreeCommon<double>>;
 
 } // end namespace bleak
+
