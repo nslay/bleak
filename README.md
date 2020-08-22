@@ -8,7 +8,7 @@ https://arxiv.org/abs/1802.03882
 
 For benchmark experiments in this repository, Random Hinge Forest serves as both a standalone learning machine as well as a non-linearity for consecutive layers. So you will not find a conventional activation function in this *neural network* toolkit (at least as of this revision, but it wouldn't be hard to add!).
 
-# Supported Environments
+# Tested Environments
 Bleak has been developed and/or tested in the following environments
 - Windows 10, Visual Studio 2017, OpenBLAS 0.3.6, CUDA 10.2, cuDNN 7.6.5, LMDB 0.9.70, ITK 4.13
   - Uses Windows Subsystem for Linux for experiments.
