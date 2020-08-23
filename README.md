@@ -17,7 +17,46 @@ Bleak has been developed and/or tested in the following environments
   - No GPU support on this Unix-like operating system. I don't have a spare computer to test on Linux!
   
 # Compiling from Source
-TODO
+To build bleak, you will need the following dependencies
+- A C++ 14 compiler (GCC, Clang or Visual Studio 2017 or later)
+- [cmake](https://cmake.org/) 3.10 or later (ccmake recommended on Unix-like systems)
+
+First clone this repository and its submodules
+```shell
+git clone https://github.com/nslay/bleak
+cd bleak
+git submodule init
+git submodule update
+```
+Create a separate empty folder (call it build) and
+## Unix-like Systems
+```shell
+mkdir build
+cd build
+ccmake /path/to/bleak
+```
+**NOTE**: Bleak should build and run on Unix-like systems (I occassionally compile and run it on FreeBSD). That said, the experiment shell scripts were written for Windows Subsystem for Linux. So some script modification is likely needed to run experiments on actual Unix-like systems.
+
+Press 'c' to configure, select desired build options and modules (press 'c' again for any changes) and then finally press 'g' to generate the Makefiles to build bleak.
+
+## Windows
+Run `cmake-gui` and the source code folder and build folders. For example `C:/Work/Source/bleak` and `C:/Work/Build/bleak` respectively.
+
+Press "Configure", select the desired build options and modules (press "Configure" for any changes) and then finally press "Generate". You can also press 'Open Project' to launch Visual Studio automatically.
+
+**NOTE**: Make sure to select the "Release" build mode in Visual Studio.
+
+## Some General Options
+- bleakUseOpenMP -- Try to enable OpenMP support in the compiler (if available).
+- bleakUseCUDA -- Try to enable CUDA support (if available).
+- bleakBLASType -- "slowblas" (default, built-in to bleak and very slow!) or "openblas" (OpenBLAS).
+
+## Modules
+- bleakCommon -- A required module that is essentially the glue of all of bleak (Graph, Vertex, Array, parsers, databases, etc...) and some optimizers (SGD, AdaGrad Adam) and some basic Vertices (InnerProduct, BatchNormalization, SoftmaxLoss, BLAS wrappers, etc...).
+- bleakImage -- Gemm-based convolution and pooling.
+- bleakTrees -- Random hinge forest, ferns, covnolutional Hinge Trees and Ferns, Feature Selection and Annealing.
+- bleakITK -- [ITK](https://itk.org/) 1D/2D/3D image loader Vertex (supports PNG/JPEG, DICOM, MetaIO, Nifti, etc...). Requires ITK 4+.
+- bleakCudnn -- cuDNN-based convolution and pooling. Requires cuDNN.
   
 # Graphs and Vertices
 In bleak, neural network computation is implemented as a directed graph. Vertices implement the forward/backward operations and have names, properties, and named inputs and outputs. This enables searching for vertices by name, assigning values to named properties as well as querying inputs and outputs by name. Edges serve to store tensor inputs and outputs and their gradients. Vertices uniquely own Edges for their outputs while being assigned Edges for their inputs. Graphs in bleak can be constructed/modified in C++ or can be read from a .sad file.
