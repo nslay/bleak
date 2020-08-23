@@ -133,7 +133,7 @@ size = [ $numTrees, 2^$treeDepth - 1 ];
 There are currently no built-in functions like min/max/exp or any syntax to reference vector components.
 
 ## Subgraph Declarations
-Subgraphs are declared immediately after variables (if any). They recursively define graphs which follow the structure mentioned [above](#basic-graph-syntax) with some additional mechanisms to facilate communicating properties and setting up connections. This topic will be covered in detail in section [Subgraphs](#subgraphs) after vertex declarations and connection declarations are covered.
+Subgraphs are declared immediately after variables (if any). They recursively define graphs which follow the structure mentioned [above](#basic-graph-syntax) with some additional mechanisms to facilitate communicating properties and setting up connections. This topic will be covered in detail in section [Subgraphs](#subgraphs) after vertex declarations and connection declarations are covered.
 
 ## Vertex Declarations
 TODO
