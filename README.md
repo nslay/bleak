@@ -40,7 +40,7 @@ ccmake /path/to/bleak
 Press 'c' to configure, select desired build options and modules (press 'c' again for any changes) and then finally press 'g' to generate the Makefiles to build bleak.
 
 ## Windows
-Run `cmake-gui` and the source code folder and build folders. For example `C:/Work/Source/bleak` and `C:/Work/Build/bleak` respectively.
+Run `cmake-gui` and set the source code and build folders. For example `C:/Work/Source/bleak` and `C:/Work/Build/bleak` respectively.
 
 Press "Configure", select the desired build options and modules (press "Configure" for any changes) and then finally press "Generate". You can also press 'Open Project' to launch Visual Studio automatically.
 
