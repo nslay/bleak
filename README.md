@@ -49,7 +49,7 @@ Press "Configure", select the desired build options and modules (press "Configur
 ## Some General Options
 - bleakUseOpenMP -- Try to enable OpenMP support in the compiler (if available).
 - bleakUseCUDA -- Try to enable CUDA support (if available).
-- bleakBLASType -- "slowblas" (default, built-in to bleak and very slow!) or "openblas" (OpenBLAS).
+- bleakBLASType -- "slowblas" (default, built-in to bleak and very slow!) or "openblas" ([OpenBLAS](https://www.openblas.net/)).
 
 ## Modules
 - bleakCommon -- A required module that is essentially the glue of all of bleak (Graph, Vertex, Array, parsers, databases, etc...) and some optimizers (SGD, AdaGrad Adam) and some basic Vertices (InnerProduct, BatchNormalization, SoftmaxLoss, BLAS wrappers, etc...).
