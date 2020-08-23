@@ -18,7 +18,7 @@ Bleak has been developed and/or tested in the following environments
   
 # Compiling from Source
 To build bleak, you will need the following dependencies
-- A C++ 14 compiler (GCC, Clang or Visual Studio 2017 or later)
+- A C++14 compiler (GCC, Clang or Visual Studio 2017 or later)
 - [cmake](https://cmake.org/) 3.10 or later (ccmake recommended on Unix-like systems)
 
 First clone this repository and its submodules
@@ -35,14 +35,15 @@ mkdir build
 cd build
 ccmake /path/to/bleak
 ```
-**NOTE**: Bleak should build and run on Unix-like systems (I occassionally compile and run it on FreeBSD). That said, the experiment shell scripts were written for Windows Subsystem for Linux. So some script modification is likely needed to run experiments on actual Unix-like systems.
 
 Press 'c' to configure, select desired build options and modules (press 'c' again for any changes) and then finally press 'g' to generate the Makefiles to build bleak.
+
+**NOTE**: Bleak should build and run on Unix-like systems (I occassionally compile and run it on FreeBSD). That said, the experiment shell scripts were written for Windows Subsystem for Linux. So some script modification is likely needed to run experiments on actual Unix-like systems.
 
 ## Windows
 Run `cmake-gui` and set the source code and build folders. For example `C:/Work/Source/bleak` and `C:/Work/Build/bleak` respectively.
 
-Press "Configure", select the desired build options and modules (press "Configure" for any changes) and then finally press "Generate". You can also press 'Open Project' to launch Visual Studio automatically.
+Press "Configure", select the desired build options and modules (press "Configure" for any changes) and then finally press "Generate". You can also press "Open Project" to launch Visual Studio automatically.
 
 **NOTE**: Make sure to select the "Release" build mode in Visual Studio.
 
@@ -52,7 +53,7 @@ Press "Configure", select the desired build options and modules (press "Configur
 - bleakBLASType -- "slowblas" (default, built-in to bleak and very slow!) or "openblas" ([OpenBLAS](https://www.openblas.net/)).
 
 ## Modules
-- bleakCommon -- A required module that is essentially the glue of all of bleak (Graph, Vertex, Array, parsers, databases, etc...) and some optimizers (SGD, AdaGrad Adam) and some basic Vertices (InnerProduct, BatchNormalization, SoftmaxLoss, BLAS wrappers, etc...).
+- bleakCommon -- A required module that is essentially the glue of all of bleak (Graph, Vertex, Array, BLAS wrappers, parsers, databases, etc...) and some optimizers (SGD, AdaGrad, Adam) and some basic Vertices (InnerProduct, BatchNormalization, SoftmaxLoss, etc...).
 - bleakImage -- Gemm-based convolution and pooling.
 - bleakTrees -- Random hinge forest, ferns, covnolutional Hinge Trees and Ferns, Feature Selection and Annealing.
 - bleakITK -- [ITK](https://itk.org/) 1D/2D/3D image loader Vertex (supports PNG/JPEG, DICOM, MetaIO, Nifti, etc...). Requires ITK 4+.
@@ -61,7 +62,7 @@ Press "Configure", select the desired build options and modules (press "Configur
 # Graphs and Vertices
 In bleak, neural network computation is implemented as a directed graph. Vertices implement the forward/backward operations and have names, properties, and named inputs and outputs. This enables searching for vertices by name, assigning values to named properties as well as querying inputs and outputs by name. Edges serve to store tensor inputs and outputs and their gradients. Vertices uniquely own Edges for their outputs while being assigned Edges for their inputs. Graphs in bleak can be constructed/modified in C++ or can be read from a .sad file.
 
-# Basic Graph Syntax (.sad)
+# Basic Graph Syntax
 A .sad file follows this general format. Sections denoted with [] are optional.
 
 1. [Variable Declarations]
@@ -118,10 +119,21 @@ Many of these are implicitly convertible to each other. Any type is convertible 
 - float vector -> float (only if the vector has 1 component)
 
 ### Expressions with Variables
-TODO
+Variables can be referenced in a synonymous fashion as shell variables (with '$') and may be used in simple mathematical expressions if they are float or integer types. The mathematical operators available include +, -, \*, /, % (modulo), ^ (exponentiation) and \*\* (exponentiation). Resulting types follow the behavior of the C/C++ programming languages. For example, 1/2 results in 0 while 1.0/2 results in 0.5. The addition operator ('+') may also be used to concatenate strings. Here are some examples
+```
+# This expression results in an integer (features3Width is an integer)
+pool1Width = ($features3Width - 2)/2 + 1; 
+
+# This concatenates two strings
+imageList=$dataRoot + "/SMNI_CMI_TRAIN/alcoholicTrainList.txt"; 
+
+# Variables and expressions can even be used inside of vectors
+size = [ $numTrees, 2^$treeDepth - 1 ]; 
+```
+There are currently no built-in functions like min/max/exp or any syntax to reference vector components.
 
 ## Subgraph Declarations
-TODO
+Subgraphs are declared immediately after variables (if any). They recursively define graphs which follow the structure mentioned [above](#basic-graph-syntax) with some additional mechanisms to facilate communicating properties and setting up connections. This topic will be covered in detail in section [Subgraphs](#subgraphs) after vertex declarations and connection declarations are covered.
 
 ## Vertex Declarations
 TODO
