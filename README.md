@@ -156,8 +156,8 @@ Vertex properties afford a bit of flexibility in value types. Many types of valu
 Parameters {
   size = 10; # Integer convertible to one component integer vector [ 10 ].
   learnable = 1; # Integer convertible to boolean.
-  a="3.0"; # String representation of a float is convertible to a float.
-  b=[ -3 ]; # One component integer vector is convertible to a float.
+  a="-3.0"; # String representation of a float is convertible to a float.
+  b=[ 3 ]; # One component integer vector is convertible to a float.
 } tensor;
 ```
 Any type is convertible to a string and any string is (possibly) convertible to any type. Other implicit conversions are provided below.
