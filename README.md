@@ -70,7 +70,7 @@ A .sad file follows this general format. Sections denoted with [] are optional.
 3. Vertex Declarations
 4. [Connection Declarations]
 
-Whitespace is ignored and all declarations are terminated with a semicolon (;) (except for includes). A file can be included at any time with an 'include' statement. For example
+Whitespace is ignored and all declarations are terminated with a semicolon (;) (except for includes). A file can be included at any time with an "include" statement. For example
 ```
 include "Config.sad"
 ```
@@ -103,23 +103,8 @@ Variables in .sad files support a small collection of basic types:
 - integer vector ([8, 3, 256, 256])
 - float vector ([0.5, 1.0])
 
-Many of these are implicitly convertible to each other. Any type is convertible to a string and any string is (possibly) convertible to any type. Other implicit conversions are provided below.
-- integer -> float
-- integer -> boolean
-- integer -> integer vector
-- integer -> float vector
-- float -> boolean
-- float -> float vector
-- boolean -> integer
-- boolean -> float
-- boolean -> integer vector
-- boolean -> float vector
-- integer vector -> integer (only if the vector has 1 component)
-- integer vector -> float (only if the vector has 1 component)
-- float vector -> float (only if the vector has 1 component)
-
 ### Expressions with Variables
-Variables can be referenced in a synonymous fashion as shell variables (with '$') and may be used in simple mathematical expressions if they are float or integer types. The mathematical operators available include +, -, \*, /, % (modulo), ^ (exponentiation) and \*\* (exponentiation). Resulting types follow the behavior of the C/C++ programming languages. For example, 1/2 results in 0 while 1.0/2 results in 0.5. The addition operator ('+') may also be used to concatenate strings. Here are some examples
+Variables can be referenced in a synonymous fashion as shell variables (with '$') and may be used in simple mathematical expressions if they are float or integer types. The mathematical operators available include +, -, \*, /, % (modulo), ^ (exponentiation) and \*\* (exponentiation). Resulting types follow the behavior of the C/C++ programming languages. For example, 1/2 results in 0 while 1.0/2 results in 0.5. The addition operator (+) may also be used to concatenate strings. Here are some examples
 ```
 # This expression results in an integer (features3Width is an integer)
 pool1Width = ($features3Width - 2)/2 + 1; 
@@ -136,6 +121,63 @@ There are currently no built-in functions like min/max/exp or any syntax to refe
 Subgraphs are declared immediately after variables (if any). They recursively define graphs which follow the structure mentioned [above](#basic-graph-syntax) with some additional mechanisms to facilitate communicating properties and setting up connections. This topic will be covered in detail in section [Subgraphs](#subgraphs) after vertex declarations and connection declarations are covered.
 
 ## Vertex Declarations
+After variables and subgraphs are declared (if any), then vertices are declared. Vertices have a type name, named properties and a unique name that refers to that instance of the vertex. They are declared in a manner as follows
+```
+VertexType {
+  propertyName=propertValue;
+  propertyName2=propertyValue2;
+  # And so forth...
+} uniqueVertexName;
+```
+If a vertex requires no properties, one may simply declare
+```
+VertexType uniqueVertexName; 
+```
+Vertex types are either provided by modules (compiled into bleak) or are instances of subgraphs (discussed in [Subgraphs](#subgraphs)). Some examples of vertices will be described later.
+
+Vertex properties are used to communicate runtime settings to the Vertex. This may be information about the size of a convolution kernel or the stride or dilation of a convolution operation. Importantly, Vertex properties are *not* variables. They may not reference themselves and cannot be declared unexpected. Variables and expressions may be used in Vertex properties (which is the whole intention of variables!). For example
+```
+numTrees=100;
+treeDepth = 7;
+applyWeightDecay = false;
+
+Parameters {
+  size = [ $numTrees, 2^$treeDepth - 1 ];
+  learnable=true;
+  initType="uniform";
+  applyWeightDecay=$applyWeightDecay;
+  b = 3;
+  a = -$b; # ERROR: Properties are not variables.
+  giraffe = "Not a property"; # ERROR: giraffe is not a Parameters property.
+} thresholds;
+```
+Vertex properties afford a bit of flexibility in value types. Many types of values are implicitly convertible. For example
+```
+Parameters {
+  size = 10; # Integer convertible to one component integer vector [ 10 ].
+  learnable = 1; # Integer convertible to boolean.
+  a="3.0"; # String representation of a float is convertible to a float.
+  b=[ -3 ]; # One component integer vector is convertible to a float.
+} tensor;
+```
+Any type is convertible to a string and any string is (possibly) convertible to any type. Other implicit conversions are provided below.
+- integer -> float
+- integer -> boolean
+- integer -> integer vector
+- integer -> float vector
+- float -> boolean
+- float -> float vector
+- boolean -> integer
+- boolean -> float
+- boolean -> integer vector
+- boolean -> float vector
+- integer vector -> integer (only if the vector has 1 component)
+- integer vector -> float (only if the vector has 1 component)
+- float vector -> float (only if the vector has 1 component)
+
+How vertices are compiled into bleak and given named properties and named inputs/outputs will be discussed [Implementing your own Vertex in C++](#implementing-your-own-vertex-in-c).
+
+### Some Common Vertices
 TODO
 
 ## Connection Declarations
