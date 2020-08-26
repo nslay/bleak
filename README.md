@@ -195,7 +195,7 @@ subgraph NameOfSubgraph {
   # Graph as described in all sections leading up to this example!
 };
 ```
-The variables section of a graph defines the properties of a subgraph. External connections to the subgraph can be communicated through the `this` keyword which refers to the instance of the subgraph itself. To better understand why this is immensely helpful, imagine the InnerProduct operation (i.e. fully connected layer). The InnerProduct includes learnable weights and bias which are used to calculate W\*X + T where X is the `$batchSize` set of `$numInputs`-dimensional vectors, W is the `$numOutputs` set of weights, and T is the `$numOutputs` set of biases. So a subgraph incorpating all of these elements might look like the following
+Where "NameOfSubgraph" behaves like a type of vertex that can be declared. The variables section of a graph defines the properties of a subgraph. External connections to the subgraph can be communicated through the `this` keyword which refers to the instance of the subgraph itself. To better understand why this is immensely helpful, imagine the InnerProduct operation (i.e. fully connected layer). The InnerProduct includes learnable weights and bias which are used to calculate W\*X + T where X is the `$batchSize` set of `$numInputs`-dimensional vectors, W is the `$numOutputs` set of weights, and T is the `$numOutputs` set of biases. So a subgraph incorpating all of these elements might look like the following
 ```
 subgraph SGInnerProduct {
   # Properties with default values
