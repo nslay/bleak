@@ -320,12 +320,12 @@ Input {
 SGModel {
   numFeatures=$numFeatures;
   numClasses=$numClasses;
-} model;
+} graph;
 
 Softmax output;
 
-input.outData -> model.inData;
-model.outData -> output.inData;
+input.outData -> graph.inData;
+graph.outData -> output.inData;
 ```
 
 # Graph Evaluation
