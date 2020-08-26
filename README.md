@@ -70,7 +70,7 @@ A .sad file follows this general format. Sections denoted with [] are optional.
 3. Vertex Declarations
 4. [Connection Declarations]
 
-Whitespace is ignored and all declarations are terminated with a semicolon (;) (except for includes). A file can be included at any time with an "include" statement. For example
+Whitespace is ignored and all declarations are terminated with a semicolon (;) (except for includes). A file can be included at any time with an `include` statement. For example
 ```
 include "Config.sad"
 ```
@@ -175,16 +175,161 @@ Any type is convertible to a string and any string is (possibly) convertible to 
 - integer vector -> float (only if the vector has 1 component)
 - float vector -> float (only if the vector has 1 component)
 
-How vertices are compiled into bleak and given named properties and named inputs/outputs will be discussed [Implementing your own Vertex in C++](#implementing-your-own-vertex-in-c).
-
-### Some Common Vertices
-TODO
+How vertices are compiled into bleak and given named properties and named inputs/outputs will be discussed in section [Implementing your own Vertex in C++](#implementing-your-own-vertex-in-c).
 
 ## Connection Declarations
-TODO 
+After all vertices have been declared, they can be connected by using their unique name and a named input or output. A connection takes one of two possible forms
+```
+VertexType1 source;
+VertexType2 target;
+
+source.outputName -> target.inputName;
+target.inputName <- source.outputName;
+```
+Like properties, named inputs and outputs are compiled into bleak. This detail will be discussed in section [Implementing your own Vertex in C++](#implementing-your-own-vertex-in-c).
 
 # Subgraphs
-TODO 
+The declarative nature of this .sad graph syntax can be cumbersome especially since neural networks tend to have repeated structure (e.g. lots of layers of convolution). Subgraphs attempt to reduce the pain of defining neural network architectures by enabling an author to define a standalone repeated component. A subgraph recursively defines a graph with the same structure and syntax as descibed in all sections following section [Basic Graph Syntax](#basic-graph-syntax). They are wrapped in a `subgraph` directive of the form
+```
+subgraph NameOfSubgraph {
+  # Graph as described in all sections leading up to this example!
+};
+```
+The variables section of a graph defines the properties of a subgraph. External connections to the subgraph can be communicated through the `this` keyword which refers to the instance of the subgraph itself. To better understand why this is immensely helpful, imagine the InnerProduct operation (i.e. fully connected layer). The InnerProduct includes learnable weights and bias which are used to calculate W\*X + T where X is the `$batchSize` set of `$numInputs`-dimensional vectors, W is the `$numOutputs` set of weights, and T is the `$numOutputs` set of biases. So a subgraph incorpating all of these elements might look like the following
+```
+subgraph SGInnerProduct {
+  # Properties with default values
+  numInputs=10;
+  numOutputs=100;
+  
+  Parameters {
+    size = [ $numOutputs, $numInputs ];
+    initType="gaussian";
+    learnable = true;
+    mu=0.0;
+    sigma=1.0;
+  } weights;
+  
+  Parameters {
+    size = [ $numOutputs ];
+    learnable=true;
+  } bias;
+  
+  InnerProduct innerProduct;
+  
+  weights.outData -> innerProduct.inWeights;
+  bias.outData -> innerProduct.inBias;
+  
+  # Set up external connections
+  this.inData -> innerProduct.inData;
+  innerProduct.outData -> this.outData;
+};
+
+```
+**NOTE**: This is a simplified explanation of InnerProduct in bleak. It can handle more than 2D tensors!
+
+Now, I can use `SGInnerProduct` as a kind of Vertex type. For example, I might define a logistic regressor for the [iris](https://archive.ics.uci.edu/ml/datasets/Iris) data set as follows
+```
+batchSize=16;
+numFeatures = 4;
+numClasses = 3;
+
+# We can hide the subgraph declaration in another file!
+include "SGInnerProduct.sad"
+
+# Incrementally read a prepared CSV file and wrap around
+CsvReader {
+  batchSize=$batchSize;
+  csvFileName="train.csv";
+  labelColumn=4;
+  shuffle=true;
+} csv;
+
+SGInnerProduct {
+  numInputs=$numFeatures;
+  numOutputs=$numClasses;
+} inner;
+
+SoftmaxLoss loss;
+
+csv.outData -> inner.inData;
+inner.outData -> loss.inData;
+csv.outLabels -> loss.inLabels;
+```
+While this is a simple example, it should be clear that subgraphs can considerably reduce the burden of defining graphs with repeated structures. An author need not explicitly declare Parameters for every single operation.
+
+One other nicety of Subgraphs is that it can be used to embed a neural network architecture into training, validation, testing and production graphs without modifying the original architecture. An author need only write the architecture as a subgraph in its own standalone .sad file. Then each task-specific graph can include and use the architecture without modification. The simple iris model might instead be defined as
+```
+subgraph SGModel {
+  numFeatures=4;
+  numClasses=3;
+  
+  include "SGInnerProduct.sad"
+  
+  SGInnerProduct {
+    numInputs=$numFeatures;
+    numOutputs=$numClasses;
+  } inner;
+  
+  this.inData -> inner.inData;
+  inner.outData -> this.outData;
+};
+```
+Then the training and production graphs might look like below
+#### Train.sad
+```
+# These might be better in a config file (Config.sad?)
+batchSize=16;
+numFeatures=4;
+numClasses=3;
+
+include "SGModel.sad"
+
+# Incrementally read a prepared CSV file and wrap around
+CsvReader {
+  batchSize=$batchSize;
+  csvFileName="train.csv";
+  labelColumn=4;
+  shuffle=true;
+} csv;
+
+SGModel {
+  numFeatures=$numFeatures;
+  numClasses=$numClasses;
+} graph;
+
+SoftmaxLoss loss;
+
+csv.outData -> graph.inData;
+graph.outData -> loss.inData;
+csv.outLabels -> loss.inLabels;
+```
+
+#### Production.sad
+```
+numFeatures=4;
+numClasses=3;
+
+include "SGModel.sad"
+
+# Input placeholder for C++ code... batch size = 1
+Input { 
+  size = [ 1, $numFeatures ];
+} input;
+
+SGModel {
+  numFeatures=$numFeatures;
+  numClasses=$numClasses;
+} model;
+
+Softmax output;
+
+input.outData -> model.inData;
+model.outData -> output.inData;
+```
+
+# Graph Evaluation
+TODO
 
 # Bleak C++ API
 TODO 
@@ -195,3 +340,6 @@ TODO
 # Creating a new Module
 TODO 
  
+# Common Vertices
+TODO
+
