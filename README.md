@@ -55,7 +55,7 @@ Press "Configure", select the desired build options and modules (press "Configur
 ## Modules
 - bleakCommon -- A required module that is essentially the glue of all of bleak (Graph, Vertex, Array, BLAS wrappers, parsers, databases, etc...) and some optimizers (SGD, AdaGrad, Adam) and some basic Vertices (InnerProduct, BatchNormalization, SoftmaxLoss, etc...).
 - bleakImage -- Gemm-based convolution and pooling.
-- bleakTrees -- Random hinge forest, ferns, covnolutional Hinge Trees and Ferns, Feature Selection and Annealing.
+- bleakTrees -- Random hinge forest, ferns, covnolutional hinge trees and ferns, feature selection and annealing.
 - bleakITK -- [ITK](https://itk.org/) 1D/2D/3D image loader Vertex (supports PNG/JPEG, DICOM, MetaIO, Nifti, etc...). Requires ITK 4+.
 - bleakCudnn -- cuDNN-based convolution and pooling. Requires cuDNN.
   
@@ -228,7 +228,7 @@ subgraph SGInnerProduct {
 ```
 **NOTE**: This is a simplified explanation of InnerProduct in bleak. It can handle more than 2D tensors!
 
-Now, I can use `SGInnerProduct` as a kind of Vertex type. For example, I might define a logistic regressor for the [iris](https://archive.ics.uci.edu/ml/datasets/Iris) data set as follows
+Now, I can use `SGInnerProduct` as a kind of vertex type. For example, I might define a logistic regressor training graph for the [iris](https://archive.ics.uci.edu/ml/datasets/Iris) data set as follows
 ```
 batchSize=16;
 numFeatures = 4;
@@ -258,7 +258,7 @@ csv.outLabels -> loss.inLabels;
 ```
 While this is a simple example, it should be clear that subgraphs can considerably reduce the burden of defining graphs with repeated structures. An author need not explicitly declare Parameters for every single operation.
 
-One other nicety of Subgraphs is that it can be used to embed a neural network architecture into training, validation, testing and production graphs without modifying the original architecture. An author need only write the architecture as a subgraph in its own standalone .sad file. Then each task-specific graph can include and use the architecture without modification. The simple iris model might instead be defined as
+One other nicety of subgraphs is that it can be used to embed a neural network architecture into training, validation, testing and production graphs without modifying the original architecture. An author need only write the architecture as a subgraph in its own standalone .sad file. Then each task-specific graph can include and use the architecture without modification. The simple iris model might instead be defined as
 ```
 subgraph SGModel {
   numFeatures=4;
