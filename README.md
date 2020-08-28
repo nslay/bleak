@@ -328,6 +328,67 @@ input.outData -> graph.inData;
 graph.outData -> output.inData;
 ```
 
+## Private Variables
+Since the variables of subgraphs work like vertex properties, these variables must be resolved in advance to determine their type. This can lead to some confusing behavior best illustrated in this example
+```
+subgraph SGModel {
+  inputWidth = 100;
+  kernelWidth = 5;
+  stride = 1;
+  dilate = 1;
+  padding = 0;
+  outputWidth = ($inputWidth - $kernelWidth - ($kernelWidth - 1)*($dilate - 1) + 2*$padding)/$stride + 1;
+  
+  # The rest of the subgraph below...
+};
+
+SGModel {
+  inputWidth=128;
+  stride=2;
+  kernelWidth=3;
+  padding = 1;
+  # What do you suppose outputWidth equals? It's still 96 even though the author intended it to be 64!
+} graph;
+
+# The rest of the graph below
+```
+The variable `outputWidth` in `SGModel` is immediately resolved to its default value of `96` regardless of what the author intended! It's important to note that only the variable declarations in subgraphs are initially resolved. Only after a subgraph is declared as a vertex and is assigned its properties do all other expressions with variables become resolved in that instance of the subgraph. Worse yes is that the variable `outputWidth` is exposed as a property allowing an author to mistakenly assign it an incorrect value! For example
+```
+SGModel {
+  inputWidth=128;
+  stride=2;
+  kernelWidth=3;
+  padding = 1;
+  outputWidth=128; # This would be true if stride=1... this is incorrect!
+} graph;
+```
+To solve both problems, bleak supports *private variables* that are excluded from vertex properties (so their type need not be known) while also delaying their resolution until after the vertex declaration and property assignments. A private variable is declared with the `private` keyword. We can fix the first example by making `outputWidth` private
+```
+subgraph SGModel {
+  inputWidth = 100;
+  kernelWidth = 5;
+  stride = 1;
+  dilate = 1;
+  padding = 0;
+  private outputWidth = ($inputWidth - $kernelWidth - ($kernelWidth - 1)*($dilate - 1) + 2*$padding)/$stride + 1;
+  
+  # The rest of the subgraph below...
+};
+
+SGModel {
+  inputWidth=128;
+  stride=2;
+  kernelWidth=3;
+  padding = 1;
+  # What do you suppose outputWidth equals? Now it's 64!
+  # outputWidth=128; # ERROR: Not a property.
+} graph;
+```
+And this gives the intended behavior. However, there are some rules for the use of `private` variables and these are given below
+1. Global variables cannot reference private variables in expressions. Private variables may, however, reference global variables.
+2. Private variables cannot be redeclared as global (without `private` qualifier) nor can global variables be redeclared as private.
+3. While normal variables are global to all the contained subgraphs, private variables are only local to their immediate graph.
+
 # Graph Evaluation
 TODO
 
