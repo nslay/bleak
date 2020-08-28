@@ -352,7 +352,7 @@ SGModel {
 
 # The rest of the graph below
 ```
-The variable `outputWidth` in `SGModel` is immediately resolved to its default value of `96` regardless of what the author intended! It's important to note that only the variable declarations in subgraphs are initially resolved. Only after a subgraph is declared as a vertex and is assigned its properties do all other expressions with variables become resolved in that instance of the subgraph. Worse yes is that the variable `outputWidth` is exposed as a property allowing an author to mistakenly assign it an incorrect value! For example
+The variable `outputWidth` in `SGModel` is immediately resolved to its default value of `96` regardless of what the author intended! It's important to note that only the variable declarations in subgraphs are initially resolved. Only after a subgraph is declared as a vertex and is assigned its properties do all other expressions with variables become resolved in that instance of the subgraph. Worse yet is that the variable `outputWidth` is exposed as a property allowing an author to mistakenly assign it an incorrect value! For example
 ```
 SGModel {
   inputWidth=128;
