@@ -48,6 +48,8 @@ public:
     bleakAddInput("inProbabilities"),
     bleakAddInput("inLabels"));
 
+  bleakForwardVertexTypedefs();
+
   typedef std::tuple<std::vector<RealType>, std::vector<RealType>, std::vector<RealType>> ROCCurveType;
 
   using SuperType::Push;

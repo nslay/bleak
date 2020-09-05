@@ -44,26 +44,26 @@ template void axpy<double>(int n, const double &a, const double *x, int incx, do
 template float dot<float>(int n, const float *x, int incx, const float *y, int incy);
 template double dot<double>(int n, const double *x, int incx, const double *y, int incy);
 
-template void dot<float>(int n, const float *x, int incx, const float *y, int incy, float &result);
-template void dot<double>(int n, const double *x, int incx, const double *y, int incy, double &result);
+template void dot<float>(int n, const float *x, int incx, const float *y, int incy, float *result);
+template void dot<double>(int n, const double *x, int incx, const double *y, int incy, double *result);
 
 template float nrm2<float>(int n, const float *x, int incx);
 template double nrm2<double>(int n, const double *x, int incx);
 
-template void nrm2<float>(int n, const float *x, int incx, float &result);
-template void nrm2<double>(int n, const double *x, int incx, double &result);
+template void nrm2<float>(int n, const float *x, int incx, float *result);
+template void nrm2<double>(int n, const double *x, int incx, double *result);
 
 template float asum<float>(int n, const float *x, int incx);
 template double asum<double>(int n, const double *x, int incx);
 
-template void asum<float>(int n, const float *x, int incx, float &result);
-template void asum<double>(int n, const double *x, int incx, double &result);
+template void asum<float>(int n, const float *x, int incx, float *result);
+template void asum<double>(int n, const double *x, int incx, double *result);
 
 template int amax<float>(int n, const float *x, int incx);
 template int amax<double>(int n, const double *x, int incx);
 
-template void amax<float>(int n, const float *x, int incx, int &result);
-template void amax<double>(int n, const double *x, int incx, int &result);
+template void amax<float>(int n, const float *x, int incx, int *result);
+template void amax<double>(int n, const double *x, int incx, int *result);
 
 // Level 2
 template void gemv<float>(char trans, int m, int n, const float &alpha, const float *a, int lda, const float *x, int incx, const float &beta, float *y, int incy);
