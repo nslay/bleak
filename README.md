@@ -228,7 +228,7 @@ subgraph SGInnerProduct {
 ```
 **NOTE**: This is a simplified explanation of InnerProduct in bleak. It can handle more than 2D tensors!
 
-Now, I can use `SGInnerProduct` as a kind of vertex type. For example, I might define a logistic regressor training graph for the [iris](https://archive.ics.uci.edu/ml/datasets/Iris) data set as follows
+Notice that the input and output names can be arbitrarily chosen by the subgraph author through `this.name`. Now, I can use `SGInnerProduct` as a kind of vertex type. For example, I might define a logistic regressor training graph for the [iris](https://archive.ics.uci.edu/ml/datasets/Iris) data set as follows
 ```
 batchSize=16;
 numFeatures = 4;
@@ -256,7 +256,7 @@ csv.outData -> inner.inData;
 inner.outData -> loss.inData;
 csv.outLabels -> loss.inLabels;
 ```
-While this is a simple example, it should be clear that subgraphs can considerably reduce the burden of defining graphs with repeated structures. An author need not explicitly declare Parameters for every single operation.
+While this is a simple example, it should be clear that subgraphs can considerably reduce the burden of defining graphs with repeated structures. An author need not explicitly declare `Parameters` for every single operation.
 
 One other nicety of subgraphs is that it can be used to embed a neural network architecture into training, validation, testing and production graphs without modifying the original architecture. An author need only write the architecture as a subgraph in its own standalone .sad file. Then each task-specific graph can include and use the architecture without modification. The simple iris model might instead be defined as
 ```
@@ -352,7 +352,7 @@ SGModel {
 
 # The rest of the graph below
 ```
-The variable `outputWidth` in `SGModel` is immediately resolved to its default value of `96` regardless of what the author intended! It's important to note that only the variable declarations in subgraphs are initially resolved. Only after a subgraph is declared as a vertex and is assigned its properties do all other expressions with variables become resolved in that instance of the subgraph. Worse yet is that the variable `outputWidth` is exposed as a property allowing an author to mistakenly assign it an incorrect value! For example
+The variable `outputWidth` in `SGModel` is immediately resolved to its default value of 96 regardless of what the author intended! It's important to note that only the variable declarations in subgraphs are initially resolved. Only after a subgraph is declared as a vertex and is assigned its properties do all other expressions with variables become resolved in that instance of the subgraph. Worse yet is that the variable `outputWidth` is exposed as a property allowing an author to mistakenly assign it an incorrect value! For example
 ```
 SGModel {
   inputWidth=128;
@@ -383,6 +383,8 @@ SGModel {
   # What do you suppose outputWidth equals? Now it's 64!
   # outputWidth=128; # ERROR: Not a property.
 } graph;
+
+# The rest of the graph below
 ```
 And this gives the intended behavior. However, there are some rules for the use of `private` variables and these are given below
 1. Global variables cannot reference private variables in expressions. Private variables may, however, reference global variables.
@@ -390,7 +392,23 @@ And this gives the intended behavior. However, there are some rules for the use 
 3. While normal variables are global to all the contained subgraphs, private variables are only local to their immediate graph.
 
 # Graph Evaluation
-TODO
+When a graph is constructed and initialized, a *plan* is created for the order of evaluation of the vertices. The *plan* is simply a topologically sorted list of the vertices so that all vertices can run in order with data dependencies implicitly satisfied. A forward pass in the network is simply a for-loop over the plan (invoking Forward()). A backward pass in the network is a for-loop over the plan in reverse (invoking Backward()). Conceptually, the *plan* evaluates root vertices first and ends with leaf vertices.
+
+## Root and Leaf Vertices
+A Vertex in a bleak Graph is considered a *root* vertex if it has no input edges with a source Vertex. For example, a *root* vertex may simply have no inputs, no connected inputs, or custom code may provide an input edge with no source vertex. A *leaf* Vertex is any vertex with no output edges associated with any target Vertex with an output edge (of which there may be more than one such vertices). For example, a *leaf* vertex may simply have no outputs, it may have an output edge that is unconnected to any target Vertex, or the target vertices all have no outputs. Vertices with no outputs are often used as operational moniters of sorts (e.g. reporting ROC/AUC, accuracy, averages, etc...). However, loss function Vertices that usually connect to such monitor Vertices need to be treated as *leaf* vertices too!
+
+## Optimizers and Graphs
+When optimizing a Graph, the Optimizer is initially tasked with identifying two types of Edges
+* *Learnable* Edges
+* Loss function Edges
+
+**NOTE**: As a reminder, an Edge stores the input/output tensors and its corresponding gradient.
+
+An Edge is considered *learnable* if it is both the output of a *root* vertex and has a non-empty gradient tensor. The output edge of `Parameters` is usually a *learnable* edge (though this may be optionally suppressed). An Edge is considered a loss function edge if it's the output of a *leaf* Vertex and has a single element tensor (i.e. a 1D real value).
+
+The Optimizer can query Graphs for root and leaf vertices and determine which Edges contain the learnable model parameters and which edges contain loss function outputs (there may be more than one). Importantly, multiple dangling loss function edges are implicitly treated as if they are summed together. The Optimizer can then use a Forward pass to calculate the loss function, and then a subsequent Backward pass to calculate learnable gradients (stored in the *learnable* edges) to use to update the *learnable* edges.
+
+**IMPORTANT**: Loss function vertices are responsible for seeding their output gradient with 1 when they are a *leaf* Vertex.
 
 # Bleak C++ API
 TODO 
