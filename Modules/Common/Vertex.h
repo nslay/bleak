@@ -430,6 +430,184 @@ public:
     return true;
   }
 
+  virtual bool TestGradient() {
+    if (GetAllOutputs().size() != 1) {
+      std::cerr << GetName() << ": Info: Node does not have exactly 1 output. Skipping gradient test ..." << std::endl;
+      return true;
+    }
+
+    const std::string &strOutputName = GetAllOutputs().begin()->first;
+
+    return TestGradient(strOutputName);
+  }
+
+  // Use forward differencing to test gradients (this is computationally expensive)
+  // Assumed SetSizes() and Initialize() has been called!
+  virtual bool TestGradient(const std::string &strOutputName) {
+    constexpr double dSmall = 1e-3;
+    constexpr double dStep = 1e-2;
+
+    bleakGetAndCheckOutput(p_clOutput, strOutputName, false);
+
+    if (GetAllInputs().empty()) {
+      std::cerr << GetName() << ": Info: Node does not have any inputs. Skipping gradient test ..." << std::endl;
+      return true;
+    }
+
+    const ArrayType &clOutput = p_clOutput->GetData();
+    ArrayType &clOutputGradient = p_clOutput->GetGradient();
+
+    if (!clOutput.Valid()) {
+      std::cout << GetName() << ": Error: No data initialized for output '" << strOutputName << "'." << std::endl;
+      return false;
+    }
+
+    if (!clOutputGradient.Valid()) {
+      std::cout << GetName() << ": Info: Node does not have output gradient. Skipping gradient test ..." << std::endl;
+      return true;
+    }
+
+    const Size &clOutputSize = clOutput.GetSize();
+    const int iOutputCount = clOutputSize.Count();
+
+    if (clOutputSize[0] != 1) {
+      std::cerr << GetName() << ": Error: Expected a batch size of 1 (got " << clOutputSize[0] << ")." << std::endl;
+      return false;
+    }
+
+    // Initialize inputs
+    std::normal_distribution<RealType> clNormalDist(RealType(0), RealType(1));
+
+    bool bHasInputGradient = false;
+
+    for (const auto &stPair : GetAllInputs()) {
+      const std::string &strInputName = stPair.first;
+      const std::shared_ptr<EdgeType> p_clInput = stPair.second.lock();
+
+      if (!p_clInput) {
+        std::cerr << GetName() << ": Warning: No input data set for '" << strInputName << "'." << std::endl;
+        continue;
+      }
+
+      ArrayType &clInput = p_clInput->GetData();
+      ArrayType &clInputGradient = p_clInput->GetGradient();
+
+      if (!clInput.Valid()) {
+        std::cerr << GetName() << ": Error No input data initialized for '" << strInputName << "'." << std::endl;
+        return false;
+      }
+
+      if (!clInputGradient.Valid()) {
+        std::cout << GetName() << ": Info: Node does not have input gradient for input '" << strInputName << "'. Skipping ..." << std::endl;
+        continue;
+      }
+
+      bHasInputGradient = true;
+
+      const Size &clInputSize = clInput.GetSize();
+      const int iInputCount = clInputSize.Count();
+
+      // XXX: Random input?
+      std::generate_n(clInput.data_no_sync(), iInputCount, 
+        [&clNormalDist]() -> RealType {
+          return clNormalDist(GetGenerator());
+        });
+    }
+
+    if (!bHasInputGradient) {
+      std::cout << GetName() << ": Info: Node does not have any input gradients. Skipping gradient test ..." << std::endl;
+      return true;
+    }
+
+    // Now run the tests...
+    for (const auto &stPair : GetAllInputs()) {
+      const std::string &strInputName = stPair.first;
+      const std::shared_ptr<EdgeType> p_clInput = stPair.second.lock();
+
+      if (!p_clInput || !p_clInput->GetGradient().Valid())
+        continue;
+
+      ArrayType &clInput = p_clInput->GetData();
+      ArrayType &clInputGradient = p_clInput->GetGradient();
+
+      const Size &clInputSize = clInput.GetSize();
+      const int iInputCount = clInputSize.Count();
+
+      std::cout << GetName() << ": Info: Testing input '" << strInputName << "' ..." << std::endl;
+
+      ArrayType clOriginalInput; // Keep the original input (in case output/input memory is shared? ReLU for example?)
+      ArrayType clOriginalGradient; // Centered at 0
+
+      clOriginalInput.SetSize(clInputSize);
+      clOriginalInput.Allocate();
+      clOriginalGradient.SetSize(clInputSize);
+      clOriginalGradient.Allocate();
+
+      clInput.CopyTo(clOriginalInput);
+
+      //const bool bSharedInputOutput = (clInput.data() == clOutput.data());
+      //const bool bSharedInputOutputGradient = (clInputGradient.data() == clOutputGradient.data());
+
+      // First, baseline
+      Forward();
+      clInputGradient.Fill(RealType()); // Do it in this order in case input is shared with output
+      clOutputGradient.Fill(RealType(1));
+      Backward();
+
+      clInputGradient.CopyTo(clOriginalGradient);
+
+      const RealType * const p_originalGradient = clOriginalGradient.data();
+
+      for (int i = 0; i < iInputCount; ++i) {
+        clOriginalInput.CopyTo(clInput);
+
+        RealType *p_input = clInput.data();
+        const RealType origValue = p_input[i]; // Keep a copy of the original
+
+        p_input[i] = RealType(origValue + dStep);
+
+        Forward();
+
+        const RealType * p_output = clOutput.data(); // Copy it back to CPU
+
+        double dTmpSumForward = 0.0;
+
+#pragma omp parallel for reduction(+:dTmpSumForward)
+        for (int k = 0; k < iOutputCount; ++k) {
+          dTmpSumForward += p_output[k];
+        }
+
+        clOriginalInput.CopyTo(clInput); // Needed for shared memory reasons
+
+        p_input = clInput.data();
+        p_input[i] = RealType(origValue - dStep);
+
+        Forward();
+
+        p_output = clOutput.data(); // Copy it back to CPU
+
+        double dTmpSumBackward = 0.0;
+
+#pragma omp parallel for reduction(+:dTmpSumBackward)
+        for (int k = 0; k < iOutputCount; ++k) {
+          dTmpSumBackward += p_output[k];
+        }
+
+        const double dCenterDiff = 0.5*(dTmpSumForward - dTmpSumBackward)/dStep;
+        const double dResidual = std::abs(dCenterDiff - p_originalGradient[i]);
+
+        //if (dResidual > std::max(std::abs(dCenterDiff), std::abs((double)p_originalGradient[i]))*dSmall) {
+        if (dResidual > dSmall) {
+          std::cerr << GetName() << ": Error: Gradient may be incorrect with respect to input '" << strInputName << "': (x" << i << " = " << origValue << ", residual = " << dResidual << ", partial = " << p_originalGradient[i] << ")." << std::endl;
+          //return false;
+        }
+
+      }
+    }
+
+    return true;
+  }
+
 protected:
   Vertex() = default;
 

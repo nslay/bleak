@@ -140,6 +140,21 @@ public:
     return true;
   }
 
+  virtual bool TestGradient(const std::string &strOutputName) override {
+    const int iIterationOrig = m_iIteration;
+    const RealType fAlphaMaxOrig = m_fAlphaMax;
+
+    m_iIteration = 1000000000;
+    m_fAlphaMax = 1.0f;
+
+    const bool bSuccess = SuperType::TestGradient(strOutputName);
+    
+    m_fAlphaMax = fAlphaMaxOrig;
+    m_iIteration = iIterationOrig;
+
+    return bSuccess;
+  }
+
   virtual void ForwardCPU() override {
     bleakGetAndCheckInput(p_clMeans, "inMeans");
     bleakGetAndCheckInput(p_clVars, "inVariances");

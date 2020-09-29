@@ -44,9 +44,10 @@ std::string g_strParameterFile;
 std::string g_strWeightsDatabasePath;
 unsigned int g_uiMaxIterations = 0;
 std::vector<std::string> g_vIncludeDirs;
+std::vector<std::string> g_vVertexNames;
 
 void Usage(const char *p_cArg0) {
-  std::cerr << "Usage: " << p_cArg0 << " train|test [-h] [-t float|double] -c configFile [-d gpuDeviceIndex] [-n maxIterations] [-s seedString] [-I includeDir] -g graphFile -w weightsDatabasePath" << std::endl;
+  std::cerr << "Usage: " << p_cArg0 << " train|test|testgradient [-h] [-t float|double] -c configFile [-d gpuDeviceIndex] [-n maxIterations] [-s seedString] [-I includeDir] [-v vertexName[,vertexName2,...]] -g graphFile -w weightsDatabasePath" << std::endl;
   exit(1);
 }
 
@@ -55,6 +56,9 @@ int Train();
 
 template<typename RealType>
 int Test();
+
+template<typename RealType>
+int TestGradient();
 
 template<typename RealType>
 bool LoadWeights(const std::shared_ptr<bleak::Graph<RealType>> &p_clGraph, const std::string &strDatabaseFile);
@@ -73,14 +77,14 @@ int main(int argc, char **argv) {
   std::string strMode = argv[1];
   std::string strSeedString = "bleak";
 
-  if (strMode != "train" && strMode != "test")
+  if (strMode != "train" && strMode != "test" && strMode != "testgradient")
     Usage(p_cArg0);
 
   ++argv;
   --argc;
 
   int c = 0;
-  while ((c = getopt(argc, argv, "c:d:g:hn:s:t:w:I:")) != -1) {
+  while ((c = getopt(argc, argv, "c:d:g:hn:s:t:v:w:I:")) != -1) {
     switch (c) {
     case 'c':
       g_strParameterFile = optarg;
@@ -113,6 +117,12 @@ int main(int argc, char **argv) {
       break;
     case 't':
       strType = optarg;
+      break;
+    case 'v':
+      {
+        std::vector<std::string> vTokens = bleak::SplitString<std::string>(optarg, ",");
+        g_vVertexNames.insert(g_vVertexNames.end(), vTokens.begin(), vTokens.end());
+      }
       break;
     case 'w':
       g_strWeightsDatabasePath = optarg;
@@ -166,12 +176,16 @@ int main(int argc, char **argv) {
       return Train<float>();
     if (strMode == "test")
       return Test<float>();
+    if (strMode == "testgradient")
+      return TestGradient<float>();
   }
   else if (strType == "double") {
-    if(strMode == "train")
+    if (strMode == "train")
       return Train<double>();
-    if(strMode == "test")
+    if (strMode == "test")
       return Test<double>();
+    if (strMode == "testgradient")
+      return TestGradient<double>();
   }
   else {
     std::cerr << "Error: Unknown type '" << strType << "'." << std::endl;
@@ -276,6 +290,28 @@ int Test() {
 
   for (unsigned int e = 0; e < g_uiMaxIterations; ++e)
     p_clGraph->Forward();
+
+  return 0;
+}
+
+template<typename RealType>
+int TestGradient() {
+  typedef bleak::Graph<RealType> GraphType;
+
+  std::shared_ptr<GraphType> p_clGraph = bleak::LoadGraph<RealType>(g_strGraphFile, g_vIncludeDirs);
+
+  if (p_clGraph == nullptr) {
+    std::cerr << "Error: Failed to load graph '" << g_strGraphFile << "'." << std::endl;
+    return -1;
+  }
+
+  if (!p_clGraph->Initialize(true)) {
+    std::cerr << "Error: Failed to intialize graph." << std::endl;
+    return -1;
+  }
+
+  if (!p_clGraph->TestGradient(g_vVertexNames))
+    return -1;
 
   return 0;
 }

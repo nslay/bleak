@@ -40,12 +40,19 @@ public:
   bleakNewVertex(SoftmaxLoss, Softmax<RealType>,
     bleakAddInput("inLabels"),
     bleakAddOutput("outLoss"),
+    bleakAddProperty("gamma", m_fGamma),
     bleakAddProperty("penaltyWeights", m_vPenaltyWeights),
     bleakAddGetterSetter("penaltyWeight", &SoftmaxLoss::GetPenaltyWeight, &SoftmaxLoss::SetPenaltyWeight));
 
   bleakForwardVertexTypedefs();
 
   virtual ~SoftmaxLoss() = default;
+
+  constexpr static RealType GetSmall() { return RealType(1e-30); }
+
+  virtual bool TestGradient() override {
+    return SuperType::TestGradient("outLoss");
+  }
 
   bool GetPenaltyWeight(float &fPenaltyWeight) const {
     switch (m_vPenaltyWeights.size()) {
@@ -133,30 +140,56 @@ public:
     const RealType * const p_inLabels = clInLabels.data();
     const RealType * const p_outProbs = clOutProbs.data();
 
-    RealType &outLoss = *clOutLoss.data();
+    //RealType &outLoss = *clOutLoss.data();
 
-    outLoss = RealType();
+    //outLoss = RealType();
 
-    for (int i = 0; i < iOuterNum; ++i) {
-      for (int j = 0; j < iInnerNum; ++j) {
-        const int iLabel = (int)p_inLabels[iInnerNum*i + j];
+    RealType outLoss = RealType();
 
-        if (iLabel < 0 || iLabel >= iNumOutputs)
-          continue;
+    // Pretty arbitrary... 
+    if (iInnerNum > iOuterNum) {
+      for (int i = 0; i < iOuterNum; ++i) {
 
-        const RealType weight = GetPenaltyWeightForLabel(iLabel, iNumOutputs);
+#pragma omp parallel for reduction(+:outLoss)
+        for (int j = 0; j < iInnerNum; ++j) {
+          const int iLabel = (int)p_inLabels[iInnerNum*i + j];
 
-        const RealType prob = p_outProbs[(i*iNumOutputs + iLabel)*iInnerNum + j];
+          if (iLabel < 0 || iLabel >= iNumOutputs)
+            continue;
 
-        if (prob > RealType(1e-30))
-          outLoss -= std::log(prob) * weight;
-        else
-          outLoss -= -100 * weight;
+          const RealType weight = GetPenaltyWeightForLabel(iLabel, iNumOutputs);
+
+          const RealType prob = std::max(GetSmall(), p_outProbs[(i*iNumOutputs + iLabel)*iInnerNum + j]);
+
+          const RealType focalLossScale = m_fGamma > 0.0f ? std::pow(RealType(1) - prob, RealType(m_fGamma)) : RealType(1);
+          outLoss += -std::log(prob) * weight * focalLossScale;
+        }
+      }
+    }
+    else {
+
+#pragma omp parallel for reduction(+:outLoss)
+      for (int i = 0; i < iOuterNum; ++i) {
+        for (int j = 0; j < iInnerNum; ++j) {
+          const int iLabel = (int)p_inLabels[iInnerNum*i + j];
+
+          if (iLabel < 0 || iLabel >= iNumOutputs)
+            continue;
+
+          const RealType weight = GetPenaltyWeightForLabel(iLabel, iNumOutputs);
+
+          const RealType prob = std::max(GetSmall(), p_outProbs[(i*iNumOutputs + iLabel)*iInnerNum + j]);
+
+          const RealType focalLossScale = m_fGamma > 0.0f ? std::pow(RealType(1) - prob, RealType(m_fGamma)) : RealType(1);
+          outLoss += -std::log(prob) * weight * focalLossScale;
+        }
       }
     }
 
     outLoss /= RealType(iOuterNum);
     //outLoss *= RealType(m_fPenaltyWeight)/RealType(iOuterNum);
+
+    *clOutLoss.data() = outLoss;
   }
 
   virtual void Backward() override {
@@ -193,22 +226,72 @@ public:
     //const RealType scale = RealType(m_fPenaltyWeight)*outGradient/RealType(iOuterNum);
     const RealType scale = outGradient/RealType(iOuterNum);
 
-    for (int i = 0; i < iOuterNum; ++i) {
-      for (int k = 0; k < iInnerNum; ++k) {
-        const int iLabel = (int)p_inLabels[iInnerNum*i + k];
+    // Pretty arbitrary...
+    if (iInnerNum > iOuterNum) {
+      for (int i = 0; i < iOuterNum; ++i) {
 
-        // Do no learning on this example
-        if (iLabel < 0 || iLabel >= iNumOutputs)
-          continue;
+#pragma omp parallel for
+        for (int k = 0; k < iInnerNum; ++k) {
+          const int iLabel = (int)p_inLabels[iInnerNum*i + k];
 
-        const RealType weight = GetPenaltyWeightForLabel(iLabel, iNumOutputs);
+          // Do no learning on this example
+          if (iLabel < 0 || iLabel >= iNumOutputs)
+            continue;
 
-        for (int j = 0; j < iNumOutputs; ++j) {
-          const RealType prob = p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
-          p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += weight*scale*prob;
+          RealType weight = GetPenaltyWeightForLabel(iLabel, iNumOutputs)*scale;
+
+          //RealType focalLossScale = RealType(1);
+
+          if (m_fGamma > 0.0f) {
+            const RealType prob = std::max(GetSmall(), p_outProbs[(i*iNumOutputs + iLabel)*iInnerNum + k]);
+            //focalLossScale = std::pow(RealType(1) - prob, RealType(m_fGamma - 1.0f));
+            //focalLossScale *= -RealType(m_fGamma)*prob*std::log(prob) + (RealType(1) - prob);
+            weight *= std::pow(RealType(1) - prob, RealType(m_fGamma - 1.0f)) * (-RealType(m_fGamma)*prob*std::log(prob) + (RealType(1) - prob));
+          }
+
+          for (int j = 0; j < iNumOutputs; ++j) {
+            const RealType prob = p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
+            //p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += focalLossScale*weight*scale*prob;
+            p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += weight*prob;
+          }
+
+          //p_inGradient[(i*iNumOutputs + iLabel)*iInnerNum + k] -= focalLossScale*weight*scale;
+          p_inGradient[(i*iNumOutputs + iLabel)*iInnerNum + k] -= weight;
         }
+      }
 
-        p_inGradient[(i*iNumOutputs + iLabel)*iInnerNum + k] -= weight*scale;
+    }
+    else {
+
+#pragma omp parallel for
+      for (int i = 0; i < iOuterNum; ++i) {
+        for (int k = 0; k < iInnerNum; ++k) {
+          const int iLabel = (int)p_inLabels[iInnerNum*i + k];
+
+          // Do no learning on this example
+          if (iLabel < 0 || iLabel >= iNumOutputs)
+            continue;
+
+          RealType weight = GetPenaltyWeightForLabel(iLabel, iNumOutputs)*scale;
+
+          //RealType focalLossScale = RealType(1);
+
+          if (m_fGamma > 0.0f) {
+            const RealType prob = std::max(GetSmall(), p_outProbs[(i*iNumOutputs + iLabel)*iInnerNum + k]);
+            //focalLossScale = std::pow(RealType(1) - prob, RealType(m_fGamma - 1.0f));
+            //focalLossScale *= -RealType(m_fGamma)*prob*std::log(prob) + (RealType(1) - prob);
+            weight *= std::pow(RealType(1) - prob, RealType(m_fGamma - 1.0f)) * (-RealType(m_fGamma)*prob*std::log(prob) + (RealType(1) - prob));
+          }
+
+          for (int j = 0; j < iNumOutputs; ++j) {
+            const RealType prob = p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
+            //p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += focalLossScale*weight*scale*prob;
+            p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += weight*prob;
+          }
+
+          //p_inGradient[(i*iNumOutputs + iLabel)*iInnerNum + k] -= focalLossScale*weight*scale;
+          p_inGradient[(i*iNumOutputs + iLabel)*iInnerNum + k] -= weight;
+        }
       }
     }
   }
@@ -234,6 +317,7 @@ protected:
 
 private:
   std::vector<float> m_vPenaltyWeights = { 1.0f };
+  float m_fGamma = 0.0f;
 };
 
 } // end namespace bleak

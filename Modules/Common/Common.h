@@ -45,7 +45,12 @@ void SetUseGPU(bool bUseGPU);
 
 void Trim(std::string &strValue);
 
+bool MkDir(const std::string &strPath, bool bMakeIntermediate = false);
+std::string BaseName(std::string strPath);
 std::string DirName(std::string strPath);
+std::string GetExtension(const std::string &strPath);
+std::string StripExtension(const std::string &strPath);
+std::string StripTrailingDelimiters(std::string strPath);
 
 bool FileExists(const std::string &strPath);
 bool IsFolder(const std::string &strPath);

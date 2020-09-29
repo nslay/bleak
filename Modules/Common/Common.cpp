@@ -29,6 +29,7 @@
 #elif defined(__unix__)
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <unistd.h>
 #include <glob.h>
 #else
 #error "Not implemented."
@@ -88,6 +89,96 @@ void Trim(std::string &strValue) {
     strValue.erase(p+1);
 }
 
+#ifdef _WIN32
+bool MkDir(const std::string &strPath, bool bMakeIntermediate) {
+  if (bMakeIntermediate) {
+    std::vector<std::string> vFolders = SplitString<std::string>(strPath, "/\\");
+
+    if (vFolders.empty()) // Uhh?
+      return false;
+
+    std::string strTmpPath = vFolders[0];
+
+    if (!IsFolder(strTmpPath) && CreateDirectory(strTmpPath.c_str(), nullptr) == 0)
+      return false;
+
+    for (size_t i = 1; i < vFolders.size(); ++i) {
+      strTmpPath += '\\';
+      strTmpPath += vFolders[i];
+
+      if (!IsFolder(strTmpPath) && CreateDirectory(strTmpPath.c_str(), nullptr) == 0)
+        return false;
+    }
+
+    return true;
+  }
+
+  return CreateDirectory(strPath.c_str(), nullptr) != 0;
+}
+#endif // _WIN32
+
+#ifdef __unix__
+bool MkDir(const std::string &strPath, bool bMakeIntermediate) {
+  if (bMakeIntermediate) {
+    std::vector<std::string> vFolders = SplitString<std::string>(strPath, "/");
+
+    if (vFolders.empty()) // Uhh?
+      return false;
+
+    std::string strTmpPath = vFolders[0];
+
+    if (!IsFolder(strTmpPath) && mkdir(strTmpPath.c_str(), 0777) != 0)
+      return false;
+
+    for (size_t i = 1; i < vFolders.size(); ++i) {
+      strTmpPath += '/';
+      strTmpPath += vFolders[i];
+
+      if (!IsFolder(strTmpPath) && mkdir(strTmpPath.c_str(), 0777) != 0)
+        return false;
+    }
+
+    return true;
+  }
+
+  return mkdir(strPath.c_str(), 0777) == 0;
+}
+#endif // __unix__
+
+#ifdef _WIN32
+std::string BaseName(std::string strPath) {
+  if (strPath.empty())
+    return std::string();
+
+  while (strPath.size() > 1 && (strPath.back() == '/' || strPath.back() == '\\'))
+    strPath.pop_back();
+
+  if (strPath.size() == 1)
+    return strPath;
+
+  size_t p = strPath.find_last_of("/\\");
+
+  return p != std::string::npos ? strPath.substr(p+1) : strPath;
+}
+#endif // _WIN32
+
+#ifdef __unix__
+std::string BaseName(std::string strPath) {
+  if (strPath.empty())
+    return std::string();
+
+  while (strPath.size() > 1 && strPath.back() == '/')
+    strPath.pop_back();
+
+  if (strPath.size() == 1)
+    return strPath;
+
+  size_t p = strPath.find_last_of("/");
+
+  return p != std::string::npos ? strPath.substr(p+1) : strPath;
+}
+#endif // __unix__
+
 std::string DirName(std::string strPath) {
 #ifdef _WIN32
   while (strPath.size() > 1 && (strPath.back() == '/' || strPath.back() == '\\'))
@@ -108,6 +199,100 @@ std::string DirName(std::string strPath) {
 
   return strPath.size() > 0 ? strPath : std::string("/");
 }
+
+#ifdef _WIN32
+std::string GetExtension(const std::string &strPath) {
+  if (strPath.empty() || strPath.back() == '/' || strPath.back() == '\\' || strPath == "." || strPath == "..")
+    return std::string();
+
+  size_t p = strPath.find_last_of('.');
+
+  if (p == std::string::npos)
+    return std::string();
+
+  size_t q = strPath.find_last_of("/\\");
+
+  if (q != std::string::npos && p < q)
+    return std::string();
+
+  return strPath.substr(p);
+}
+#endif // _WIN32
+
+#ifdef __unix__
+std::string GetExtension(const std::string &strPath) {
+  if (strPath.empty() || strPath.back() == '/' || strPath == "." || strPath == "..")
+    return std::string();
+
+  size_t p = strPath.find_last_of('.');
+
+  if (p == std::string::npos)
+    return std::string();
+
+  size_t q = strPath.find_last_of('/');
+
+  if (q != std::string::npos && p < q)
+    return std::string();
+
+  return strPath.substr(p);
+}
+#endif // __unix__
+
+#ifdef _WIN32
+std::string StripExtension(const std::string &strPath) {
+  if (strPath.empty() || strPath.back() == '/' || strPath.back() == '\\')
+    return strPath;
+
+  size_t p = strPath.find_last_of('.');
+
+  if (p == std::string::npos)
+    return strPath;
+
+  size_t q = strPath.find_last_of("/\\");
+
+  if (q != std::string::npos && p < q)
+    return strPath;
+
+  return strPath.substr(0, p);  
+}
+#endif // _WIN32
+
+#ifdef __unix__
+std::string StripExtension(const std::string &strPath) {
+  if (strPath.empty() || strPath.back() == '/')
+    return strPath;
+
+  size_t p = strPath.find_last_of('.');
+
+  if (p == std::string::npos)
+    return strPath;
+
+  size_t q = strPath.find_last_of('/');
+
+  if (q != std::string::npos && p < q)
+    return strPath;
+
+  return strPath.substr(0, p);  
+}
+#endif // __unix__
+
+#ifdef _WIN32
+std::string StripTrailingDelimiters(std::string strPath) {
+  while (strPath.size() > 0 && (strPath.back() == '/' || strPath.back() == '\\'))
+    strPath.pop_back();
+
+  return strPath;
+}
+#endif // _WIN32
+
+#ifdef __unix__
+std::string StripTrailingDelimiters(std::string strPath) {
+  while (strPath.size() > 0 && strPath.back() == '/')
+    strPath.pop_back();
+
+  return strPath;
+}
+#endif // __unix__
 
 #ifdef _WIN32
 bool FileExists(const std::string &strPath) {

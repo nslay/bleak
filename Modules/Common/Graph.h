@@ -75,6 +75,44 @@ public:
     return true;
   }
 
+  bool TestGradient() {
+    bool bSuccess = true;
+
+    for (const auto &p_clVertex : m_vPlan) {
+      std::cout << "Info: Testing gradient for " << p_clVertex->GetName() << " ..." << std::endl;
+
+      if (!p_clVertex->TestGradient()) {
+        bSuccess = false;
+        std::cerr << "Error: " << p_clVertex->GetName() << " failed the gradient test." << std::endl;
+      }
+    }
+
+    return bSuccess;
+  }
+
+  bool TestGradient(const std::vector<std::string> &vVertexNames) {
+    if (vVertexNames.empty())
+      return TestGradient();
+
+    bool bSuccess = true;
+
+    for (const std::string &strName : vVertexNames) {
+      auto p_clVertex = FindVertex(strName);
+
+      if (!p_clVertex) {
+        std::cerr << "Error: Could not find vertex with name '" << strName << "'." << std::endl;
+        return false;
+      }
+
+      if (!p_clVertex->TestGradient()) {
+        bSuccess = false;
+        std::cerr << "Error: " << p_clVertex->GetName() << " failed the gradient test." << std::endl;
+      }
+    }
+
+    return bSuccess;
+  }
+
   bool SaveToDatabase(const std::shared_ptr<Database> &p_clDatabase) const {
     std::unique_ptr<Transaction> p_clTransaction = p_clDatabase->NewTransaction();
 

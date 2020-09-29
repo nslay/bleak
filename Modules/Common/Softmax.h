@@ -92,38 +92,83 @@ public:
     const RealType * const p_inData = clInData.data();
     RealType * const p_outProbs = clOutProbs.data();
 
-    for (int i = 0; i < iOuterNum; ++i) {
-      for (int k = 0; k < iInnerNum; ++k) {
-        RealType valueMax = p_inData[(i*iNumOutputs + 0)*iInnerNum + k];
-        int jMax = 0;
+    // Pretty arbitrary...
+    if (iInnerNum > iOuterNum) {
+      for (int i = 0; i < iOuterNum; ++i) {
 
-        for (int j = 1; j < iNumOutputs; ++j) {
-          const RealType value = p_inData[(i*iNumOutputs + j)*iInnerNum + k];
+#pragma omp parallel for
+        for (int k = 0; k < iInnerNum; ++k) {
+          RealType valueMax = p_inData[(i*iNumOutputs + 0)*iInnerNum + k];
+          int jMax = 0;
 
-          if (value > valueMax) {
-            valueMax = value;
-            jMax = j;
+          for (int j = 1; j < iNumOutputs; ++j) {
+            const RealType value = p_inData[(i*iNumOutputs + j)*iInnerNum + k];
+
+            if (value > valueMax) {
+              valueMax = value;
+              jMax = j;
+            }
           }
+
+          RealType sum = RealType();
+
+          for (int j = 0; j < iNumOutputs; ++j) {
+            const RealType value = p_inData[(i*iNumOutputs + j)*iInnerNum + k];
+            const RealType valueExp = (j != jMax) ? std::exp(value - valueMax) : RealType(1);
+
+            p_outProbs[(i*iNumOutputs + j)*iInnerNum + k] = valueExp;
+
+            sum += valueExp;
+          }
+
+          if (!std::isfinite(sum)) {
+#pragma omp critical
+            std::cerr << GetName() << ": Error: Normalizer is not finite!" << std::endl;
+            //return;
+          }
+
+          for (int j = 0; j < iNumOutputs; ++j)
+            p_outProbs[(i*iNumOutputs + j)*iInnerNum + k] /= sum;
         }
+      }
+    }
+    else {
 
-        RealType sum = RealType();
+#pragma omp parallel for
+      for (int i = 0; i < iOuterNum; ++i) {
+        for (int k = 0; k < iInnerNum; ++k) {
+          RealType valueMax = p_inData[(i*iNumOutputs + 0)*iInnerNum + k];
+          int jMax = 0;
 
-        for (int j = 0; j < iNumOutputs; ++j) {
-          const RealType value = p_inData[(i*iNumOutputs + j)*iInnerNum + k];
-          const RealType valueExp = (j != jMax) ? std::exp(value - valueMax) : RealType(1);
+          for (int j = 1; j < iNumOutputs; ++j) {
+            const RealType value = p_inData[(i*iNumOutputs + j)*iInnerNum + k];
 
-          p_outProbs[(i*iNumOutputs + j)*iInnerNum + k] = valueExp;
+            if (value > valueMax) {
+              valueMax = value;
+              jMax = j;
+            }
+          }
 
-          sum += valueExp;
+          RealType sum = RealType();
+
+          for (int j = 0; j < iNumOutputs; ++j) {
+            const RealType value = p_inData[(i*iNumOutputs + j)*iInnerNum + k];
+            const RealType valueExp = (j != jMax) ? std::exp(value - valueMax) : RealType(1);
+
+            p_outProbs[(i*iNumOutputs + j)*iInnerNum + k] = valueExp;
+
+            sum += valueExp;
+          }
+
+          if (!std::isfinite(sum)) {
+#pragma omp critical
+            std::cerr << GetName() << ": Error: Normalizer is not finite!" << std::endl;
+            //return;
+          }
+
+          for (int j = 0; j < iNumOutputs; ++j)
+            p_outProbs[(i*iNumOutputs + j)*iInnerNum + k] /= sum;
         }
-
-        if (!std::isfinite(sum)) {
-          std::cerr << GetName() << ": Error: Normalizer is not finite!" << std::endl;
-          return;
-        }
-
-        for (int j = 0; j < iNumOutputs; ++j)
-          p_outProbs[(i*iNumOutputs + j)*iInnerNum + k] /= sum;
       }
     }
   }
@@ -148,16 +193,38 @@ public:
     const RealType * const p_outGradient = clOutGradient.data();
     RealType * const p_inGradient = clInGradient.data();
 
-    for (int i = 0; i < iOuterNum; ++i) {
-      for (int k = 0; k < iInnerNum; ++k) {
-        RealType innerProd = RealType();
+    // Pretty arbitrary...
+    if (iInnerNum > iOuterNum) {
+      for (int i = 0; i < iOuterNum; ++i) {
 
-        for (int j = 0; j < iNumOutputs; ++j)
-          innerProd += p_outGradient[(i*iNumOutputs + j)*iInnerNum + k]*p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
+#pragma omp parallel for
+        for (int k = 0; k < iInnerNum; ++k) {
+          RealType innerProd = RealType();
 
-        for (int j = 0; j < iNumOutputs; ++j) {
-          const RealType &prob = p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
-          p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += (p_outGradient[(i*iNumOutputs + j)*iInnerNum + k] - innerProd)*prob;
+          for (int j = 0; j < iNumOutputs; ++j)
+            innerProd += p_outGradient[(i*iNumOutputs + j)*iInnerNum + k]*p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
+
+          for (int j = 0; j < iNumOutputs; ++j) {
+            const RealType &prob = p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
+            p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += (p_outGradient[(i*iNumOutputs + j)*iInnerNum + k] - innerProd)*prob;
+          }
+        }
+      }
+    }
+    else {
+
+#pragma omp parallel for
+      for (int i = 0; i < iOuterNum; ++i) {
+        for (int k = 0; k < iInnerNum; ++k) {
+          RealType innerProd = RealType();
+
+          for (int j = 0; j < iNumOutputs; ++j)
+            innerProd += p_outGradient[(i*iNumOutputs + j)*iInnerNum + k]*p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
+
+          for (int j = 0; j < iNumOutputs; ++j) {
+            const RealType &prob = p_outProbs[(i*iNumOutputs + j)*iInnerNum + k];
+            p_inGradient[(i*iNumOutputs + j)*iInnerNum + k] += (p_outGradient[(i*iNumOutputs + j)*iInnerNum + k] - innerProd)*prob;
+          }
         }
       }
     }

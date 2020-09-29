@@ -123,6 +123,19 @@ public:
     return m_vTargets;
   }
 
+  int SourceCount() const { return !m_p_clSource.expired() ? 1 : 0; }
+
+  int TargetCount() const { 
+    int iCount = 0;
+
+    for (const auto &stPair : m_vTargets) {
+      if (!stPair.first.expired())
+        iCount += stPair.second;
+    }
+
+    return iCount;
+  }
+
 private:
   Array<RealType> m_clData;
   Array<RealType> m_clGradient;
