@@ -127,7 +127,7 @@ bool MkDir(const std::string &strPath, bool bMakeIntermediate) {
 
     std::string strTmpPath = vFolders[0];
 
-    if (!IsFolder(strTmpPath) && mkdir(strTmpPath.c_str(), 0777) != 0)
+    if (strTmpPath.size() > 0 && !IsFolder(strTmpPath) && mkdir(strTmpPath.c_str(), 0777) != 0)
       return false;
 
     for (size_t i = 1; i < vFolders.size(); ++i) {
