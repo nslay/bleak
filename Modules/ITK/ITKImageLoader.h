@@ -32,6 +32,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <random>
 #include "Common.h"
 #include "Vertex.h"
 
@@ -133,12 +134,16 @@ struct PixelTraitsByComponents<RealType, 4> {
 template<typename RealType, unsigned int Dimension>
 class ITKImageLoader : public Vertex<RealType> {
 public:
+  typedef std::mt19937_64 GeneratorType;
+
   bleakNewAbstractVertex(ITKImageLoader, Vertex<RealType>,
     bleakAddProperty("imageFile", m_strImageFile), // For one image
     bleakAddProperty("listFile", m_strListFile), // For a list of files relative to "directory"
     bleakAddProperty("directory", m_strDirectory), // Or just search the directory for images...
     bleakAddProperty("interpolationType", m_strInterpolationType), // Interpolation type
     bleakAddProperty("size", m_vSize), // BatchSize x C x Z x Y x X ...
+    bleakAddProperty("seed", m_strSeed), // For list shuffling
+    bleakAddProperty("shuffle", m_bShuffle),
     bleakAddOutput("outData")
   );
 
@@ -177,6 +182,17 @@ public:
 
   virtual bool Initialize() override {
     bleakGetAndCheckOutput(p_clOutData, "outData", false);
+
+    std::cout << GetName() << ": Info: Shuffling " << (m_bShuffle ? "enabled" : "disabled") << '.' << std::endl;
+
+    if (m_strSeed.size() > 0) {
+      std::cout << GetName() << ": Info: Using seed string '" << m_strSeed << "' for shuffling." << std::endl;
+      std::seed_seq clSeed(m_strSeed.begin(), m_strSeed.end());
+      this->GetGenerator().seed(clSeed);
+    }
+    else {
+      this->GetGenerator().seed();
+    }
 
     m_iItr = 0;
     m_vPaths.clear();
@@ -219,6 +235,8 @@ public:
       }
     }
 
+    std::cout << GetName() << ": Info: Loaded/Found " << m_vPaths.size() << " image paths." << std::endl;
+
     return m_vPaths.size() > 0;
   }
 
@@ -235,10 +253,12 @@ public:
     RealType *p_outData = clOutData.data();
 
     for (int i = 0; i < iBatchSize; ++i) {
-      const std::string &strPath = m_vPaths[m_iItr++];
-
-      if (m_iItr >= (int)m_vPaths.size())
+      if (m_iItr >= (int)m_vPaths.size()) {
+        Shuffle();
         m_iItr = 0;
+      }
+
+      const std::string &strPath = m_vPaths[m_iItr++]; // Using a reference... Shuffle() must not happen after this line!
 
       p_outData = LoadImg(strPath, p_outData);
 
@@ -263,6 +283,19 @@ private:
 
   std::vector<std::string> m_vPaths;
   int m_iItr = 0;
+
+  std::string m_strSeed;
+  bool m_bShuffle = false;
+  GeneratorType m_clGenerator;
+
+  GeneratorType & GetGenerator() { return m_clGenerator; }
+
+  void Shuffle() {
+    if (!m_bShuffle)
+      return;
+
+    std::shuffle(m_vPaths.begin(), m_vPaths.end(), this->GetGenerator());
+  }
 
   std::string GetPath(const std::string &strFile) const {
     if (m_strDirectory.size() > 0)

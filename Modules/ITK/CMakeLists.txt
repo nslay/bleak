@@ -1,7 +1,7 @@
 project(bleakITKModule C CXX)
 
 if (bleakITK_ENABLE)
-  find_package(ITK 4)
+  find_package(ITK)
 
   if (NOT ITK_FOUND)
     message(FATAL_ERROR "The ITK library is required to build this module.")
