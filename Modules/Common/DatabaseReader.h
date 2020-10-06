@@ -32,6 +32,8 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <random>
+#include <set>
 #include "Vertex.h"
 #include "DatabaseFactory.h"
 
@@ -40,6 +42,8 @@ namespace bleak {
 template<typename RealType>
 class DatabaseReader : public Vertex<RealType> {
 public:
+  typedef std::mt19937_64 GeneratorType;
+
   bleakNewVertex(DatabaseReader, Vertex<RealType>,
     bleakAddOutput("outData"),
     bleakAddOutput("outLabels"),
@@ -47,7 +51,9 @@ public:
     bleakAddProperty("labelIndices", m_vLabelIndices),
     bleakAddGetterSetter("labelIndex", &DatabaseReader::GetLabelIndex, &DatabaseReader::SetLabelIndex),
     bleakAddProperty("databaseType", m_strDatabaseType),
-    bleakAddProperty("databasePath", m_strDatabasePath));
+    bleakAddProperty("databasePath", m_strDatabasePath),
+    bleakAddProperty("seed", m_strSeed),
+    bleakAddProperty("shuffle", m_bShuffle));
 
   bleakForwardVertexTypedefs();
 
@@ -106,14 +112,11 @@ public:
       }
     }
 
-    if (clOutDataSize.SubSize(1).Product() != (int)(m_dataSize - m_vLabelIndices.size())) {
+    if (clOutDataSize.Product(1) != (int)(m_dataSize - m_vLabelIndices.size())) {
       CloseDatabase();
       std::cerr << GetName() << ": Dimension mismatch between data size and requested size " << clOutDataSize.SubSize(1) << '.' << std::endl;
       return false;
     }
-
-    // Make sure these are in an order that makes sense!
-    std::sort(m_vLabelIndices.begin(), m_vLabelIndices.end());
 
     Size clOutLabelsSize;
 
@@ -137,10 +140,40 @@ public:
   }
 
   virtual bool Initialize() override {
+    m_vKeys.clear();
+    m_iItr = 0;
+
     if (m_p_clCursor == nullptr)
       return false;
 
     m_p_clCursor->Rewind();
+    if (!m_p_clCursor->Good())
+      return false;
+
+    // Collect and sort unique label partitions
+    std::set<int> m_sLabelIndices(m_vLabelIndices.begin(), m_vLabelIndices.end());
+    m_vPartitions.assign(m_sLabelIndices.begin(), m_sLabelIndices.end());
+
+    std::cout << GetName() << ": Info: Shuffling " << (m_bShuffle ? "enabled" : "disabled") << '.' << std::endl;
+
+    if (m_strSeed.size() > 0) {
+      std::cout << GetName() << ": Info: Using seed string '" << m_strSeed << "' for shuffling." << std::endl;
+      std::seed_seq clSeed(m_strSeed.begin(), m_strSeed.end());
+      this->GetGenerator().seed(clSeed);
+    }
+    else {
+      this->GetGenerator().seed();
+    }
+
+    if (m_bShuffle) {
+      do {
+        m_vKeys.push_back(m_p_clCursor->Key());
+      } while (m_p_clCursor->Next());
+
+      m_p_clCursor->Rewind();
+
+      std::cout << GetName() << ": Info: Collected " << m_vKeys.size() << " database keys (for shuffling)." << std::endl;
+    }
 
     return m_p_clCursor->Good();
   }
@@ -167,50 +200,43 @@ public:
     const int iNumLabels = clOutLabels.GetSize().Product(1);
 
     for (int i = 0; i < iOuterNum; ++i) {
-      size_t dataSize = 0;
-      const double * const p_dData = (double *)m_p_clCursor->Value(dataSize);
+      const double * const p_dData = Next();
 
-      if (p_dData == nullptr || dataSize == 0 || (dataSize % sizeof(double)) != 0) {
-        std::cerr << GetName() << ": Error: Invalid data entry at key '" << m_p_clCursor->Key() << "' with byte size = " << dataSize << '.' << std::endl;
-        return;
-      }
-
-      dataSize /= sizeof(double);
-
-      if (dataSize != m_dataSize) {
-        std::cerr << GetName() << ": Error: Unexpected data size. Got " << dataSize << " but expected " << m_dataSize << '.' << std::endl;
+      if (p_dData == nullptr) {
+        std::cerr << GetName() << ": Next() failed. Giving up." << std::endl;
         return;
       }
 
       RealType *p_outDataBegin = p_outData + (i*iInnerNum + 0);
+      
       const double *p_dDataBegin = p_dData;
       const double *p_dDataEnd = nullptr;
 
-      for (size_t j = 0; j < m_vLabelIndices.size(); ++j) {
-        const int k = m_vLabelIndices[j];
+      for (const int k : m_vPartitions) {
         p_dDataEnd = p_dData + k;
 
+        // XXX: This kind of std::transform miscompiles on GCC 7.5? Crashes on Ubuntu 18... but a for loop does not
         p_outDataBegin = std::transform(p_dDataBegin, p_dDataEnd, p_outDataBegin,
           [](const double &x) -> RealType {
             return RealType(x);
           });
 
-        p_dDataBegin = p_dDataEnd;
-
-        // Assign the label
-        p_outLabels[i*iNumLabels + j] = RealType(*p_dDataBegin);
-        ++p_dDataBegin;
+        p_dDataBegin = p_dDataEnd+1;
       }
 
-      p_dDataEnd = p_dData + dataSize;
+      p_dDataEnd = p_dData + m_dataSize;
 
-      std::transform(p_dDataBegin, p_dDataEnd, p_outDataBegin, 
+      // XXX: Ditto
+      std::transform(p_dDataBegin, p_dDataEnd, p_outDataBegin,
         [](const double &x) -> RealType {
           return RealType(x);
         });
 
-      if (!m_p_clCursor->Next())
-        m_p_clCursor->Rewind();
+      // Now assign labels...
+      for (size_t j = 0; j < m_vLabelIndices.size(); ++j) {
+        const int k = m_vLabelIndices[j];
+        p_outLabels[i*iNumLabels + j] = RealType(p_dData[k]);
+      }
     }
   }
 
@@ -222,14 +248,75 @@ protected:
 private:
   std::vector<int> m_vSize;
   std::vector<int> m_vLabelIndices;
+  std::vector<int> m_vPartitions; // Partition the range
   std::string m_strDatabaseType;
   std::string m_strDatabasePath;
+
+  GeneratorType m_clGenerator;
+  bool m_bShuffle = false;
+  std::string m_strSeed;
 
   // Expected data size
   size_t m_dataSize = 0;
 
+  // Keys if we're shuffling
+  std::vector<std::string> m_vKeys;
+  int m_iItr = 0;
+
   std::shared_ptr<Database> m_p_clDatabase;
   std::unique_ptr<Cursor> m_p_clCursor;
+
+  DatabaseReader(const DatabaseReader &) = delete;
+  DatabaseReader(DatabaseReader &&) = delete;
+  DatabaseReader & operator=(const DatabaseReader &) = delete;
+  DatabaseReader & operator=(DatabaseReader &&) = delete;
+
+  GeneratorType & GetGenerator() { return m_clGenerator; }
+
+  const double * Next() {
+    if (m_p_clCursor == nullptr)
+      return nullptr;
+
+    if (m_vKeys.empty()) {
+      if (!m_p_clCursor->Next())
+        m_p_clCursor->Rewind();
+    }
+    else {
+      if (m_iItr >= (int)m_vKeys.size()) {
+        std::shuffle(m_vKeys.begin(), m_vKeys.end(), this->GetGenerator()); 
+        m_iItr = 0;
+      }
+
+      const std::string &strKey = m_vKeys[m_iItr++];
+
+      if (!m_p_clCursor->Find(strKey)) {
+        std::cerr << GetName() << ": Error: Could not find key '" << strKey << "' in database?" << std::endl;
+        return nullptr;
+      }
+    }
+
+    size_t dataSize = 0;
+    const uint8_t * const p_ui8Data = m_p_clCursor->Value(dataSize);
+
+    if (p_ui8Data == nullptr) {
+      std::cerr << GetName() << ": Error: nullptr data value at key '" << m_p_clCursor->Key() << "'?" << std::endl;
+      return nullptr;
+    }
+
+    if ((dataSize % sizeof(double)) != 0) {
+      std::cerr << GetName() << ": Error: Data at key '" << m_p_clCursor->Key() << "' is not a multiple of " << sizeof(double) << " (got " << dataSize << " bytes)." << std::endl;
+      return nullptr;
+    }
+
+    dataSize /= sizeof(double);
+
+    if (m_dataSize != dataSize) {
+      std::cerr << GetName() << ": Error: Data at key '" << m_p_clCursor->Key() << "' has an unexpected number of elements (expected " << m_dataSize << " but got " << dataSize << ")." << std::endl;
+      return nullptr;
+    }
+
+    return (double *)p_ui8Data;
+  }
 
   void CloseDatabase() {
     m_dataSize = 0;
