@@ -7,18 +7,19 @@ subgraph SGHingeTreeConv2D {
   numTrees = 16;
   height = 3;
   width = 3;
+  groups = 1;
   learningRateMultiplier = 1.0;
   
   include "SGBatchNormalization.sad"
   
   Parameters {
-    size = [ $numTrees, $numChannels, 2^$treeDepth-1];
+    size = [ $numTrees, $numChannels / $groups, 2^$treeDepth-1];
     learnable=false;
     saveOutputs=true;
   } ordinals;
   
   Parameters {
-    size = [ $numTrees, $numChannels, 2^$treeDepth-1 ];
+    size = [ $numTrees, $numChannels / $groups, 2^$treeDepth-1 ];
     learnable=true;
     initType="uniform";
     a = -3;
@@ -29,7 +30,7 @@ subgraph SGHingeTreeConv2D {
   } thresholds;
   
   Parameters {
-    size = [ $numTrees, $numChannels, 2^$treeDepth ];
+    size = [ $numTrees, $numChannels / $groups, 2^$treeDepth ];
     learnable = true;
     initType="gaussian";
     mu=0.0;

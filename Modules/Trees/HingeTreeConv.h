@@ -96,10 +96,15 @@ public:
       return false;
     }
 
-    if (clInWeights.GetSize()[1] != clInData.GetSize()[1]) {
-      std::cerr << GetName() << ": Error: inWeights and inData channel size must match (" << clInWeights.GetSize()[1] << " != " << clInData.GetSize()[1] << ")." << std::endl;
+    m_iGroups = clInData.GetSize()[1] / clInWeights.GetSize()[1];
+
+    if (clInWeights.GetSize()[1]*m_iGroups != clInData.GetSize()[1]) {
+      std::cerr << GetName() << ": Error: inWeights channels size must divide inData channels size (" << clInWeights.GetSize()[1] << " does not divide " << clInData.GetSize()[1] << ")." << std::endl;
       return false;
     }
+
+    if (m_iGroups != 1)
+      std::cout << GetName() << ": Info: Using group convolution (groups = " << m_iGroups << ")." << std::endl;
 
     if (clInThresholds.GetSize() != clInOrdinals.GetSize() || clInWeights.GetSize()[0] != clInThresholds.GetSize()[0]) {
       std::cerr << GetName() << ": Error: Dimension mismatch between inThresholds, inOrdinals and/or inWeights." << std::endl;
@@ -147,7 +152,11 @@ public:
     std::copy_n(clInWeights.GetSize().data()+3, clInWeights.GetSize().GetDimension()-3, clOutSize.data()+2+GetDimension());
 
     p_clOutData->GetData().SetSize(clOutSize);
-    p_clOutData->GetGradient().SetSize(clOutSize);
+
+    if (p_clInData->GetGradient().GetSize().Valid() || p_clInWeights->GetGradient().GetSize().Valid() || p_clInThresholds->GetGradient().GetSize().Valid())
+      p_clOutData->GetGradient().SetSize(clOutSize);
+    else
+      p_clOutData->GetGradient().Clear();
 
     return true;
   }
@@ -206,8 +215,8 @@ public:
     RealType * const p_outData = clOutData.data_no_sync();
 
     const int iOuterDataNum = clInData.GetSize()[0];
-    const int iInnerDataNum = clInData.GetSize().Product(1);
-    const int iInNumChannels = clInData.GetSize()[1];
+    const int iInnerDataNum = clInData.GetSize().Product(1) / m_iGroups;
+    const int iInNumChannels = clInData.GetSize()[1] / m_iGroups;
     const int iInChannelSize = clInData.GetSize().Product(2);
     const int iNumTrees = clInWeights.GetSize()[0];
     const int iNumDecisionsPerTree = clInOrdinals.GetSize()[2];
@@ -218,29 +227,31 @@ public:
     clOutData.Fill(RealType());
 
     for (int i = 0; i < iOuterDataNum; ++i) {
-      for (int c = 0; c < iInNumChannels; ++c) {
-        m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
+      for (int g = 0; g < m_iGroups; ++g) {
+        for (int c = 0; c < iInNumChannels; ++c) {
+          m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + ((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
 
-        // Iterate over output kernels
+          // Iterate over output kernels
 #pragma omp parallel for
-        for (int j = 0; j < iNumTrees; ++j) {
-          const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
-          const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+          for (int j = 0; j < iNumTrees; ++j) {
+            const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+            const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
 
-          // Iterate over extracted patches
-          for (int k = 0; k < m_iRows; ++k) {
-            const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
+            // Iterate over extracted patches
+            for (int k = 0; k < m_iRows; ++k) {
+              const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
 
-            const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
+              const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
 
-            const KeyType key = std::get<0>(clKeyMarginTuple);
-            const RealType signedMargin = std::get<1>(clKeyMarginTuple);
-            const RealType margin = std::abs(signedMargin);
+              const KeyType key = std::get<0>(clKeyMarginTuple);
+              const RealType signedMargin = std::get<1>(clKeyMarginTuple);
+              const RealType margin = std::abs(signedMargin);
 
-            const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
+              const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
 
-            for (int l = 0; l < iInnerWeightsNum; ++l)
-              p_outData[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l] += p_leafWeights[l]*margin;
+              for (int l = 0; l < iInnerWeightsNum; ++l)
+                p_outData[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l] += p_leafWeights[l]*margin;
+            }
           }
         }
       }
@@ -253,6 +264,9 @@ public:
     bleakGetAndCheckInput(p_clInThresholds, "inThresholds");
     bleakGetAndCheckInput(p_clInOrdinals, "inOrdinals");
     bleakGetAndCheckOutput(p_clOutData, "outData");
+
+    if (!p_clOutData->GetGradient().Valid())
+      return; // Nothing to do
 
     const ArrayType &clInData = p_clInData->GetData();
     ArrayType &clInDataGradient = p_clInData->GetGradient();
@@ -278,8 +292,8 @@ public:
     const RealType * const p_outDataGradient = clOutDataGradient.data();
 
     const int iOuterDataNum = clInData.GetSize()[0];
-    const int iInnerDataNum = clInData.GetSize().Product(1);
-    const int iInNumChannels = clInData.GetSize()[1];
+    const int iInnerDataNum = clInData.GetSize().Product(1) / m_iGroups;
+    const int iInNumChannels = clInData.GetSize()[1] / m_iGroups;
     const int iInChannelSize = clInData.GetSize().Product(2);
     const int iNumTrees = clInWeights.GetSize()[0];
     const int iNumDecisionsPerTree = clInOrdinals.GetSize()[2];
@@ -289,29 +303,31 @@ public:
 
     if (p_inThresholdsGradient != nullptr) {
       for (int i = 0; i < iOuterDataNum; ++i) {
-        for (int c = 0; c < iInNumChannels; ++c) {
-          m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
+        for (int g = 0; g < m_iGroups; ++g) {
+          for (int c = 0; c < iInNumChannels; ++c) {
+            m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + ((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
 
 #pragma omp parallel for
-          for (int j = 0; j < iNumTrees; ++j) {
-            const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
-            const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+            for (int j = 0; j < iNumTrees; ++j) {
+              const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+              const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
 
-            for (int k = 0; k < m_iRows; ++k) {
-              const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
+              for (int k = 0; k < m_iRows; ++k) {
+                const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
 
-              const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
+                const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
 
-              const KeyType key = std::get<0>(clKeyMarginTuple);
-              const RealType signedMargin = std::get<1>(clKeyMarginTuple);
-              const int iThresholdIndex = std::get<2>(clKeyMarginTuple);
+                const KeyType key = std::get<0>(clKeyMarginTuple);
+                const RealType signedMargin = std::get<1>(clKeyMarginTuple);
+                const int iThresholdIndex = std::get<2>(clKeyMarginTuple);
 
-              const RealType sign = RealType((RealType(0) < signedMargin) - (signedMargin < RealType(0)));
+                const RealType sign = RealType((RealType(0) < signedMargin) - (signedMargin < RealType(0)));
 
-              const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
+                const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
 
-              for (int l = 0; l < iInnerWeightsNum; ++l)
-                p_inThresholdsGradient[(j*iInNumChannels + c)*iNumDecisionsPerTree + iThresholdIndex] += -sign * p_leafWeights[l] * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
+                for (int l = 0; l < iInnerWeightsNum; ++l)
+                  p_inThresholdsGradient[(j*iInNumChannels + c)*iNumDecisionsPerTree + iThresholdIndex] += -sign * p_leafWeights[l] * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
+              }
             }
           }
         }
@@ -320,27 +336,29 @@ public:
 
     if (p_inWeightsGradient != nullptr) {
       for (int i = 0; i < iOuterDataNum; ++i) {
-        for (int c = 0; c < iInNumChannels; ++c) {
-          m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
+        for (int g = 0; g < m_iGroups; ++g) {
+          for (int c = 0; c < iInNumChannels; ++c) {
+            m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + ((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
 
 #pragma omp parallel for
-          for (int j = 0; j < iNumTrees; ++j) {
-            const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
-            const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+            for (int j = 0; j < iNumTrees; ++j) {
+              const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+              const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
 
-            for (int k = 0; k < m_iRows; ++k) {
-              const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
+              for (int k = 0; k < m_iRows; ++k) {
+                const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
 
-              const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
+                const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
 
-              const KeyType key = std::get<0>(clKeyMarginTuple);
-              const RealType signedMargin = std::get<1>(clKeyMarginTuple);
-              const int iThresholdIndex = std::get<2>(clKeyMarginTuple);
+                const KeyType key = std::get<0>(clKeyMarginTuple);
+                const RealType signedMargin = std::get<1>(clKeyMarginTuple);
+                const int iThresholdIndex = std::get<2>(clKeyMarginTuple);
 
-              const RealType margin = std::abs(signedMargin);
+                const RealType margin = std::abs(signedMargin);
 
-              for (int l = 0; l < iInnerWeightsNum; ++l)
-                p_inWeightsGradient[((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum + l] += margin * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
+                for (int l = 0; l < iInnerWeightsNum; ++l)
+                  p_inWeightsGradient[((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum + l] += margin * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
+              }
             }
           }
         }
@@ -349,34 +367,36 @@ public:
 
     if (p_inDataGradient != nullptr) {
       for (int i = 0; i < iOuterDataNum; ++i) {
-        for (int c = 0; c < iInNumChannels; ++c) {
-          m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
+        for (int g = 0; g < m_iGroups; ++g) {
+          for (int c = 0; c < iInNumChannels; ++c) {
+            m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + ((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(), clImageSize.data());
 
 #pragma omp parallel for
-          for (int j = 0; j < iNumTrees; ++j) {
-            const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
-            const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+            for (int j = 0; j < iNumTrees; ++j) {
+              const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+              const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
 
-            for (int k = 0; k < m_iRows; ++k) {
-              const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
-              const int * const p_iIndexRow = m_clIndexMatrix.data() + k*m_iCols;
+              for (int k = 0; k < m_iRows; ++k) {
+                const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
+                const int * const p_iIndexRow = m_clIndexMatrix.data() + k*m_iCols;
 
-              const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
+                const auto clKeyMarginTuple = TreeTraitsType::ComputeKeyAndSignedMargin(p_row, p_thresholds, p_ordinals, m_iTreeDepth, 1);
 
-              const KeyType key = std::get<0>(clKeyMarginTuple);
-              const RealType signedMargin = std::get<1>(clKeyMarginTuple);
-              const int iThresholdIndex = std::get<2>(clKeyMarginTuple);
-              const int iFeatureIndex = (int)p_ordinals[iThresholdIndex];
-              const int iImageIndex = p_iIndexRow[iFeatureIndex];
+                const KeyType key = std::get<0>(clKeyMarginTuple);
+                const RealType signedMargin = std::get<1>(clKeyMarginTuple);
+                const int iThresholdIndex = std::get<2>(clKeyMarginTuple);
+                const int iFeatureIndex = (int)p_ordinals[iThresholdIndex];
+                const int iImageIndex = p_iIndexRow[iFeatureIndex];
 
-              if (iImageIndex >= 0) { // Check if it's not padding!
-                const RealType sign = RealType((RealType(0) < signedMargin) - (signedMargin < RealType(0)));
+                if (iImageIndex >= 0) { // Check if it's not padding!
+                  const RealType sign = RealType((RealType(0) < signedMargin) - (signedMargin < RealType(0)));
 
-                const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
+                  const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
 
-                for (int l = 0; l < iInnerWeightsNum; ++l) {
+                  for (int l = 0; l < iInnerWeightsNum; ++l) {
 #pragma omp atomic
-                  p_inDataGradient[(i*iInNumChannels + c)*iInChannelSize + iImageIndex] += sign * p_leafWeights[l] * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
+                    p_inDataGradient[((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize + iImageIndex] += sign * p_leafWeights[l] * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
+                  }
                 }
               }
             }
@@ -420,6 +440,7 @@ private:
   std::vector<int> m_vStride;
   std::vector<int> m_vDilate;
   std::vector<int> m_vKernelSize;
+  int m_iGroups = 1;
 
   ImageToMatrixType m_clImageToMatrix;
 

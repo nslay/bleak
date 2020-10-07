@@ -6,11 +6,12 @@ subgraph SGConvolution2D {
   numOutputs = 16;
   height = 9;
   width = 9;
+  groups = 1;
   useBias = true;
   learningRateMultiplier = 1.0;
   
   Parameters {
-    size = [ $numOutputs, $numInputs, $height, $width ];
+    size = [ $numOutputs, $numInputs / $groups, $height, $width ];
     learnable = true;
     initType="gaussian";
     mu=0.0;

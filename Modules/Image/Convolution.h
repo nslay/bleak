@@ -100,10 +100,15 @@ public:
       return false;
     }
 
-    if (clInWeights.GetSize()[1] != clInData.GetSize()[1]) {
-      std::cerr << GetName() << ": Error: inWeights and inData channel size must match (" << clInWeights.GetSize()[1] << " != " << clInData.GetSize()[1] << ")." << std::endl;
+    m_iGroups = clInData.GetSize()[1] / clInWeights.GetSize()[1];
+
+    if (clInWeights.GetSize()[1]*m_iGroups != clInData.GetSize()[1]) {
+      std::cerr << GetName() << ": Error: inWeights channels size must divide inData channels size (" << clInWeights.GetSize()[1] << " does not divide " << clInData.GetSize()[1] << ")." << std::endl;
       return false;
     }
+
+    if (m_iGroups != 1)
+      std::cout << GetName() << ": Info: Using group convolution (groups = " << m_iGroups << ")." << std::endl;
 
     if (p_clInBias == nullptr) {
       std::cout << GetName() << ": Info: inBias is not connected. Bias will be assumed to be fixed as 0." << std::endl;
@@ -152,7 +157,11 @@ public:
     }
 
     p_clOutData->GetData().SetSize(clOutSize);
-    p_clOutData->GetGradient().SetSize(clOutSize);
+
+    if (p_clInData->GetGradient().GetSize().Valid() || p_clInWeights->GetGradient().GetSize().Valid() || (p_clInBias != nullptr && p_clInBias->GetGradient().GetSize().Valid()))
+      p_clOutData->GetGradient().SetSize(clOutSize);
+    else
+      p_clOutData->GetGradient().Clear();
 
     return true;
   }
@@ -168,7 +177,8 @@ public:
     m_clImageToMatrix.SetPadding(m_vPadding.data());
     m_clImageToMatrix.SetDilate(m_vDilate.data());
 
-    const Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    clImageSize[0] /= m_iGroups;
 
     if (!m_clImageToMatrix.Good(clImageSize.data()))
       return false;
@@ -199,7 +209,8 @@ public:
     const ArrayType &clInWeights = p_clInWeights->GetData();
     ArrayType &clOutData = p_clOutData->GetData();
 
-    const Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    clImageSize[0] /= m_iGroups;
 
     const RealType * const p_inData = clInData.data();
     const RealType * const p_inWeights = clInWeights.data();
@@ -207,7 +218,8 @@ public:
     RealType * const p_outData = clOutData.data_no_sync();
 
     const int iOuterNum = clInData.GetSize()[0];
-    const int iInnerNum = clInData.GetSize().Product(1);
+    //const int iInnerNum = clInData.GetSize().Product(1);
+    const int iInnerNum = clImageSize.Product();
     const int iOutDataNumChannels = clOutData.GetSize()[1]; // Synonym for weights/bias channels
     const int iOutDataChannelSize = clOutData.GetSize().Product(2);
     const int iOutDataInnerNum = clOutData.GetSize().Product(1);
@@ -236,9 +248,12 @@ public:
     // So we need m_vMatrix^T * Weights = m_iRows x iOutDataNumChannels
 
     for (int i = 0; i < iOuterNum; ++i) {
-      //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, clImageSize.data());
-      m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, m_clIndexMatrix.data(), clImageSize.data());
-      cpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_clMatrix.data(), m_iCols, p_inWeights, m_iCols, RealType(1), p_outData + i*iOutDataInnerNum, m_iRows);
+      for (int g = 0; g < m_iGroups; ++g) {
+        //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, clImageSize.data());
+        //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, m_clIndexMatrix.data(), clImageSize.data());
+        m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*m_iGroups + g)*iInnerNum, m_clIndexMatrix.data(), clImageSize.data());
+        cpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_clMatrix.data(), m_iCols, p_inWeights, m_iCols, RealType(1), p_outData + i*iOutDataInnerNum, m_iRows);
+      }
     }
   }
 
@@ -247,6 +262,9 @@ public:
     bleakGetAndCheckInput(p_clInData, "inData");
     bleakGetAndCheckInput(p_clInWeights, "inWeights");
     bleakGetAndCheckOutput(p_clOutData, "outData");
+
+    if (!p_clOutData->GetGradient().Valid())
+      return; // Nothing to do
 
     std::shared_ptr<EdgeType> p_clInBias = GetInput("inBias");
 
@@ -257,7 +275,8 @@ public:
     const ArrayType &clOutData = p_clOutData->GetData();
     const ArrayType &clOutDataGradient = p_clOutData->GetGradient();
 
-    const Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    clImageSize[0] /= m_iGroups;
 
     const RealType * const p_inData = clInData.data();
     RealType * const p_inDataGradient = clInDataGradient.data();
@@ -269,7 +288,8 @@ public:
     const RealType * const p_outDataGradient = clOutDataGradient.data();
 
     const int iOuterNum = clInData.GetSize()[0];
-    const int iInnerNum = clInData.GetSize().Product(1);
+    //const int iInnerNum = clInData.GetSize().Product(1);
+    const int iInnerNum = clImageSize.Product();
     const int iOutDataNumChannels = clOutData.GetSize()[1];
     const int iOutDataInnerNum = clOutData.GetSize().Product(1);
     const int iOutDataChannelSize = clOutData.GetSize().Product(2);
@@ -303,9 +323,12 @@ public:
 
     if (p_inWeightsGradient != nullptr) {
       for (int i = 0; i < iOuterNum; ++i) {
-        //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, clImageSize.data());
-        m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, m_clIndexMatrix.data(), clImageSize.data());
-        cpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_clMatrix.data(), m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient, m_iCols);
+        for (int g = 0; g < m_iGroups; ++g) {
+          //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, clImageSize.data());
+          //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, m_clIndexMatrix.data(), clImageSize.data());
+          m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (m_iGroups*i + g)*iInnerNum, m_clIndexMatrix.data(), clImageSize.data());
+          cpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_clMatrix.data(), m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient, m_iCols);
+        }
       }
     }
 
@@ -313,15 +336,18 @@ public:
       //m_clImageToMatrix.ExtractIndexMatrix(m_vIndexMatrix.data(), clImageSize.data()); // This never changes
 
       for (int i = 0; i < iOuterNum; ++i) {
-        cpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights, m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(0), m_clMatrix.data_no_sync(), m_iCols);
-        m_clImageToMatrix.MapAndAdd(p_inDataGradient + i*iInnerNum, 1, m_clMatrix.data(), m_clIndexMatrix.data(), clImageSize.data());
-        //const RealType * const p_matrix = m_clMatrix.data();
-        //
-        //for (int j = 0; j < m_clIndexMatrix.GetSize().Count(); ++j) {
-        //  const int index = m_clIndexMatrix.data()[j];
-        //  if (index >= 0)
-        //    p_inDataGradient[i*iInnerNum + index] += p_matrix[j];
-        //}
+        for (int g = 0; g < m_iGroups; ++g) {
+          cpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights, m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(0), m_clMatrix.data_no_sync(), m_iCols);
+          //m_clImageToMatrix.MapAndAdd(p_inDataGradient + i*iInnerNum, 1, m_clMatrix.data(), m_clIndexMatrix.data(), clImageSize.data());
+          m_clImageToMatrix.MapAndAdd(p_inDataGradient + (i*m_iGroups + g)*iInnerNum, 1, m_clMatrix.data(), m_clIndexMatrix.data(), clImageSize.data());
+          //const RealType * const p_matrix = m_clMatrix.data();
+          //
+          //for (int j = 0; j < m_clIndexMatrix.GetSize().Count(); ++j) {
+          //  const int index = m_clIndexMatrix.data()[j];
+          //  if (index >= 0)
+          //    p_inDataGradient[i*iInnerNum + index] += p_matrix[j];
+          //}
+        }
       }
     }
   }
@@ -338,7 +364,8 @@ public:
     const ArrayType &clInWeights = p_clInWeights->GetData();
     ArrayType &clOutData = p_clOutData->GetData();
 
-    const Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    clImageSize[0] /= m_iGroups;
 
     const RealType * const p_inData = clInData.data(GPU);
     const RealType * const p_inWeights = clInWeights.data(GPU);
@@ -346,7 +373,8 @@ public:
     RealType * const p_outData = clOutData.data_no_sync(GPU);
 
     const int iOuterNum = clInData.GetSize()[0];
-    const int iInnerNum = clInData.GetSize().Product(1);
+    //const int iInnerNum = clInData.GetSize().Product(1);
+    const int iInnerNum = clImageSize.Product();
     const int iOutDataNumChannels = clOutData.GetSize()[1]; // Synonym for weights/bias channels
     const int iOutDataChannelSize = clOutData.GetSize().Product(2);
     const int iOutDataInnerNum = clOutData.GetSize().Product(1);
@@ -379,9 +407,12 @@ public:
     // So we need m_vMatrix^T * Weights = m_iRows x iOutDataNumChannels
 
     for (int i = 0; i < iOuterNum; ++i) {
-      //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(CPU), p_inData + i*iInnerNum, clImageSize.data()); // TODO: Make this work in GPU
-      m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + i*iInnerNum, m_clIndexMatrix.data(GPU), clImageSize.data());
-      gpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_clMatrix.data(GPU), m_iCols, p_inWeights, m_iCols, RealType(1), p_outData + i*iOutDataInnerNum, m_iRows);
+      for (int g = 0; g < m_iGroups; ++g) {
+        //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(CPU), p_inData + i*iInnerNum, clImageSize.data()); // TODO: Make this work in GPU
+        //m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + i*iInnerNum, m_clIndexMatrix.data(GPU), clImageSize.data());
+        m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + (i*m_iGroups + g)*iInnerNum, m_clIndexMatrix.data(GPU), clImageSize.data());
+        gpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_clMatrix.data(GPU), m_iCols, p_inWeights, m_iCols, RealType(1), p_outData + i*iOutDataInnerNum, m_iRows);
+      }
     }
   }
 
@@ -390,6 +421,9 @@ public:
     bleakGetAndCheckInput(p_clInData, "inData");
     bleakGetAndCheckInput(p_clInWeights, "inWeights");
     bleakGetAndCheckOutput(p_clOutData, "outData");
+
+    if (!p_clOutData->GetGradient().Valid())
+      return; // Nothing to do
 
     std::shared_ptr<EdgeType> p_clInBias = GetInput("inBias");
 
@@ -400,7 +434,8 @@ public:
     const ArrayType &clOutData = p_clOutData->GetData();
     const ArrayType &clOutDataGradient = p_clOutData->GetGradient();
 
-    const Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    Size clImageSize = p_clInData->GetData().GetSize().SubSize(1);
+    clImageSize[0] /= m_iGroups;
 
     const RealType * const p_inData = clInData.data(GPU);
     RealType * const p_inDataGradient = clInDataGradient.data(GPU);
@@ -412,7 +447,8 @@ public:
     const RealType * const p_outDataGradient = clOutDataGradient.data(GPU);
 
     const int iOuterNum = clInData.GetSize()[0];
-    const int iInnerNum = clInData.GetSize().Product(1);
+    //const int iInnerNum = clInData.GetSize().Product(1);
+    const int iInnerNum = clImageSize.Product();
     const int iOutDataNumChannels = clOutData.GetSize()[1];
     const int iOutDataInnerNum = clOutData.GetSize().Product(1);
     const int iOutDataChannelSize = clOutData.GetSize().Product(2);
@@ -455,9 +491,12 @@ public:
 
     if (p_inWeightsGradient != nullptr) {
       for (int i = 0; i < iOuterNum; ++i) {
-        //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(CPU), p_inData + i*iInnerNum, clImageSize.data());
-        m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + i*iInnerNum, m_clIndexMatrix.data(GPU), clImageSize.data());
-        gpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_clMatrix.data(GPU), m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient, m_iCols);
+        for (int g = 0; g < m_iGroups; ++g) {
+          //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(CPU), p_inData + i*iInnerNum, clImageSize.data());
+          //m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + i*iInnerNum, m_clIndexMatrix.data(GPU), clImageSize.data());
+          m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + (i*m_iGroups + g)*iInnerNum, m_clIndexMatrix.data(GPU), clImageSize.data());
+          gpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_clMatrix.data(GPU), m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient, m_iCols);
+        }
       }
     }
 
@@ -465,14 +504,17 @@ public:
       //m_clImageToMatrix.ExtractIndexMatrix(m_vIndexMatrix.data(), clImageSize.data()); // This never changes
 
       for (int i = 0; i < iOuterNum; ++i) {
-        gpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights, m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(0), m_clMatrix.data_no_sync(GPU), m_iCols);
-        m_clImageToMatrix.MapAndAddGPU(p_inDataGradient + i*iInnerNum, 1, m_clMatrix.data(GPU), m_clIndexMatrix.data(GPU), clImageSize.data());
+        for (int g = 0; g < m_iGroups; ++g) {
+          gpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights, m_iCols, p_outDataGradient + i*iOutDataInnerNum, m_iRows, RealType(0), m_clMatrix.data_no_sync(GPU), m_iCols);
+          //m_clImageToMatrix.MapAndAddGPU(p_inDataGradient + i*iInnerNum, 1, m_clMatrix.data(GPU), m_clIndexMatrix.data(GPU), clImageSize.data());
+          m_clImageToMatrix.MapAndAddGPU(p_inDataGradient + (i*m_iGroups + g)*iInnerNum, 1, m_clMatrix.data(GPU), m_clIndexMatrix.data(GPU), clImageSize.data());
 
-        //for (size_t j = 0; j < m_vIndexMatrix.size(); ++j) {
-        //  const int index = m_vIndexMatrix[j];
-        //  if (index >= 0)
-        //    p_inDataGradient[i*iInnerNum + index] += p_matrix[j];
-        //}
+          //for (size_t j = 0; j < m_vIndexMatrix.size(); ++j) {
+          //  const int index = m_vIndexMatrix[j];
+          //  if (index >= 0)
+          //    p_inDataGradient[i*iInnerNum + index] += p_matrix[j];
+          //}
+        }
       }
     }
   }
@@ -486,6 +528,7 @@ private:
   std::vector<int> m_vPadding;
   std::vector<int> m_vStride;
   std::vector<int> m_vDilate;
+  int m_iGroups = 1;
 
   ImageToMatrixType m_clImageToMatrix;
 
