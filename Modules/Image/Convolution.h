@@ -259,7 +259,7 @@ public:
         //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, clImageSize.data());
         //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, m_clIndexMatrix.data(), clImageSize.data());
         m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (i*m_iGroups + g)*iInnerNum, m_clIndexMatrix.data(), clImageSize.data());
-        cpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_clMatrix.data(), m_iCols, p_inWeights + (g*m_iCols + 0), m_iCols, RealType(1), p_outData + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows);
+        cpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_clMatrix.data(), m_iCols, p_inWeights + (g*iOutDataNumChannels*m_iCols), m_iCols, RealType(1), p_outData + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows);
       }
     }
   }
@@ -336,7 +336,7 @@ public:
           //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, clImageSize.data());
           //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + i*iInnerNum, m_clIndexMatrix.data(), clImageSize.data());
           m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(), p_inData + (m_iGroups*i + g)*iInnerNum, m_clIndexMatrix.data(), clImageSize.data());
-          cpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_clMatrix.data(), m_iCols, p_outDataGradient + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient + (g*m_iCols + 0), m_iCols);
+          cpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_clMatrix.data(), m_iCols, p_outDataGradient + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient + (g*iOutDataNumChannels*m_iCols), m_iCols);
         }
       }
     }
@@ -346,7 +346,7 @@ public:
 
       for (int i = 0; i < iOuterNum; ++i) {
         for (int g = 0; g < m_iGroups; ++g) {
-          cpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights + (g*m_iCols + 0), m_iCols, p_outDataGradient + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows, RealType(0), m_clMatrix.data_no_sync(), m_iCols);
+          cpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights + (g*iOutDataNumChannels*m_iCols), m_iCols, p_outDataGradient + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows, RealType(0), m_clMatrix.data_no_sync(), m_iCols);
           //m_clImageToMatrix.MapAndAdd(p_inDataGradient + i*iInnerNum, 1, m_clMatrix.data(), m_clIndexMatrix.data(), clImageSize.data());
           m_clImageToMatrix.MapAndAdd(p_inDataGradient + (i*m_iGroups + g)*iInnerNum, 1, m_clMatrix.data(), m_clIndexMatrix.data(), clImageSize.data());
           //const RealType * const p_matrix = m_clMatrix.data();
@@ -422,7 +422,7 @@ public:
         //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(CPU), p_inData + i*iInnerNum, clImageSize.data()); // TODO: Make this work in GPU
         //m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + i*iInnerNum, m_clIndexMatrix.data(GPU), clImageSize.data());
         m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + (i*m_iGroups + g)*iInnerNum, m_clIndexMatrix.data(GPU), clImageSize.data());
-        gpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_clMatrix.data(GPU), m_iCols, p_inWeights + (g*m_iCols + 0), m_iCols, RealType(1), p_outData + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows);
+        gpu_blas::gemm('T', 'N', m_iRows, iOutDataNumChannels, m_iCols, RealType(1), m_clMatrix.data(GPU), m_iCols, p_inWeights + (g*iOutDataNumChannels*m_iCols), m_iCols, RealType(1), p_outData + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows);
       }
     }
   }
@@ -508,7 +508,7 @@ public:
           //m_clImageToMatrix.ExtractMatrix(m_clMatrix.data_no_sync(CPU), p_inData + i*iInnerNum, clImageSize.data());
           //m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + i*iInnerNum, m_clIndexMatrix.data(GPU), clImageSize.data());
           m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + (i*m_iGroups + g)*iInnerNum, m_clIndexMatrix.data(GPU), clImageSize.data());
-          gpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_clMatrix.data(GPU), m_iCols, p_outDataGradient + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient + (g*m_iCols + 0), m_iCols);
+          gpu_blas::gemm('N', 'N', m_iCols, iOutDataNumChannels, m_iRows, RealType(1), m_clMatrix.data(GPU), m_iCols, p_outDataGradient + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows, RealType(1), p_inWeightsGradient + (g*iOutDataNumChannels*m_iCols), m_iCols);
         }
       }
     }
@@ -518,7 +518,7 @@ public:
 
       for (int i = 0; i < iOuterNum; ++i) {
         for (int g = 0; g < m_iGroups; ++g) {
-          gpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights + (g*m_iCols + 0), m_iCols, p_outDataGradient + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows, RealType(0), m_clMatrix.data_no_sync(GPU), m_iCols);
+          gpu_blas::gemm('N', 'T', m_iCols, m_iRows, iOutDataNumChannels, RealType(1), p_inWeights + (g*iOutDataNumChannels*m_iCols), m_iCols, p_outDataGradient + (i*m_iGroups + g)*iOutDataInnerNum, m_iRows, RealType(0), m_clMatrix.data_no_sync(GPU), m_iCols);
           //m_clImageToMatrix.MapAndAddGPU(p_inDataGradient + i*iInnerNum, 1, m_clMatrix.data(GPU), m_clIndexMatrix.data(GPU), clImageSize.data());
           m_clImageToMatrix.MapAndAddGPU(p_inDataGradient + (i*m_iGroups + g)*iInnerNum, 1, m_clMatrix.data(GPU), m_clIndexMatrix.data(GPU), clImageSize.data());
 
