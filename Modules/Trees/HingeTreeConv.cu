@@ -236,7 +236,7 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::ForwardGPU() {
   const int iInnerDataNum = clInData.GetSize().Product(1) / m_iGroups;
   const int iInNumChannels = clInData.GetSize()[1] / m_iGroups;
   const int iInChannelSize = clInData.GetSize().Product(2);
-  const int iNumTrees = clInWeights.GetSize()[0];
+  const int iNumTrees = clInWeights.GetSize()[0] / m_iGroups;
   const int iNumDecisionsPerTree = clInOrdinals.GetSize()[2];
   const int iNumLeavesPerTree = clInWeights.GetSize()[2];
   const int iInnerWeightsNum = clInWeights.GetSize().Product(3);
@@ -257,8 +257,8 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::ForwardGPU() {
         m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + ((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(GPU), clImageSize.data());
 
         ForwardKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), 
-          p_inThresholds + c*iNumDecisionsPerTree, p_inOrdinals + c*iNumDecisionsPerTree, p_inWeights + c*iNumLeavesPerTree*iInnerWeightsNum,
-          p_outData + i*iNumTrees*m_iRows*iInnerWeightsNum, m_iTreeDepth, iThresholdStride, iWeightsStride, iInnerWeightsNum, iNumTrees, m_iRows, m_iCols);
+          p_inThresholds + ((g*iNumTrees + 0)*iInNumChannels + c)*iNumDecisionsPerTree, p_inOrdinals + ((g*iNumTrees + 0)*iInNumChannels + c)*iNumDecisionsPerTree, p_inWeights + (((g*iNumTrees + 0)*iInNumChannels + c)*iNumLeavesPerTree + 0)*iInnerWeightsNum,
+          p_outData + (i*m_iGroups + g)*iNumTrees*m_iRows*iInnerWeightsNum, m_iTreeDepth, iThresholdStride, iWeightsStride, iInnerWeightsNum, iNumTrees, m_iRows, m_iCols);
       }
     }
   }
@@ -305,7 +305,7 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::BackwardGPU() {
   const int iInnerDataNum = clInData.GetSize().Product(1) / m_iGroups;
   const int iInNumChannels = clInData.GetSize()[1] / m_iGroups;
   const int iInChannelSize = clInData.GetSize().Product(2);
-  const int iNumTrees = clInWeights.GetSize()[0];
+  const int iNumTrees = clInWeights.GetSize()[0] / m_iGroups;
   const int iNumDecisionsPerTree = clInOrdinals.GetSize()[2];
   const int iNumLeavesPerTree = clInWeights.GetSize()[2];
   const int iInnerWeightsNum = clInWeights.GetSize().Product(3);
@@ -325,8 +325,8 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::BackwardGPU() {
           m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + ((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(GPU), clImageSize.data());
 
           BackwardThresholdsKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), 
-            p_inThresholds + c*iNumDecisionsPerTree, p_inOrdinals + c*iNumDecisionsPerTree, p_inWeights + c*iNumLeavesPerTree*iInnerWeightsNum,
-            p_outDataGradient + i*iNumTrees*m_iRows*iInnerWeightsNum, p_inThresholdsGradient + c*iNumDecisionsPerTree, m_iTreeDepth, iThresholdStride, 
+            p_inThresholds + ((g*iNumTrees + 0)*iInNumChannels + c)*iNumDecisionsPerTree, p_inOrdinals + ((g*iNumTrees + 0)*iInNumChannels + c)*iNumDecisionsPerTree, p_inWeights + (((g*iNumTrees + 0)*iInNumChannels + c)*iNumLeavesPerTree + 0)*iInnerWeightsNum,
+            p_outDataGradient + (i*m_iGroups + g)*iNumTrees*m_iRows*iInnerWeightsNum, p_inThresholdsGradient + ((g*iNumTrees + 0)*iInNumChannels + c)*iNumDecisionsPerTree, m_iTreeDepth, iThresholdStride, 
             iWeightsStride, iInnerWeightsNum, iNumTrees, m_iRows, m_iCols);
         }
       }
@@ -340,8 +340,8 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::BackwardGPU() {
           m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + ((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(GPU), clImageSize.data());
 
           BackwardWeightsKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), 
-            p_inThresholds + c*iNumDecisionsPerTree, p_inOrdinals + c*iNumDecisionsPerTree, /*p_inWeights + c*iNumLeavesPerTree*iInnerWeightsNum,*/
-            p_outDataGradient + i*iNumTrees*m_iRows*iInnerWeightsNum, p_inWeightsGradient + c*iNumLeavesPerTree*iInnerWeightsNum, m_iTreeDepth, iThresholdStride, 
+            p_inThresholds + ((g*iNumTrees + 0)*iInNumChannels + c)*iNumDecisionsPerTree, p_inOrdinals + ((g*iNumTrees + 0)*iInNumChannels + c)*iNumDecisionsPerTree, /*p_inWeights + (((g*iNumTrees + 0)*iInNumChannels + c)*iNumLeavesPerTree + 0)*iInnerWeightsNum,*/
+            p_outDataGradient + (i*m_iGroups + g)*iNumTrees*m_iRows*iInnerWeightsNum, p_inWeightsGradient + (((g*iNumTrees + 0)*iInNumChannels + c)*iNumLeavesPerTree + 0)*iInnerWeightsNum, m_iTreeDepth, iThresholdStride, 
             iWeightsStride, iInnerWeightsNum, iNumTrees, m_iRows, m_iCols);
         }
       }
@@ -355,8 +355,8 @@ void HingeTreeConvTemplate<RealType, Dimension, TreeTraitsType>::BackwardGPU() {
           m_clImageToMatrix.ExtractMatrixGPU(m_clMatrix.data_no_sync(GPU), p_inData + ((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize, m_clIndexMatrix.data(GPU), clImageSize.data());
 
           BackwardDataKernel<TreeTraitsTypeGPU><<<numBlocks, threadsPerBlock>>>(m_clMatrix.data(GPU), m_clIndexMatrix.data(GPU),
-            p_inThresholds + c*iNumDecisionsPerTree, p_inOrdinals + c*iNumDecisionsPerTree, p_inWeights + c*iNumLeavesPerTree*iInnerWeightsNum,
-            p_outDataGradient + i*iNumTrees*m_iRows*iInnerWeightsNum, p_inDataGradient + ((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize, m_iTreeDepth, iThresholdStride, 
+            p_inThresholds + ((g*iNumTrees + 0)*iInNumChannels + c)*iNumDecisionsPerTree, p_inOrdinals + ((g*iNumTrees + 0)*iInNumChannels + c)*iNumDecisionsPerTree, p_inWeights + (((g*iNumTrees + 0)*iInNumChannels + c)*iNumLeavesPerTree + 0)*iInnerWeightsNum,
+            p_outDataGradient + (i*m_iGroups + g)*iNumTrees*m_iRows*iInnerWeightsNum, p_inDataGradient + ((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize, m_iTreeDepth, iThresholdStride, 
             iWeightsStride, iInnerWeightsNum, iNumTrees, m_iRows, m_iCols);        
         }
       }

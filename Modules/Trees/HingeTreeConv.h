@@ -106,6 +106,11 @@ public:
     if (m_iGroups != 1)
       std::cout << GetName() << ": Info: Using group convolution (groups = " << m_iGroups << ")." << std::endl;
 
+    if ((clInWeights.GetSize()[0] % m_iGroups) != 0) {
+      std::cerr << GetName() << ": Error: Groups must divide output channels (" << m_iGroups << " does not divide " << clInWeights.GetSize()[0] << ")." << std::endl;
+      return false;
+    }
+
     if (clInThresholds.GetSize() != clInOrdinals.GetSize() || clInWeights.GetSize()[0] != clInThresholds.GetSize()[0]) {
       std::cerr << GetName() << ": Error: Dimension mismatch between inThresholds, inOrdinals and/or inWeights." << std::endl;
       return false;
@@ -218,7 +223,7 @@ public:
     const int iInnerDataNum = clInData.GetSize().Product(1) / m_iGroups;
     const int iInNumChannels = clInData.GetSize()[1] / m_iGroups;
     const int iInChannelSize = clInData.GetSize().Product(2);
-    const int iNumTrees = clInWeights.GetSize()[0];
+    const int iNumTrees = clInWeights.GetSize()[0] / m_iGroups;
     const int iNumDecisionsPerTree = clInOrdinals.GetSize()[2];
     const int iNumLeavesPerTree = clInWeights.GetSize()[2];
     const int iInnerWeightsNum = clInWeights.GetSize().Product(3);
@@ -234,8 +239,8 @@ public:
           // Iterate over output kernels
 #pragma omp parallel for
           for (int j = 0; j < iNumTrees; ++j) {
-            const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
-            const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+            const RealType * const p_thresholds = p_inThresholds + ((g*iNumTrees + j)*iInNumChannels + c)*iNumDecisionsPerTree;
+            const RealType * const p_ordinals = p_inOrdinals + ((g*iNumTrees + j)*iInNumChannels + c)*iNumDecisionsPerTree;
 
             // Iterate over extracted patches
             for (int k = 0; k < m_iRows; ++k) {
@@ -247,10 +252,12 @@ public:
               const RealType signedMargin = std::get<1>(clKeyMarginTuple);
               const RealType margin = std::abs(signedMargin);
 
-              const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
+              const RealType * const p_leafWeights = p_inWeights + (((g*iNumTrees + j)*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
 
-              for (int l = 0; l < iInnerWeightsNum; ++l)
-                p_outData[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l] += p_leafWeights[l]*margin;
+              for (int l = 0; l < iInnerWeightsNum; ++l) {
+                //p_outData[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l] += p_leafWeights[l]*margin;
+                p_outData[(((i*m_iGroups + g)*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l] += p_leafWeights[l]*margin;
+              }
             }
           }
         }
@@ -295,7 +302,7 @@ public:
     const int iInnerDataNum = clInData.GetSize().Product(1) / m_iGroups;
     const int iInNumChannels = clInData.GetSize()[1] / m_iGroups;
     const int iInChannelSize = clInData.GetSize().Product(2);
-    const int iNumTrees = clInWeights.GetSize()[0];
+    const int iNumTrees = clInWeights.GetSize()[0] / m_iGroups;
     const int iNumDecisionsPerTree = clInOrdinals.GetSize()[2];
     const int iNumLeavesPerTree = clInWeights.GetSize()[2];
     const int iInnerWeightsNum = clInWeights.GetSize().Product(3);
@@ -309,8 +316,8 @@ public:
 
 #pragma omp parallel for
             for (int j = 0; j < iNumTrees; ++j) {
-              const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
-              const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+              const RealType * const p_thresholds = p_inThresholds + ((g*iNumTrees + j)*iInNumChannels + c)*iNumDecisionsPerTree;
+              const RealType * const p_ordinals = p_inOrdinals + ((g*iNumTrees + j)*iInNumChannels + c)*iNumDecisionsPerTree;
 
               for (int k = 0; k < m_iRows; ++k) {
                 const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
@@ -323,10 +330,10 @@ public:
 
                 const RealType sign = RealType((RealType(0) < signedMargin) - (signedMargin < RealType(0)));
 
-                const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
+                const RealType * const p_leafWeights = p_inWeights + (((g*iNumTrees + j)*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
 
                 for (int l = 0; l < iInnerWeightsNum; ++l)
-                  p_inThresholdsGradient[(j*iInNumChannels + c)*iNumDecisionsPerTree + iThresholdIndex] += -sign * p_leafWeights[l] * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
+                  p_inThresholdsGradient[((g*iNumTrees + j)*iInNumChannels + c)*iNumDecisionsPerTree + iThresholdIndex] += -sign * p_leafWeights[l] * p_outDataGradient[(((i*m_iGroups + g)*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
               }
             }
           }
@@ -342,8 +349,8 @@ public:
 
 #pragma omp parallel for
             for (int j = 0; j < iNumTrees; ++j) {
-              const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
-              const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+              const RealType * const p_thresholds = p_inThresholds + ((g*iNumTrees + j)*iInNumChannels + c)*iNumDecisionsPerTree;
+              const RealType * const p_ordinals = p_inOrdinals + ((g*iNumTrees + j)*iInNumChannels + c)*iNumDecisionsPerTree;
 
               for (int k = 0; k < m_iRows; ++k) {
                 const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
@@ -357,7 +364,7 @@ public:
                 const RealType margin = std::abs(signedMargin);
 
                 for (int l = 0; l < iInnerWeightsNum; ++l)
-                  p_inWeightsGradient[((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum + l] += margin * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
+                  p_inWeightsGradient[(((g*iNumTrees + j)*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum + l] += margin * p_outDataGradient[(((i*m_iGroups + g)*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
               }
             }
           }
@@ -373,8 +380,8 @@ public:
 
 #pragma omp parallel for
             for (int j = 0; j < iNumTrees; ++j) {
-              const RealType * const p_thresholds = p_inThresholds + (j*iInNumChannels + c)*iNumDecisionsPerTree;
-              const RealType * const p_ordinals = p_inOrdinals + (j*iInNumChannels + c)*iNumDecisionsPerTree;
+              const RealType * const p_thresholds = p_inThresholds + ((g*iNumTrees + j)*iInNumChannels + c)*iNumDecisionsPerTree;
+              const RealType * const p_ordinals = p_inOrdinals + ((g*iNumTrees + j)*iInNumChannels + c)*iNumDecisionsPerTree;
 
               for (int k = 0; k < m_iRows; ++k) {
                 const RealType * const p_row = m_clMatrix.data() + k*m_iCols;
@@ -391,11 +398,11 @@ public:
                 if (iImageIndex >= 0) { // Check if it's not padding!
                   const RealType sign = RealType((RealType(0) < signedMargin) - (signedMargin < RealType(0)));
 
-                  const RealType * const p_leafWeights = p_inWeights + ((j*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
+                  const RealType * const p_leafWeights = p_inWeights + (((g*iNumTrees + j)*iInNumChannels + c)*iNumLeavesPerTree + key)*iInnerWeightsNum;
 
                   for (int l = 0; l < iInnerWeightsNum; ++l) {
 #pragma omp atomic
-                    p_inDataGradient[((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize + iImageIndex] += sign * p_leafWeights[l] * p_outDataGradient[((i*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
+                    p_inDataGradient[((i*m_iGroups + g)*iInNumChannels + c)*iInChannelSize + iImageIndex] += sign * p_leafWeights[l] * p_outDataGradient[(((i*m_iGroups + g)*iNumTrees + j)*iOutDataImageSize + k)*iInnerWeightsNum + l];
                   }
                 }
               }
