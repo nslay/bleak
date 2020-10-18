@@ -23,6 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <iostream>
 #include "LMDBDatabase.h"
 
 namespace bleak {
@@ -81,18 +82,48 @@ bool LMDBTransaction::Put(const std::string &strKey, const uint8_t *p_ui8Buffer,
 }
 
 bool LMDBTransaction::Commit() {
+  Status eStatus = TryCommit();
+
+  switch (eStatus) {
+  case StatusError:
+    return false;
+  case StatusMapFull:
+    {
+      MDB_envinfo stEnvInfo = {};
+      if (mdb_env_info(m_p_mdbEnv, &stEnvInfo) != 0)
+        return false; // Uhh?
+
+      int ret = 0;
+      if ((ret = mdb_env_set_mapsize(m_p_mdbEnv, 2*stEnvInfo.me_mapsize)) != 0) {
+        std::cerr << "Error: Failed to mdb_env_set_mapsize() (error code = " << ret << ")." << std::endl;
+        return false;
+      }
+
+      return TryCommit() == StatusGood;
+    }
+  case StatusGood:
+    return true;  
+  }
+
+  return false; // Not reached
+}
+
+auto LMDBTransaction::TryCommit() -> Status {
   if (m_vKeyDataPairs.empty())
-    return true;
+    return StatusGood;
 
   MDB_txn *p_mdbTxn = nullptr;
   MDB_dbi mdbDbi;
 
-  if (mdb_txn_begin(m_p_mdbEnv, nullptr, 0, &p_mdbTxn) != 0)
-    return false;
+  int ret = 0;
+  if (mdb_txn_begin(m_p_mdbEnv, nullptr, 0, &p_mdbTxn) != 0) {
+    std::cerr << "Error: mdb_txn_begin() failed (error code = " << ret << ")." << std::endl;
+    return StatusError;
+  }
 
   if (mdb_dbi_open(p_mdbTxn, nullptr, MDB_CREATE, &mdbDbi) != 0) {
     mdb_txn_abort(p_mdbTxn);
-    return false;
+    return StatusError;
   }
 
   MDB_val stKey, stValue;
@@ -104,17 +135,28 @@ bool LMDBTransaction::Commit() {
     stValue.mv_data = (void *)stKeyValuePair.second.data();
     stValue.mv_size = stKeyValuePair.second.size();
 
-    if (mdb_put(p_mdbTxn, mdbDbi, &stKey, &stValue, 0) != 0) {
-      // XXX: Handle this.
+    int ret = 0;
+    if ((ret = mdb_put(p_mdbTxn, mdbDbi, &stKey, &stValue, 0)) != 0) {
+      mdb_txn_abort(p_mdbTxn);
+      //mdb_dbi_close(m_p_mdbEnv, mdbDbi); // Normally unnecessary
+
+      switch (ret) {
+      case MDB_MAP_FULL:
+        return StatusMapFull;
+      }
+
+      std::cerr << "Error: Unhandled error from mdb_put() (error code = " << ret << "). Transaction abandoned." << std::endl;
+
+      return StatusError;
     }
   }
 
+  mdb_txn_commit(p_mdbTxn);
+  //mdb_dbi_close(m_p_mdbEnv, mdbDbi);
+
   m_vKeyDataPairs.clear();
 
-  mdb_txn_commit(p_mdbTxn);
-  mdb_dbi_close(m_p_mdbEnv, mdbDbi);
-
-  return true;
+  return StatusGood;
 }
 
 //////////////////////////// Database ////////////////////////////

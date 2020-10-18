@@ -88,6 +88,10 @@ public:
   virtual bool Commit() override;
 
 private:
+  enum Status { StatusError, StatusGood, StatusMapFull };
+
+  Status TryCommit();
+
   MDB_env *m_p_mdbEnv;
 
   std::vector<std::pair<std::string, std::vector<uint8_t>>> m_vKeyDataPairs;
