@@ -39,6 +39,14 @@
 #include "Common.h"
 #include "bsdgetopt.h"
 
+#ifdef WITH_ITK
+#include "itkRGBPixel.h"
+#include "itkImage.h"
+#include "itkResampleImageFilter.h"
+#include "itkImageFileWriter.h"
+#include "itkMetaImageIOFactory.h"
+#endif // WITH_ITK
+
 void Usage(const char *p_cArg0) {
   std::cerr << "Usage: " << p_cArg0 << " [-a] [-h] [-f] [-t databaseType] [-k numClasses] -o trainOutputPath [-v validationOutputPath] [-V validationRatio] batchFile [batchFile2 ...]" << std::endl;
   exit(1);
@@ -62,6 +70,10 @@ std::shared_ptr<bleak::Database> OpenDatabase(const std::string &strOutputPath, 
 
 bool LoadCIFAR(std::vector<std::vector<double>> &vData, const std::string &strImagesFile, unsigned int uiNumClasses);
 void FlipImages(std::vector<std::vector<double>> &vData); // Horizontal flip
+
+#ifdef WITH_ITK
+void RotateImages(std::vector<std::vector<double>> &vData); // +/-15 degree rotations
+#endif // WITH_ITK
 
 int main(int argc, char **argv) {
   bleak::InitializeModules();
@@ -185,6 +197,18 @@ int main(int argc, char **argv) {
     trainEnd *= 2;
     validationBegin *= 2;
     validationEnd *= 2;
+
+#ifdef WITH_ITK
+    std::cout << "Info: Augmenting with rotated images ..." << std::endl;
+
+    RotateImages(vData);
+
+    // vData is now triple the size of the original0, rotated0, rotated2, original1, rotated1, rotated2, etc...
+    trainBegin *= 3;
+    trainEnd *= 3;
+    validationBegin *= 3;
+    validationEnd *= 3;
+#endif // WITH_ITK
 
     // Shuffle again within training/validation sets (can't pollute training with validation and vice versa!)
     if (bShuffle) {
@@ -340,3 +364,130 @@ void FlipImages(std::vector<std::vector<double>> &vData) {
 
   vData.swap(vCombined);
 }
+
+#ifdef WITH_ITK
+void RegisterITKFactories() {
+  // Images
+  itk::MetaImageIOFactory::RegisterOneFactory();
+  //itk::NiftiImageIOFactory::RegisterOneFactory();
+
+  // Meshes
+  //itk::OBJMeshIOFactory::RegisterOneFactory();
+  //itk::STLMeshIOFactory::RegisterOneFactory();
+}
+
+template<typename PixelType, unsigned int Dimension>
+bool SaveImg(const itk::Image<PixelType, Dimension> *p_clImage, const std::string &strPath, bool bCompress) {
+  typedef itk::Image<PixelType, Dimension> ImageType;
+  typedef itk::ImageFileWriter<ImageType> WriterType;
+
+  typename WriterType::Pointer p_clWriter = WriterType::New();
+
+  p_clWriter->SetFileName(strPath);
+  p_clWriter->SetUseCompression(bCompress);
+  p_clWriter->SetInput(p_clImage);
+
+  try {
+    p_clWriter->Update();
+  }
+  catch (itk::ExceptionObject &e) {
+    std::cerr << "Error: " << e << std::endl;
+    return false;
+  }
+
+  return true;
+}
+
+void RotateImages(std::vector<std::vector<double>> &vData) {
+  //RegisterITKFactories();
+
+  typedef itk::RGBPixel<double> PixelType;
+  typedef itk::Image<PixelType, 2> ImageType;
+
+  typedef itk::ResampleImageFilter<ImageType, ImageType> ResamplerType;
+
+  std::vector<std::vector<double>> vCombined;
+  vCombined.reserve(3*vData.size());
+
+  ResamplerType::Pointer p_clResampler = ResamplerType::New();
+  ImageType::Pointer p_clImage = ImageType::New();
+
+  itk::Size<2> clSize;
+  clSize[0] = clSize[1] = 32;
+
+  const itk::SizeValueType imageSize = clSize[0]*clSize[1];
+
+  p_clImage->SetRegions(clSize);
+  p_clImage->Allocate();
+
+  p_clResampler->SetOutputOrigin(p_clImage->GetOrigin());
+  p_clResampler->SetSize(clSize);
+  p_clResampler->SetOutputSpacing(p_clImage->GetSpacing());
+
+  std::vector<double> vNewRow(3073);
+
+  constexpr int iNumRotations = 2;
+  ImageType::DirectionType a_clR[iNumRotations];
+
+  for (int i = 0; i < iNumRotations; ++i) {
+    const double dAngle = -15 + 30*i;
+    a_clR[i](0,0) = a_clR[i](1,1) = std::cos(dAngle*M_PI/180.0);
+    a_clR[i](1,0) = std::sin(dAngle*M_PI/180.0);
+    a_clR[i](0,1) = -a_clR[i](1,0);
+  }
+
+  for (auto &vRow : vData) {
+    vNewRow[0] = vRow[0]; // Class label
+
+    const double *p_dImage = vRow.data()+1;
+    double *p_dNewImage = vNewRow.data()+1;
+
+    for (int c = 0; c < 3; ++c) {
+      PixelType * const p_clBuffer = p_clImage->GetBufferPointer();
+
+      for (itk::SizeValueType i = 0; i < imageSize; ++i)
+        p_clBuffer[i][c] = p_dImage[c*imageSize + i];
+    }
+
+    vCombined.push_back(std::move(vRow)); // Already copied
+
+    //SaveImg(p_clImage.GetPointer(), "original.mha", true);
+
+    for (int i = 0; i < iNumRotations; ++i) {
+      p_clResampler->SetOutputDirection(a_clR[i]);
+
+      // ITK rotates with respect to the origin (top left corner). 
+      // We need to calculate a new origin so that the center point maps to itself after the resampling.
+      ImageType::PointType clCenter;
+      clCenter[0] = clCenter[1] = 16.0;
+
+      ImageType::PointType clOutputOrigin = clCenter - a_clR[i] * clCenter;
+
+      p_clResampler->SetOutputOrigin(clOutputOrigin);
+
+      p_clResampler->SetInput(p_clImage);
+      p_clResampler->Update();
+  
+      ImageType::Pointer p_clNewImage = p_clResampler->GetOutput();
+
+      //SaveImg(p_clNewImage.GetPointer(), std::to_string(i) + ".mha", true);
+
+      const PixelType * const p_clBegin = p_clNewImage->GetBufferPointer();
+      const PixelType * const p_clEnd = p_clBegin + imageSize;
+
+      for (int c = 0; c < 3; ++c) {
+        std::transform(p_clBegin, p_clEnd, p_dNewImage + c*imageSize, 
+          [&c](const PixelType &clPixel) -> double {
+            return clPixel[c];
+          });
+      }
+
+      vCombined.push_back(vNewRow);
+    }
+
+    //exit(0);
+  }
+
+  vData.swap(vCombined);
+}
+#endif // WITH_ITK
